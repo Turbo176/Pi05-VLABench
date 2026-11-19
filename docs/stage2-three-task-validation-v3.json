@@ -1,0 +1,40 @@
+{
+  "format": "LeRobot v3.0",
+  "fps": 10,
+  "splits": {
+    "validation": {
+      "episodes": 3,
+      "frames": 832,
+      "all_frames_verified": true,
+      "episodes_detail": [
+        {
+          "source": "runs/stage2/select_fruit-43-pilot/episode.h5",
+          "split": "validation",
+          "task": "select_fruit",
+          "seed": 43,
+          "instruction": "Put the orange into the plate_seen",
+          "frames": 121,
+          "initial_state_sha256": "271a29cc4d39ef69a378aa1ba458e385a741d069b1c7a54de212470680db35e7"
+        },
+        {
+          "source": "runs/stage2/insert_flower-46-screen-success/episode.h5",
+          "split": "validation",
+          "task": "insert_flower",
+          "seed": 46,
+          "instruction": "Insert the tulip into the vase_seen.",
+          "frames": 203,
+          "initial_state_sha256": "8f370daf6935708333f9de6c18f5754df2ad413c0c25ec099fd1f58adfa0f057"
+        },
+        {
+          "source": "runs/stage2/take_out_cool_drink-46-screen-success/episode.h5",
+          "split": "validation",
+          "task": "take_out_cool_drink",
+          "seed": 46,
+          "instruction": "I am so thirsty after sport, I want to drink something healthy cool",
+          "frames": 508,
+          "initial_state_sha256": "42d946a30c16d75aa863d8d5b8f65a66d98f8781da4610a28bc7f8ca5d7af64e"
+        }
+      ]
+    }
+  }
+}

@@ -4,7 +4,7 @@
 | --- | --- | --- |
 | [VLABench](https://github.com/OpenMOSS/VLABench) | `cf588fe60c0c7282174fe979f5913170cfe69017` | Expert, task, robot, and simulator used in the smoke test |
 | [RRT Algorithms](https://github.com/motion-planning/rrt-algorithms) | `14e47963780affe3ff3bb9fc33a4b14e1a733e85` | Expert planning dependency used from the source checkout |
-| [LeRobot VLABench guide](https://huggingface.co/docs/lerobot/vlabench) | Documentation reviewed 2026-11-19. Git HEAD observed at `8ec1a474da5f3f90a670d9343386995ec9f81264`. VLABench requirements pin LeRobot separately at `6674e368249472c91382eb54bb8501c94c7f0c56`. | Dataset conversion pending |
+| [LeRobot VLABench guide](https://huggingface.co/docs/lerobot/vlabench) | Documentation reviewed 2026-11-19. Git HEAD observed at `8ec1a474da5f3f90a670d9343386995ec9f81264`. VLABench requirements pin LeRobot separately at `6674e368249472c91382eb54bb8501c94c7f0c56`. | Stage 2 conversion uses LeRobot v0.4.4 at `8fff0fde7c79f23a93d845d1a50e985de01f8b8a` |
 | [Physical Intelligence OpenPI](https://github.com/Physical-Intelligence/openpi) | `215abfb217dbac7d5f1273282331b9b1866c0479` observed and README reviewed | SFT integration pending |
 | [RLinf](https://github.com/RLinf/RLinf) | `a29c0a6c37b02881b8d4af0900fa97f35e44b34c` observed and README reviewed | PPO integration pending |
 

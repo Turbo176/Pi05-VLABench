@@ -1,0 +1,81 @@
+{
+  "format": "LeRobot v3.0",
+  "fps": 10,
+  "splits": {
+    "train": {
+      "episodes": 2,
+      "frames": 313,
+      "all_frames_verified": true,
+      "episodes_detail": [
+        {
+          "source": "runs/select_fruit-42/episode.h5",
+          "split": "train",
+          "task": "select_fruit",
+          "seed": 42,
+          "instruction": "Put the apple into the plate_seen",
+          "frames": 132,
+          "initial_state_sha256": "d6c5c851d32135ffa16ce7e7a5da550fa55aae608e14a3807b7416c6aeccf75f"
+        },
+        {
+          "source": "runs/stage2/insert_flower-42-retry/episode.h5",
+          "split": "train",
+          "task": "insert_flower",
+          "seed": 42,
+          "instruction": "Insert the rose into the vase_seen.",
+          "frames": 181,
+          "initial_state_sha256": "ef0e26dad0d344397e4bcdd3e4a410112bc8b88699866e03f5182a9507d8c134"
+        }
+      ]
+    },
+    "validation": {
+      "episodes": 2,
+      "frames": 324,
+      "all_frames_verified": true,
+      "episodes_detail": [
+        {
+          "source": "runs/stage2/select_fruit-43-pilot/episode.h5",
+          "split": "validation",
+          "task": "select_fruit",
+          "seed": 43,
+          "instruction": "Put the orange into the plate_seen",
+          "frames": 121,
+          "initial_state_sha256": "271a29cc4d39ef69a378aa1ba458e385a741d069b1c7a54de212470680db35e7"
+        },
+        {
+          "source": "runs/stage2/insert_flower-46-screen-success/episode.h5",
+          "split": "validation",
+          "task": "insert_flower",
+          "seed": 46,
+          "instruction": "Insert the tulip into the vase_seen.",
+          "frames": 203,
+          "initial_state_sha256": "8f370daf6935708333f9de6c18f5754df2ad413c0c25ec099fd1f58adfa0f057"
+        }
+      ]
+    },
+    "test": {
+      "episodes": 2,
+      "frames": 300,
+      "all_frames_verified": true,
+      "episodes_detail": [
+        {
+          "source": "runs/stage2/select_fruit-44-pilot/episode.h5",
+          "split": "test",
+          "task": "select_fruit",
+          "seed": 44,
+          "instruction": "Put the apple into the plate_seen",
+          "frames": 141,
+          "initial_state_sha256": "caeec4cc7a967112a7285c96ec78584d9512bf36f968d3330bb8df3b60ad7628"
+        },
+        {
+          "source": "runs/stage2/insert_flower-50-screen-success/episode.h5",
+          "split": "test",
+          "task": "insert_flower",
+          "seed": 50,
+          "instruction": "Insert the tulip into the vase_seen.",
+          "frames": 159,
+          "initial_state_sha256": "0a3aaecd371c3c5fc85cd70b9414d63c94816ca37ec489df0d14b5bdcaa41e33"
+        }
+      ]
+    }
+  }
+}

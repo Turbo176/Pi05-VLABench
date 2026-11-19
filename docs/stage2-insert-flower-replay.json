@@ -1,0 +1,13 @@
+{
+  "source": "saved actuator commands re-executed in a fresh simulator",
+  "task": "insert_flower",
+  "seed": 42,
+  "steps": 181,
+  "success": true,
+  "max_abs_physics_state_error": 0.0,
+  "wall_seconds": 101.62,
+  "video_resolution": [
+    1536,
+    1536
+  ]
+}

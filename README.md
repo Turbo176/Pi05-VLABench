@@ -4,17 +4,22 @@ A staged project for multitask π0.5 imitation learning, closed-loop generalizat
 
 ## Verified locally
 
-The official `select_fruit` expert picked and placed an apple with the official Franka robot in MuJoCo. Seed 42 produced one successful 132-step episode at 10 Hz. A separate process rebuilt the episode, fed all 132 saved actuator commands into the simulator, and reached the official success condition. The maximum difference across the per-step MuJoCo position and velocity arrays was 0 on this machine.
+The official VLABench expert and Franka robot ran in MuJoCo under WSL2. The `select_fruit` seed 42 and `insert_flower` seed 42 captures reached the official success condition in 132 and 181 steps. Re-executing their saved actuator commands in fresh simulators reached the same result with zero difference in the recorded MuJoCo position and velocity arrays.
 
-| Video | Source | Result |
-| --- | --- | --- |
-| `expert.mp4` | Official VLABench expert | 1/1 smoke-test episode |
-| `action_replay.mp4` | Saved actuator commands executed in a fresh MuJoCo instance | 1/1 replay of the same episode |
+| Video | Source |
+| --- | --- |
+| `expert.mp4` | Official VLABench expert |
+| `action_replay.mp4`, `action_replay_hd.mp4` | Saved actuator commands executed in fresh MuJoCo |
 
-See the [local runbook](docs/stage1.md) for commands, asset scope, and action format. See [upstream revisions](docs/upstream.md) for sources, licenses, and component status.
+The two-task LeRobot pilot has six successful demonstrations and 937 action-aligned frames at 10 Hz. Each split contains a distinct episode from both tasks. The exports preserve four RGB views, the original instruction, nine measured joint positions, and nine absolute actuator targets. The official `take_out_cool_drink` expert adds a 477-step demonstration of opening and closing a refrigerator. The three-task training and validation splits have 790 and 832 frames, respectively, in both the v2.1 and v3.0 exports. The 300-frame test split covers fruit and flower. The expert screening records cover successful, unsuccessful, and timed-out runs.
+
+- [Local simulator and replay commands](docs/stage1.md)
+- [Expert screening and LeRobot export commands](docs/stage2.md)
+- [SFT to PPO source audit](docs/sft-rl-compatibility.md)
+- [Pinned upstream revisions and licenses](docs/upstream.md)
 
 ## Remaining milestones
 
-1. Verify additional official skills and convert a small sample to LeRobot Dataset.
-2. Train a shared π0.5 checkpoint and evaluate per task on held-out initializations and language variants.
-3. Verify the SFT checkpoint in the RL environment before any PPO update and measure the effect of updating policy weights.
+1. Confirm the third task across more initializations and grow the dataset.
+2. Train one π0.5 checkpoint across tasks and evaluate on held-out initializations and language variants.
+3. Verify the SFT policy in the RL environment before the first PPO update and measure policy changes and task success after training.
