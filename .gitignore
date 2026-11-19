@@ -1,0 +1,14 @@
+/.local/
+/runs/
+/data/
+/checkpoints/
+/assets/
+/outputs/
+.env
+.env.*
+__pycache__/
+*.py[cod]
+*.h5
+*.mp4
+*.safetensors
+*.pt

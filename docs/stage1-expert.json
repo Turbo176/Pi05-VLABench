@@ -1,0 +1,33 @@
+{
+  "source": "official VLABench expert",
+  "task": "select_fruit",
+  "robot": "franka",
+  "seed": 42,
+  "instruction": "Put the apple into the plate_seen",
+  "success": true,
+  "terminal": true,
+  "steps": 132,
+  "control_hz": 10.0,
+  "scene": "default",
+  "camera_names": [
+    "right",
+    "left",
+    "forward",
+    "franka/Franka_wrist_cam"
+  ],
+  "stages": [
+    {
+      "name": "pick",
+      "stage_success": true,
+      "steps_so_far": 60,
+      "success_condition": false
+    },
+    {
+      "name": "place",
+      "stage_success": true,
+      "steps_so_far": 132,
+      "success_condition": true
+    }
+  ],
+  "wall_seconds": 97.95
+}
