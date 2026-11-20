@@ -2,6 +2,17 @@
 
 Multitask imitation learning and closed-loop generalization on VLABench, with π0.5 fine-tuning and PPO post-training as the next milestones.
 
+## Demos
+
+Each clip shows saved commands from the official VLABench expert replayed in a fresh MuJoCo simulation. The GIFs run at 2× speed for fruit and flower and 4× for the fridge. The full videos use the original 10 Hz timing and show all four camera views.
+
+| Fruit selection | Flower insertion | Fridge drink retrieval |
+| :---: | :---: | :---: |
+| ![Franka picks an apple and places it on a plate](media/demos/select-fruit-preview.gif) | ![Franka picks a rose and inserts it into a vase](media/demos/insert-flower-preview.gif) | ![Franka opens the fridge, retrieves a drink, and closes the door](media/demos/fridge-drink-preview.gif) |
+| [Full video · 13.3 s](media/demos/select-fruit-replay.mp4) | [Full video · 18.2 s](media/demos/insert-flower-replay.mp4) | [Full video · 47.8 s](media/demos/fridge-drink-replay.mp4) |
+| [Replay report · seed 42](docs/stage1-action-replay.json) | [Replay report · seed 42](docs/stage2-insert-flower-replay.json) | [Replay report · seed 43](docs/stage2-fridge-rgb-replay.json) |
+
+
 ## Tasks and results
 
 I ran the official VLABench expert and Franka robot in MuJoCo under WSL2. The training split contains 60 successful, replay-verified demonstrations at 10 Hz. The export preserves four RGB views, the original instruction, nine measured joint positions, and nine absolute joint targets.
@@ -42,6 +53,7 @@ bash scripts/run_wsl.sh replay runs/select_fruit-42/episode.h5
 | [`scripts/`](scripts/) | Expert capture, action replay, LeRobot export, and local evaluation |
 | [`configs/`](configs/) | Held-out evaluation seeds and paired fruit prompts |
 | [`docs/`](docs/) | Runbooks, measured results, and source audit |
+| [`media/demos/`](media/demos/) | Selected expert action replay videos and previews |
 
 Start with the [LeRobot export guide](docs/stage2.md), [policy input and normalization checks](docs/policy-io.md), or [closed-loop evaluation runbook](docs/closed-loop.md). The [SFT to PPO audit](docs/sft-rl-compatibility.md) follows checkpoint, camera, normalization, and controller interfaces at the pinned revisions. The first GPU milestone is one real training batch, checkpoint save and reload, and a short closed-loop rollout.
 
