@@ -1,4 +1,4 @@
-<h1 align="center">🤖 Pi05-VLABench</h1>
+<h1 align="center">Pi05-VLABench</h1>
 
 <p align="center">
   <strong>Multitask robot learning with π0.5 on VLABench</strong><br>
