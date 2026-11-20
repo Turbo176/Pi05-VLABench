@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "robot": "franka",
+  "control_hz": 10,
+  "max_control_steps": 600,
+  "ordinary": {
+    "tasks": [
+      "select_fruit",
+      "insert_flower",
+      "take_out_cool_drink"
+    ],
+    "seeds_inclusive": [
+      1001,
+      1020
+    ]
+  },
+  "fruit_language": {
+    "tasks": [
+      "select_fruit"
+    ],
+    "seeds_inclusive": [
+      1101,
+      1110
+    ],
+    "prompt_modes": [
+      "official",
+      "paraphrase",
+      "alternate_target"
+    ]
+  }
+}

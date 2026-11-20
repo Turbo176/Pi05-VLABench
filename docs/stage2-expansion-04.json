@@ -1,0 +1,2131 @@
+{
+  "training_split": {
+    "episodes": 34,
+    "frames": 8426,
+    "all_frames_verified": true,
+    "action_chunks": {
+      "horizon": 50,
+      "positions_verified": 102
+    },
+    "episodes_detail": [
+      {
+        "source": "runs/select_fruit-42/episode.h5",
+        "split": "train",
+        "task": "select_fruit",
+        "seed": 42,
+        "instruction": "Put the apple into the plate_seen",
+        "frames": 132,
+        "initial_state_sha256": "d6c5c851d32135ffa16ce7e7a5da550fa55aae608e14a3807b7416c6aeccf75f"
+      },
+      {
+        "source": "runs/stage2/insert_flower-42-retry/episode.h5",
+        "split": "train",
+        "task": "insert_flower",
+        "seed": 42,
+        "instruction": "Insert the rose into the vase_seen.",
+        "frames": 181,
+        "initial_state_sha256": "ef0e26dad0d344397e4bcdd3e4a410112bc8b88699866e03f5182a9507d8c134"
+      },
+      {
+        "source": "runs/stage2/take_out_cool_drink-43-screen-success/episode.h5",
+        "split": "train",
+        "task": "take_out_cool_drink",
+        "seed": 43,
+        "instruction": "I am so thirsty after sport, I want to drink something healthy cool",
+        "frames": 477,
+        "initial_state_sha256": "15fdb0fe1784f62559ffa00619f970eac9412541aac0e86f0a69493531786d4a"
+      },
+      {
+        "source": "runs/stage2-expansion-01/take_out_cool_drink-52-rgb/episode.h5",
+        "split": "train",
+        "task": "take_out_cool_drink",
+        "seed": 52,
+        "instruction": "I am so thirsty after sport, I want to drink something healthy cool",
+        "frames": 501,
+        "initial_state_sha256": "70d954feb90de42a7f9e50efba0c9252223ca9e90d3608d1fee0e8dbe08a4023"
+      },
+      {
+        "source": "runs/stage2-expansion-01/select_fruit-53-rgb/episode.h5",
+        "split": "train",
+        "task": "select_fruit",
+        "seed": 53,
+        "instruction": "Put the pear into the plate_seen",
+        "frames": 163,
+        "initial_state_sha256": "b18fe5e9eefbcbe0d152a02d6dbf849a9f2ea104b6de1361239b04684cb021f9"
+      },
+      {
+        "source": "runs/stage2-expansion-01/select_fruit-54-rgb/episode.h5",
+        "split": "train",
+        "task": "select_fruit",
+        "seed": 54,
+        "instruction": "Put the pear into the plate_seen",
+        "frames": 164,
+        "initial_state_sha256": "545d0d89ebe1dca2d35915894416ed4b2f0db830d9da408e7652dadead0c6229"
+      },
+      {
+        "source": "runs/stage2-expansion-01/select_fruit-55-rgb/episode.h5",
+        "split": "train",
+        "task": "select_fruit",
+        "seed": 55,
+        "instruction": "Put the banana into the plate_seen",
+        "frames": 138,
+        "initial_state_sha256": "210f272ad5dad4ced2612d64628cfa754adc1789239a7981d12699b18a121f7d"
+      },
+      {
+        "source": "runs/stage2-expansion-01/insert_flower-55-rgb/episode.h5",
+        "split": "train",
+        "task": "insert_flower",
+        "seed": 55,
+        "instruction": "Insert the rose into the vase_seen.",
+        "frames": 154,
+        "initial_state_sha256": "fb9d126cdcde658dd6a7abf668c4b4a1fb2ba66cd1cda1fe5410608af6c69ec3"
+      },
+      {
+        "source": "runs/stage2-expansion-02/take_out_cool_drink-54-recovered-rgb/episode.h5",
+        "split": "train",
+        "task": "take_out_cool_drink",
+        "seed": 54,
+        "instruction": "I am so thirsty after sport, I want to drink something healthy cool",
+        "frames": 484,
+        "initial_state_sha256": "d872249d1a156e7c1fedf36499b680ea8db7ed59dfefcc7e48939cb76f396187"
+      },
+      {
+        "source": "runs/stage2-expansion-02/select_fruit-56-rgb/episode.h5",
+        "split": "train",
+        "task": "select_fruit",
+        "seed": 56,
+        "instruction": "Put the pear into the plate_seen",
+        "frames": 151,
+        "initial_state_sha256": "89f2700efa8ae99222868fc866a7963dfcdcca2263bcf7946ae2771764b19136"
+      },
+      {
+        "source": "runs/stage2-expansion-02/take_out_cool_drink-56-rgb/episode.h5",
+        "split": "train",
+        "task": "take_out_cool_drink",
+        "seed": 56,
+        "instruction": "I am so thirsty after sport, I want to drink something healthy cool",
+        "frames": 491,
+        "initial_state_sha256": "1fe03161deccec755a1867fdbf0c32cfa6f43d2fdca41a7df9460be1be15ff94"
+      },
+      {
+        "source": "runs/stage2-expansion-02/select_fruit-57-rgb/episode.h5",
+        "split": "train",
+        "task": "select_fruit",
+        "seed": 57,
+        "instruction": "Put the orange into the plate_seen",
+        "frames": 131,
+        "initial_state_sha256": "83539283c1f692b730324c2c54fd7a41fe01c91fb5bf46b71a4da5d2fa497013"
+      },
+      {
+        "source": "runs/stage2-expansion-02/select_fruit-58-rgb/episode.h5",
+        "split": "train",
+        "task": "select_fruit",
+        "seed": 58,
+        "instruction": "Put the banana into the plate_seen",
+        "frames": 141,
+        "initial_state_sha256": "707326352cd7b1c57f9da05f0dfb7f247c4128b8315784012344f9c4ab78b4c7"
+      },
+      {
+        "source": "runs/stage2-expansion-02/insert_flower-58-rgb/episode.h5",
+        "split": "train",
+        "task": "insert_flower",
+        "seed": 58,
+        "instruction": "Insert the rose into the vase_seen.",
+        "frames": 174,
+        "initial_state_sha256": "5ff20c3f28a1cbb5d36480d7fbac9dd160575bc7385e9cb0326355ed49768329"
+      },
+      {
+        "source": "runs/stage2-expansion-02/take_out_cool_drink-58-rgb/episode.h5",
+        "split": "train",
+        "task": "take_out_cool_drink",
+        "seed": 58,
+        "instruction": "I am so thirsty after sport, I want to drink something healthy cool",
+        "frames": 501,
+        "initial_state_sha256": "68b9ccf78f1023aa0a18d13ca080b938e05ac8846a799ad4c14e7b8726caee0c"
+      },
+      {
+        "source": "runs/stage2-expansion-03/take_out_cool_drink-59-rgb/episode.h5",
+        "split": "train",
+        "task": "take_out_cool_drink",
+        "seed": 59,
+        "instruction": "I am so thirsty after sport, I want to drink something healthy cool",
+        "frames": 511,
+        "initial_state_sha256": "ac0c71d47ea4f3ef00b053ee249ab567edbfcc35c9c0bffc9c770db1efdbf5b2"
+      },
+      {
+        "source": "runs/stage2-expansion-03/take_out_cool_drink-60-rgb/episode.h5",
+        "split": "train",
+        "task": "take_out_cool_drink",
+        "seed": 60,
+        "instruction": "I am so thirsty after sport, I want to drink something healthy cool",
+        "frames": 531,
+        "initial_state_sha256": "26c304c79c7b2a685691ae3d431acf51ed3698fab52875c3abb8ca0faa995eba"
+      },
+      {
+        "source": "runs/stage2-expansion-03/insert_flower-61-rgb/episode.h5",
+        "split": "train",
+        "task": "insert_flower",
+        "seed": 61,
+        "instruction": "Insert the rose into the vase_seen.",
+        "frames": 188,
+        "initial_state_sha256": "d3bc5ac34fc6fefb7e959e77ef35cc8c702b46867312924a38521ea0d7240add"
+      },
+      {
+        "source": "runs/stage2-expansion-03/take_out_cool_drink-61-rgb/episode.h5",
+        "split": "train",
+        "task": "take_out_cool_drink",
+        "seed": 61,
+        "instruction": "I am so thirsty after sport, I want to drink something healthy cool",
+        "frames": 470,
+        "initial_state_sha256": "9aa57421b54ab155dc3c21f640d5622b0cc3e50c775ebcba6fdd1728525a42ae"
+      },
+      {
+        "source": "runs/stage2-expansion-03/insert_flower-62-rgb/episode.h5",
+        "split": "train",
+        "task": "insert_flower",
+        "seed": 62,
+        "instruction": "Insert the rose into the vase_seen.",
+        "frames": 171,
+        "initial_state_sha256": "5ff308edafa720f5f392a722d1cab40f8dbe075ea1d726893d3cab7590dd78df"
+      },
+      {
+        "source": "runs/stage2-expansion-04/select_fruit-63-rgb/episode.h5",
+        "split": "train",
+        "task": "select_fruit",
+        "seed": 63,
+        "instruction": "Put the pear into the plate_seen",
+        "frames": 165,
+        "initial_state_sha256": "9dedf603059cdaece1c584c432d5626c066a1151169403e2102a508811a661ae"
+      },
+      {
+        "source": "runs/stage2-expansion-04/select_fruit-64-rgb/episode.h5",
+        "split": "train",
+        "task": "select_fruit",
+        "seed": 64,
+        "instruction": "Put the apple into the plate_seen",
+        "frames": 155,
+        "initial_state_sha256": "fb2733099c599b4723ae35e5836eaa677922a44c3646e4c827e0af693c4bd1c5"
+      },
+      {
+        "source": "runs/stage2-expansion-04/insert_flower-64-rgb/episode.h5",
+        "split": "train",
+        "task": "insert_flower",
+        "seed": 64,
+        "instruction": "Insert the rose into the vase_seen.",
+        "frames": 179,
+        "initial_state_sha256": "5fba70722aaf9643521bf77f787a8c11e9fba4f64705a787e7e7b40fcdec79af"
+      },
+      {
+        "source": "runs/stage2-expansion-04/select_fruit-65-rgb/episode.h5",
+        "split": "train",
+        "task": "select_fruit",
+        "seed": 65,
+        "instruction": "Put the orange into the plate_seen",
+        "frames": 132,
+        "initial_state_sha256": "33d28feeca8a47efb39b285aee550787e447de7abcbc6fdbcfeca684fd630202"
+      },
+      {
+        "source": "runs/stage2-expansion-04/insert_flower-65-rgb/episode.h5",
+        "split": "train",
+        "task": "insert_flower",
+        "seed": 65,
+        "instruction": "Insert the tulip into the vase_seen.",
+        "frames": 183,
+        "initial_state_sha256": "270019ec3fb6f6bc079fee42e32a766b9c9b2808a1a7c881561f75e700f1aec3"
+      },
+      {
+        "source": "runs/stage2-expansion-04/select_fruit-66-rgb/episode.h5",
+        "split": "train",
+        "task": "select_fruit",
+        "seed": 66,
+        "instruction": "Put the orange into the plate_seen",
+        "frames": 154,
+        "initial_state_sha256": "a195916558a2e288b60d384a435eb948f21fd51c0850123f012ca6dbfd548d77"
+      },
+      {
+        "source": "runs/stage2-expansion-04/select_fruit-67-rgb/episode.h5",
+        "split": "train",
+        "task": "select_fruit",
+        "seed": 67,
+        "instruction": "Put the apple into the plate_seen",
+        "frames": 153,
+        "initial_state_sha256": "d820483fd2c7d0e45da2e7e2c351dd67edcbdcaa483087fde6ba5f8d0fbd96b6"
+      },
+      {
+        "source": "runs/stage2-expansion-04/select_fruit-68-rgb/episode.h5",
+        "split": "train",
+        "task": "select_fruit",
+        "seed": 68,
+        "instruction": "Put the apple into the plate_seen",
+        "frames": 165,
+        "initial_state_sha256": "b9da4e106d2971fe4f844e9db39a44cf314bc1697bd0d0b6f683ed9bef59d9e4"
+      },
+      {
+        "source": "runs/stage2-expansion-04/select_fruit-69-rgb/episode.h5",
+        "split": "train",
+        "task": "select_fruit",
+        "seed": 69,
+        "instruction": "Put the apple into the plate_seen",
+        "frames": 145,
+        "initial_state_sha256": "50a93ae30e718a56b17d2523338d35055e8b342d9a77ec72228d057d35291e3e"
+      },
+      {
+        "source": "runs/stage2-expansion-04/insert_flower-69-rgb/episode.h5",
+        "split": "train",
+        "task": "insert_flower",
+        "seed": 69,
+        "instruction": "Insert the rose into the vase_seen.",
+        "frames": 152,
+        "initial_state_sha256": "318be8d60dfb4ab597765a5e8badd10e2640e33f31f13f464c3590aa81941aaf"
+      },
+      {
+        "source": "runs/stage2-expansion-04/select_fruit-70-rgb/episode.h5",
+        "split": "train",
+        "task": "select_fruit",
+        "seed": 70,
+        "instruction": "Put the orange into the plate_seen",
+        "frames": 142,
+        "initial_state_sha256": "b755ea4c2ec96214a23f4b20456f9f8f769dc2cf12085f7b0ee4e3b4e6d07d3f"
+      },
+      {
+        "source": "runs/stage2-expansion-04/select_fruit-71-rgb/episode.h5",
+        "split": "train",
+        "task": "select_fruit",
+        "seed": 71,
+        "instruction": "Put the apple into the plate_seen",
+        "frames": 168,
+        "initial_state_sha256": "002c300e0c541bb197babe79cea19db0570f7af703f2f36d05d75b49282704d1"
+      },
+      {
+        "source": "runs/stage2-expansion-04/take_out_cool_drink-71-rgb/episode.h5",
+        "split": "train",
+        "task": "take_out_cool_drink",
+        "seed": 71,
+        "instruction": "I am so thirsty after sport, I want to drink something healthy cool",
+        "frames": 512,
+        "initial_state_sha256": "54e0cbb9ea7997e0dfbaa2b36df7109cf2fcdd384b92fae1ac4ae031dae1d953"
+      },
+      {
+        "source": "runs/stage2-expansion-04/select_fruit-72-rgb/episode.h5",
+        "split": "train",
+        "task": "select_fruit",
+        "seed": 72,
+        "instruction": "Put the banana into the plate_seen",
+        "frames": 167,
+        "initial_state_sha256": "896300a73b2974887bd63b1a64a47e35b38dfafb42f434534ab39d5bf2a81465"
+      }
+    ]
+  },
+  "new_rgb_replays": [
+    {
+      "source": "runs/stage2-expansion-04/select_fruit-63-screen/screening.h5",
+      "observation_source": "expert action replay",
+      "task": "select_fruit",
+      "seed": 63,
+      "steps": 165,
+      "source_steps": 165,
+      "success": true,
+      "terminal": true,
+      "camera_frames": 166,
+      "max_abs_physics_state_error": 0.0,
+      "state_trace_matches": true,
+      "state_trace_atol": 1e-08,
+      "wall_seconds": 40.25
+    },
+    {
+      "source": "runs/stage2-expansion-04/select_fruit-64-screen/screening.h5",
+      "observation_source": "expert action replay",
+      "task": "select_fruit",
+      "seed": 64,
+      "steps": 155,
+      "source_steps": 155,
+      "success": true,
+      "terminal": true,
+      "camera_frames": 156,
+      "max_abs_physics_state_error": 0.0,
+      "state_trace_matches": true,
+      "state_trace_atol": 1e-08,
+      "wall_seconds": 38.04
+    },
+    {
+      "source": "runs/stage2-expansion-04/insert_flower-64-screen/screening.h5",
+      "observation_source": "expert action replay",
+      "task": "insert_flower",
+      "seed": 64,
+      "steps": 179,
+      "source_steps": 179,
+      "success": true,
+      "terminal": true,
+      "camera_frames": 180,
+      "max_abs_physics_state_error": 0.0,
+      "state_trace_matches": true,
+      "state_trace_atol": 1e-08,
+      "wall_seconds": 85.34
+    },
+    {
+      "source": "runs/stage2-expansion-04/select_fruit-65-screen/screening.h5",
+      "observation_source": "expert action replay",
+      "task": "select_fruit",
+      "seed": 65,
+      "steps": 132,
+      "source_steps": 132,
+      "success": true,
+      "terminal": true,
+      "camera_frames": 133,
+      "max_abs_physics_state_error": 0.0,
+      "state_trace_matches": true,
+      "state_trace_atol": 1e-08,
+      "wall_seconds": 33.6
+    },
+    {
+      "source": "runs/stage2-expansion-04/insert_flower-65-screen/screening.h5",
+      "observation_source": "expert action replay",
+      "task": "insert_flower",
+      "seed": 65,
+      "steps": 183,
+      "source_steps": 183,
+      "success": true,
+      "terminal": true,
+      "camera_frames": 184,
+      "max_abs_physics_state_error": 0.0,
+      "state_trace_matches": true,
+      "state_trace_atol": 1e-08,
+      "wall_seconds": 75.97
+    },
+    {
+      "source": "runs/stage2-expansion-04/select_fruit-66-screen/screening.h5",
+      "observation_source": "expert action replay",
+      "task": "select_fruit",
+      "seed": 66,
+      "steps": 154,
+      "source_steps": 154,
+      "success": true,
+      "terminal": true,
+      "camera_frames": 155,
+      "max_abs_physics_state_error": 0.0,
+      "state_trace_matches": true,
+      "state_trace_atol": 1e-08,
+      "wall_seconds": 35.85
+    },
+    {
+      "source": "runs/stage2-expansion-04/select_fruit-67-screen/screening.h5",
+      "observation_source": "expert action replay",
+      "task": "select_fruit",
+      "seed": 67,
+      "steps": 153,
+      "source_steps": 153,
+      "success": true,
+      "terminal": true,
+      "camera_frames": 154,
+      "max_abs_physics_state_error": 0.0,
+      "state_trace_matches": true,
+      "state_trace_atol": 1e-08,
+      "wall_seconds": 34.61
+    },
+    {
+      "source": "runs/stage2-expansion-04/select_fruit-68-screen/screening.h5",
+      "observation_source": "expert action replay",
+      "task": "select_fruit",
+      "seed": 68,
+      "steps": 165,
+      "source_steps": 165,
+      "success": true,
+      "terminal": true,
+      "camera_frames": 166,
+      "max_abs_physics_state_error": 0.0,
+      "state_trace_matches": true,
+      "state_trace_atol": 1e-08,
+      "wall_seconds": 39.13
+    },
+    {
+      "source": "runs/stage2-expansion-04/select_fruit-69-screen/screening.h5",
+      "observation_source": "expert action replay",
+      "task": "select_fruit",
+      "seed": 69,
+      "steps": 145,
+      "source_steps": 145,
+      "success": true,
+      "terminal": true,
+      "camera_frames": 146,
+      "max_abs_physics_state_error": 0.0,
+      "state_trace_matches": true,
+      "state_trace_atol": 1e-08,
+      "wall_seconds": 33.84
+    },
+    {
+      "source": "runs/stage2-expansion-04/insert_flower-69-screen/screening.h5",
+      "observation_source": "expert action replay",
+      "task": "insert_flower",
+      "seed": 69,
+      "steps": 152,
+      "source_steps": 152,
+      "success": true,
+      "terminal": true,
+      "camera_frames": 153,
+      "max_abs_physics_state_error": 0.0,
+      "state_trace_matches": true,
+      "state_trace_atol": 1e-08,
+      "wall_seconds": 66.17
+    },
+    {
+      "source": "runs/stage2-expansion-04/select_fruit-70-screen/screening.h5",
+      "observation_source": "expert action replay",
+      "task": "select_fruit",
+      "seed": 70,
+      "steps": 142,
+      "source_steps": 142,
+      "success": true,
+      "terminal": true,
+      "camera_frames": 143,
+      "max_abs_physics_state_error": 0.0,
+      "state_trace_matches": true,
+      "state_trace_atol": 1e-08,
+      "wall_seconds": 33.31
+    },
+    {
+      "source": "runs/stage2-expansion-04/select_fruit-71-screen/screening.h5",
+      "observation_source": "expert action replay",
+      "task": "select_fruit",
+      "seed": 71,
+      "steps": 168,
+      "source_steps": 168,
+      "success": true,
+      "terminal": true,
+      "camera_frames": 169,
+      "max_abs_physics_state_error": 0.0,
+      "state_trace_matches": true,
+      "state_trace_atol": 1e-08,
+      "wall_seconds": 38.53
+    },
+    {
+      "source": "runs/stage2-expansion-04/take_out_cool_drink-71-screen/screening.h5",
+      "observation_source": "expert action replay",
+      "task": "take_out_cool_drink",
+      "seed": 71,
+      "steps": 512,
+      "source_steps": 512,
+      "success": true,
+      "terminal": true,
+      "camera_frames": 513,
+      "max_abs_physics_state_error": 0.0,
+      "state_trace_matches": true,
+      "state_trace_atol": 1e-08,
+      "wall_seconds": 156.25
+    },
+    {
+      "source": "runs/stage2-expansion-04/select_fruit-72-screen/screening.h5",
+      "observation_source": "expert action replay",
+      "task": "select_fruit",
+      "seed": 72,
+      "steps": 167,
+      "source_steps": 167,
+      "success": true,
+      "terminal": true,
+      "camera_frames": 168,
+      "max_abs_physics_state_error": 0.0,
+      "state_trace_matches": true,
+      "state_trace_atol": 1e-08,
+      "wall_seconds": 37.82
+    }
+  ],
+  "training_episodes_by_task": {
+    "select_fruit": 17,
+    "insert_flower": 8,
+    "take_out_cool_drink": 9
+  },
+  "training_frames_by_task": {
+    "select_fruit": 2566,
+    "insert_flower": 1382,
+    "take_out_cool_drink": 4478
+  },
+  "training_candidate_seed_range_inclusive": [
+    63,
+    72
+  ],
+  "target_episodes_per_task": 20,
+  "selected_tasks": [
+    "select_fruit",
+    "insert_flower",
+    "take_out_cool_drink"
+  ],
+  "allowed_state_drift": [],
+  "successful_retries": [],
+  "screening_outcomes_by_task": {
+    "select_fruit": {
+      "success": 10
+    },
+    "insert_flower": {
+      "expert_unsuccessful": 7,
+      "success": 3
+    },
+    "take_out_cool_drink": {
+      "expert_unsuccessful": 9,
+      "success": 1
+    }
+  },
+  "screening_attempts": [
+    {
+      "task": "select_fruit",
+      "seed": 63,
+      "exit_code": 0,
+      "outcome": "success",
+      "steps": 165,
+      "instruction": "Put the pear into the plate_seen",
+      "stages": [
+        {
+          "name": "pick",
+          "stage_success": true,
+          "steps_so_far": 89,
+          "success_condition": false
+        },
+        {
+          "name": "place",
+          "stage_success": true,
+          "steps_so_far": 165,
+          "success_condition": true
+        }
+      ],
+      "wall_seconds": 27.23,
+      "record": "runs/stage2-expansion-04/select_fruit-63-screen/expert.json"
+    },
+    {
+      "task": "select_fruit",
+      "seed": 64,
+      "exit_code": 0,
+      "outcome": "success",
+      "steps": 155,
+      "instruction": "Put the apple into the plate_seen",
+      "stages": [
+        {
+          "name": "pick",
+          "stage_success": true,
+          "steps_so_far": 85,
+          "success_condition": false
+        },
+        {
+          "name": "place",
+          "stage_success": true,
+          "steps_so_far": 155,
+          "success_condition": true
+        }
+      ],
+      "wall_seconds": 24.87,
+      "record": "runs/stage2-expansion-04/select_fruit-64-screen/expert.json"
+    },
+    {
+      "task": "select_fruit",
+      "seed": 65,
+      "exit_code": 0,
+      "outcome": "success",
+      "steps": 132,
+      "instruction": "Put the orange into the plate_seen",
+      "stages": [
+        {
+          "name": "pick",
+          "stage_success": true,
+          "steps_so_far": 71,
+          "success_condition": false
+        },
+        {
+          "name": "place",
+          "stage_success": true,
+          "steps_so_far": 132,
+          "success_condition": true
+        }
+      ],
+      "wall_seconds": 22.14,
+      "record": "runs/stage2-expansion-04/select_fruit-65-screen/expert.json"
+    },
+    {
+      "task": "select_fruit",
+      "seed": 66,
+      "exit_code": 0,
+      "outcome": "success",
+      "steps": 154,
+      "instruction": "Put the orange into the plate_seen",
+      "stages": [
+        {
+          "name": "pick",
+          "stage_success": true,
+          "steps_so_far": 68,
+          "success_condition": false
+        },
+        {
+          "name": "place",
+          "stage_success": true,
+          "steps_so_far": 154,
+          "success_condition": true
+        }
+      ],
+      "wall_seconds": 22.48,
+      "record": "runs/stage2-expansion-04/select_fruit-66-screen/expert.json"
+    },
+    {
+      "task": "select_fruit",
+      "seed": 67,
+      "exit_code": 0,
+      "outcome": "success",
+      "steps": 153,
+      "instruction": "Put the apple into the plate_seen",
+      "stages": [
+        {
+          "name": "pick",
+          "stage_success": true,
+          "steps_so_far": 101,
+          "success_condition": false
+        },
+        {
+          "name": "place",
+          "stage_success": true,
+          "steps_so_far": 153,
+          "success_condition": true
+        }
+      ],
+      "wall_seconds": 22.18,
+      "record": "runs/stage2-expansion-04/select_fruit-67-screen/expert.json"
+    },
+    {
+      "task": "select_fruit",
+      "seed": 68,
+      "exit_code": 0,
+      "outcome": "success",
+      "steps": 165,
+      "instruction": "Put the apple into the plate_seen",
+      "stages": [
+        {
+          "name": "pick",
+          "stage_success": true,
+          "steps_so_far": 80,
+          "success_condition": false
+        },
+        {
+          "name": "place",
+          "stage_success": true,
+          "steps_so_far": 165,
+          "success_condition": true
+        }
+      ],
+      "wall_seconds": 25.53,
+      "record": "runs/stage2-expansion-04/select_fruit-68-screen/expert.json"
+    },
+    {
+      "task": "select_fruit",
+      "seed": 69,
+      "exit_code": 0,
+      "outcome": "success",
+      "steps": 145,
+      "instruction": "Put the apple into the plate_seen",
+      "stages": [
+        {
+          "name": "pick",
+          "stage_success": true,
+          "steps_so_far": 63,
+          "success_condition": false
+        },
+        {
+          "name": "place",
+          "stage_success": true,
+          "steps_so_far": 145,
+          "success_condition": true
+        }
+      ],
+      "wall_seconds": 22.12,
+      "record": "runs/stage2-expansion-04/select_fruit-69-screen/expert.json"
+    },
+    {
+      "task": "select_fruit",
+      "seed": 70,
+      "exit_code": 0,
+      "outcome": "success",
+      "steps": 142,
+      "instruction": "Put the orange into the plate_seen",
+      "stages": [
+        {
+          "name": "pick",
+          "stage_success": true,
+          "steps_so_far": 64,
+          "success_condition": false
+        },
+        {
+          "name": "place",
+          "stage_success": true,
+          "steps_so_far": 142,
+          "success_condition": true
+        }
+      ],
+      "wall_seconds": 21.91,
+      "record": "runs/stage2-expansion-04/select_fruit-70-screen/expert.json"
+    },
+    {
+      "task": "select_fruit",
+      "seed": 71,
+      "exit_code": 0,
+      "outcome": "success",
+      "steps": 168,
+      "instruction": "Put the apple into the plate_seen",
+      "stages": [
+        {
+          "name": "pick",
+          "stage_success": true,
+          "steps_so_far": 91,
+          "success_condition": false
+        },
+        {
+          "name": "place",
+          "stage_success": true,
+          "steps_so_far": 168,
+          "success_condition": true
+        }
+      ],
+      "wall_seconds": 24.79,
+      "record": "runs/stage2-expansion-04/select_fruit-71-screen/expert.json"
+    },
+    {
+      "task": "select_fruit",
+      "seed": 72,
+      "exit_code": 0,
+      "outcome": "success",
+      "steps": 167,
+      "instruction": "Put the banana into the plate_seen",
+      "stages": [
+        {
+          "name": "pick",
+          "stage_success": false,
+          "steps_so_far": 82,
+          "success_condition": false
+        },
+        {
+          "name": "place",
+          "stage_success": true,
+          "steps_so_far": 167,
+          "success_condition": true
+        }
+      ],
+      "wall_seconds": 24.95,
+      "record": "runs/stage2-expansion-04/select_fruit-72-screen/expert.json"
+    },
+    {
+      "task": "insert_flower",
+      "seed": 63,
+      "exit_code": 1,
+      "outcome": "expert_unsuccessful",
+      "steps": 191,
+      "instruction": "Insert the tulip into the vase_seen.",
+      "stages": [
+        {
+          "name": "pick",
+          "stage_success": true,
+          "steps_so_far": 84,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": true,
+          "steps_so_far": 114,
+          "success_condition": false
+        },
+        {
+          "name": "moveto",
+          "stage_success": false,
+          "steps_so_far": 171,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": false,
+          "steps_so_far": 191,
+          "success_condition": false
+        }
+      ],
+      "wall_seconds": 35.95,
+      "record": "runs/stage2-expansion-04/insert_flower-63-screen/expert.json"
+    },
+    {
+      "task": "insert_flower",
+      "seed": 64,
+      "exit_code": 0,
+      "outcome": "success",
+      "steps": 179,
+      "instruction": "Insert the rose into the vase_seen.",
+      "stages": [
+        {
+          "name": "pick",
+          "stage_success": true,
+          "steps_so_far": 68,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": false,
+          "steps_so_far": 99,
+          "success_condition": false
+        },
+        {
+          "name": "moveto",
+          "stage_success": true,
+          "steps_so_far": 162,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": false,
+          "steps_so_far": 179,
+          "success_condition": true
+        }
+      ],
+      "wall_seconds": 39.24,
+      "record": "runs/stage2-expansion-04/insert_flower-64-screen/expert.json"
+    },
+    {
+      "task": "insert_flower",
+      "seed": 65,
+      "exit_code": 0,
+      "outcome": "success",
+      "steps": 183,
+      "instruction": "Insert the tulip into the vase_seen.",
+      "stages": [
+        {
+          "name": "pick",
+          "stage_success": true,
+          "steps_so_far": 79,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": true,
+          "steps_so_far": 110,
+          "success_condition": false
+        },
+        {
+          "name": "moveto",
+          "stage_success": true,
+          "steps_so_far": 166,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": false,
+          "steps_so_far": 183,
+          "success_condition": true
+        }
+      ],
+      "wall_seconds": 33.98,
+      "record": "runs/stage2-expansion-04/insert_flower-65-screen/expert.json"
+    },
+    {
+      "task": "insert_flower",
+      "seed": 66,
+      "exit_code": 1,
+      "outcome": "expert_unsuccessful",
+      "steps": 157,
+      "instruction": "Insert the tulip into the vase_seen.",
+      "stages": [
+        {
+          "name": "pick",
+          "stage_success": true,
+          "steps_so_far": 67,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": false,
+          "steps_so_far": 97,
+          "success_condition": false
+        },
+        {
+          "name": "moveto",
+          "stage_success": false,
+          "steps_so_far": 137,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": false,
+          "steps_so_far": 157,
+          "success_condition": false
+        }
+      ],
+      "wall_seconds": 33.63,
+      "record": "runs/stage2-expansion-04/insert_flower-66-screen/expert.json"
+    },
+    {
+      "task": "insert_flower",
+      "seed": 67,
+      "exit_code": 1,
+      "outcome": "expert_unsuccessful",
+      "steps": 191,
+      "instruction": "Insert the rose into the vase_seen.",
+      "stages": [
+        {
+          "name": "pick",
+          "stage_success": true,
+          "steps_so_far": 69,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": false,
+          "steps_so_far": 100,
+          "success_condition": false
+        },
+        {
+          "name": "moveto",
+          "stage_success": false,
+          "steps_so_far": 171,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": false,
+          "steps_so_far": 191,
+          "success_condition": false
+        }
+      ],
+      "wall_seconds": 30.73,
+      "record": "runs/stage2-expansion-04/insert_flower-67-screen/expert.json"
+    },
+    {
+      "task": "insert_flower",
+      "seed": 68,
+      "exit_code": 1,
+      "outcome": "expert_unsuccessful",
+      "steps": 191,
+      "instruction": "Insert the chrysanthemum into the vase_seen.",
+      "stages": [
+        {
+          "name": "pick",
+          "stage_success": false,
+          "steps_so_far": 71,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": false,
+          "steps_so_far": 102,
+          "success_condition": false
+        },
+        {
+          "name": "moveto",
+          "stage_success": true,
+          "steps_so_far": 171,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": false,
+          "steps_so_far": 191,
+          "success_condition": false
+        }
+      ],
+      "wall_seconds": 33.13,
+      "record": "runs/stage2-expansion-04/insert_flower-68-screen/expert.json"
+    },
+    {
+      "task": "insert_flower",
+      "seed": 69,
+      "exit_code": 0,
+      "outcome": "success",
+      "steps": 152,
+      "instruction": "Insert the rose into the vase_seen.",
+      "stages": [
+        {
+          "name": "pick",
+          "stage_success": true,
+          "steps_so_far": 66,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": false,
+          "steps_so_far": 97,
+          "success_condition": false
+        },
+        {
+          "name": "moveto",
+          "stage_success": false,
+          "steps_so_far": 135,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": false,
+          "steps_so_far": 152,
+          "success_condition": true
+        }
+      ],
+      "wall_seconds": 31.58,
+      "record": "runs/stage2-expansion-04/insert_flower-69-screen/expert.json"
+    },
+    {
+      "task": "insert_flower",
+      "seed": 70,
+      "exit_code": 1,
+      "outcome": "expert_unsuccessful",
+      "steps": 188,
+      "instruction": "Insert the tulip into the vase_seen.",
+      "stages": [
+        {
+          "name": "pick",
+          "stage_success": true,
+          "steps_so_far": 69,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": false,
+          "steps_so_far": 100,
+          "success_condition": false
+        },
+        {
+          "name": "moveto",
+          "stage_success": true,
+          "steps_so_far": 168,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": false,
+          "steps_so_far": 188,
+          "success_condition": false
+        }
+      ],
+      "wall_seconds": 31.63,
+      "record": "runs/stage2-expansion-04/insert_flower-70-screen/expert.json"
+    },
+    {
+      "task": "insert_flower",
+      "seed": 71,
+      "exit_code": 1,
+      "outcome": "expert_unsuccessful",
+      "steps": 175,
+      "instruction": "Insert the chrysanthemum into the vase_seen.",
+      "stages": [
+        {
+          "name": "pick",
+          "stage_success": false,
+          "steps_so_far": 79,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": false,
+          "steps_so_far": 109,
+          "success_condition": false
+        },
+        {
+          "name": "moveto",
+          "stage_success": false,
+          "steps_so_far": 155,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": false,
+          "steps_so_far": 175,
+          "success_condition": false
+        }
+      ],
+      "wall_seconds": 27.58,
+      "record": "runs/stage2-expansion-04/insert_flower-71-screen/expert.json"
+    },
+    {
+      "task": "insert_flower",
+      "seed": 72,
+      "exit_code": 1,
+      "outcome": "expert_unsuccessful",
+      "steps": 174,
+      "instruction": "Insert the chrysanthemum into the vase_seen.",
+      "stages": [
+        {
+          "name": "pick",
+          "stage_success": true,
+          "steps_so_far": 68,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": false,
+          "steps_so_far": 99,
+          "success_condition": false
+        },
+        {
+          "name": "moveto",
+          "stage_success": true,
+          "steps_so_far": 154,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": false,
+          "steps_so_far": 174,
+          "success_condition": false
+        }
+      ],
+      "wall_seconds": 28.02,
+      "record": "runs/stage2-expansion-04/insert_flower-72-screen/expert.json"
+    },
+    {
+      "task": "take_out_cool_drink",
+      "seed": 63,
+      "exit_code": 1,
+      "outcome": "expert_unsuccessful",
+      "steps": 532,
+      "instruction": "I am so thirsty after sport, I want to drink something healthy cool",
+      "stages": [
+        {
+          "name": "pick",
+          "stage_success": true,
+          "steps_so_far": 62,
+          "success_condition": false
+        },
+        {
+          "name": "open_door",
+          "stage_success": true,
+          "steps_so_far": 115,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": true,
+          "steps_so_far": 126,
+          "success_condition": false
+        },
+        {
+          "name": "pull",
+          "stage_success": true,
+          "steps_so_far": 141,
+          "success_condition": false
+        },
+        {
+          "name": "move_offset",
+          "stage_success": true,
+          "steps_so_far": 184,
+          "success_condition": false
+        },
+        {
+          "name": "pick",
+          "stage_success": false,
+          "steps_so_far": 263,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": false,
+          "steps_so_far": 273,
+          "success_condition": false
+        },
+        {
+          "name": "pull",
+          "stage_success": true,
+          "steps_so_far": 303,
+          "success_condition": false
+        },
+        {
+          "name": "place",
+          "stage_success": false,
+          "steps_so_far": 352,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": true,
+          "steps_so_far": 383,
+          "success_condition": false
+        },
+        {
+          "name": "pull",
+          "stage_success": false,
+          "steps_so_far": 403,
+          "success_condition": false
+        },
+        {
+          "name": "move_offset",
+          "stage_success": false,
+          "steps_so_far": 446,
+          "success_condition": false
+        },
+        {
+          "name": "pick",
+          "stage_success": true,
+          "steps_so_far": 489,
+          "success_condition": false
+        },
+        {
+          "name": "close_door",
+          "stage_success": false,
+          "steps_so_far": 532,
+          "success_condition": false
+        }
+      ],
+      "wall_seconds": 54.9,
+      "record": "runs/stage2-expansion-04/take_out_cool_drink-63-screen/expert.json"
+    },
+    {
+      "task": "take_out_cool_drink",
+      "seed": 64,
+      "exit_code": 1,
+      "outcome": "expert_unsuccessful",
+      "steps": 521,
+      "instruction": "I am so thirsty after sport, I want to drink something healthy cool",
+      "stages": [
+        {
+          "name": "pick",
+          "stage_success": true,
+          "steps_so_far": 56,
+          "success_condition": false
+        },
+        {
+          "name": "open_door",
+          "stage_success": true,
+          "steps_so_far": 109,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": true,
+          "steps_so_far": 120,
+          "success_condition": false
+        },
+        {
+          "name": "pull",
+          "stage_success": true,
+          "steps_so_far": 136,
+          "success_condition": false
+        },
+        {
+          "name": "move_offset",
+          "stage_success": true,
+          "steps_so_far": 173,
+          "success_condition": false
+        },
+        {
+          "name": "pick",
+          "stage_success": false,
+          "steps_so_far": 249,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": false,
+          "steps_so_far": 260,
+          "success_condition": false
+        },
+        {
+          "name": "pull",
+          "stage_success": true,
+          "steps_so_far": 290,
+          "success_condition": false
+        },
+        {
+          "name": "place",
+          "stage_success": false,
+          "steps_so_far": 325,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": true,
+          "steps_so_far": 356,
+          "success_condition": false
+        },
+        {
+          "name": "pull",
+          "stage_success": true,
+          "steps_so_far": 376,
+          "success_condition": false
+        },
+        {
+          "name": "move_offset",
+          "stage_success": false,
+          "steps_so_far": 435,
+          "success_condition": false
+        },
+        {
+          "name": "pick",
+          "stage_success": true,
+          "steps_so_far": 481,
+          "success_condition": false
+        },
+        {
+          "name": "close_door",
+          "stage_success": true,
+          "steps_so_far": 521,
+          "success_condition": false
+        }
+      ],
+      "wall_seconds": 60.17,
+      "record": "runs/stage2-expansion-04/take_out_cool_drink-64-screen/expert.json"
+    },
+    {
+      "task": "take_out_cool_drink",
+      "seed": 65,
+      "exit_code": 1,
+      "outcome": "expert_unsuccessful",
+      "steps": 507,
+      "instruction": "I am so thirsty after sport, I want to drink something healthy cool",
+      "stages": [
+        {
+          "name": "pick",
+          "stage_success": true,
+          "steps_so_far": 53,
+          "success_condition": false
+        },
+        {
+          "name": "open_door",
+          "stage_success": true,
+          "steps_so_far": 106,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": true,
+          "steps_so_far": 117,
+          "success_condition": false
+        },
+        {
+          "name": "pull",
+          "stage_success": true,
+          "steps_so_far": 132,
+          "success_condition": false
+        },
+        {
+          "name": "move_offset",
+          "stage_success": true,
+          "steps_so_far": 167,
+          "success_condition": false
+        },
+        {
+          "name": "pick",
+          "stage_success": false,
+          "steps_so_far": 252,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": false,
+          "steps_so_far": 263,
+          "success_condition": false
+        },
+        {
+          "name": "pull",
+          "stage_success": true,
+          "steps_so_far": 293,
+          "success_condition": false
+        },
+        {
+          "name": "place",
+          "stage_success": false,
+          "steps_so_far": 345,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": true,
+          "steps_so_far": 376,
+          "success_condition": false
+        },
+        {
+          "name": "pull",
+          "stage_success": false,
+          "steps_so_far": 396,
+          "success_condition": false
+        },
+        {
+          "name": "move_offset",
+          "stage_success": true,
+          "steps_so_far": 447,
+          "success_condition": false
+        },
+        {
+          "name": "pick",
+          "stage_success": true,
+          "steps_so_far": 506,
+          "success_condition": false
+        },
+        {
+          "name": "close_door",
+          "stage_success": true,
+          "steps_so_far": 507,
+          "success_condition": false
+        }
+      ],
+      "wall_seconds": 55.38,
+      "record": "runs/stage2-expansion-04/take_out_cool_drink-65-screen/expert.json"
+    },
+    {
+      "task": "take_out_cool_drink",
+      "seed": 66,
+      "exit_code": 1,
+      "outcome": "expert_unsuccessful",
+      "steps": 511,
+      "instruction": "I am so thirsty after sport, I want to drink something healthy cool",
+      "stages": [
+        {
+          "name": "pick",
+          "stage_success": true,
+          "steps_so_far": 62,
+          "success_condition": false
+        },
+        {
+          "name": "open_door",
+          "stage_success": true,
+          "steps_so_far": 115,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": true,
+          "steps_so_far": 126,
+          "success_condition": false
+        },
+        {
+          "name": "pull",
+          "stage_success": true,
+          "steps_so_far": 141,
+          "success_condition": false
+        },
+        {
+          "name": "move_offset",
+          "stage_success": true,
+          "steps_so_far": 191,
+          "success_condition": false
+        },
+        {
+          "name": "pick",
+          "stage_success": false,
+          "steps_so_far": 265,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": false,
+          "steps_so_far": 276,
+          "success_condition": false
+        },
+        {
+          "name": "pull",
+          "stage_success": true,
+          "steps_so_far": 306,
+          "success_condition": false
+        },
+        {
+          "name": "place",
+          "stage_success": false,
+          "steps_so_far": 352,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": true,
+          "steps_so_far": 382,
+          "success_condition": false
+        },
+        {
+          "name": "pull",
+          "stage_success": false,
+          "steps_so_far": 402,
+          "success_condition": false
+        },
+        {
+          "name": "move_offset",
+          "stage_success": true,
+          "steps_so_far": 444,
+          "success_condition": false
+        },
+        {
+          "name": "pick",
+          "stage_success": true,
+          "steps_so_far": 507,
+          "success_condition": false
+        },
+        {
+          "name": "close_door",
+          "stage_success": true,
+          "steps_so_far": 511,
+          "success_condition": false
+        }
+      ],
+      "wall_seconds": 52.37,
+      "record": "runs/stage2-expansion-04/take_out_cool_drink-66-screen/expert.json"
+    },
+    {
+      "task": "take_out_cool_drink",
+      "seed": 67,
+      "exit_code": 1,
+      "outcome": "expert_unsuccessful",
+      "steps": 528,
+      "instruction": "I am so thirsty after sport, I want to drink something healthy cool",
+      "stages": [
+        {
+          "name": "pick",
+          "stage_success": true,
+          "steps_so_far": 66,
+          "success_condition": false
+        },
+        {
+          "name": "open_door",
+          "stage_success": true,
+          "steps_so_far": 119,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": true,
+          "steps_so_far": 130,
+          "success_condition": false
+        },
+        {
+          "name": "pull",
+          "stage_success": true,
+          "steps_so_far": 145,
+          "success_condition": false
+        },
+        {
+          "name": "move_offset",
+          "stage_success": true,
+          "steps_so_far": 183,
+          "success_condition": false
+        },
+        {
+          "name": "pick",
+          "stage_success": true,
+          "steps_so_far": 261,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": false,
+          "steps_so_far": 271,
+          "success_condition": false
+        },
+        {
+          "name": "pull",
+          "stage_success": false,
+          "steps_so_far": 301,
+          "success_condition": false
+        },
+        {
+          "name": "place",
+          "stage_success": false,
+          "steps_so_far": 351,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": true,
+          "steps_so_far": 382,
+          "success_condition": false
+        },
+        {
+          "name": "pull",
+          "stage_success": true,
+          "steps_so_far": 402,
+          "success_condition": false
+        },
+        {
+          "name": "move_offset",
+          "stage_success": false,
+          "steps_so_far": 442,
+          "success_condition": false
+        },
+        {
+          "name": "pick",
+          "stage_success": true,
+          "steps_so_far": 485,
+          "success_condition": false
+        },
+        {
+          "name": "close_door",
+          "stage_success": false,
+          "steps_so_far": 528,
+          "success_condition": false
+        }
+      ],
+      "wall_seconds": 57.31,
+      "record": "runs/stage2-expansion-04/take_out_cool_drink-67-screen/expert.json"
+    },
+    {
+      "task": "take_out_cool_drink",
+      "seed": 68,
+      "exit_code": 1,
+      "outcome": "expert_unsuccessful",
+      "steps": 576,
+      "instruction": "I am so thirsty after sport, I want to drink something healthy cool",
+      "stages": [
+        {
+          "name": "pick",
+          "stage_success": true,
+          "steps_so_far": 56,
+          "success_condition": false
+        },
+        {
+          "name": "open_door",
+          "stage_success": true,
+          "steps_so_far": 109,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": true,
+          "steps_so_far": 120,
+          "success_condition": false
+        },
+        {
+          "name": "pull",
+          "stage_success": true,
+          "steps_so_far": 136,
+          "success_condition": false
+        },
+        {
+          "name": "move_offset",
+          "stage_success": true,
+          "steps_so_far": 178,
+          "success_condition": false
+        },
+        {
+          "name": "pick",
+          "stage_success": false,
+          "steps_so_far": 267,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": true,
+          "steps_so_far": 278,
+          "success_condition": false
+        },
+        {
+          "name": "pull",
+          "stage_success": false,
+          "steps_so_far": 309,
+          "success_condition": false
+        },
+        {
+          "name": "place",
+          "stage_success": false,
+          "steps_so_far": 385,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": true,
+          "steps_so_far": 416,
+          "success_condition": false
+        },
+        {
+          "name": "pull",
+          "stage_success": true,
+          "steps_so_far": 436,
+          "success_condition": false
+        },
+        {
+          "name": "move_offset",
+          "stage_success": false,
+          "steps_so_far": 506,
+          "success_condition": false
+        },
+        {
+          "name": "pick",
+          "stage_success": true,
+          "steps_so_far": 576,
+          "success_condition": false
+        },
+        {
+          "name": "close_door",
+          "stage_success": true,
+          "steps_so_far": 576,
+          "success_condition": false
+        }
+      ],
+      "wall_seconds": 65.95,
+      "record": "runs/stage2-expansion-04/take_out_cool_drink-68-screen/expert.json"
+    },
+    {
+      "task": "take_out_cool_drink",
+      "seed": 69,
+      "exit_code": 1,
+      "outcome": "expert_unsuccessful",
+      "steps": 529,
+      "instruction": "I am so thirsty after sport, I want to drink something healthy cool",
+      "stages": [
+        {
+          "name": "pick",
+          "stage_success": true,
+          "steps_so_far": 53,
+          "success_condition": false
+        },
+        {
+          "name": "open_door",
+          "stage_success": true,
+          "steps_so_far": 106,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": true,
+          "steps_so_far": 117,
+          "success_condition": false
+        },
+        {
+          "name": "pull",
+          "stage_success": true,
+          "steps_so_far": 132,
+          "success_condition": false
+        },
+        {
+          "name": "move_offset",
+          "stage_success": true,
+          "steps_so_far": 169,
+          "success_condition": false
+        },
+        {
+          "name": "pick",
+          "stage_success": false,
+          "steps_so_far": 246,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": false,
+          "steps_so_far": 257,
+          "success_condition": false
+        },
+        {
+          "name": "pull",
+          "stage_success": false,
+          "steps_so_far": 287,
+          "success_condition": false
+        },
+        {
+          "name": "place",
+          "stage_success": false,
+          "steps_so_far": 353,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": true,
+          "steps_so_far": 384,
+          "success_condition": false
+        },
+        {
+          "name": "pull",
+          "stage_success": true,
+          "steps_so_far": 404,
+          "success_condition": false
+        },
+        {
+          "name": "move_offset",
+          "stage_success": false,
+          "steps_so_far": 444,
+          "success_condition": false
+        },
+        {
+          "name": "pick",
+          "stage_success": true,
+          "steps_so_far": 489,
+          "success_condition": false
+        },
+        {
+          "name": "close_door",
+          "stage_success": true,
+          "steps_so_far": 529,
+          "success_condition": false
+        }
+      ],
+      "wall_seconds": 52.45,
+      "record": "runs/stage2-expansion-04/take_out_cool_drink-69-screen/expert.json"
+    },
+    {
+      "task": "take_out_cool_drink",
+      "seed": 70,
+      "exit_code": 1,
+      "outcome": "expert_unsuccessful",
+      "steps": 513,
+      "instruction": "I am so thirsty after sport, I want to drink something healthy cool",
+      "stages": [
+        {
+          "name": "pick",
+          "stage_success": true,
+          "steps_so_far": 59,
+          "success_condition": false
+        },
+        {
+          "name": "open_door",
+          "stage_success": true,
+          "steps_so_far": 112,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": true,
+          "steps_so_far": 123,
+          "success_condition": false
+        },
+        {
+          "name": "pull",
+          "stage_success": true,
+          "steps_so_far": 138,
+          "success_condition": false
+        },
+        {
+          "name": "move_offset",
+          "stage_success": true,
+          "steps_so_far": 173,
+          "success_condition": false
+        },
+        {
+          "name": "pick",
+          "stage_success": false,
+          "steps_so_far": 258,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": false,
+          "steps_so_far": 269,
+          "success_condition": false
+        },
+        {
+          "name": "pull",
+          "stage_success": true,
+          "steps_so_far": 299,
+          "success_condition": false
+        },
+        {
+          "name": "place",
+          "stage_success": false,
+          "steps_so_far": 341,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": true,
+          "steps_so_far": 372,
+          "success_condition": false
+        },
+        {
+          "name": "pull",
+          "stage_success": true,
+          "steps_so_far": 392,
+          "success_condition": false
+        },
+        {
+          "name": "move_offset",
+          "stage_success": false,
+          "steps_so_far": 436,
+          "success_condition": false
+        },
+        {
+          "name": "pick",
+          "stage_success": true,
+          "steps_so_far": 476,
+          "success_condition": false
+        },
+        {
+          "name": "close_door",
+          "stage_success": true,
+          "steps_so_far": 513,
+          "success_condition": false
+        }
+      ],
+      "wall_seconds": 50.76,
+      "record": "runs/stage2-expansion-04/take_out_cool_drink-70-screen/expert.json"
+    },
+    {
+      "task": "take_out_cool_drink",
+      "seed": 71,
+      "exit_code": 0,
+      "outcome": "success",
+      "steps": 512,
+      "instruction": "I am so thirsty after sport, I want to drink something healthy cool",
+      "stages": [
+        {
+          "name": "pick",
+          "stage_success": true,
+          "steps_so_far": 60,
+          "success_condition": false
+        },
+        {
+          "name": "open_door",
+          "stage_success": true,
+          "steps_so_far": 113,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": true,
+          "steps_so_far": 124,
+          "success_condition": false
+        },
+        {
+          "name": "pull",
+          "stage_success": true,
+          "steps_so_far": 139,
+          "success_condition": false
+        },
+        {
+          "name": "move_offset",
+          "stage_success": true,
+          "steps_so_far": 178,
+          "success_condition": false
+        },
+        {
+          "name": "pick",
+          "stage_success": true,
+          "steps_so_far": 258,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": false,
+          "steps_so_far": 268,
+          "success_condition": false
+        },
+        {
+          "name": "pull",
+          "stage_success": false,
+          "steps_so_far": 298,
+          "success_condition": false
+        },
+        {
+          "name": "place",
+          "stage_success": false,
+          "steps_so_far": 346,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": true,
+          "steps_so_far": 377,
+          "success_condition": false
+        },
+        {
+          "name": "pull",
+          "stage_success": true,
+          "steps_so_far": 397,
+          "success_condition": false
+        },
+        {
+          "name": "move_offset",
+          "stage_success": true,
+          "steps_so_far": 437,
+          "success_condition": false
+        },
+        {
+          "name": "pick",
+          "stage_success": true,
+          "steps_so_far": 485,
+          "success_condition": false
+        },
+        {
+          "name": "close_door",
+          "stage_success": true,
+          "steps_so_far": 512,
+          "success_condition": true
+        }
+      ],
+      "wall_seconds": 59.89,
+      "record": "runs/stage2-expansion-04/take_out_cool_drink-71-screen/expert.json"
+    },
+    {
+      "task": "take_out_cool_drink",
+      "seed": 72,
+      "exit_code": 1,
+      "outcome": "expert_unsuccessful",
+      "steps": 522,
+      "instruction": "I am so thirsty after sport, I want to drink something healthy cool",
+      "stages": [
+        {
+          "name": "pick",
+          "stage_success": true,
+          "steps_so_far": 61,
+          "success_condition": false
+        },
+        {
+          "name": "open_door",
+          "stage_success": true,
+          "steps_so_far": 114,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": true,
+          "steps_so_far": 125,
+          "success_condition": false
+        },
+        {
+          "name": "pull",
+          "stage_success": true,
+          "steps_so_far": 140,
+          "success_condition": false
+        },
+        {
+          "name": "move_offset",
+          "stage_success": true,
+          "steps_so_far": 176,
+          "success_condition": false
+        },
+        {
+          "name": "pick",
+          "stage_success": false,
+          "steps_so_far": 267,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": false,
+          "steps_so_far": 277,
+          "success_condition": false
+        },
+        {
+          "name": "pull",
+          "stage_success": false,
+          "steps_so_far": 307,
+          "success_condition": false
+        },
+        {
+          "name": "place",
+          "stage_success": false,
+          "steps_so_far": 334,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": true,
+          "steps_so_far": 364,
+          "success_condition": false
+        },
+        {
+          "name": "pull",
+          "stage_success": true,
+          "steps_so_far": 384,
+          "success_condition": false
+        },
+        {
+          "name": "move_offset",
+          "stage_success": false,
+          "steps_so_far": 430,
+          "success_condition": false
+        },
+        {
+          "name": "pick",
+          "stage_success": true,
+          "steps_so_far": 479,
+          "success_condition": false
+        },
+        {
+          "name": "close_door",
+          "stage_success": false,
+          "steps_so_far": 522,
+          "success_condition": false
+        }
+      ],
+      "wall_seconds": 59.19,
+      "record": "runs/stage2-expansion-04/take_out_cool_drink-72-screen/expert.json"
+    }
+  ],
+  "replay_failures": [],
+  "checked_distinct_initializations_including_held_out": 39,
+  "normalization_sha256": "a5614aa223a88078c9b095f4dd716de1538f3ef44d188788de6e988b4e34bdb3"
+}

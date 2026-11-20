@@ -1,0 +1,194 @@
+{
+  "cases": [
+    {
+      "seed": 1101,
+      "initial_state_sha256": "e9fe4dc2d31d377b0cae74e0a9ef076269e288ffe351f044af9bb08bc7230022",
+      "initial_rgb_sha256": "96eca9ec40cfb012c23f70b1a2ce459170a5cf8624106cc3982ccbcdcd1c9ced",
+      "prompts": {
+        "official": {
+          "instruction": "Put the pear into the plate_seen",
+          "target": "pear"
+        },
+        "paraphrase": {
+          "instruction": "Please place the pear on the plate.",
+          "target": "pear"
+        },
+        "alternate_target": {
+          "instruction": "Put the banana into the plate_seen",
+          "target": "banana"
+        }
+      }
+    },
+    {
+      "seed": 1102,
+      "initial_state_sha256": "9f04803e03323f177af3631d0e2d74109d9ca546f592888a6e0405db97e99a3d",
+      "initial_rgb_sha256": "324665428baad73e0b8868648b6e753516bf76f3f1605a108f269d0724731381",
+      "prompts": {
+        "official": {
+          "instruction": "Put the banana into the plate_seen",
+          "target": "banana"
+        },
+        "paraphrase": {
+          "instruction": "Please place the banana on the plate.",
+          "target": "banana"
+        },
+        "alternate_target": {
+          "instruction": "Put the mango into the plate_seen",
+          "target": "mango"
+        }
+      }
+    },
+    {
+      "seed": 1103,
+      "initial_state_sha256": "21db60bf0a274f064034259326f93716b6564986f75e3cbddf3f43e12ff94f2e",
+      "initial_rgb_sha256": "694f1a8c76df9ea91a0d44f5ec13660139aceb412935d217591b8052327032f9",
+      "prompts": {
+        "official": {
+          "instruction": "Put the pear into the plate_seen",
+          "target": "pear"
+        },
+        "paraphrase": {
+          "instruction": "Please place the pear on the plate.",
+          "target": "pear"
+        },
+        "alternate_target": {
+          "instruction": "Put the apple into the plate_seen",
+          "target": "apple"
+        }
+      }
+    },
+    {
+      "seed": 1104,
+      "initial_state_sha256": "c39412fd2ed81c4b4b94e1b0be12bcb88ffa6adf97f79be4c5e315ddf4fd5900",
+      "initial_rgb_sha256": "550c59d77dc8cca2e3052b479c5f6ae06c85ed56ae8633f7bfd77a13ad0dbe32",
+      "prompts": {
+        "official": {
+          "instruction": "Put the orange into the plate_seen",
+          "target": "orange"
+        },
+        "paraphrase": {
+          "instruction": "Please place the orange on the plate.",
+          "target": "orange"
+        },
+        "alternate_target": {
+          "instruction": "Put the apple into the plate_seen",
+          "target": "apple"
+        }
+      }
+    },
+    {
+      "seed": 1105,
+      "initial_state_sha256": "8d711231a39549c2787e0ac36729fec682e0a7d580dd8429481854802df96b21",
+      "initial_rgb_sha256": "d45e7a33ecb58289f75393a17f264112a89f38bb844e95b04166a9d9e36d102a",
+      "prompts": {
+        "official": {
+          "instruction": "Put the apple into the plate_seen",
+          "target": "apple"
+        },
+        "paraphrase": {
+          "instruction": "Please place the apple on the plate.",
+          "target": "apple"
+        },
+        "alternate_target": {
+          "instruction": "Put the kiwi into the plate_seen",
+          "target": "kiwi"
+        }
+      }
+    },
+    {
+      "seed": 1106,
+      "initial_state_sha256": "947d45da8410d2ccbfedc40d765e612cdd55b59a4301dd5768dba4e8d236166d",
+      "initial_rgb_sha256": "89dbdc1c15d433029bb0a6fc3da3c97369e02a188973ce38f32e3338c397bd8d",
+      "prompts": {
+        "official": {
+          "instruction": "Put the pear into the plate_seen",
+          "target": "pear"
+        },
+        "paraphrase": {
+          "instruction": "Please place the pear on the plate.",
+          "target": "pear"
+        },
+        "alternate_target": {
+          "instruction": "Put the apple into the plate_seen",
+          "target": "apple"
+        }
+      }
+    },
+    {
+      "seed": 1107,
+      "initial_state_sha256": "ee546044b724f380a9819731b0ad39a2b2e934f23e3adb5b334ff2cf8ac53309",
+      "initial_rgb_sha256": "d8d05e6e4ca0086ab48509f7d34f8d90bf7b21873ddf73a360894689ce78f15e",
+      "prompts": {
+        "official": {
+          "instruction": "Put the pear into the plate_seen",
+          "target": "pear"
+        },
+        "paraphrase": {
+          "instruction": "Please place the pear on the plate.",
+          "target": "pear"
+        },
+        "alternate_target": {
+          "instruction": "Put the apple into the plate_seen",
+          "target": "apple"
+        }
+      }
+    },
+    {
+      "seed": 1108,
+      "initial_state_sha256": "1cb08d963d3dc5e87e5a03636797e1993cb729e7ebe4c9514e354d253c6aab37",
+      "initial_rgb_sha256": "a876dc745f80b5190d9bd35128e19f41835321fe41a7bac0bdcc24314c3c1144",
+      "prompts": {
+        "official": {
+          "instruction": "Put the orange into the plate_seen",
+          "target": "orange"
+        },
+        "paraphrase": {
+          "instruction": "Please place the orange on the plate.",
+          "target": "orange"
+        },
+        "alternate_target": {
+          "instruction": "Put the apple into the plate_seen",
+          "target": "apple"
+        }
+      }
+    },
+    {
+      "seed": 1109,
+      "initial_state_sha256": "a96cb1b13e27047ddb5cabeed2252a90ab6d9da426bcd1d0c7e1cc95afb6c61f",
+      "initial_rgb_sha256": "526e3e09c5d60038c98699944dc2b4ae91b2764291d9bce8905bc5856ce4e65c",
+      "prompts": {
+        "official": {
+          "instruction": "Put the apple into the plate_seen",
+          "target": "apple"
+        },
+        "paraphrase": {
+          "instruction": "Please place the apple on the plate.",
+          "target": "apple"
+        },
+        "alternate_target": {
+          "instruction": "Put the banana into the plate_seen",
+          "target": "banana"
+        }
+      }
+    },
+    {
+      "seed": 1110,
+      "initial_state_sha256": "a800eb59615e023aa138fc6b1edb6b181e2cc49ad3369bf09e6951092626e620",
+      "initial_rgb_sha256": "c906767e5210e51209a71d7dcf292616f1180fba66a48a619ea70c142a351bcb",
+      "prompts": {
+        "official": {
+          "instruction": "Put the banana into the plate_seen",
+          "target": "banana"
+        },
+        "paraphrase": {
+          "instruction": "Please place the banana on the plate.",
+          "target": "banana"
+        },
+        "alternate_target": {
+          "instruction": "Put the lemon into the plate_seen",
+          "target": "lemon"
+        }
+      }
+    }
+  ]
+}

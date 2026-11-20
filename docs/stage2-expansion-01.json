@@ -1,0 +1,475 @@
+{
+  "action_budget": 600,
+  "wall_time_limit_s": 240,
+  "fixed_training_candidate_seeds": [
+    53,
+    54,
+    55
+  ],
+  "screening_attempts": [
+    {
+      "task": "select_fruit",
+      "seed": 53,
+      "exit_code": 0,
+      "outcome": "success",
+      "steps": 163,
+      "instruction": "Put the pear into the plate_seen",
+      "stages": [
+        {
+          "name": "pick",
+          "stage_success": true,
+          "steps_so_far": 81,
+          "success_condition": false
+        },
+        {
+          "name": "place",
+          "stage_success": true,
+          "steps_so_far": 163,
+          "success_condition": true
+        }
+      ],
+      "wall_seconds": 29.55,
+      "record": "runs/stage2-expansion-01/select_fruit-53-screen/expert.json"
+    },
+    {
+      "task": "insert_flower",
+      "seed": 53,
+      "exit_code": 1,
+      "outcome": "expert_unsuccessful",
+      "steps": 164,
+      "instruction": "Insert the tulip into the vase_seen.",
+      "stages": [
+        {
+          "name": "pick",
+          "stage_success": true,
+          "steps_so_far": 68,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": false,
+          "steps_so_far": 98,
+          "success_condition": false
+        },
+        {
+          "name": "moveto",
+          "stage_success": false,
+          "steps_so_far": 144,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": false,
+          "steps_so_far": 164,
+          "success_condition": false
+        }
+      ],
+      "wall_seconds": 35.87,
+      "record": "runs/stage2-expansion-01/insert_flower-53-screen/expert.json"
+    },
+    {
+      "task": "take_out_cool_drink",
+      "seed": 53,
+      "exit_code": 1,
+      "record": "runs/stage2-expansion-01/take_out_cool_drink-53-screen.log",
+      "outcome": "action_budget_exhausted",
+      "steps": 600,
+      "instruction": "I am so thirsty after sport, I want to drink something healthy cool",
+      "last_skill_started": "close_door"
+    },
+    {
+      "task": "select_fruit",
+      "seed": 54,
+      "exit_code": 0,
+      "outcome": "success",
+      "steps": 164,
+      "instruction": "Put the pear into the plate_seen",
+      "stages": [
+        {
+          "name": "pick",
+          "stage_success": true,
+          "steps_so_far": 86,
+          "success_condition": false
+        },
+        {
+          "name": "place",
+          "stage_success": true,
+          "steps_so_far": 164,
+          "success_condition": true
+        }
+      ],
+      "wall_seconds": 25.57,
+      "record": "runs/stage2-expansion-01/select_fruit-54-screen/expert.json"
+    },
+    {
+      "task": "insert_flower",
+      "seed": 54,
+      "exit_code": 1,
+      "outcome": "expert_unsuccessful",
+      "steps": 147,
+      "instruction": "Insert the tulip into the vase_seen.",
+      "stages": [
+        {
+          "name": "pick",
+          "stage_success": false,
+          "steps_so_far": 66,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": true,
+          "steps_so_far": 96,
+          "success_condition": false
+        },
+        {
+          "name": "moveto",
+          "stage_success": true,
+          "steps_so_far": 127,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": false,
+          "steps_so_far": 147,
+          "success_condition": false
+        }
+      ],
+      "wall_seconds": 28.82,
+      "record": "runs/stage2-expansion-01/insert_flower-54-screen/expert.json"
+    },
+    {
+      "task": "take_out_cool_drink",
+      "seed": 54,
+      "exit_code": 139,
+      "record": "runs/stage2-expansion-01/take_out_cool_drink-54-screen.log",
+      "outcome": "simulator_process_crash",
+      "signal": "SIGSEGV",
+      "last_skill_started": "move_offset"
+    },
+    {
+      "task": "select_fruit",
+      "seed": 55,
+      "exit_code": 0,
+      "outcome": "success",
+      "steps": 138,
+      "instruction": "Put the banana into the plate_seen",
+      "stages": [
+        {
+          "name": "pick",
+          "stage_success": false,
+          "steps_so_far": 83,
+          "success_condition": false
+        },
+        {
+          "name": "place",
+          "stage_success": true,
+          "steps_so_far": 138,
+          "success_condition": true
+        }
+      ],
+      "wall_seconds": 23.2,
+      "record": "runs/stage2-expansion-01/select_fruit-55-screen/expert.json"
+    },
+    {
+      "task": "insert_flower",
+      "seed": 55,
+      "exit_code": 0,
+      "outcome": "success",
+      "steps": 154,
+      "instruction": "Insert the rose into the vase_seen.",
+      "stages": [
+        {
+          "name": "pick",
+          "stage_success": true,
+          "steps_so_far": 68,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": false,
+          "steps_so_far": 99,
+          "success_condition": false
+        },
+        {
+          "name": "moveto",
+          "stage_success": false,
+          "steps_so_far": 138,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": false,
+          "steps_so_far": 154,
+          "success_condition": true
+        }
+      ],
+      "wall_seconds": 27.24,
+      "record": "runs/stage2-expansion-01/insert_flower-55-screen/expert.json"
+    },
+    {
+      "task": "take_out_cool_drink",
+      "seed": 55,
+      "exit_code": 1,
+      "outcome": "expert_unsuccessful",
+      "steps": 533,
+      "instruction": "I am so thirsty after sport, I want to drink something healthy cool",
+      "stages": [
+        {
+          "name": "pick",
+          "stage_success": true,
+          "steps_so_far": 54,
+          "success_condition": false
+        },
+        {
+          "name": "open_door",
+          "stage_success": true,
+          "steps_so_far": 107,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": true,
+          "steps_so_far": 118,
+          "success_condition": false
+        },
+        {
+          "name": "pull",
+          "stage_success": true,
+          "steps_so_far": 133,
+          "success_condition": false
+        },
+        {
+          "name": "move_offset",
+          "stage_success": true,
+          "steps_so_far": 181,
+          "success_condition": false
+        },
+        {
+          "name": "pick",
+          "stage_success": true,
+          "steps_so_far": 266,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": false,
+          "steps_so_far": 276,
+          "success_condition": false
+        },
+        {
+          "name": "pull",
+          "stage_success": false,
+          "steps_so_far": 306,
+          "success_condition": false
+        },
+        {
+          "name": "place",
+          "stage_success": false,
+          "steps_so_far": 343,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": true,
+          "steps_so_far": 373,
+          "success_condition": false
+        },
+        {
+          "name": "pull",
+          "stage_success": false,
+          "steps_so_far": 393,
+          "success_condition": false
+        },
+        {
+          "name": "move_offset",
+          "stage_success": false,
+          "steps_so_far": 435,
+          "success_condition": false
+        },
+        {
+          "name": "pick",
+          "stage_success": true,
+          "steps_so_far": 490,
+          "success_condition": false
+        },
+        {
+          "name": "close_door",
+          "stage_success": false,
+          "steps_so_far": 533,
+          "success_condition": false
+        }
+      ],
+      "wall_seconds": 52.65,
+      "record": "runs/stage2-expansion-01/take_out_cool_drink-55-screen/expert.json"
+    }
+  ],
+  "new_rgb_replays": [
+    {
+      "source": "runs/stage2/followup-take_out_cool_drink-52/screening.h5",
+      "observation_source": "expert action replay",
+      "task": "take_out_cool_drink",
+      "seed": 52,
+      "steps": 501,
+      "success": true,
+      "terminal": true,
+      "camera_frames": 502,
+      "max_abs_physics_state_error": 0.0,
+      "wall_seconds": 89.5
+    },
+    {
+      "source": "runs/stage2-expansion-01/select_fruit-53-screen/screening.h5",
+      "observation_source": "expert action replay",
+      "task": "select_fruit",
+      "seed": 53,
+      "steps": 163,
+      "success": true,
+      "terminal": true,
+      "camera_frames": 164,
+      "max_abs_physics_state_error": 0.0,
+      "wall_seconds": 36.99
+    },
+    {
+      "source": "runs/stage2-expansion-01/select_fruit-54-screen/screening.h5",
+      "observation_source": "expert action replay",
+      "task": "select_fruit",
+      "seed": 54,
+      "steps": 164,
+      "success": true,
+      "terminal": true,
+      "camera_frames": 165,
+      "max_abs_physics_state_error": 0.0,
+      "wall_seconds": 38.88
+    },
+    {
+      "source": "runs/stage2-expansion-01/select_fruit-55-screen/screening.h5",
+      "observation_source": "expert action replay",
+      "task": "select_fruit",
+      "seed": 55,
+      "steps": 138,
+      "success": true,
+      "terminal": true,
+      "camera_frames": 139,
+      "max_abs_physics_state_error": 0.0,
+      "wall_seconds": 33.66
+    },
+    {
+      "source": "runs/stage2-expansion-01/insert_flower-55-screen/screening.h5",
+      "observation_source": "expert action replay",
+      "task": "insert_flower",
+      "seed": 55,
+      "steps": 154,
+      "success": true,
+      "terminal": true,
+      "camera_frames": 155,
+      "max_abs_physics_state_error": 0.0,
+      "wall_seconds": 47.84
+    }
+  ],
+  "training_split": {
+    "episodes": 8,
+    "frames": 1910,
+    "all_frames_verified": true,
+    "action_chunks": {
+      "horizon": 50,
+      "positions_verified": 24
+    },
+    "episodes_detail": [
+      {
+        "source": "runs/select_fruit-42/episode.h5",
+        "split": "train",
+        "task": "select_fruit",
+        "seed": 42,
+        "instruction": "Put the apple into the plate_seen",
+        "frames": 132,
+        "initial_state_sha256": "d6c5c851d32135ffa16ce7e7a5da550fa55aae608e14a3807b7416c6aeccf75f"
+      },
+      {
+        "source": "runs/stage2/insert_flower-42-retry/episode.h5",
+        "split": "train",
+        "task": "insert_flower",
+        "seed": 42,
+        "instruction": "Insert the rose into the vase_seen.",
+        "frames": 181,
+        "initial_state_sha256": "ef0e26dad0d344397e4bcdd3e4a410112bc8b88699866e03f5182a9507d8c134"
+      },
+      {
+        "source": "runs/stage2/take_out_cool_drink-43-screen-success/episode.h5",
+        "split": "train",
+        "task": "take_out_cool_drink",
+        "seed": 43,
+        "instruction": "I am so thirsty after sport, I want to drink something healthy cool",
+        "frames": 477,
+        "initial_state_sha256": "15fdb0fe1784f62559ffa00619f970eac9412541aac0e86f0a69493531786d4a"
+      },
+      {
+        "source": "runs/stage2-expansion-01/take_out_cool_drink-52-rgb/episode.h5",
+        "split": "train",
+        "task": "take_out_cool_drink",
+        "seed": 52,
+        "instruction": "I am so thirsty after sport, I want to drink something healthy cool",
+        "frames": 501,
+        "initial_state_sha256": "70d954feb90de42a7f9e50efba0c9252223ca9e90d3608d1fee0e8dbe08a4023"
+      },
+      {
+        "source": "runs/stage2-expansion-01/select_fruit-53-rgb/episode.h5",
+        "split": "train",
+        "task": "select_fruit",
+        "seed": 53,
+        "instruction": "Put the pear into the plate_seen",
+        "frames": 163,
+        "initial_state_sha256": "b18fe5e9eefbcbe0d152a02d6dbf849a9f2ea104b6de1361239b04684cb021f9"
+      },
+      {
+        "source": "runs/stage2-expansion-01/select_fruit-54-rgb/episode.h5",
+        "split": "train",
+        "task": "select_fruit",
+        "seed": 54,
+        "instruction": "Put the pear into the plate_seen",
+        "frames": 164,
+        "initial_state_sha256": "545d0d89ebe1dca2d35915894416ed4b2f0db830d9da408e7652dadead0c6229"
+      },
+      {
+        "source": "runs/stage2-expansion-01/select_fruit-55-rgb/episode.h5",
+        "split": "train",
+        "task": "select_fruit",
+        "seed": 55,
+        "instruction": "Put the banana into the plate_seen",
+        "frames": 138,
+        "initial_state_sha256": "210f272ad5dad4ced2612d64628cfa754adc1789239a7981d12699b18a121f7d"
+      },
+      {
+        "source": "runs/stage2-expansion-01/insert_flower-55-rgb/episode.h5",
+        "split": "train",
+        "task": "insert_flower",
+        "seed": 55,
+        "instruction": "Insert the rose into the vase_seen.",
+        "frames": 154,
+        "initial_state_sha256": "fb9d126cdcde658dd6a7abf668c4b4a1fb2ba66cd1cda1fe5410608af6c69ec3"
+      }
+    ]
+  },
+  "training_episodes_by_task": {
+    "select_fruit": 4,
+    "insert_flower": 2,
+    "take_out_cool_drink": 2
+  },
+  "training_frames_by_task": {
+    "select_fruit": 597,
+    "insert_flower": 335,
+    "take_out_cool_drink": 978
+  },
+  "training_instruction_counts": {
+    "select_fruit": {
+      "Put the apple into the plate_seen": 1,
+      "Put the pear into the plate_seen": 2,
+      "Put the banana into the plate_seen": 1
+    },
+    "insert_flower": {
+      "Insert the rose into the vase_seen.": 2
+    },
+    "take_out_cool_drink": {
+      "I am so thirsty after sport, I want to drink something healthy cool": 2
+    }
+  },
+  "unique_task_seed_and_initial_state_across_pilot_splits": 13
+}

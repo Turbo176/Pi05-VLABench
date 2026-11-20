@@ -1,0 +1,129 @@
+{
+  "scope": "LeRobot v2.1 and fresh MuJoCo, before OpenPI model transforms",
+  "fps": 10,
+  "cameras": {
+    "base_0_rgb": "forward",
+    "left_wrist_0_rgb": "franka/Franka_wrist_cam",
+    "right_wrist_0_rgb": null
+  },
+  "action_window": 50,
+  "replayed_steps": 790,
+  "matched_samples": 9,
+  "episodes": [
+    {
+      "task": "select_fruit",
+      "seed": 42,
+      "instruction": "Put the apple into the plate_seen",
+      "steps": 132,
+      "matched_frames": [
+        0,
+        66,
+        131
+      ],
+      "replay_success": true,
+      "max_abs_physics_state_error": 0.0
+    },
+    {
+      "task": "insert_flower",
+      "seed": 42,
+      "instruction": "Insert the rose into the vase_seen.",
+      "steps": 181,
+      "matched_frames": [
+        0,
+        90,
+        180
+      ],
+      "replay_success": true,
+      "max_abs_physics_state_error": 0.0
+    },
+    {
+      "task": "take_out_cool_drink",
+      "seed": 43,
+      "instruction": "I am so thirsty after sport, I want to drink something healthy cool",
+      "steps": 477,
+      "matched_frames": [
+        0,
+        238,
+        476
+      ],
+      "replay_success": true,
+      "max_abs_physics_state_error": 0.0
+    }
+  ],
+  "state_ranges_rad_or_m": {
+    "joint1": {
+      "min": -0.9777367727113029,
+      "max": 2.52239891413689
+    },
+    "joint2": {
+      "min": -1.3308789732036512,
+      "max": 1.5709698902302236
+    },
+    "joint3": {
+      "min": -2.853879259205744,
+      "max": 0.8386297066036362
+    },
+    "joint4": {
+      "min": -3.118790358909955,
+      "max": -1.5329285247750533
+    },
+    "joint5": {
+      "min": -2.4433156613933567,
+      "max": 3.6447547094463872
+    },
+    "joint6": {
+      "min": 1.3684554622876783,
+      "max": 5.1113388377330935
+    },
+    "joint7": {
+      "min": -5.904107129341787,
+      "max": 1.7704269607153444
+    },
+    "finger_joint1": {
+      "min": -0.002826919079088639,
+      "max": 0.04012684353672844
+    },
+    "finger_joint2": {
+      "min": 0.0015308334667503236,
+      "max": 0.04008851574758113
+    }
+  },
+  "absolute_target_ranges_rad_or_m": {
+    "joint1": {
+      "min": -0.9797136000225777,
+      "max": 2.5309187477562443
+    },
+    "joint2": {
+      "min": -1.329151142908875,
+      "max": 1.5691222989956297
+    },
+    "joint3": {
+      "min": -2.866623035144566,
+      "max": 0.8394684644804578
+    },
+    "joint4": {
+      "min": -3.1180909016136935,
+      "max": -1.5008376667339798
+    },
+    "joint5": {
+      "min": -2.393572096860321,
+      "max": 3.6574735294425738
+    },
+    "joint6": {
+      "min": 1.369423852822397,
+      "max": 5.3137764816539095
+    },
+    "joint7": {
+      "min": -5.9108218735064435,
+      "max": 1.7752604903981406
+    },
+    "finger_joint1": {
+      "min": 0.0,
+      "max": 0.06
+    },
+    "finger_joint2": {
+      "min": 0.0,
+      "max": 0.06
+    }
+  }
+}

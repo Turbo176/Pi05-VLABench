@@ -1,8 +1,11 @@
 """Export successful VLABench episodes and validate every LeRobot frame."""
 import argparse
+from contextlib import contextmanager
 import hashlib
 import json
 from pathlib import Path
+import shutil
+import tempfile
 
 import h5py
 import numpy as np
@@ -68,12 +71,41 @@ def schema():
     return features
 
 
-def create_split(dataset_class, root, repo_id, records):
-    dataset = dataset_class.create(repo_id, fps=FPS, root=root, features=schema(), use_videos=False,
-                                    robot_type='franka', video_backend='pyav')
+@contextmanager
+def open_source(path, scratch):
+    if scratch is None:
+        with h5py.File(path) as source:
+            yield source
+        return
+    with tempfile.TemporaryDirectory(prefix='episode-', dir=scratch) as directory:
+        staged = Path(directory) / 'episode.h5'
+        shutil.copyfile(path, staged)
+        with h5py.File(staged) as source:
+            yield source
+
+
+def create_split(dataset_class, root, repo_id, records, scratch=None, base_export=None):
+    if base_export is None:
+        dataset = dataset_class.create(repo_id, fps=FPS, root=root, features=schema(), use_videos=False,
+                                       robot_type='franka', video_backend='pyav')
+    else:
+        base_report = json.loads((base_export / 'verification.json').read_text(encoding='utf-8'))
+        base = base_report['splits']['train']
+        base_records = base['episodes_detail']
+        if (base_report['format'] != 'LeRobot v2.1' or not base['all_frames_verified']
+                or not 0 < len(base_records) < len(records)
+                or records[:len(base_records)] != base_records):
+            raise ValueError('The base export must be a verified prefix of the requested training split')
+        shutil.copytree(base_export / 'train', root)
+        dataset = dataset_class(repo_id, root=root, video_backend='pyav')
+        if (dataset.num_episodes != len(base_records) or dataset.num_frames != base['frames']
+                or dataset.fps != FPS or dataset.meta.video_keys):
+            raise ValueError('The copied training split does not match the base verification report')
+        dataset.hf_dataset = dataset.create_hf_dataset()
+        records = records[len(base_records):]
     try:
         for record in records:
-            with h5py.File(record['source']) as source:
+            with open_source(record['source'], scratch) as source:
                 for index in range(record['frames']):
                     rgb = source['rgb'][index]
                     row = {f'observation.images.{key}': frame for key, frame in zip(IMAGE_KEYS, rgb)}
@@ -82,12 +114,16 @@ def create_split(dataset_class, root, repo_id, records):
                                 'task': record['instruction']})
                     dataset.add_frame(row)
             dataset.save_episode()
+            if dataset.meta.info['codebase_version'] == 'v2.1':
+                # The pinned writer keeps all previous Arrow tables in memory.
+                # Episode offsets come from metadata, and readback reopens the files on disk.
+                dataset.hf_dataset = dataset.create_hf_dataset()
     finally:
         if hasattr(dataset, 'finalize'):
             dataset.finalize()
 
 
-def verify_split(dataset_class, root, repo_id, records):
+def verify_split(dataset_class, root, repo_id, records, scratch=None):
     dataset = dataset_class(repo_id, root=root, video_backend='pyav')
     expected = set(schema()) | {'timestamp', 'frame_index', 'episode_index', 'index', 'task_index'}
     if set(dataset.features) != expected or dataset.fps != FPS:
@@ -97,7 +133,7 @@ def verify_split(dataset_class, root, repo_id, records):
         raise ValueError(f'Dataset episode or frame count mismatch at {root}')
     absolute_index = 0
     for episode, record in enumerate(records):
-        with h5py.File(record['source']) as source:
+        with open_source(record['source'], scratch) as source:
             for local_index in range(record['frames']):
                 row = dataset[absolute_index]
                 if (row['task'] != record['instruction'] or row['episode_index'].item() != episode
@@ -140,7 +176,9 @@ def main():
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--format', choices=('v3.0', 'v2.1'), default='v3.0')
     parser.add_argument('--action-horizon', type=int, help='Check a window of future actions at each episode boundary')
+    parser.add_argument('--input-scratch', type=Path, help='Copy one HDF5 at a time here for faster local reads')
     parser.add_argument('--verify-only', action='store_true', help='Verify a previously exported dataset')
+    parser.add_argument('--base-export', type=Path, help='Copy a verified v2.1 training export and append to the copy')
     args = parser.parse_args()
     if args.action_horizon is not None and args.action_horizon < 1:
         parser.error('--action-horizon must be positive')
@@ -166,6 +204,8 @@ def main():
         seeds.add(identity)
         records[split].append(record)
 
+    if args.base_export and (args.format != 'v2.1' or args.verify_only or records['validation'] or records['test']):
+        parser.error('--base-export requires a new train-only LeRobot v2.1 export')
     if not args.verify_only:
         args.output.mkdir(parents=True, exist_ok=False)
     summary = {'format': f'LeRobot {args.format}', 'fps': FPS, 'splits': {}}
@@ -175,8 +215,8 @@ def main():
         repo_id = f'local/pi05-vlabench-{split}'
         root = args.output / split
         if not args.verify_only:
-            create_split(LeRobotDataset, root, repo_id, entries)
-        result = verify_split(LeRobotDataset, root, repo_id, entries)
+            create_split(LeRobotDataset, root, repo_id, entries, args.input_scratch, args.base_export)
+        result = verify_split(LeRobotDataset, root, repo_id, entries, args.input_scratch)
         if args.action_horizon:
             result['action_chunks'] = verify_action_chunks(LeRobotDataset, root, repo_id, entries, args.action_horizon)
         summary['splits'][split] = {**result, 'episodes_detail': entries}

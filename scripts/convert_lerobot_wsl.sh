@@ -13,6 +13,10 @@ if [[ "${1:-}" == --openpi ]]; then
         exit 1
     fi
     export PYTHONPATH="$source_dir:/var/tmp/pi05-vlabench-$(id -u)/openpi-dataset-deps"
+    if [[ "${1:-}" == --policy-io-samples ]]; then
+        shift
+        exec "/var/tmp/pi05-vlabench-$(id -u)/lerobot/bin/python" -u scripts/verify_policy_io.py dataset "$@"
+    fi
     set -- --format v2.1 "$@"
 fi
 exec "/var/tmp/pi05-vlabench-$(id -u)/lerobot/bin/python" -u scripts/convert_lerobot.py "$@"

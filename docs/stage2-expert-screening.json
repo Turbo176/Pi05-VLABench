@@ -16,8 +16,8 @@
       "timed_out_attempts": 3
     },
     "insert_flower": {
-      "attempted_seeds": 9,
-      "completed_seeds": 9,
+      "attempted_seeds": 10,
+      "completed_seeds": 10,
       "successful_seeds": [
         42,
         46,
@@ -38,11 +38,12 @@
       "timed_out_attempts": 0
     },
     "take_out_cool_drink": {
-      "attempted_seeds": 5,
-      "completed_seeds": 4,
+      "attempted_seeds": 6,
+      "completed_seeds": 5,
       "successful_seeds": [
         43,
-        46
+        46,
+        52
       ],
       "reset_error_seeds": [
         45
@@ -1632,6 +1633,160 @@
       "warning": "WARNING:absl:Nan, Inf or huge value in QACC at DOF 24. The simulation is unstable. Time = 0.1470.",
       "error": "dm_control.rl.control.PhysicsError: Physics state is invalid. Warning(s) raised: mjWARN_BADQACC",
       "record": ".local/take_out_cool_drink-45-reset-repeat.log"
+    },
+    {
+      "source": "official VLABench expert",
+      "task": "insert_flower",
+      "robot": "franka",
+      "seed": 52,
+      "instruction": "Insert the rose into the vase_seen.",
+      "success": false,
+      "terminal": false,
+      "steps": 173,
+      "control_hz": 10.0,
+      "scene": "default",
+      "camera_names": [
+        "right",
+        "left",
+        "forward",
+        "franka/Franka_wrist_cam"
+      ],
+      "stages": [
+        {
+          "name": "pick",
+          "stage_success": true,
+          "steps_so_far": 63,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": true,
+          "steps_so_far": 94,
+          "success_condition": false
+        },
+        {
+          "name": "moveto",
+          "stage_success": false,
+          "steps_so_far": 153,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": false,
+          "steps_so_far": 173,
+          "success_condition": false
+        }
+      ],
+      "wall_seconds": 35.88,
+      "capture": "screen",
+      "record": "runs/stage2/followup-insert_flower-52/expert.json"
+    },
+    {
+      "source": "official VLABench expert",
+      "task": "take_out_cool_drink",
+      "robot": "franka",
+      "seed": 52,
+      "instruction": "I am so thirsty after sport, I want to drink something healthy cool",
+      "success": true,
+      "terminal": true,
+      "steps": 501,
+      "control_hz": 10.0,
+      "scene": "default",
+      "camera_names": [
+        "right",
+        "left",
+        "forward",
+        "franka/Franka_wrist_cam"
+      ],
+      "stages": [
+        {
+          "name": "pick",
+          "stage_success": true,
+          "steps_so_far": 60,
+          "success_condition": false
+        },
+        {
+          "name": "open_door",
+          "stage_success": true,
+          "steps_so_far": 113,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": true,
+          "steps_so_far": 124,
+          "success_condition": false
+        },
+        {
+          "name": "pull",
+          "stage_success": true,
+          "steps_so_far": 140,
+          "success_condition": false
+        },
+        {
+          "name": "move_offset",
+          "stage_success": true,
+          "steps_so_far": 175,
+          "success_condition": false
+        },
+        {
+          "name": "pick",
+          "stage_success": true,
+          "steps_so_far": 250,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": false,
+          "steps_so_far": 260,
+          "success_condition": false
+        },
+        {
+          "name": "pull",
+          "stage_success": true,
+          "steps_so_far": 290,
+          "success_condition": false
+        },
+        {
+          "name": "place",
+          "stage_success": false,
+          "steps_so_far": 334,
+          "success_condition": false
+        },
+        {
+          "name": "lift",
+          "stage_success": false,
+          "steps_so_far": 364,
+          "success_condition": false
+        },
+        {
+          "name": "pull",
+          "stage_success": true,
+          "steps_so_far": 384,
+          "success_condition": false
+        },
+        {
+          "name": "move_offset",
+          "stage_success": false,
+          "steps_so_far": 431,
+          "success_condition": false
+        },
+        {
+          "name": "pick",
+          "stage_success": true,
+          "steps_so_far": 473,
+          "success_condition": false
+        },
+        {
+          "name": "close_door",
+          "stage_success": true,
+          "steps_so_far": 501,
+          "success_condition": true
+        }
+      ],
+      "wall_seconds": 58.77,
+      "capture": "screen",
+      "record": "runs/stage2/followup-take_out_cool_drink-52/expert.json"
     }
   ]
 }

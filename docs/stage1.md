@@ -2,12 +2,12 @@
 
 Validated on Windows 10 build 19045 and Ubuntu 22.04.5 under WSL2. Windows reported 15.36 GiB RAM, a GTX 1650 Ti with 4 GiB VRAM, and 70.5 GiB initially free on D:. WSL exposed 7.4 GiB RAM and detected the same GPU. The run used Mesa EGL software rendering. No system packages were installed.
 
-| Component | Location on the test machine |
+| Component | Project or WSL path |
 | --- | --- |
-| Project | `D:\Robotics\Pi05-VLABench` (`/mnt/d/Robotics/Pi05-VLABench`) |
+| Project | Repository root |
 | Checkouts | `.local/VLABench` and `.local/rrt-algorithms` |
 | Official assets | `.local/VLABench/VLABench/assets` |
-| Python environment | `/var/tmp/pi05-vlabench-1000/venv` on the WSL filesystem backed by `D:\WSL\Ubuntu-22.04\ext4.vhdx` |
+| Python environment | `/var/tmp/pi05-vlabench-$(id -u)/venv` on the WSL filesystem |
 | pip and rendering caches | `.local/pip-cache` and `.local/cache` |
 | Episode, videos and JSON reports | `runs/select_fruit-42/` |
 
