@@ -14,5 +14,6 @@ __pycache__/
 !/media/demos/select-fruit-replay.mp4
 !/media/demos/insert-flower-replay.mp4
 !/media/demos/fridge-drink-replay.mp4
+!/media/policy/*-1001.mp4
 *.safetensors
 *.pt

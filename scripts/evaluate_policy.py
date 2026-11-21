@@ -16,7 +16,7 @@ from vlabench_policy_io import (ACTION_HORIZON, IMAGE_SIZE, SCENE_CAMERA, WRIST_
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def run_episode(env, infer, instruction, *, max_steps, execute_steps, initial_rgb):
+def run_episode(env, infer, instruction, *, max_steps, execute_steps, initial_rgb, after_step=None):
     """Execute unnormalized absolute targets from infer(observation) until success or the limit."""
     if not 1 <= execute_steps <= ACTION_HORIZON or max_steps < 1:
         raise ValueError('Invalid execution length or rollout budget')
@@ -45,6 +45,8 @@ def run_episode(env, infer, instruction, *, max_steps, execute_steps, initial_rg
             steps += 1
             executed += 1
             reward_sum += float(timestep.reward)
+            if after_step is not None:
+                after_step(env)
             if success(env):
                 outcome = 'success'
                 break

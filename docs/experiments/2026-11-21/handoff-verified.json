@@ -1,0 +1,15 @@
+{
+  "episodes": 3,
+  "verified_keys": [
+    "task",
+    "seed",
+    "success",
+    "steps",
+    "stop_reason",
+    "initial_state_sha256",
+    "initial_rgb_sha256",
+    "action_chunks_sha256",
+    "stats_sha256",
+    "checkpoint_sha256"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "run": "runs/sft-smoke-20261121-150905",
+  "keys": [
+    "task",
+    "seed",
+    "prompt_mode",
+    "instruction",
+    "initial_state_sha256",
+    "initial_rgb_sha256",
+    "action_chunks_sha256",
+    "steps",
+    "success",
+    "stop_reason",
+    "stats_sha256",
+    "checkpoint_sha256"
+  ],
+  "episodes": 3
+}

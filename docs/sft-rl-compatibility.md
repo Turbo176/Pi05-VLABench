@@ -1,6 +1,6 @@
 # π0.5 SFT to PPO source audit
 
-Repository revisions are recorded in [Upstream revisions](upstream.md). The local test exercised the pinned OpenPI LeRobot reader. This audit covers the model and rollout source. GPU validation is pending.
+Repository revisions are recorded in [Upstream revisions](upstream.md). The local test exercised the pinned OpenPI LeRobot reader. This audit covers the model and rollout source. The single-GPU implementation and measured experiments are documented in [Single-GPU experiments](single-gpu.md).
 
 | Boundary | Finding at the pinned revisions |
 | --- | --- |
@@ -27,6 +27,8 @@ Include ordinary held-out starts and a predefined generalization group. For `sel
 ## Local evaluation preflight
 
 The [evaluation config](../configs/evaluation-v1.json) reserves seeds 1001–1020 per task for ordinary starts and seeds 1101–1110 for paired fruit prompts. Each comparison uses a 600-control-step limit at 10 Hz. The training expansion runner rejects overlapping seed ranges. The preflight tested seed 1001 twice in each task and matched the initial simulator state, camera images, and instruction across resets. All three initialization hashes differ from the existing dataset splits.
+
+The ordinary evaluation sweep checked all 60 task and seed pairs. Fruit and fridge each passed all 20 resets on the first pass. Flower passed 19 of 20. Flower seed 1015 raised `mjWARN_BADQACC` during the initial MuJoCo reset. Two retries in separate processes with `bash scripts/run_wsl.sh probe --task insert_flower --seed 1015` returned identical initial states and first RGB frames. All 60 starts produced four RGB views at a 10 Hz control rate after the retries. Their initial states were distinct from one another, the 65 dataset episodes, and the 10 fruit language layouts.
 
 The [frozen fruit prompts](../configs/evaluation-fruit-prompts-v1.json) record all 30 instructions across 10 layouts. For each layout, the three prompt variants produce identical initial simulator states and camera images. The 10 layouts have distinct initialization hashes, all absent from the training export.
 

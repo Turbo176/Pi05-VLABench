@@ -1,0 +1,23 @@
+{
+  "scope": "three-episode smoke",
+  "seed": 0,
+  "stats_sha256": "fc89b1b8f11586cd09f963ae9ceb8ef774fa44204905e43ddaa2614a3f3744e2",
+  "execute_steps": 10,
+  "base_bytes": 13413809816,
+  "torch": "2.8.0+cu128",
+  "trainable_parameters": 2165792,
+  "lr": 5e-05,
+  "training_episodes": {
+    "select_fruit": 1,
+    "insert_flower": 1,
+    "take_out_cool_drink": 1
+  },
+  "first_actor_max_abs_delta": 5.030632019042969e-05,
+  "updates": 3,
+  "wall_seconds": 1.1445935538504273,
+  "peak_allocated_bytes": 10187351040,
+  "peak_reserved_bytes": 10364125184,
+  "checkpoint_readback": true,
+  "resume_loss": 0.6235706806182861,
+  "resume_max_abs_actor_difference": 0.0
+}

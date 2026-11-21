@@ -2,7 +2,7 @@
 
 <p align="center">
   <strong>Multitask robot learning with π0.5 on VLABench</strong><br>
-  Official expert demonstrations · LeRobot datasets · Closed-loop evaluation
+  Official expert demonstrations · LeRobot datasets · Multitask SFT · PPO · Closed-loop evaluation
 </p>
 
 <p align="center">
@@ -19,7 +19,7 @@
 
 ## 🎬 Demos
 
-A Franka arm selects fruit, inserts a flower into a vase, and retrieves a drink from a fridge. Each clip shows a fresh MuJoCo simulation executing saved commands from the official VLABench expert.
+A Franka arm selects fruit, inserts a flower into a vase, and retrieves a drink from a fridge. Each clip shows a fresh MuJoCo simulation executing saved commands from the official VLABench expert. This gallery shows one expert replay per task. The separate LeRobot training split contains 20 successful demonstrations per task, for 60 episodes and 16,520 frames. Each training frame pairs camera images and measured robot state with the expert action at that tick. [Training split audit](docs/stage2-expansion-06.json)
 
 | 🍎 Fruit selection | 🌷 Flower insertion | 🧃 Fridge drink retrieval |
 | :---: | :---: | :---: |
@@ -28,6 +28,16 @@ A Franka arm selects fruit, inserts a flower into a vase, and retrieves a drink 
 | [Replay report · seed 42](docs/stage1-action-replay.json) | [Replay report · seed 42](docs/stage2-insert-flower-replay.json) | [Replay report · seed 43](docs/stage2-fridge-rgb-replay.json) |
 
 The full MP4s show all four cameras at the original 10 Hz timing. The GIF previews run at 2× for fruit and flower and 4× for the fridge.
+
+### 👀 Policy rollouts
+
+All nine recordings below use held-out seed 1001 at 10 Hz. Each run reached the 600-step limit without task success.
+
+| Task | π0.5 base with adapter | Multitask SFT | Fruit PPO after SFT |
+| --- | --- | --- | --- |
+| 🍎 Fruit selection | [▶ Base](media/policy/base-select_fruit-1001.mp4?raw=true) | [▶ SFT](media/policy/sft-select_fruit-1001.mp4?raw=true) | [▶ PPO](media/policy/ppo-select_fruit-1001.mp4?raw=true) |
+| 🌷 Flower insertion | [▶ Base](media/policy/base-insert_flower-1001.mp4?raw=true) | [▶ SFT](media/policy/sft-insert_flower-1001.mp4?raw=true) | [▶ PPO](media/policy/ppo-insert_flower-1001.mp4?raw=true) |
+| 🧃 Fridge drink retrieval | [▶ Base](media/policy/base-take_out_cool_drink-1001.mp4?raw=true) | [▶ SFT](media/policy/sft-take_out_cool_drink-1001.mp4?raw=true) | [▶ PPO](media/policy/ppo-take_out_cool_drink-1001.mp4?raw=true) |
 
 <a name="data-pipeline"></a>
 
@@ -59,10 +69,11 @@ Expert screening counts distinct task and seed pairs across the pilot and six ex
 | --- | --- |
 | Expert collection, fresh action replay, and LeRobot export | ✅ Verified locally |
 | Policy input mapping, action execution, and official task scoring | ✅ Verified locally |
-| Base π0.5 and multitask supervised fine-tuning (SFT) | ⏳ Pending GPU validation |
-| SFT checkpoint handoff and PPO post-training | ⏳ Pending GPU validation |
+| Official π0.5 and multitask supervised fine-tuning (SFT) | ✅ 900 updates on one GPU |
+| SFT checkpoint handoff and PPO post-training | ✅ Matching rollouts before PPO and one measured PPO iteration |
+| Held-out model comparison | ✅ First paired seed verified across all three tasks. Full evaluation in progress. |
 
-The local evaluation harness verified the action budget with joint-position holds on all three tasks. With the same fruit scene and different goals, saved expert actions reached the pear goal in 151 steps and the banana goal in 136. Both final physics states matched their source traces. Model evaluation will use held-out seeds and fruit prompts that change the wording or the target. [Local smoke test](docs/closed-loop.md) · [Evaluation protocol](configs/evaluation-v1.json) · [SFT-to-PPO audit](docs/sft-rl-compatibility.md)
+The local evaluation harness verified the action budget with joint-position holds on all three tasks. With the same fruit scene and different goals, saved expert actions reached the pear goal in 151 steps and the banana goal in 136. Both final physics states matched their source traces. The GPU experiment uses held-out seeds and fruit prompts that change the wording or target. [Single-GPU recipe](docs/single-gpu.md) · [GPU experiment log](docs/experiments/2026-11-21/README.md). [Local smoke test](docs/closed-loop.md) · [Evaluation protocol](configs/evaluation-v1.json) · [SFT-to-PPO audit](docs/sft-rl-compatibility.md)
 
 <a name="reproduce-the-fruit-demo"></a>
 
@@ -84,10 +95,11 @@ bash scripts/run_wsl.sh replay runs/select_fruit-42/episode.h5
 
 | Path | Contents |
 | --- | --- |
-| [`scripts/`](scripts/) | Expert capture, action replay, LeRobot export, and local evaluation |
+| [`scripts/`](scripts/) | Expert capture, action replay, LeRobot export, SFT, PPO, and closed-loop evaluation |
 | [`configs/`](configs/) | Held-out evaluation seeds and paired fruit prompts |
 | [`docs/`](docs/) | Reproduction guides, experiment reports, and upstream version pins |
-| [`media/demos/`](media/demos/) | Expert action-replay previews and full four-view videos |
+| [`media/demos/`](media/demos/) | Expert action replays and previews |
+| [`media/policy/`](media/policy/) | Held-out base, SFT, and PPO rollouts |
 
 <a name="dependencies-and-license"></a>
 
