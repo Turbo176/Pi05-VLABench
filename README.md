@@ -27,7 +27,7 @@ A reproducible robot-learning project built around official VLABench tasks and c
 | :---: | :---: | :---: | :---: |
 | **64 episodes / 9,904 frames** | **Fruit + flower SFT** | **224 actor tensors changed** | **10 paired held-out fruit scenes** |
 
-The repository covers data validation, model adaptation, SFT-to-RL compatibility, and paired evaluation around the official robot controller. The completed learned-policy workflow is fruit selection; flower insertion and fridge retrieval remain extensions. [System design and implementation](docs/system-design.md) · [中文项目讲解与面试说明](docs/interview-guide.zh-CN.md)
+The repository covers data validation, model adaptation, SFT-to-RL compatibility, and paired evaluation around the official robot controller. The completed learned-policy workflow is fruit selection; flower insertion and fridge retrieval remain extensions. [System design and implementation](docs/system-design.md)
 
 <a id="demos"></a>
 
@@ -158,7 +158,6 @@ bash scripts/run_wsl.sh replay runs/select_fruit-42/episode.h5
 | [Fruit SFT → PPO](docs/experiments/2026-11-22/fruit-completion-v1/README.md) | Frozen checkpoints, executed commands, evaluation, costs, and raw evidence |
 | [Training and motion analysis](docs/experiments/2026-11-23/training-and-motion/README.md) | Loss and gradient plots, time-aligned motion measurements, reproducible plotting command |
 | [System design and model/data cards](docs/system-design.md) | Implementation boundaries, exact interfaces, training scope, costs, and requirement coverage |
-| [中文项目讲解与面试说明](docs/interview-guide.zh-CN.md) | Resume wording, a three-minute explanation, technical questions, and a five-minute demo |
 | [CPU verification and overview figures](docs/experiments/2026-11-23/project-overview/README.md) | Executable integrity checks, raw outcome aggregation, and data coverage |
 | [Reward review](docs/fruit-reward-review.md) | Actual reward, literature, and an untrained staged-reward proposal |
 | [Expert data and LeRobot export](docs/stage2.md) | Collection, replay checks, dataset fields, and split audits |
