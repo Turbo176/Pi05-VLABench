@@ -1,8 +1,0 @@
-{
-  "device_native": "TFRT_CPU_0",
-  "first_10_actuator_mae_normalized": 0.00924992561340332,
-  "all_actuator_mae_normalized": 0.007438944187015295,
-  "all_32_dims_mae_normalized": 0.002637688536196947,
-  "max_abs_normalized_difference": 0.023739680647850037,
-  "wall_seconds": 57.29422416607849
-}

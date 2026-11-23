@@ -1,4 +1,4 @@
-"""Verify the published fruit evidence on CPU; optionally render portfolio figures."""
+"""Verify the published fruit evidence on CPU; optionally render overview figures."""
 
 import argparse
 from collections import Counter
@@ -64,9 +64,17 @@ def verify():
             require(hashlib.sha256(data.replace(b'\r\n', b'\n')).hexdigest() == expected,
                     'Registered source/config changed: ' + name)
             normalized += 1
-    manifest = read(root / 'evidence-export.json')
+    original_manifest = read(root / 'evidence-export.json')
+    manifest = read(root / 'public-evidence.json')
+    require(sha(root / 'evidence-export.json') == manifest['original_manifest_sha256'],
+            'Original evidence manifest changed')
+    for key in ('sft_sha256', 'ppo_sha256'):
+        require(manifest[key] == original_manifest[key], 'Public checkpoint identity differs')
+    original_files = {item['bundle_path']: item for item in original_manifest['files']}
     checked = set()
     for item in manifest['files']:
+        require(item == original_files.get(item['bundle_path']),
+                'Public evidence differs from its original export entry')
         kind, relative = item['bundle_path'].split('/', 1)
         require(kind in ('evidence', 'media'), 'Unexpected evidence bundle path')
         name = EXPERIMENT / relative if kind == 'evidence' else Path('media/policy') / relative
@@ -75,6 +83,13 @@ def verify():
         checked.add(name)
         require(path.stat().st_size == item['bytes'] and sha(path) == item['sha256'],
                 'Evidence hash or size mismatch: ' + str(name))
+    required = {'comparison.json', 'ordinary-comparison.json', 'registration.json', 'handoff.json',
+                'saved-checkpoint-update-audit.json', 'split-isolation.json', 'sft-parent/summary.json',
+                'sft-parent/updates.jsonl', 'ppo/iteration-1.json', 'ppo/rollouts.jsonl'}
+    required.update(suite + '-' + stage + '/episodes.jsonl'
+                    for suite in ('ordinary', 'fruit_language') for stage in STAGES)
+    require({EXPERIMENT / name for name in required}.issubset(checked),
+            'Public manifest omits required experiment evidence')
 
     comparison = read(root / 'comparison.json')
     protocol = read(ROOT / 'configs/evaluation-fruit-completion-v1.json')
@@ -182,6 +197,7 @@ def verify():
     inputs = {str(path): sha(local(path)) for path in (
         EXPERIMENT / 'comparison.json', EXPERIMENT / 'ordinary-comparison.json',
         EXPERIMENT / 'registration.json', EXPERIMENT / 'evidence-export.json',
+        EXPERIMENT / 'public-evidence.json',
         EXPERIMENT / 'saved-checkpoint-update-audit.json', CONTRACT)}
     report = dict(created_at=datetime.now(timezone.utc).isoformat(), python=platform.python_version(),
                   verification=dict(registered_source_and_config_hashes=len(registration['inputs']),

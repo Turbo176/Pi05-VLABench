@@ -1,6 +1,0 @@
-{
-  "stopped_at": "2026-11-22T15:37:32.872901+00:00",
-  "driver_pid": 49852,
-  "worker_pid": 52374,
-  "reason": "Exact existing reference reuse preflight passed, including three complete new action-hash matches. Stop only redundant reference computation; preserve all partial results."
-}

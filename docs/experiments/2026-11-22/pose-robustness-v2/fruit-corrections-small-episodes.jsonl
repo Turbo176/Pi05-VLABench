@@ -1,4 +1,0 @@
-{"seed": 2080, "policy_steps": 60, "expert_steps": 107, "held_at_takeover": false, "expert_success": true, "replay_success": true, "render_samples": 0, "policy_parent_sha256": "e597674c257f7fc8114650ec13e515f2257fa3506ca5e2c83ce8b82f18b79965"}
-{"seed": 2081, "policy_steps": 100, "expert_steps": 117, "held_at_takeover": false, "expert_success": true, "replay_success": true, "render_samples": 0, "policy_parent_sha256": "e597674c257f7fc8114650ec13e515f2257fa3506ca5e2c83ce8b82f18b79965"}
-{"seed": 2082, "policy_steps": 120, "expert_steps": 134, "held_at_takeover": false, "expert_success": false, "render_samples": 0, "policy_parent_sha256": "e597674c257f7fc8114650ec13e515f2257fa3506ca5e2c83ce8b82f18b79965"}
-{"seed": 2083, "policy_steps": 80, "expert_steps": 95, "held_at_takeover": false, "expert_success": false, "render_samples": 0, "policy_parent_sha256": "e597674c257f7fc8114650ec13e515f2257fa3506ca5e2c83ce8b82f18b79965"}

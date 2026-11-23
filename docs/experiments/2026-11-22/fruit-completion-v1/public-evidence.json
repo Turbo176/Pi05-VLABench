@@ -1,0 +1,283 @@
+{
+  "created_at": "2026-11-22T16:29:30.528267+00:00",
+  "scope": "Fruit-only bounded pilot; flower and fridge are incomplete.",
+  "sft_sha256": "998181bb8cc8386766aa5bec3302b938234ab5da2a24e81cef199a8fd560eef3",
+  "ppo_sha256": "0d2fac4c03db18ceac98c2344aec358713251e3b37cbcfa154349392c4ca0ad3",
+  "packaging_version": 1,
+  "packaged_on": "2026-11-23",
+  "source_git_commit": "7464c59e1341bc365b730ba2b9acaba68075a673",
+  "original_manifest_sha256": "4fca44def1d0a2b8c845a939b625ae75538ac0c79aa0ef7c2417450698706fb9",
+  "selection": "All final ordinary/language outcomes, development outcomes, SFT/PPO update evidence, reset manifests and video-control traces. Scheduling logs, duplicate sources/configs and per-case copies are excluded.",
+  "files": [
+    {
+      "bundle_path": "evidence/cases/select_fruit-alternate_target.jsonl",
+      "source": "/root/autodl-tmp/Pi05-VLABench/runs/pose-robustness-v2/fruit-completion-v1/cases/select_fruit-alternate_target.jsonl",
+      "bytes": 1663,
+      "sha256": "af2d48455edb78de5f63ae154727d597dd09ea01bed3c4073069cb669c748032"
+    },
+    {
+      "bundle_path": "evidence/cases/select_fruit-language-official.jsonl",
+      "source": "/root/autodl-tmp/Pi05-VLABench/runs/pose-robustness-v2/fruit-completion-v1/cases/select_fruit-language-official.jsonl",
+      "bytes": 1637,
+      "sha256": "f03c90bcb54a1d2cacc66745bd82aefd23b1e21e4450766a4745a6caf95787e2"
+    },
+    {
+      "bundle_path": "evidence/cases/select_fruit-official.jsonl",
+      "source": "/root/autodl-tmp/Pi05-VLABench/runs/pose-robustness-v2/fruit-completion-v1/cases/select_fruit-official.jsonl",
+      "bytes": 5459,
+      "sha256": "11b38689e9ec88a7f328a92f3da8ca83f7fa7d2d102bda30fa2cf028fe1626c5"
+    },
+    {
+      "bundle_path": "evidence/cases/select_fruit-paraphrase.jsonl",
+      "source": "/root/autodl-tmp/Pi05-VLABench/runs/pose-robustness-v2/fruit-completion-v1/cases/select_fruit-paraphrase.jsonl",
+      "bytes": 1652,
+      "sha256": "d638ba9d1edd9940739b25441bed81149caed1ffd7c1012cb6bd6ecf4e93578c"
+    },
+    {
+      "bundle_path": "evidence/comparison.json",
+      "source": "/root/autodl-tmp/Pi05-VLABench/runs/pose-robustness-v2/fruit-completion-v1/comparison.json",
+      "bytes": 35117,
+      "sha256": "42d03b6c32d54ee789172df04de1a36e7fdaabdeae48f5d6c8a8788a82de1420"
+    },
+    {
+      "bundle_path": "evidence/development-comparison.json",
+      "source": "/root/autodl-tmp/Pi05-VLABench/runs/pose-robustness-v2/fruit-completion-v1/development-comparison.json",
+      "bytes": 3694,
+      "sha256": "6cec52233881ed8bd0b54b27252ac886bb115c5af92240231129a5c8e176aba5"
+    },
+    {
+      "bundle_path": "evidence/development-ppo/episodes.jsonl",
+      "source": "/root/autodl-tmp/Pi05-VLABench/runs/pose-robustness-v2/fruit-completion-v1/development-ppo/episodes.jsonl",
+      "bytes": 7528,
+      "sha256": "2fc0c6a691b15fdae327e918230537401e9d5bf8c707b7d6cb2f58ff1864d764"
+    },
+    {
+      "bundle_path": "evidence/development-reference.jsonl",
+      "source": "/root/autodl-tmp/Pi05-VLABench/runs/pose-robustness-v2/base-development/select_fruit/episodes.jsonl",
+      "bytes": 6921,
+      "sha256": "383d13b47106050d3f19be7e24090327864b1b307d9987b6752499cc4476f793"
+    },
+    {
+      "bundle_path": "evidence/development-sft.jsonl",
+      "source": "/root/autodl-tmp/Pi05-VLABench/runs/pose-robustness-v2/two-task-conservative-development/episodes.jsonl",
+      "bytes": 14544,
+      "sha256": "b84e313f0b3a5bd1e3e778b8569f0eb93d258ce093d22659902940ebd7454d50"
+    },
+    {
+      "bundle_path": "evidence/environment.json",
+      "source": "/root/autodl-tmp/Pi05-VLABench/runs/pose-robustness-v2/fruit-completion-v1/environment.json",
+      "bytes": 574,
+      "sha256": "a4a7dfdefa3764018cfd10eb62447a985e64c1f3ef377092c8c9511cd1ccf362"
+    },
+    {
+      "bundle_path": "evidence/fruit_language-base/episodes.jsonl",
+      "source": "/root/autodl-tmp/Pi05-VLABench/runs/pose-robustness-v2/fruit-completion-v1/fruit_language-base/episodes.jsonl",
+      "bytes": 16552,
+      "sha256": "e5c87c2a5d5c69eea97afa0f903659c8b88683ecae5fa066a689b2a2154948cc"
+    },
+    {
+      "bundle_path": "evidence/fruit_language-ppo/episodes.jsonl",
+      "source": "/root/autodl-tmp/Pi05-VLABench/runs/pose-robustness-v2/fruit-completion-v1/fruit_language-ppo/episodes.jsonl",
+      "bytes": 17167,
+      "sha256": "b953d552474419ac2b224575984e63ea4a9b8e5ceea5adb9327965916bf14583"
+    },
+    {
+      "bundle_path": "evidence/fruit_language-sft/episodes.jsonl",
+      "source": "/root/autodl-tmp/Pi05-VLABench/runs/pose-robustness-v2/fruit-completion-v1/fruit_language-sft/episodes.jsonl",
+      "bytes": 16360,
+      "sha256": "92277ae2af66fab59e6cffd9f84491a1d08beb653bf0365c3523599813a92082"
+    },
+    {
+      "bundle_path": "evidence/handoff.json",
+      "source": "/root/autodl-tmp/Pi05-VLABench/runs/pose-robustness-v2/fruit-completion-v1/handoff.json",
+      "bytes": 1464,
+      "sha256": "646dc65fb2c08df8dcfd63448e62cf2bcad19a4a721f9762dd0705536fe78ed9"
+    },
+    {
+      "bundle_path": "evidence/handoff/episodes.jsonl",
+      "source": "/root/autodl-tmp/Pi05-VLABench/runs/pose-robustness-v2/fruit-completion-v1/handoff/episodes.jsonl",
+      "bytes": 1802,
+      "sha256": "0d18daf7787f7ed1cd3d442f0eb67a16b6303e87092c4745d1721eaa65024068"
+    },
+    {
+      "bundle_path": "evidence/ordinary-base/episodes.jsonl",
+      "source": "/root/autodl-tmp/Pi05-VLABench/runs/pose-robustness-v2/fruit-completion-v1/ordinary-base/episodes.jsonl",
+      "bytes": 17341,
+      "sha256": "3b0c686494d6cd590b97da200ad5360b6c15cf3dae6f3254b4701c65d7284292"
+    },
+    {
+      "bundle_path": "evidence/ordinary-comparison.json",
+      "source": "/root/autodl-tmp/Pi05-VLABench/runs/pose-robustness-v2/fruit-completion-v1/ordinary-comparison.json",
+      "bytes": 8203,
+      "sha256": "2c6216b46fdcb3f979b51376ec9ea848cd27b1fdf36484a0f9166c7ffd5e958f"
+    },
+    {
+      "bundle_path": "evidence/ordinary-ppo/episodes.jsonl",
+      "source": "/root/autodl-tmp/Pi05-VLABench/runs/pose-robustness-v2/fruit-completion-v1/ordinary-ppo/episodes.jsonl",
+      "bytes": 18904,
+      "sha256": "e751676bf317cf5c38d491a1ee8d987a989f623c0b660406adb193f29b85fabb"
+    },
+    {
+      "bundle_path": "evidence/ordinary-sft/episodes.jsonl",
+      "source": "/root/autodl-tmp/Pi05-VLABench/runs/pose-robustness-v2/fruit-completion-v1/ordinary-sft/episodes.jsonl",
+      "bytes": 18082,
+      "sha256": "483739c65f94699493528a065fff401fc38b165a89627be0e6de1837407059ff"
+    },
+    {
+      "bundle_path": "evidence/ppo/iteration-1.json",
+      "source": "/root/autodl-tmp/Pi05-VLABench/runs/pose-robustness-v2/fruit-completion-v1/ppo/iteration-1.json",
+      "bytes": 11325,
+      "sha256": "d683cc520468e87056997a94ec75992f8e70973e9819428619e025148455f381"
+    },
+    {
+      "bundle_path": "evidence/ppo/rollouts.jsonl",
+      "source": "/root/autodl-tmp/Pi05-VLABench/runs/pose-robustness-v2/fruit-completion-v1/ppo/rollouts.jsonl",
+      "bytes": 2614,
+      "sha256": "85b133876f583540ea229a124169289b487c7c79d30a177881a4700cdffa3382"
+    },
+    {
+      "bundle_path": "evidence/reference-original-20.jsonl",
+      "source": "/root/autodl-tmp/Pi05-VLABench/runs/pose-robustness-v2/fruit-completion-v1/reference-original-20.jsonl",
+      "bytes": 34609,
+      "sha256": "151259575630bc7974f0709a47d7fab70e0f50695497f5ed0a6f88a80aad57e4"
+    },
+    {
+      "bundle_path": "evidence/reference-reuse.json",
+      "source": "/root/autodl-tmp/Pi05-VLABench/runs/pose-robustness-v2/fruit-completion-v1/reference-reuse.json",
+      "bytes": 1668,
+      "sha256": "6794fb2cb250becd3c097c9cd4a054056d5e1376ccd1d44d076da5cf6726d524"
+    },
+    {
+      "bundle_path": "evidence/registration.json",
+      "source": "/root/autodl-tmp/Pi05-VLABench/runs/pose-robustness-v2/fruit-completion-v1/registration.json",
+      "bytes": 2875,
+      "sha256": "40afe28d29367ab7c184bc7d6eff2147821f674671ed8c0c033d0dcd4e1294f8"
+    },
+    {
+      "bundle_path": "evidence/saved-checkpoint-update-audit.json",
+      "source": "/root/autodl-tmp/Pi05-VLABench/runs/pose-robustness-v2/fruit-completion-v1/saved-checkpoint-update-audit.json",
+      "bytes": 881,
+      "sha256": "1f265b7aa1f6f08da566b839a19fcdb94f16e4947810891550ecffdd50fcf29a"
+    },
+    {
+      "bundle_path": "evidence/sft-parent/norm_stats.json",
+      "source": "/root/autodl-tmp/Pi05-VLABench/runs/pose-robustness-v2/two-task-conservative-90/norm_stats.json",
+      "bytes": 4424,
+      "sha256": "bce33fc1831830d953ef9bc57e520c02ee44e02b7ad07f27ce92b931a879384f"
+    },
+    {
+      "bundle_path": "evidence/sft-parent/summary.json",
+      "source": "/root/autodl-tmp/Pi05-VLABench/runs/pose-robustness-v2/two-task-conservative-90/summary.json",
+      "bytes": 6156,
+      "sha256": "bb210a3df2008cd4c8b8267fdb131f153d3454a1abe1aa9fca83545794d695aa"
+    },
+    {
+      "bundle_path": "evidence/sft-parent/updates.jsonl",
+      "source": "/root/autodl-tmp/Pi05-VLABench/runs/pose-robustness-v2/two-task-conservative-90/updates.jsonl",
+      "bytes": 74086,
+      "sha256": "5832c4becacd5dedf17f0321578eb9cdd43bf189bea29cf6280a211988f29f02"
+    },
+    {
+      "bundle_path": "evidence/split-isolation.json",
+      "source": "/root/autodl-tmp/Pi05-VLABench/runs/pose-robustness-v2/fruit-completion-v1/split-isolation.json",
+      "bytes": 3985,
+      "sha256": "fbeca7d7fca696efb827a100dd22c2284f4d6670e42c1d8555e3491713da8cbd"
+    },
+    {
+      "bundle_path": "evidence/video-base/episodes.jsonl",
+      "source": "/root/autodl-tmp/Pi05-VLABench/runs/pose-robustness-v2/fruit-completion-v1/video-base/episodes.jsonl",
+      "bytes": 1879,
+      "sha256": "fad64e9aeeb230493efda049934251a729a627ebb085688eb23ef4b3839ca97b"
+    },
+    {
+      "bundle_path": "evidence/video-base/select_fruit-1501-controls.jsonl",
+      "source": "/root/autodl-tmp/Pi05-VLABench/runs/pose-robustness-v2/fruit-completion-v1/video-base/select_fruit-1501-controls.jsonl",
+      "bytes": 434324,
+      "sha256": "fcc7295acd3f38388f68bc4e01bd8c5f44c3df9f61237966351069e893146ef3"
+    },
+    {
+      "bundle_path": "evidence/video-base/verification.json",
+      "source": "/root/autodl-tmp/Pi05-VLABench/runs/pose-robustness-v2/fruit-completion-v1/video-base/verification.json",
+      "bytes": 781,
+      "sha256": "b889b2c3b64b34d196f52b517a2c2ec24745cf0d0964491343e1a12fce013179"
+    },
+    {
+      "bundle_path": "evidence/video-plan.json",
+      "source": "/root/autodl-tmp/Pi05-VLABench/runs/pose-robustness-v2/fruit-completion-v1/video-plan.json",
+      "bytes": 444,
+      "sha256": "06b96480d15a60611817905e5002db68c01764ccdbe04b6888d17ce141096a28"
+    },
+    {
+      "bundle_path": "evidence/video-ppo/episodes.jsonl",
+      "source": "/root/autodl-tmp/Pi05-VLABench/runs/pose-robustness-v2/fruit-completion-v1/video-ppo/episodes.jsonl",
+      "bytes": 1878,
+      "sha256": "9220ae020874b83912dd8c64882ccf017ab9f371f5dd49c7e40e442717faea4e"
+    },
+    {
+      "bundle_path": "evidence/video-ppo/select_fruit-1501-controls.jsonl",
+      "source": "/root/autodl-tmp/Pi05-VLABench/runs/pose-robustness-v2/fruit-completion-v1/video-ppo/select_fruit-1501-controls.jsonl",
+      "bytes": 116120,
+      "sha256": "bd5750934252c23db1a6a8e7f33a728c0f1916a455f95cde290aa9f65abc3611"
+    },
+    {
+      "bundle_path": "evidence/video-ppo/verification.json",
+      "source": "/root/autodl-tmp/Pi05-VLABench/runs/pose-robustness-v2/fruit-completion-v1/video-ppo/verification.json",
+      "bytes": 1008,
+      "sha256": "8a40e5ba45db9fef42481dcf1c6b24cb673955b6584423e1993b8fcc587613da"
+    },
+    {
+      "bundle_path": "evidence/video-sft/episodes.jsonl",
+      "source": "/root/autodl-tmp/Pi05-VLABench/runs/pose-robustness-v2/fruit-completion-v1/video-sft/episodes.jsonl",
+      "bytes": 1801,
+      "sha256": "3a96f30f33bed6b568561a1af47ff19653714c9aa6e61c29517897d7c3f835e6"
+    },
+    {
+      "bundle_path": "evidence/video-sft/select_fruit-1501-controls.jsonl",
+      "source": "/root/autodl-tmp/Pi05-VLABench/runs/pose-robustness-v2/fruit-completion-v1/video-sft/select_fruit-1501-controls.jsonl",
+      "bytes": 115785,
+      "sha256": "20addf6c9506f4cdc0bf429038dce1d0265344fa09134240c25accf2801a02a9"
+    },
+    {
+      "bundle_path": "evidence/video-sft/verification.json",
+      "source": "/root/autodl-tmp/Pi05-VLABench/runs/pose-robustness-v2/fruit-completion-v1/video-sft/verification.json",
+      "bytes": 756,
+      "sha256": "d1579dcd271e05f66145b81e9cdba48dea558bdd731495e36f30d29a4c89e48c"
+    },
+    {
+      "bundle_path": "media/fruit-completion-v1-base-1501.gif",
+      "source": "/root/autodl-tmp/Pi05-VLABench/runs/pose-robustness-v2/fruit-completion-v1/previews/fruit-completion-v1-base-1501.gif",
+      "bytes": 6668237,
+      "sha256": "15d14e0c8b8b2ff6d719c749690ebf156502f4f2efe8926cf6a8d5a6bcfee7bb"
+    },
+    {
+      "bundle_path": "media/fruit-completion-v1-base-1501.mp4",
+      "source": "/root/autodl-tmp/Pi05-VLABench/runs/pose-robustness-v2/fruit-completion-v1/video-base/select_fruit-1501.mp4",
+      "bytes": 12419328,
+      "sha256": "a51a202a08742371dc6441a007323ee4849e21060ee61895fd404b55a240ffc8"
+    },
+    {
+      "bundle_path": "media/fruit-completion-v1-ppo-1501.gif",
+      "source": "/root/autodl-tmp/Pi05-VLABench/runs/pose-robustness-v2/fruit-completion-v1/previews/fruit-completion-v1-ppo-1501.gif",
+      "bytes": 1659367,
+      "sha256": "0b5205e076d10bb98d398fccb61dc478891244009ea4b6894687904f6c66afab"
+    },
+    {
+      "bundle_path": "media/fruit-completion-v1-ppo-1501.mp4",
+      "source": "/root/autodl-tmp/Pi05-VLABench/runs/pose-robustness-v2/fruit-completion-v1/video-ppo/select_fruit-1501.mp4",
+      "bytes": 2338566,
+      "sha256": "02745228396f02f2636e0fb4df6b13e1d4b0121997f2ae38d6a6c9bcf9f15c34"
+    },
+    {
+      "bundle_path": "media/fruit-completion-v1-sft-1501.gif",
+      "source": "/root/autodl-tmp/Pi05-VLABench/runs/pose-robustness-v2/fruit-completion-v1/previews/fruit-completion-v1-sft-1501.gif",
+      "bytes": 1683846,
+      "sha256": "839e8fa1cb66f338b68dad4462576e2c67832ed202a6966d177607a813bb4c3b"
+    },
+    {
+      "bundle_path": "media/fruit-completion-v1-sft-1501.mp4",
+      "source": "/root/autodl-tmp/Pi05-VLABench/runs/pose-robustness-v2/fruit-completion-v1/video-sft/select_fruit-1501.mp4",
+      "bytes": 2341820,
+      "sha256": "086db70b90997b9d06ad6177e36fd4ff51e1418b88b6173a36513ae0c387621d"
+    }
+  ]
+}

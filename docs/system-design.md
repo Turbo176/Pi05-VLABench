@@ -1,6 +1,6 @@
 # 🧩 System design and implementation
 
-The current result is a fruit-selection SFT-to-PPO experiment built from one shared fruit/flower policy. This page describes the executed pose-policy interface. The original joint-space pilot in [policy-io.md](policy-io.md) uses a different action representation and remains a separate historical experiment.
+The current result is a fruit-selection SFT-to-PPO experiment built from one shared fruit/flower policy. This page describes the executed pose-policy interface. The original joint-space expert gallery uses a different action representation; its data are separate from the learned-policy dataset.
 
 ## Architecture
 

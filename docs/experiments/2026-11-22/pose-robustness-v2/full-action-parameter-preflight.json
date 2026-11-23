@@ -1,8 +1,0 @@
-{
-  "default_lora_parameter_selection_unchanged": true,
-  "full_action_expert_count": 427932672,
-  "full_action_expert_tensor_count": 182,
-  "vlm_base_parameters_selected": false,
-  "free_disk_bytes": 11306106880,
-  "planned_final_checkpoints": 1
-}

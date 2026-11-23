@@ -1,8 +1,0 @@
-{"seed": 55, "mode": "fk_with_original_fingers", "success": true, "controls": 138, "ik_nonconverged_steps": 0}
-{"seed": 55, "mode": "original_arm_with_binary_fingers", "success": false, "controls": 138, "ik_nonconverged_steps": 0}
-{"seed": 58, "mode": "fk_with_original_fingers", "success": false, "controls": 141, "ik_nonconverged_steps": 0}
-{"seed": 58, "mode": "original_arm_with_binary_fingers", "success": false, "controls": 141, "ik_nonconverged_steps": 0}
-{"seed": 72, "mode": "fk_with_original_fingers", "success": true, "controls": 167, "ik_nonconverged_steps": 0}
-{"seed": 72, "mode": "original_arm_with_binary_fingers", "success": false, "controls": 167, "ik_nonconverged_steps": 0}
-{"seed": 75, "mode": "fk_with_original_fingers", "success": true, "controls": 159, "ik_nonconverged_steps": 0}
-{"seed": 75, "mode": "original_arm_with_binary_fingers", "success": false, "controls": 159, "ik_nonconverged_steps": 0}

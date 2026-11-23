@@ -1,9 +1,0 @@
-{
-  "kind": "expert_corrections_after_training_only_policy_rollin",
-  "task": "insert_flower",
-  "attempts": 3,
-  "replay_verified": 0,
-  "policy_parent_sha256": "e334f6d40f3d65b31c6261208d5191918cc05bc94c11761774eb966e3bf68b1f",
-  "render_samples": 0,
-  "script_sha256": "38793c593041460ee168a62df1e15eb3803192efd847e1beea66fba1da13f779"
-}

@@ -1,8 +1,0 @@
-{
-  "kind": "expert_corrections_after_training_only_policy_rollin",
-  "attempts": 4,
-  "replay_verified": 2,
-  "policy_parent_sha256": "e597674c257f7fc8114650ec13e515f2257fa3506ca5e2c83ce8b82f18b79965",
-  "render_samples": 0,
-  "script_sha256": "1fb1e5f8076e0658e09b3001500a8213126e7c9b4b089624cca509aeb2035989"
-}

@@ -1,3 +1,0 @@
-{"update": 1, "expert_seed": 42, "frame": 110, "loss": 2.2439727783203125, "grad_l2": 9.105462074279785, "task": "select_fruit", "actor_max_delta": 0.00010061264038085938}
-{"update": 2, "expert_seed": 42, "frame": 60, "loss": 0.4730893075466156, "grad_l2": 2.3030452728271484, "task": "insert_flower"}
-{"update": 3, "expert_seed": 43, "frame": 62, "loss": 1.0910691022872925, "grad_l2": 4.198581695556641, "task": "take_out_cool_drink"}

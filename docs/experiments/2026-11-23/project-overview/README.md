@@ -25,7 +25,7 @@ python scripts/review_fruit_experiment.py
 The command was run successfully with Windows Python 3.9.13 and WSL Python 3.10.12. Its output is:
 
 ```text
-Verified 201 evidence files and 11 registered source/config hashes.
+Verified 45 evidence files and 11 registered source/config hashes.
 Published reference: 4/10 successes, 40%, 4198 controls
 Shared SFT90: 5/10 successes, 50%, 3861 controls
 Fruit PPO1: 5/10 successes, 50%, 3737 controls
@@ -33,7 +33,7 @@ Actor update: 224 changed tensors; 19 PPO optimizer steps; 731 environment contr
 Checks use saved evidence only; no GPU, weights, or simulation are required.
 ```
 
-It rehashes exported evidence, checks the registered source/configuration files, recomputes 57 ordinary/language episode outcomes, checks paired input fields and checkpoint identities, and compares saved actor-update evidence with the training record. Registered text files may be normalized from CRLF to LF for cross-platform checkout compatibility; raw evidence is hashed without newline conversion. It rejects missing or changed evidence and inconsistent scores. Original weight tensors and source datasets are excluded from Git, so this review checks their exported audit records rather than rerunning those audits.
+It rehashes the 45 retained evidence files against entries in the original 201-file export manifest, checks the registered source/configuration files, recomputes 57 ordinary/language episode outcomes, checks paired input fields and checkpoint identities, and compares saved actor-update evidence with the training record. Registered text files may be normalized from CRLF to LF for cross-platform checkout compatibility; raw evidence is hashed without newline conversion. It rejects missing or changed evidence and inconsistent scores. Original weight tensors and source datasets are excluded from Git, so this review checks their exported audit records rather than rerunning those audits.
 
 To save a machine-readable report, choose a new output directory:
 
@@ -49,4 +49,4 @@ PYTHONDONTWRITEBYTECODE=1 MPLCONFIGDIR=.local/matplotlib \
   --figures --output .local/project-overview-rerun
 ```
 
-The first figure generation used this report directory as the output. The plotting script refuses to overwrite an existing output. [Report, measurements, input hashes, and figure hashes](report.json) · [Reviewer source](../../../../scripts/review_fruit_experiment.py) · [Frozen experiment](../../2026-11-22/fruit-completion-v1/README.md)
+The first figure generation used this report directory as the output and verified the original 201-file export. The saved report records that earlier packaging and source hash; the current source release retains 45 evidence files and all scored outcomes. The plotting script refuses to overwrite an existing output. [Report, measurements, input hashes, and figure hashes](report.json) · [Reviewer source](../../../../scripts/review_fruit_experiment.py) · [Frozen experiment](../../2026-11-22/fruit-completion-v1/README.md)

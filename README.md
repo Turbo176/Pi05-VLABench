@@ -135,7 +135,7 @@ From the repository root, Python 3.9+ can verify the exported evidence and recom
 python scripts/review_fruit_experiment.py
 ```
 
-This checks 201 evidence files, 11 registered source/configuration hashes, paired observations, reported checkpoint identities, and saved actor-update records. It recomputes the ordinary/language scores from 57 raw evaluation episodes. It does not load weights or rerun the simulator. [Expected output and figure reproduction](docs/experiments/2026-11-23/project-overview/README.md)
+This checks 45 retained evidence files against their original export hashes, 11 registered source/configuration hashes, paired observations, checkpoint identities, and saved actor-update records. It recomputes the ordinary/language scores from all 57 raw evaluation episodes. It does not load weights or rerun the simulator. [Expected output and figure reproduction](docs/experiments/2026-11-23/project-overview/README.md)
 
 ### Run an official expert demonstration
 
@@ -163,7 +163,7 @@ bash scripts/run_wsl.sh replay runs/select_fruit-42/episode.h5
 | [Expert data and LeRobot export](docs/stage2.md) | Collection, replay checks, dataset fields, and split audits |
 | [Earlier experiments](docs/experiments/2026-11-22/pose-robustness-v2/README.md) | Previous interfaces, diagnostic runs, and their separate results |
 
-`scripts/` contains collection, conversion, training, PPO, evaluation, and analysis tools; `configs/` records experiment settings. Curated videos live in `media/`. Weights, source datasets, assets, caches, and credentials remain outside Git.
+[Script guide](scripts/README.md) lists the entry points for collection, conversion, SFT, PPO, evaluation, and analysis. `configs/` contains the frozen fruit PPO/evaluation settings and the reference evaluator's default control settings. `media/` holds the three expert replays and the final paired policy videos. Weights, source datasets, assets, caches, and credentials remain outside Git.
 
 <a id="credits"></a>
 

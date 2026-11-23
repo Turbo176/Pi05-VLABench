@@ -1,6 +1,0 @@
-{"repeat": 0, "reset_valid": true, "matches_manifest": true, "initial_state_sha256": "19b09c51b5f822d3701cb52e68b3cd8d16f0292fde9830aeaae0077ac26bae3b", "initial_policy_rgb_sha256": "04e72637e1a254e7674d5966ac8ade9fd053172979890f992f0568237772b1b4", "instruction": "Insert the rose into the vase_seen."}
-WARNING:absl:Nan, Inf or huge value in QACC at DOF 21. The simulation is unstable. Time = 0.0160.
-{"repeat": 1, "reset_valid": false, "error": "Physics state is invalid. Warning(s) raised: mjWARN_BADQACC"}
-{"repeat": 2, "reset_valid": true, "matches_manifest": true, "initial_state_sha256": "19b09c51b5f822d3701cb52e68b3cd8d16f0292fde9830aeaae0077ac26bae3b", "initial_policy_rgb_sha256": "04e72637e1a254e7674d5966ac8ade9fd053172979890f992f0568237772b1b4", "instruction": "Insert the rose into the vase_seen."}
-WARNING:absl:Nan, Inf or huge value in QACC at DOF 22. The simulation is unstable. Time = 0.1610.
-{"repeat": 3, "reset_valid": false, "error": "Physics state is invalid. Warning(s) raised: mjWARN_BADQACC"}
