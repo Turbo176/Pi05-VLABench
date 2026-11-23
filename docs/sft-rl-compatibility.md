@@ -1,5 +1,7 @@
 # π0.5 SFT to PPO source audit
 
+> Initial source audit and joint-space pilot. The completed fruit pose-policy experiment uses the later pinned VLABench/OpenPI fork. See the [executed interface and model card](system-design.md) and [verified zero-update handoff](experiments/2026-11-22/fruit-completion-v1/handoff.json) for its current results.
+
 Repository revisions are recorded in [Upstream revisions](upstream.md). The local test exercised the pinned OpenPI LeRobot reader. This audit covers the model and rollout source. The single-GPU implementation and measured experiments are documented in [Single-GPU experiments](single-gpu.md).
 
 | Boundary | Finding at the pinned revisions |

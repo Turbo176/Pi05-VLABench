@@ -1,5 +1,7 @@
 # Stage 2 dataset pilot
 
+> Original local joint-space dataset. The shared fruit/flower SFT uses the separate pose export in the [current data card](system-design.md#data-card); its 64 training episodes are not added to the older 60-episode collection below.
+
 The pilot uses the VLABench Franka, MuJoCo, and the upstream expert skills. Each capture records nine actuator targets and aligned four-camera RGB at 10 Hz. The LeRobot v3.0 export stores the RGB losslessly as image features for frame-by-frame validation. `task` contains the original natural-language instruction.
 
 ## Local setup

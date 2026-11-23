@@ -1,0 +1,499 @@
+{
+  "created_at": "2026-11-23T03:43:38.104553+00:00",
+  "python": "3.10.12",
+  "verification": {
+    "registered_source_and_config_hashes": 11,
+    "registered_text_crlf_normalized": 0,
+    "evidence_files": 201,
+    "raw_evaluation_episodes": 57,
+    "paired_interface_fields": 13,
+    "model_weights_loaded": false,
+    "simulation_executed": false
+  },
+  "input_hashes": {
+    "docs/experiments/2026-11-22/fruit-completion-v1/comparison.json": "42d03b6c32d54ee789172df04de1a36e7fdaabdeae48f5d6c8a8788a82de1420",
+    "docs/experiments/2026-11-22/fruit-completion-v1/ordinary-comparison.json": "2c6216b46fdcb3f979b51376ec9ea848cd27b1fdf36484a0f9166c7ffd5e958f",
+    "docs/experiments/2026-11-22/fruit-completion-v1/registration.json": "40afe28d29367ab7c184bc7d6eff2147821f674671ed8c0c033d0dcd4e1294f8",
+    "docs/experiments/2026-11-22/fruit-completion-v1/evidence-export.json": "4fca44def1d0a2b8c845a939b625ae75538ac0c79aa0ef7c2417450698706fb9",
+    "docs/experiments/2026-11-22/fruit-completion-v1/saved-checkpoint-update-audit.json": "1f265b7aa1f6f08da566b839a19fcdb94f16e4947810891550ecffdd50fcf29a",
+    "docs/experiments/2026-11-22/pose-robustness-v2/training-contract-audit.json": "8032b184a21448ed8e435300a78b9d335fc6fd9379e80002fa86aad1463a9b46"
+  },
+  "data": {
+    "train_episodes": 64,
+    "validation_episodes": 5,
+    "train_frames": 9904,
+    "validation_frames": 744,
+    "training_sources": {
+      "select_fruit": {
+        "expert_demo": 45,
+        "expert_correction": 2
+      },
+      "insert_flower": {
+        "expert_demo": 17,
+        "expert_correction": 0
+      }
+    },
+    "by_task": {
+      "insert_flower": {
+        "training_episodes": 17,
+        "validation_episodes": 1,
+        "frames": 2918,
+        "instructions": {
+          "Insert the rose into the vase_seen.": 14,
+          "Insert the tulip into the vase_seen.": 3
+        }
+      },
+      "select_fruit": {
+        "training_episodes": 47,
+        "validation_episodes": 4,
+        "frames": 6986,
+        "instructions": {
+          "Put the apple into the plate_seen": 9,
+          "Put the pear into the plate_seen": 16,
+          "Put the orange into the plate_seen": 10,
+          "Put the banana into the plate_seen": 12
+        }
+      }
+    }
+  },
+  "suites": {
+    "ordinary": {
+      "official": {
+        "base": {
+          "successes": 4,
+          "trials": 10,
+          "success_rate": 0.4,
+          "wilson_95": [
+            0.16818032970623614,
+            0.6873262302663417
+          ],
+          "total_controls": 4198
+        },
+        "sft": {
+          "successes": 5,
+          "trials": 10,
+          "success_rate": 0.5,
+          "wilson_95": [
+            0.236593090512564,
+            0.7634069094874361
+          ],
+          "total_controls": 3861
+        },
+        "ppo": {
+          "successes": 5,
+          "trials": 10,
+          "success_rate": 0.5,
+          "wilson_95": [
+            0.236593090512564,
+            0.7634069094874361
+          ],
+          "total_controls": 3737
+        }
+      }
+    },
+    "fruit_language": {
+      "official": {
+        "base": {
+          "successes": 1,
+          "trials": 3,
+          "success_rate": 0.3333333333333333,
+          "wilson_95": [
+            0.06149194472039621,
+            0.7923403991979522
+          ],
+          "total_controls": 1334
+        },
+        "sft": {
+          "successes": 1,
+          "trials": 3,
+          "success_rate": 0.3333333333333333,
+          "wilson_95": [
+            0.06149194472039621,
+            0.7923403991979522
+          ],
+          "total_controls": 1343
+        },
+        "ppo": {
+          "successes": 0,
+          "trials": 3,
+          "success_rate": 0.0,
+          "wilson_95": [
+            5.551115123125783e-17,
+            0.5614970317550454
+          ],
+          "total_controls": 1800
+        }
+      },
+      "paraphrase": {
+        "base": {
+          "successes": 0,
+          "trials": 3,
+          "success_rate": 0.0,
+          "wilson_95": [
+            5.551115123125783e-17,
+            0.5614970317550454
+          ],
+          "total_controls": 1800
+        },
+        "sft": {
+          "successes": 1,
+          "trials": 3,
+          "success_rate": 0.3333333333333333,
+          "wilson_95": [
+            0.06149194472039621,
+            0.7923403991979522
+          ],
+          "total_controls": 1297
+        },
+        "ppo": {
+          "successes": 0,
+          "trials": 3,
+          "success_rate": 0.0,
+          "wilson_95": [
+            5.551115123125783e-17,
+            0.5614970317550454
+          ],
+          "total_controls": 1800
+        }
+      },
+      "alternate_target": {
+        "base": {
+          "successes": 1,
+          "trials": 3,
+          "success_rate": 0.3333333333333333,
+          "wilson_95": [
+            0.06149194472039621,
+            0.7923403991979522
+          ],
+          "total_controls": 1334
+        },
+        "sft": {
+          "successes": 1,
+          "trials": 3,
+          "success_rate": 0.3333333333333333,
+          "wilson_95": [
+            0.06149194472039621,
+            0.7923403991979522
+          ],
+          "total_controls": 1331
+        },
+        "ppo": {
+          "successes": 1,
+          "trials": 3,
+          "success_rate": 0.3333333333333333,
+          "wilson_95": [
+            0.06149194472039621,
+            0.7923403991979522
+          ],
+          "total_controls": 1333
+        }
+      }
+    }
+  },
+  "ordinary_cases": [
+    {
+      "seed": 1501,
+      "instruction": "Put the pear into the plate_seen",
+      "outcomes": {
+        "base": {
+          "success": false,
+          "steps": 600,
+          "failure_type": "target_moved_goal_unsatisfied",
+          "ik_nonconverged_steps": 206
+        },
+        "sft": {
+          "success": true,
+          "steps": 160,
+          "failure_type": null,
+          "ik_nonconverged_steps": 0
+        },
+        "ppo": {
+          "success": true,
+          "steps": 160,
+          "failure_type": null,
+          "ik_nonconverged_steps": 0
+        }
+      }
+    },
+    {
+      "seed": 1502,
+      "instruction": "Put the pear into the plate_seen",
+      "outcomes": {
+        "base": {
+          "success": false,
+          "steps": 600,
+          "failure_type": "target_moved_goal_unsatisfied",
+          "ik_nonconverged_steps": 293
+        },
+        "sft": {
+          "success": false,
+          "steps": 600,
+          "failure_type": "target_moved_goal_unsatisfied",
+          "ik_nonconverged_steps": 257
+        },
+        "ppo": {
+          "success": false,
+          "steps": 600,
+          "failure_type": "target_moved_goal_unsatisfied",
+          "ik_nonconverged_steps": 264
+        }
+      }
+    },
+    {
+      "seed": 1503,
+      "instruction": "Put the banana into the plate_seen",
+      "outcomes": {
+        "base": {
+          "success": true,
+          "steps": 146,
+          "failure_type": null,
+          "ik_nonconverged_steps": 0
+        },
+        "sft": {
+          "success": false,
+          "steps": 600,
+          "failure_type": "target_moved_goal_unsatisfied",
+          "ik_nonconverged_steps": 162
+        },
+        "ppo": {
+          "success": false,
+          "steps": 600,
+          "failure_type": "target_moved_goal_unsatisfied",
+          "ik_nonconverged_steps": 43
+        }
+      }
+    },
+    {
+      "seed": 1504,
+      "instruction": "Put the banana into the plate_seen",
+      "outcomes": {
+        "base": {
+          "success": false,
+          "steps": 600,
+          "failure_type": "target_moved_goal_unsatisfied",
+          "ik_nonconverged_steps": 243
+        },
+        "sft": {
+          "success": true,
+          "steps": 268,
+          "failure_type": null,
+          "ik_nonconverged_steps": 0
+        },
+        "ppo": {
+          "success": false,
+          "steps": 600,
+          "failure_type": "target_moved_goal_unsatisfied",
+          "ik_nonconverged_steps": 93
+        }
+      }
+    },
+    {
+      "seed": 1505,
+      "instruction": "Put the apple into the plate_seen",
+      "outcomes": {
+        "base": {
+          "success": true,
+          "steps": 154,
+          "failure_type": null,
+          "ik_nonconverged_steps": 0
+        },
+        "sft": {
+          "success": true,
+          "steps": 156,
+          "failure_type": null,
+          "ik_nonconverged_steps": 0
+        },
+        "ppo": {
+          "success": true,
+          "steps": 153,
+          "failure_type": null,
+          "ik_nonconverged_steps": 0
+        }
+      }
+    },
+    {
+      "seed": 1506,
+      "instruction": "Put the pear into the plate_seen",
+      "outcomes": {
+        "base": {
+          "success": false,
+          "steps": 600,
+          "failure_type": "target_moved_goal_unsatisfied",
+          "ik_nonconverged_steps": 183
+        },
+        "sft": {
+          "success": true,
+          "steps": 146,
+          "failure_type": null,
+          "ik_nonconverged_steps": 1
+        },
+        "ppo": {
+          "success": false,
+          "steps": 600,
+          "failure_type": "target_moved_goal_unsatisfied",
+          "ik_nonconverged_steps": 101
+        }
+      }
+    },
+    {
+      "seed": 1507,
+      "instruction": "Put the pear into the plate_seen",
+      "outcomes": {
+        "base": {
+          "success": true,
+          "steps": 146,
+          "failure_type": null,
+          "ik_nonconverged_steps": 0
+        },
+        "sft": {
+          "success": false,
+          "steps": 600,
+          "failure_type": "target_moved_goal_unsatisfied",
+          "ik_nonconverged_steps": 172
+        },
+        "ppo": {
+          "success": true,
+          "steps": 127,
+          "failure_type": null,
+          "ik_nonconverged_steps": 0
+        }
+      }
+    },
+    {
+      "seed": 1508,
+      "instruction": "Put the banana into the plate_seen",
+      "outcomes": {
+        "base": {
+          "success": false,
+          "steps": 600,
+          "failure_type": "target_moved_goal_unsatisfied",
+          "ik_nonconverged_steps": 202
+        },
+        "sft": {
+          "success": false,
+          "steps": 600,
+          "failure_type": "target_moved_goal_unsatisfied",
+          "ik_nonconverged_steps": 250
+        },
+        "ppo": {
+          "success": false,
+          "steps": 600,
+          "failure_type": "target_moved_goal_unsatisfied",
+          "ik_nonconverged_steps": 268
+        }
+      }
+    },
+    {
+      "seed": 1509,
+      "instruction": "Put the banana into the plate_seen",
+      "outcomes": {
+        "base": {
+          "success": false,
+          "steps": 600,
+          "failure_type": "target_moved_goal_unsatisfied",
+          "ik_nonconverged_steps": 177
+        },
+        "sft": {
+          "success": false,
+          "steps": 600,
+          "failure_type": "target_moved_goal_unsatisfied",
+          "ik_nonconverged_steps": 225
+        },
+        "ppo": {
+          "success": true,
+          "steps": 141,
+          "failure_type": null,
+          "ik_nonconverged_steps": 0
+        }
+      }
+    },
+    {
+      "seed": 1510,
+      "instruction": "Put the pear into the plate_seen",
+      "outcomes": {
+        "base": {
+          "success": true,
+          "steps": 152,
+          "failure_type": null,
+          "ik_nonconverged_steps": 0
+        },
+        "sft": {
+          "success": true,
+          "steps": 131,
+          "failure_type": null,
+          "ik_nonconverged_steps": 0
+        },
+        "ppo": {
+          "success": true,
+          "steps": 156,
+          "failure_type": null,
+          "ik_nonconverged_steps": 0
+        }
+      }
+    }
+  ],
+  "handoff": {
+    "measured_windows": 3,
+    "normalized_prediction_max_error": 0.0,
+    "matched_closed_loop_rollouts": 1
+  },
+  "actor_update": {
+    "action_expert_lora": {
+      "tensors": 216,
+      "changed_tensors": 216,
+      "changed_elements": 6930323,
+      "max_abs_delta": 3.5019038477912545e-05,
+      "delta_l2": 0.02436706013739338
+    },
+    "action_heads": {
+      "tensors": 8,
+      "changed_tensors": 8,
+      "changed_elements": 2140024,
+      "max_abs_delta": 3.46573069691658e-05,
+      "delta_l2": 0.01499879704978484
+    }
+  },
+  "training_cost": {
+    "device_reported": "NVIDIA GeForce RTX 4080 SUPER",
+    "sft_update_loop_seconds": 142.52201917394996,
+    "sft_peak_allocated_bytes": 19399018496,
+    "ppo_rollout_update_seconds": 232.50529009103775,
+    "ppo_peak_allocated_bytes": 7328862208,
+    "ppo_controls": 731,
+    "ppo_chunks": 147,
+    "ppo_optimizer_steps": 19
+  },
+  "limitations": [
+    "Verifies exported records; does not reload weights or repeat a simulation.",
+    "Small fruit pilot; flower and fridge learned-policy workflows remain unfinished.",
+    "No aggregate PPO success gain; language regression remains in the full report.",
+    "Loop times exclude model loading, evaluation, diagnostics, and earlier experiments."
+  ],
+  "source_sha256": "ba29fab78b4ae2f238429fa118bb94f42662b454c65f8f381f3bd0bad87b43df",
+  "plots": {
+    "matplotlib": "3.10.9",
+    "numpy": "1.25.0",
+    "figures": [
+      {
+        "path": "paired-results.png",
+        "bytes": 169282,
+        "sha256": "cf1ef57cae6bf6fb6c434d7400892be1218e70f59f7bcd803da543c331a60a82"
+      },
+      {
+        "path": "paired-results.svg",
+        "bytes": 127051,
+        "sha256": "ab60fed62091169993682397f67fa23bbd7583a0b1c3d23f1956f446b68c494f"
+      },
+      {
+        "path": "dataset-coverage.png",
+        "bytes": 111777,
+        "sha256": "38c32e6602545291710dcd9cf093f6a55b6274c20513a7c5f79901d0a9edc189"
+      },
+      {
+        "path": "dataset-coverage.svg",
+        "bytes": 80330,
+        "sha256": "3057b4c947701ef38d30e32b567065a4f96ea1f91ad9bb386489e3b86a611d32"
+      }
+    ]
+  }
+}
