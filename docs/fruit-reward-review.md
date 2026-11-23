@@ -28,6 +28,16 @@ The current geometry terms do not explicitly distinguish touching from a stable 
 
 There is also a discount-consistency limitation: advantage calculation uses `gamma=0.99` per policy chunk, while the progress bonus uses `Phi_next - Phi_now`. Classical potential-based shaping uses `gamma * Phi_next - Phi_now`, with consistent terminal handling. The existing bonus is therefore a distance heuristic; this project does not claim that it preserves the original task's optimal policy. See Ng, Harada and Russell, [Policy invariance under reward transformations (1999)](https://people.eecs.berkeley.edu/~russell/papers/icml99-shaping.pdf). Changing this formula alone would not establish that PPO will improve.
 
+## 📚 Literature and implementation references
+
+| Reference | Relevant finding | Application here |
+| --- | --- | --- |
+| Ng, Harada and Russell, [Policy invariance under reward transformations, ICML 1999](https://people.eecs.berkeley.edu/~russell/papers/icml99-shaping.pdf), Theorem 1 | Potential-based shaping uses the same discount as the objective: `gamma * Phi(next) - Phi(now)`. | A corrected shaping experiment needs consistent chunk discounting and terminal potentials. This theorem does not guarantee that finite-budget PPO improves. |
+| Luo et al., [SERL, ICRA 2024](https://arxiv.org/html/2401.16013v4#S4.SS2), Section 4.2 | Reward specification needs a reliable success detector; classifier rewards can be exploited. | Keep the simulator's official success predicate and check intermediate events against trajectories. SERL uses off-policy RL and provides no PPO-specific guarantee. |
+| [robosuite official PickPlace implementation](https://github.com/ARISE-Initiative/robosuite/blob/master/robosuite/environments/manipulation/pick_place.py), `reward` and `staged_rewards` | The shaping distinguishes reaching, grasping, lifting, and hovering; lifting is gated on grasping. Its dense contribution uses the maximum stage reward. | Use grasp-conditioned lift detection as a design reference. Its weights and per-step reward are not the one-time milestone proposal below. The project continues to use VLABench. |
+
+These sources support clear progress signals and careful reward semantics. None establishes that a 0.5/0.5 or 0.2/0.8 split is optimal for this model and task.
+
 ## 🧪 Proposed next experiment, not yet implemented
 
 The suggested split of +0.5 for lifting and +0.5 for placement is a reasonable candidate to compare. A more completion-focused starting candidate is:
@@ -35,10 +45,14 @@ The suggested split of +0.5 for lifting and +0.5 for placement is a reasonable c
 | Event | One-time reward | Detection requirement |
 | --- | ---: | --- |
 | Securely grasp and lift the instructed fruit | +0.2 | Verified grasp/contact and sustained lift above its reset height; do not count a push, bounce, or wrong fruit |
-| Place the fruit and release | +0.8 | Preserve official task success; separately verify release and stable placement for this reward event |
+| Complete the official fruit task | +0.8 | The unchanged official success predicate becomes true; do not wait for an additional release or stability condition |
 
-The values are proposed hyperparameters, not validated settings. The un-discounted event reward is at most 1 per episode. Track an episode-local ledger so lifting, hovering, releasing and regrasping do not repeatedly collect the same milestone reward. Check the predicates against successful expert trajectories and failed trajectories before training. Keep official success reporting unchanged; if official success can occur before the release/stability check, explicitly define the extra validation controls and termination rule in the new protocol.
+The values are proposed hyperparameters, not validated settings. The undiscounted event reward is at most 1 per episode; a success without the lift milestone receives 0.8. Track an episode-local ledger so lifting, hovering, releasing and regrasping do not repeatedly collect the same milestone reward. Detect lift persistence at each underlying control tick even though rewards are accumulated per policy chunk. Determine and freeze the height and persistence thresholds using training/development trajectories before PPO. Check wrong-object lifts, pushes, bounces, repeated grasps, and suspended objects above the plate as negative cases.
 
-For context, robosuite's [official pick-and-place reward implementation](https://github.com/ARISE-Initiative/robosuite/blob/master/robosuite/environments/manipulation/pick_place.py) also distinguishes reaching, grasping, lifting and hovering. It is a design reference, not code that was run in VLABench and not a proposed environment change.
+Release and stable placement remain separate diagnostics under this candidate. Official success can end an episode before a stricter stability test would pass; withholding the final reward until after termination would be a bug. An additional settling period would require its own explicitly different protocol. The proposal keeps the present success criterion, 600-control limit, and termination handling.
 
-Any later reward comparison should start from the exact same SFT90 parent and fix the training interaction budget, controller and evaluation settings. Register the new experiment before running it. Use training/development starts for debugging; the already reported 1501–1510 and 1601–1603 results have been inspected and must not become an untouched test set for a tuned reward. Preserve the present checkpoint and its negative results.
+One-time milestones change the training objective and do not inherit the policy-invariance theorem. If potential-based shaping is tested separately, use the same `gamma=0.99` per chunk as advantage calculation, include remaining horizon in the finite-horizon state, and set potential to zero at every true terminal state, including the fixed task-budget endpoint. Continuing-task truncation would instead need its own bootstrap treatment. Do not combine both redesigns and describe their effect as a reward-only ablation of either one.
+
+Any later reward comparison should start from the exact same SFT90 parent and fix the training interaction budget, learning rate, trainable actor parameters, sampler, controller, action execution, and evaluation settings. Change the reward alone. Register the new experiment and fresh held-out starts before running it; use matched training starts and multiple training seeds where the budget allows. The already reported 1501–1510 and 1601–1603 results have been inspected and cannot serve as an untouched test set for a tuned reward.
+
+Log each reward component, official success, controls, actor/critic loss, entropy or the applicable sampler diagnostic, approximate KL, clipping fraction, actor gradients, and parameter changes. Compare official closed-loop success and interaction cost rather than shaped return alone. Preserve the present checkpoint and all paired results. A [separate motion analysis](experiments/2026-11-23/training-and-motion/README.md) documents command discontinuities; any smoothing experiment belongs in a different comparison.

@@ -1,0 +1,730 @@
+{
+  "created_at": "2026-11-23T02:37:52.525244+00:00",
+  "scope": "Saved-log analysis; no policy runs or updates.",
+  "source_sha256": "6e919bc7d60120672b700287b540652a66a612e1c57b1b41f1726653112aaa02",
+  "inputs": {
+    "updates": {
+      "path": "docs/experiments/2026-11-22/fruit-completion-v1/sft-parent/updates.jsonl",
+      "sha256": "5832c4becacd5dedf17f0321578eb9cdd43bf189bea29cf6280a211988f29f02"
+    },
+    "sft_summary": {
+      "path": "docs/experiments/2026-11-22/fruit-completion-v1/sft-parent/summary.json",
+      "sha256": "bb210a3df2008cd4c8b8267fdb131f153d3454a1abe1aa9fca83545794d695aa"
+    },
+    "ppo_update": {
+      "path": "docs/experiments/2026-11-22/fruit-completion-v1/ppo/iteration-1.json",
+      "sha256": "d683cc520468e87056997a94ec75992f8e70973e9819428619e025148455f381"
+    },
+    "base_trace": {
+      "path": "docs/experiments/2026-11-22/fruit-completion-v1/video-base/select_fruit-1501-controls.jsonl",
+      "sha256": "fcc7295acd3f38388f68bc4e01bd8c5f44c3df9f61237966351069e893146ef3"
+    },
+    "base_verification": {
+      "path": "docs/experiments/2026-11-22/fruit-completion-v1/video-base/verification.json",
+      "sha256": "b889b2c3b64b34d196f52b517a2c2ec24745cf0d0964491343e1a12fce013179"
+    },
+    "sft_trace": {
+      "path": "docs/experiments/2026-11-22/fruit-completion-v1/video-sft/select_fruit-1501-controls.jsonl",
+      "sha256": "20addf6c9506f4cdc0bf429038dce1d0265344fa09134240c25accf2801a02a9"
+    },
+    "sft_verification": {
+      "path": "docs/experiments/2026-11-22/fruit-completion-v1/video-sft/verification.json",
+      "sha256": "d1579dcd271e05f66145b81e9cdba48dea558bdd731495e36f30d29a4c89e48c"
+    },
+    "ppo_trace": {
+      "path": "docs/experiments/2026-11-22/fruit-completion-v1/video-ppo/select_fruit-1501-controls.jsonl",
+      "sha256": "bd5750934252c23db1a6a8e7f33a728c0f1916a455f95cde290aa9f65abc3611"
+    },
+    "ppo_verification": {
+      "path": "docs/experiments/2026-11-22/fruit-completion-v1/video-ppo/verification.json",
+      "sha256": "8a40e5ba45db9fef42481dcf1c6b24cb673955b6584423e1993b8fcc587613da"
+    }
+  },
+  "environment": {
+    "python": "3.10.12",
+    "numpy": "1.25.0",
+    "matplotlib": "3.10.9"
+  },
+  "sft": {
+    "updates": 90,
+    "first_loss": 0.342455442994833,
+    "last_loss": 0.1338071972131729,
+    "first_10_mean": 0.21896110605448485,
+    "last_10_mean": 0.32430294919759034,
+    "loss": {
+      "samples": 90,
+      "mean": 0.2634685050489174,
+      "median": 0.15732314065098763,
+      "p95": 0.6579799391329287,
+      "maximum": 0.9212472140789032
+    },
+    "gradient_before_clipping": {
+      "samples": 90,
+      "mean": 1.163188969757822,
+      "median": 0.7806225419044495,
+      "p95": 2.8489121675491327,
+      "maximum": 5.0584893226623535
+    },
+    "smoothing": "10-update trailing mean; raw updates retained",
+    "validation_loss_history_available": false
+  },
+  "ppo": {
+    "iterations": 1,
+    "optimizer_steps": 19,
+    "controls": 731,
+    "actor_critic_loss_history_available": false
+  },
+  "motion": {
+    "scene_seed": 1501,
+    "common_prefix_controls": 160,
+    "stages": {
+      "base": {
+        "common_prefix": {
+          "controls": 160,
+          "ik_nonconverged_controls": 0,
+          "gripper_command_changes": 1,
+          "commanded_target_step_mm": {
+            "all": {
+              "samples": 159,
+              "mean": 9.878572999831823,
+              "median": 10.018371408345317,
+              "p95": 13.011138351449766,
+              "maximum": 41.59366284855424
+            },
+            "at_replan": {
+              "samples": 31,
+              "mean": 9.021100166705256,
+              "median": 6.229723714472906,
+              "p95": 24.478641530102667,
+              "maximum": 40.57759716174235
+            },
+            "within_chunk": {
+              "samples": 128,
+              "mean": 10.086242201604662,
+              "median": 10.082599046040714,
+              "p95": 11.854675090562411,
+              "maximum": 41.59366284855424
+            }
+          },
+          "measured_response_step_mm": {
+            "all": {
+              "samples": 159,
+              "mean": 10.082359747867937,
+              "median": 9.747202192951196,
+              "p95": 17.980082920860283,
+              "maximum": 80.19840087208739
+            },
+            "at_replan": {
+              "samples": 32,
+              "mean": 11.001711166842515,
+              "median": 7.359546691878236,
+              "p95": 23.62840818091911,
+              "maximum": 80.19840087208739
+            },
+            "within_chunk": {
+              "samples": 127,
+              "mean": 9.850712146236546,
+              "median": 9.818842721625883,
+              "p95": 15.178485220724113,
+              "maximum": 23.780537481236795
+            }
+          },
+          "measured_response_rotation_deg": {
+            "all": {
+              "samples": 159,
+              "mean": 2.413074293564717,
+              "median": 2.1665930955029484,
+              "p95": 5.666024706221209,
+              "maximum": 19.49224134286089
+            },
+            "at_replan": {
+              "samples": 32,
+              "mean": 2.447121831819159,
+              "median": 2.0360517493370445,
+              "p95": 4.1216035482598885,
+              "maximum": 19.49224134286089
+            },
+            "within_chunk": {
+              "samples": 127,
+              "mean": 2.404495386288008,
+              "median": 2.3282490818620176,
+              "p95": 5.945979361865638,
+              "maximum": 18.47901106071208
+            }
+          },
+          "largest_raw_euler_coordinate_step_rad": 6.302703677055674,
+          "largest_command_steps": [
+            {
+              "step": 83,
+              "at_replan": false,
+              "distance_mm": 41.59366284855424
+            },
+            {
+              "step": 151,
+              "at_replan": true,
+              "distance_mm": 40.57759716174235
+            },
+            {
+              "step": 111,
+              "at_replan": true,
+              "distance_mm": 30.510818927416903
+            },
+            {
+              "step": 152,
+              "at_replan": false,
+              "distance_mm": 29.34222527064312
+            },
+            {
+              "step": 146,
+              "at_replan": true,
+              "distance_mm": 18.44646413278843
+            }
+          ]
+        },
+        "complete_rollout": {
+          "controls": 600,
+          "ik_nonconverged_controls": 206,
+          "gripper_command_changes": 4,
+          "commanded_target_step_mm": {
+            "all": {
+              "samples": 599,
+              "mean": 26.59449350352323,
+              "median": 10.16692430811297,
+              "p95": 128.01426338490964,
+              "maximum": 532.8248321413481
+            },
+            "at_replan": {
+              "samples": 119,
+              "mean": 93.90324533438614,
+              "median": 80.0858528429701,
+              "p95": 241.41708446654172,
+              "maximum": 532.8248321413481
+            },
+            "within_chunk": {
+              "samples": 480,
+              "mean": 9.907532112121801,
+              "median": 10.018350397812686,
+              "p95": 13.50279901749946,
+              "maximum": 54.587959294116146
+            }
+          },
+          "measured_response_step_mm": {
+            "all": {
+              "samples": 599,
+              "mean": 29.218019935812098,
+              "median": 15.004911712670907,
+              "p95": 93.92867520258457,
+              "maximum": 193.9791801586358
+            },
+            "at_replan": {
+              "samples": 120,
+              "mean": 32.68145672857383,
+              "median": 23.355588357774945,
+              "p95": 92.12447597032856,
+              "maximum": 172.66873906360536
+            },
+            "within_chunk": {
+              "samples": 479,
+              "mean": 28.350353098377013,
+              "median": 13.64413054496021,
+              "p95": 94.7594429558335,
+              "maximum": 193.9791801586358
+            }
+          },
+          "measured_response_rotation_deg": {
+            "all": {
+              "samples": 599,
+              "mean": 6.305882248475505,
+              "median": 5.828871607208522,
+              "p95": 14.455785503209572,
+              "maximum": 19.9051343921812
+            },
+            "at_replan": {
+              "samples": 120,
+              "mean": 6.5996745973036814,
+              "median": 5.7777588867611565,
+              "p95": 14.974121290118838,
+              "maximum": 19.49224134286089
+            },
+            "within_chunk": {
+              "samples": 479,
+              "mean": 6.2322808249694885,
+              "median": 5.859751752064577,
+              "p95": 14.20047275690257,
+              "maximum": 19.9051343921812
+            }
+          },
+          "largest_raw_euler_coordinate_step_rad": 11.878446452314837,
+          "largest_command_steps": [
+            {
+              "step": 291,
+              "at_replan": true,
+              "distance_mm": 532.8248321413481
+            },
+            {
+              "step": 591,
+              "at_replan": true,
+              "distance_mm": 518.374638792502
+            },
+            {
+              "step": 236,
+              "at_replan": true,
+              "distance_mm": 409.171593952872
+            },
+            {
+              "step": 251,
+              "at_replan": true,
+              "distance_mm": 407.79005021952844
+            },
+            {
+              "step": 306,
+              "at_replan": true,
+              "distance_mm": 284.66082643893895
+            }
+          ]
+        }
+      },
+      "sft": {
+        "common_prefix": {
+          "controls": 160,
+          "ik_nonconverged_controls": 0,
+          "gripper_command_changes": 2,
+          "commanded_target_step_mm": {
+            "all": {
+              "samples": 159,
+              "mean": 9.345390234293653,
+              "median": 10.008825930464035,
+              "p95": 10.976381737700292,
+              "maximum": 51.29689476108383
+            },
+            "at_replan": {
+              "samples": 31,
+              "mean": 7.0947546438226,
+              "median": 5.965439052581467,
+              "p95": 10.243197872600954,
+              "maximum": 31.23128280218575
+            },
+            "within_chunk": {
+              "samples": 128,
+              "mean": 9.890466041360861,
+              "median": 10.046499832183244,
+              "p95": 11.115884096414934,
+              "maximum": 51.29689476108383
+            }
+          },
+          "measured_response_step_mm": {
+            "all": {
+              "samples": 159,
+              "mean": 8.790157787712014,
+              "median": 9.60662274141366,
+              "p95": 10.358036441308206,
+              "maximum": 23.32655379244393
+            },
+            "at_replan": {
+              "samples": 32,
+              "mean": 7.120879763632139,
+              "median": 7.438381834570713,
+              "p95": 9.122824701502417,
+              "maximum": 10.288741976101065
+            },
+            "within_chunk": {
+              "samples": 127,
+              "mean": 9.210763274094342,
+              "median": 9.765436725687142,
+              "p95": 10.57225238863418,
+              "maximum": 23.32655379244393
+            }
+          },
+          "measured_response_rotation_deg": {
+            "all": {
+              "samples": 159,
+              "mean": 1.9070593355105883,
+              "median": 1.8740547014957494,
+              "p95": 3.666253993446162,
+              "maximum": 6.985201242856937
+            },
+            "at_replan": {
+              "samples": 32,
+              "mean": 1.7897267322650592,
+              "median": 1.6910192600078902,
+              "p95": 3.926701392997304,
+              "maximum": 4.217762040542036
+            },
+            "within_chunk": {
+              "samples": 127,
+              "mean": 1.9366234560133988,
+              "median": 1.9959327991616447,
+              "p95": 3.6480601937622823,
+              "maximum": 6.985201242856937
+            }
+          },
+          "largest_raw_euler_coordinate_step_rad": 12.535848448633226,
+          "largest_command_steps": [
+            {
+              "step": 85,
+              "at_replan": false,
+              "distance_mm": 51.29689476108383
+            },
+            {
+              "step": 88,
+              "at_replan": false,
+              "distance_mm": 48.28248472854282
+            },
+            {
+              "step": 86,
+              "at_replan": true,
+              "distance_mm": 31.23128280218575
+            },
+            {
+              "step": 72,
+              "at_replan": false,
+              "distance_mm": 11.582679407887897
+            },
+            {
+              "step": 65,
+              "at_replan": false,
+              "distance_mm": 11.442494613555722
+            }
+          ]
+        },
+        "complete_rollout": {
+          "controls": 160,
+          "ik_nonconverged_controls": 0,
+          "gripper_command_changes": 2,
+          "commanded_target_step_mm": {
+            "all": {
+              "samples": 159,
+              "mean": 9.345390234293653,
+              "median": 10.008825930464035,
+              "p95": 10.976381737700292,
+              "maximum": 51.29689476108383
+            },
+            "at_replan": {
+              "samples": 31,
+              "mean": 7.0947546438226,
+              "median": 5.965439052581467,
+              "p95": 10.243197872600954,
+              "maximum": 31.23128280218575
+            },
+            "within_chunk": {
+              "samples": 128,
+              "mean": 9.890466041360861,
+              "median": 10.046499832183244,
+              "p95": 11.115884096414934,
+              "maximum": 51.29689476108383
+            }
+          },
+          "measured_response_step_mm": {
+            "all": {
+              "samples": 159,
+              "mean": 8.790157787712014,
+              "median": 9.60662274141366,
+              "p95": 10.358036441308206,
+              "maximum": 23.32655379244393
+            },
+            "at_replan": {
+              "samples": 32,
+              "mean": 7.120879763632139,
+              "median": 7.438381834570713,
+              "p95": 9.122824701502417,
+              "maximum": 10.288741976101065
+            },
+            "within_chunk": {
+              "samples": 127,
+              "mean": 9.210763274094342,
+              "median": 9.765436725687142,
+              "p95": 10.57225238863418,
+              "maximum": 23.32655379244393
+            }
+          },
+          "measured_response_rotation_deg": {
+            "all": {
+              "samples": 159,
+              "mean": 1.9070593355105883,
+              "median": 1.8740547014957494,
+              "p95": 3.666253993446162,
+              "maximum": 6.985201242856937
+            },
+            "at_replan": {
+              "samples": 32,
+              "mean": 1.7897267322650592,
+              "median": 1.6910192600078902,
+              "p95": 3.926701392997304,
+              "maximum": 4.217762040542036
+            },
+            "within_chunk": {
+              "samples": 127,
+              "mean": 1.9366234560133988,
+              "median": 1.9959327991616447,
+              "p95": 3.6480601937622823,
+              "maximum": 6.985201242856937
+            }
+          },
+          "largest_raw_euler_coordinate_step_rad": 12.535848448633226,
+          "largest_command_steps": [
+            {
+              "step": 85,
+              "at_replan": false,
+              "distance_mm": 51.29689476108383
+            },
+            {
+              "step": 88,
+              "at_replan": false,
+              "distance_mm": 48.28248472854282
+            },
+            {
+              "step": 86,
+              "at_replan": true,
+              "distance_mm": 31.23128280218575
+            },
+            {
+              "step": 72,
+              "at_replan": false,
+              "distance_mm": 11.582679407887897
+            },
+            {
+              "step": 65,
+              "at_replan": false,
+              "distance_mm": 11.442494613555722
+            }
+          ]
+        }
+      },
+      "ppo": {
+        "common_prefix": {
+          "controls": 160,
+          "ik_nonconverged_controls": 0,
+          "gripper_command_changes": 2,
+          "commanded_target_step_mm": {
+            "all": {
+              "samples": 159,
+              "mean": 9.234335340701895,
+              "median": 10.007039739541819,
+              "p95": 11.307880383496775,
+              "maximum": 51.23106158709173
+            },
+            "at_replan": {
+              "samples": 31,
+              "mean": 7.031629512252213,
+              "median": 6.160523828289673,
+              "p95": 10.873916466389057,
+              "maximum": 28.875138908561585
+            },
+            "within_chunk": {
+              "samples": 128,
+              "mean": 9.767803158529553,
+              "median": 10.060012238757588,
+              "p95": 11.24131311704853,
+              "maximum": 51.23106158709173
+            }
+          },
+          "measured_response_step_mm": {
+            "all": {
+              "samples": 159,
+              "mean": 8.733147280394661,
+              "median": 9.55778121704226,
+              "p95": 10.583023758700302,
+              "maximum": 21.563255817898536
+            },
+            "at_replan": {
+              "samples": 32,
+              "mean": 7.049746362291767,
+              "median": 7.421746400431076,
+              "p95": 8.537734200744904,
+              "maximum": 10.439780271152332
+            },
+            "within_chunk": {
+              "samples": 127,
+              "mean": 9.157311291255233,
+              "median": 9.759186249483978,
+              "p95": 10.814789542379573,
+              "maximum": 21.563255817898536
+            }
+          },
+          "measured_response_rotation_deg": {
+            "all": {
+              "samples": 159,
+              "mean": 1.8841099160538635,
+              "median": 1.8525598374733465,
+              "p95": 3.6865238159773925,
+              "maximum": 6.495166389479614
+            },
+            "at_replan": {
+              "samples": 32,
+              "mean": 1.9697266929203936,
+              "median": 1.8796213129974961,
+              "p95": 3.775233540857224,
+              "maximum": 5.078385656339372
+            },
+            "within_chunk": {
+              "samples": 127,
+              "mean": 1.862537184874895,
+              "median": 1.5952912741463,
+              "p95": 3.623340943261153,
+              "maximum": 6.495166389479614
+            }
+          },
+          "largest_raw_euler_coordinate_step_rad": 6.429311602483255,
+          "largest_command_steps": [
+            {
+              "step": 85,
+              "at_replan": false,
+              "distance_mm": 51.23106158709173
+            },
+            {
+              "step": 86,
+              "at_replan": true,
+              "distance_mm": 28.875138908561585
+            },
+            {
+              "step": 87,
+              "at_replan": false,
+              "distance_mm": 21.28633631439294
+            },
+            {
+              "step": 88,
+              "at_replan": false,
+              "distance_mm": 13.507202091222139
+            },
+            {
+              "step": 91,
+              "at_replan": true,
+              "distance_mm": 11.717218807595142
+            }
+          ]
+        },
+        "complete_rollout": {
+          "controls": 160,
+          "ik_nonconverged_controls": 0,
+          "gripper_command_changes": 2,
+          "commanded_target_step_mm": {
+            "all": {
+              "samples": 159,
+              "mean": 9.234335340701895,
+              "median": 10.007039739541819,
+              "p95": 11.307880383496775,
+              "maximum": 51.23106158709173
+            },
+            "at_replan": {
+              "samples": 31,
+              "mean": 7.031629512252213,
+              "median": 6.160523828289673,
+              "p95": 10.873916466389057,
+              "maximum": 28.875138908561585
+            },
+            "within_chunk": {
+              "samples": 128,
+              "mean": 9.767803158529553,
+              "median": 10.060012238757588,
+              "p95": 11.24131311704853,
+              "maximum": 51.23106158709173
+            }
+          },
+          "measured_response_step_mm": {
+            "all": {
+              "samples": 159,
+              "mean": 8.733147280394661,
+              "median": 9.55778121704226,
+              "p95": 10.583023758700302,
+              "maximum": 21.563255817898536
+            },
+            "at_replan": {
+              "samples": 32,
+              "mean": 7.049746362291767,
+              "median": 7.421746400431076,
+              "p95": 8.537734200744904,
+              "maximum": 10.439780271152332
+            },
+            "within_chunk": {
+              "samples": 127,
+              "mean": 9.157311291255233,
+              "median": 9.759186249483978,
+              "p95": 10.814789542379573,
+              "maximum": 21.563255817898536
+            }
+          },
+          "measured_response_rotation_deg": {
+            "all": {
+              "samples": 159,
+              "mean": 1.8841099160538635,
+              "median": 1.8525598374733465,
+              "p95": 3.6865238159773925,
+              "maximum": 6.495166389479614
+            },
+            "at_replan": {
+              "samples": 32,
+              "mean": 1.9697266929203936,
+              "median": 1.8796213129974961,
+              "p95": 3.775233540857224,
+              "maximum": 5.078385656339372
+            },
+            "within_chunk": {
+              "samples": 127,
+              "mean": 1.862537184874895,
+              "median": 1.5952912741463,
+              "p95": 3.623340943261153,
+              "maximum": 6.495166389479614
+            }
+          },
+          "largest_raw_euler_coordinate_step_rad": 6.429311602483255,
+          "largest_command_steps": [
+            {
+              "step": 85,
+              "at_replan": false,
+              "distance_mm": 51.23106158709173
+            },
+            {
+              "step": 86,
+              "at_replan": true,
+              "distance_mm": 28.875138908561585
+            },
+            {
+              "step": 87,
+              "at_replan": false,
+              "distance_mm": 21.28633631439294
+            },
+            {
+              "step": 88,
+              "at_replan": false,
+              "distance_mm": 13.507202091222139
+            },
+            {
+              "step": 91,
+              "at_replan": true,
+              "distance_mm": 11.717218807595142
+            }
+          ]
+        }
+      }
+    },
+    "measured_pose_timing": "pre-control; row t+1 minus row t is the physical response to control t",
+    "orientation_metric": "2 * acos(abs(dot(normalized measured quaternions))), degrees",
+    "limitations": [
+      "Single scene; descriptive measurements do not establish a unique jitter cause.",
+      "Raw Euler coordinate jumps can be angle wrapping rather than physical rotation.",
+      "No simulator substep, latency, or joint-velocity trace is available."
+    ]
+  },
+  "figures": [
+    {
+      "path": "sft-training.png",
+      "bytes": 271620,
+      "sha256": "e1d3b254505b3bcd69c08092921c4b218da881868984bb19c464273b5ca900aa"
+    },
+    {
+      "path": "sft-training.svg",
+      "bytes": 112272,
+      "sha256": "c74d37c49312631d11a115e50eb0ee858fa8dbb39672d9c82ddc9a0c3594f71b"
+    },
+    {
+      "path": "motion-audit.png",
+      "bytes": 372823,
+      "sha256": "92cdc9121093cc49666ebf7b47a3fe292edb2ed5d860697947953a96fbf8b473"
+    },
+    {
+      "path": "motion-audit.svg",
+      "bytes": 149460,
+      "sha256": "9fd48a17e60169b881ccafd0f25273db1c5bc136b8a916ebeb7292d907507067"
+    }
+  ]
+}
