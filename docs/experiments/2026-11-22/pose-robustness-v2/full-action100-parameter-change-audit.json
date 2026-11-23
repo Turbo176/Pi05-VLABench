@@ -1,0 +1,1362 @@
+{
+  "kind": "stored_parameter_change_not_autonomous_success",
+  "script_sha256": "998af8a47ee2e0cd8f6d37a37829c90f612a26afcae04600d0f1b55226c1e9bf",
+  "checkpoint_sha256": "fc152852b137e42aa07ed1297e5128709a0c19a4a24271a668370ce531a514dc",
+  "base_sha256": "66975306e09199efdf221e14d6f5d13ea5d6dbe42e8f921f19bd1096721eac61",
+  "groups": {
+    "action_expert_torch.bfloat16": {
+      "parameters": 311427072,
+      "changed_parameters": 28443513,
+      "max_absolute_delta": 0.0015106201171875,
+      "changed_fraction": 0.09133282093086628,
+      "mean_absolute_delta": 1.2611981718529521e-05
+    },
+    "action_expert_torch.float32": {
+      "parameters": 116505600,
+      "changed_parameters": 115455791,
+      "max_absolute_delta": 0.006568193435668945,
+      "changed_fraction": 0.9909891970858054,
+      "mean_absolute_delta": 0.0002351755486985239
+    },
+    "action_heads_torch.float32": {
+      "parameters": 2165792,
+      "changed_parameters": 2165785,
+      "max_absolute_delta": 0.0010106749832630157,
+      "changed_fraction": 0.9999967679260058,
+      "mean_absolute_delta": 0.0002436798385357064
+    }
+  },
+  "tensors": [
+    {
+      "name": "llm.layers.0.attn.q_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 2097152,
+      "changed_parameters": 171471,
+      "max_absolute_delta": 0.000820159912109375
+    },
+    {
+      "name": "llm.layers.0.attn.k_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 262144,
+      "changed_parameters": 22581,
+      "max_absolute_delta": 0.0009613037109375
+    },
+    {
+      "name": "llm.layers.0.attn.v_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 262144,
+      "changed_parameters": 20847,
+      "max_absolute_delta": 0.00079345703125
+    },
+    {
+      "name": "llm.layers.0.attn.o_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 2097152,
+      "changed_parameters": 268264,
+      "max_absolute_delta": 0.00113677978515625
+    },
+    {
+      "name": "llm.layers.0.pre_attention_norms.1.ada_modulation.weight",
+      "dtype": "torch.float32",
+      "parameters": 3145728,
+      "changed_parameters": 3145720,
+      "max_absolute_delta": 0.0008586850017309189
+    },
+    {
+      "name": "llm.layers.0.pre_attention_norms.1.ada_modulation.bias",
+      "dtype": "torch.float32",
+      "parameters": 3072,
+      "changed_parameters": 3072,
+      "max_absolute_delta": 0.0007383039919659495
+    },
+    {
+      "name": "llm.layers.0.pre_ffw_norms.1.ada_modulation.weight",
+      "dtype": "torch.float32",
+      "parameters": 3145728,
+      "changed_parameters": 3145724,
+      "max_absolute_delta": 0.000877678394317627
+    },
+    {
+      "name": "llm.layers.0.pre_ffw_norms.1.ada_modulation.bias",
+      "dtype": "torch.float32",
+      "parameters": 3072,
+      "changed_parameters": 3072,
+      "max_absolute_delta": 0.0007634535431861877
+    },
+    {
+      "name": "llm.layers.0.mlps.1.w_gating",
+      "dtype": "torch.bfloat16",
+      "parameters": 8388608,
+      "changed_parameters": 685667,
+      "max_absolute_delta": 0.0009307861328125
+    },
+    {
+      "name": "llm.layers.0.mlps.1.w_linear",
+      "dtype": "torch.bfloat16",
+      "parameters": 4194304,
+      "changed_parameters": 691121,
+      "max_absolute_delta": 0.0009307861328125
+    },
+    {
+      "name": "llm.layers.1.attn.q_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 2097152,
+      "changed_parameters": 169544,
+      "max_absolute_delta": 0.000762939453125
+    },
+    {
+      "name": "llm.layers.1.attn.k_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 262144,
+      "changed_parameters": 21618,
+      "max_absolute_delta": 0.00103759765625
+    },
+    {
+      "name": "llm.layers.1.attn.v_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 262144,
+      "changed_parameters": 21615,
+      "max_absolute_delta": 0.00080108642578125
+    },
+    {
+      "name": "llm.layers.1.attn.o_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 2097152,
+      "changed_parameters": 220663,
+      "max_absolute_delta": 0.0009613037109375
+    },
+    {
+      "name": "llm.layers.1.pre_attention_norms.1.ada_modulation.weight",
+      "dtype": "torch.float32",
+      "parameters": 3145728,
+      "changed_parameters": 3145721,
+      "max_absolute_delta": 0.0009339079260826111
+    },
+    {
+      "name": "llm.layers.1.pre_attention_norms.1.ada_modulation.bias",
+      "dtype": "torch.float32",
+      "parameters": 3072,
+      "changed_parameters": 3072,
+      "max_absolute_delta": 0.0007079001516103745
+    },
+    {
+      "name": "llm.layers.1.pre_ffw_norms.1.ada_modulation.weight",
+      "dtype": "torch.float32",
+      "parameters": 3145728,
+      "changed_parameters": 3145717,
+      "max_absolute_delta": 0.0018755793571472168
+    },
+    {
+      "name": "llm.layers.1.pre_ffw_norms.1.ada_modulation.bias",
+      "dtype": "torch.float32",
+      "parameters": 3072,
+      "changed_parameters": 3071,
+      "max_absolute_delta": 0.0006817877292633057
+    },
+    {
+      "name": "llm.layers.1.mlps.1.w_gating",
+      "dtype": "torch.bfloat16",
+      "parameters": 8388608,
+      "changed_parameters": 689109,
+      "max_absolute_delta": 0.0009307861328125
+    },
+    {
+      "name": "llm.layers.1.mlps.1.w_linear",
+      "dtype": "torch.bfloat16",
+      "parameters": 4194304,
+      "changed_parameters": 597600,
+      "max_absolute_delta": 0.0010986328125
+    },
+    {
+      "name": "llm.layers.2.attn.q_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 2097152,
+      "changed_parameters": 174905,
+      "max_absolute_delta": 0.0009307861328125
+    },
+    {
+      "name": "llm.layers.2.attn.k_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 262144,
+      "changed_parameters": 21449,
+      "max_absolute_delta": 0.00081634521484375
+    },
+    {
+      "name": "llm.layers.2.attn.v_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 262144,
+      "changed_parameters": 20498,
+      "max_absolute_delta": 0.0010833740234375
+    },
+    {
+      "name": "llm.layers.2.attn.o_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 2097152,
+      "changed_parameters": 216359,
+      "max_absolute_delta": 0.00091552734375
+    },
+    {
+      "name": "llm.layers.2.pre_attention_norms.1.ada_modulation.weight",
+      "dtype": "torch.float32",
+      "parameters": 3145728,
+      "changed_parameters": 3145724,
+      "max_absolute_delta": 0.001028306782245636
+    },
+    {
+      "name": "llm.layers.2.pre_attention_norms.1.ada_modulation.bias",
+      "dtype": "torch.float32",
+      "parameters": 3072,
+      "changed_parameters": 3072,
+      "max_absolute_delta": 0.0007929354906082153
+    },
+    {
+      "name": "llm.layers.2.pre_ffw_norms.1.ada_modulation.weight",
+      "dtype": "torch.float32",
+      "parameters": 3145728,
+      "changed_parameters": 3145719,
+      "max_absolute_delta": 0.0012817680835723877
+    },
+    {
+      "name": "llm.layers.2.pre_ffw_norms.1.ada_modulation.bias",
+      "dtype": "torch.float32",
+      "parameters": 3072,
+      "changed_parameters": 3072,
+      "max_absolute_delta": 0.0006820037961006165
+    },
+    {
+      "name": "llm.layers.2.mlps.1.w_gating",
+      "dtype": "torch.bfloat16",
+      "parameters": 8388608,
+      "changed_parameters": 662343,
+      "max_absolute_delta": 0.000823974609375
+    },
+    {
+      "name": "llm.layers.2.mlps.1.w_linear",
+      "dtype": "torch.bfloat16",
+      "parameters": 4194304,
+      "changed_parameters": 544258,
+      "max_absolute_delta": 0.0010223388671875
+    },
+    {
+      "name": "llm.layers.3.attn.q_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 2097152,
+      "changed_parameters": 169300,
+      "max_absolute_delta": 0.001068115234375
+    },
+    {
+      "name": "llm.layers.3.attn.k_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 262144,
+      "changed_parameters": 20115,
+      "max_absolute_delta": 0.0007781982421875
+    },
+    {
+      "name": "llm.layers.3.attn.v_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 262144,
+      "changed_parameters": 20256,
+      "max_absolute_delta": 0.00091552734375
+    },
+    {
+      "name": "llm.layers.3.attn.o_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 2097152,
+      "changed_parameters": 212561,
+      "max_absolute_delta": 0.00119781494140625
+    },
+    {
+      "name": "llm.layers.3.pre_attention_norms.1.ada_modulation.weight",
+      "dtype": "torch.float32",
+      "parameters": 3145728,
+      "changed_parameters": 3145724,
+      "max_absolute_delta": 0.0010963976383209229
+    },
+    {
+      "name": "llm.layers.3.pre_attention_norms.1.ada_modulation.bias",
+      "dtype": "torch.float32",
+      "parameters": 3072,
+      "changed_parameters": 3072,
+      "max_absolute_delta": 0.0008689835667610168
+    },
+    {
+      "name": "llm.layers.3.pre_ffw_norms.1.ada_modulation.weight",
+      "dtype": "torch.float32",
+      "parameters": 3145728,
+      "changed_parameters": 3145720,
+      "max_absolute_delta": 0.0009769052267074585
+    },
+    {
+      "name": "llm.layers.3.pre_ffw_norms.1.ada_modulation.bias",
+      "dtype": "torch.float32",
+      "parameters": 3072,
+      "changed_parameters": 3072,
+      "max_absolute_delta": 0.0007609426975250244
+    },
+    {
+      "name": "llm.layers.3.mlps.1.w_gating",
+      "dtype": "torch.bfloat16",
+      "parameters": 8388608,
+      "changed_parameters": 662710,
+      "max_absolute_delta": 0.00096893310546875
+    },
+    {
+      "name": "llm.layers.3.mlps.1.w_linear",
+      "dtype": "torch.bfloat16",
+      "parameters": 4194304,
+      "changed_parameters": 497763,
+      "max_absolute_delta": 0.0009765625
+    },
+    {
+      "name": "llm.layers.4.attn.q_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 2097152,
+      "changed_parameters": 170249,
+      "max_absolute_delta": 0.000885009765625
+    },
+    {
+      "name": "llm.layers.4.attn.k_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 262144,
+      "changed_parameters": 21345,
+      "max_absolute_delta": 0.000885009765625
+    },
+    {
+      "name": "llm.layers.4.attn.v_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 262144,
+      "changed_parameters": 20898,
+      "max_absolute_delta": 0.0008697509765625
+    },
+    {
+      "name": "llm.layers.4.attn.o_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 2097152,
+      "changed_parameters": 205115,
+      "max_absolute_delta": 0.00084686279296875
+    },
+    {
+      "name": "llm.layers.4.pre_attention_norms.1.ada_modulation.weight",
+      "dtype": "torch.float32",
+      "parameters": 3145728,
+      "changed_parameters": 3145723,
+      "max_absolute_delta": 0.0010051503777503967
+    },
+    {
+      "name": "llm.layers.4.pre_attention_norms.1.ada_modulation.bias",
+      "dtype": "torch.float32",
+      "parameters": 3072,
+      "changed_parameters": 3072,
+      "max_absolute_delta": 0.0011417567729949951
+    },
+    {
+      "name": "llm.layers.4.pre_ffw_norms.1.ada_modulation.weight",
+      "dtype": "torch.float32",
+      "parameters": 3145728,
+      "changed_parameters": 3145719,
+      "max_absolute_delta": 0.0011898577213287354
+    },
+    {
+      "name": "llm.layers.4.pre_ffw_norms.1.ada_modulation.bias",
+      "dtype": "torch.float32",
+      "parameters": 3072,
+      "changed_parameters": 3072,
+      "max_absolute_delta": 0.0009705126285552979
+    },
+    {
+      "name": "llm.layers.4.mlps.1.w_gating",
+      "dtype": "torch.bfloat16",
+      "parameters": 8388608,
+      "changed_parameters": 663415,
+      "max_absolute_delta": 0.00089263916015625
+    },
+    {
+      "name": "llm.layers.4.mlps.1.w_linear",
+      "dtype": "torch.bfloat16",
+      "parameters": 4194304,
+      "changed_parameters": 486115,
+      "max_absolute_delta": 0.0012359619140625
+    },
+    {
+      "name": "llm.layers.5.attn.q_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 2097152,
+      "changed_parameters": 165352,
+      "max_absolute_delta": 0.00086212158203125
+    },
+    {
+      "name": "llm.layers.5.attn.k_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 262144,
+      "changed_parameters": 19674,
+      "max_absolute_delta": 0.000682830810546875
+    },
+    {
+      "name": "llm.layers.5.attn.v_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 262144,
+      "changed_parameters": 19954,
+      "max_absolute_delta": 0.0007648468017578125
+    },
+    {
+      "name": "llm.layers.5.attn.o_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 2097152,
+      "changed_parameters": 203290,
+      "max_absolute_delta": 0.0009765625
+    },
+    {
+      "name": "llm.layers.5.pre_attention_norms.1.ada_modulation.weight",
+      "dtype": "torch.float32",
+      "parameters": 3145728,
+      "changed_parameters": 3145724,
+      "max_absolute_delta": 0.0009317696094512939
+    },
+    {
+      "name": "llm.layers.5.pre_attention_norms.1.ada_modulation.bias",
+      "dtype": "torch.float32",
+      "parameters": 3072,
+      "changed_parameters": 3072,
+      "max_absolute_delta": 0.000791497528553009
+    },
+    {
+      "name": "llm.layers.5.pre_ffw_norms.1.ada_modulation.weight",
+      "dtype": "torch.float32",
+      "parameters": 3145728,
+      "changed_parameters": 3145718,
+      "max_absolute_delta": 0.0015929937362670898
+    },
+    {
+      "name": "llm.layers.5.pre_ffw_norms.1.ada_modulation.bias",
+      "dtype": "torch.float32",
+      "parameters": 3072,
+      "changed_parameters": 3072,
+      "max_absolute_delta": 0.0008672475814819336
+    },
+    {
+      "name": "llm.layers.5.mlps.1.w_gating",
+      "dtype": "torch.bfloat16",
+      "parameters": 8388608,
+      "changed_parameters": 662968,
+      "max_absolute_delta": 0.0010833740234375
+    },
+    {
+      "name": "llm.layers.5.mlps.1.w_linear",
+      "dtype": "torch.bfloat16",
+      "parameters": 4194304,
+      "changed_parameters": 484740,
+      "max_absolute_delta": 0.00116729736328125
+    },
+    {
+      "name": "llm.layers.6.attn.q_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 2097152,
+      "changed_parameters": 168619,
+      "max_absolute_delta": 0.00095367431640625
+    },
+    {
+      "name": "llm.layers.6.attn.k_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 262144,
+      "changed_parameters": 19652,
+      "max_absolute_delta": 0.000823974609375
+    },
+    {
+      "name": "llm.layers.6.attn.v_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 262144,
+      "changed_parameters": 20033,
+      "max_absolute_delta": 0.000885009765625
+    },
+    {
+      "name": "llm.layers.6.attn.o_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 2097152,
+      "changed_parameters": 196758,
+      "max_absolute_delta": 0.0010833740234375
+    },
+    {
+      "name": "llm.layers.6.pre_attention_norms.1.ada_modulation.weight",
+      "dtype": "torch.float32",
+      "parameters": 3145728,
+      "changed_parameters": 3145719,
+      "max_absolute_delta": 0.0010857582092285156
+    },
+    {
+      "name": "llm.layers.6.pre_attention_norms.1.ada_modulation.bias",
+      "dtype": "torch.float32",
+      "parameters": 3072,
+      "changed_parameters": 3072,
+      "max_absolute_delta": 0.0009427666664123535
+    },
+    {
+      "name": "llm.layers.6.pre_ffw_norms.1.ada_modulation.weight",
+      "dtype": "torch.float32",
+      "parameters": 3145728,
+      "changed_parameters": 3145724,
+      "max_absolute_delta": 0.005688667297363281
+    },
+    {
+      "name": "llm.layers.6.pre_ffw_norms.1.ada_modulation.bias",
+      "dtype": "torch.float32",
+      "parameters": 3072,
+      "changed_parameters": 3072,
+      "max_absolute_delta": 0.0009946227073669434
+    },
+    {
+      "name": "llm.layers.6.mlps.1.w_gating",
+      "dtype": "torch.bfloat16",
+      "parameters": 8388608,
+      "changed_parameters": 654293,
+      "max_absolute_delta": 0.00107574462890625
+    },
+    {
+      "name": "llm.layers.6.mlps.1.w_linear",
+      "dtype": "torch.bfloat16",
+      "parameters": 4194304,
+      "changed_parameters": 467928,
+      "max_absolute_delta": 0.0010833740234375
+    },
+    {
+      "name": "llm.layers.7.attn.q_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 2097152,
+      "changed_parameters": 165803,
+      "max_absolute_delta": 0.0008697509765625
+    },
+    {
+      "name": "llm.layers.7.attn.k_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 262144,
+      "changed_parameters": 20292,
+      "max_absolute_delta": 0.0008697509765625
+    },
+    {
+      "name": "llm.layers.7.attn.v_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 262144,
+      "changed_parameters": 19858,
+      "max_absolute_delta": 0.0008544921875
+    },
+    {
+      "name": "llm.layers.7.attn.o_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 2097152,
+      "changed_parameters": 199646,
+      "max_absolute_delta": 0.00103759765625
+    },
+    {
+      "name": "llm.layers.7.pre_attention_norms.1.ada_modulation.weight",
+      "dtype": "torch.float32",
+      "parameters": 3145728,
+      "changed_parameters": 3145726,
+      "max_absolute_delta": 0.0009393859654664993
+    },
+    {
+      "name": "llm.layers.7.pre_attention_norms.1.ada_modulation.bias",
+      "dtype": "torch.float32",
+      "parameters": 3072,
+      "changed_parameters": 3072,
+      "max_absolute_delta": 0.0008173361420631409
+    },
+    {
+      "name": "llm.layers.7.pre_ffw_norms.1.ada_modulation.weight",
+      "dtype": "torch.float32",
+      "parameters": 3145728,
+      "changed_parameters": 3145725,
+      "max_absolute_delta": 0.004077911376953125
+    },
+    {
+      "name": "llm.layers.7.pre_ffw_norms.1.ada_modulation.bias",
+      "dtype": "torch.float32",
+      "parameters": 3072,
+      "changed_parameters": 3072,
+      "max_absolute_delta": 0.002781510353088379
+    },
+    {
+      "name": "llm.layers.7.mlps.1.w_gating",
+      "dtype": "torch.bfloat16",
+      "parameters": 8388608,
+      "changed_parameters": 656863,
+      "max_absolute_delta": 0.00116729736328125
+    },
+    {
+      "name": "llm.layers.7.mlps.1.w_linear",
+      "dtype": "torch.bfloat16",
+      "parameters": 4194304,
+      "changed_parameters": 471699,
+      "max_absolute_delta": 0.00101470947265625
+    },
+    {
+      "name": "llm.layers.8.attn.q_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 2097152,
+      "changed_parameters": 168365,
+      "max_absolute_delta": 0.00083160400390625
+    },
+    {
+      "name": "llm.layers.8.attn.k_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 262144,
+      "changed_parameters": 20444,
+      "max_absolute_delta": 0.00081634521484375
+    },
+    {
+      "name": "llm.layers.8.attn.v_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 262144,
+      "changed_parameters": 20262,
+      "max_absolute_delta": 0.0009765625
+    },
+    {
+      "name": "llm.layers.8.attn.o_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 2097152,
+      "changed_parameters": 194711,
+      "max_absolute_delta": 0.00095367431640625
+    },
+    {
+      "name": "llm.layers.8.pre_attention_norms.1.ada_modulation.weight",
+      "dtype": "torch.float32",
+      "parameters": 3145728,
+      "changed_parameters": 3145721,
+      "max_absolute_delta": 0.000952303409576416
+    },
+    {
+      "name": "llm.layers.8.pre_attention_norms.1.ada_modulation.bias",
+      "dtype": "torch.float32",
+      "parameters": 3072,
+      "changed_parameters": 3072,
+      "max_absolute_delta": 0.0008779950439929962
+    },
+    {
+      "name": "llm.layers.8.pre_ffw_norms.1.ada_modulation.weight",
+      "dtype": "torch.float32",
+      "parameters": 3145728,
+      "changed_parameters": 3145720,
+      "max_absolute_delta": 0.006568193435668945
+    },
+    {
+      "name": "llm.layers.8.pre_ffw_norms.1.ada_modulation.bias",
+      "dtype": "torch.float32",
+      "parameters": 3072,
+      "changed_parameters": 3072,
+      "max_absolute_delta": 0.0019707679748535156
+    },
+    {
+      "name": "llm.layers.8.mlps.1.w_gating",
+      "dtype": "torch.bfloat16",
+      "parameters": 8388608,
+      "changed_parameters": 651692,
+      "max_absolute_delta": 0.00103759765625
+    },
+    {
+      "name": "llm.layers.8.mlps.1.w_linear",
+      "dtype": "torch.bfloat16",
+      "parameters": 4194304,
+      "changed_parameters": 465629,
+      "max_absolute_delta": 0.0010833740234375
+    },
+    {
+      "name": "llm.layers.9.attn.q_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 2097152,
+      "changed_parameters": 168050,
+      "max_absolute_delta": 0.0008087158203125
+    },
+    {
+      "name": "llm.layers.9.attn.k_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 262144,
+      "changed_parameters": 20113,
+      "max_absolute_delta": 0.00081634521484375
+    },
+    {
+      "name": "llm.layers.9.attn.v_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 262144,
+      "changed_parameters": 19565,
+      "max_absolute_delta": 0.00095367431640625
+    },
+    {
+      "name": "llm.layers.9.attn.o_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 2097152,
+      "changed_parameters": 196472,
+      "max_absolute_delta": 0.001190185546875
+    },
+    {
+      "name": "llm.layers.9.pre_attention_norms.1.ada_modulation.weight",
+      "dtype": "torch.float32",
+      "parameters": 3145728,
+      "changed_parameters": 3145722,
+      "max_absolute_delta": 0.0010710805654525757
+    },
+    {
+      "name": "llm.layers.9.pre_attention_norms.1.ada_modulation.bias",
+      "dtype": "torch.float32",
+      "parameters": 3072,
+      "changed_parameters": 3072,
+      "max_absolute_delta": 0.0008863657712936401
+    },
+    {
+      "name": "llm.layers.9.pre_ffw_norms.1.ada_modulation.weight",
+      "dtype": "torch.float32",
+      "parameters": 3145728,
+      "changed_parameters": 3145727,
+      "max_absolute_delta": 0.0034296512603759766
+    },
+    {
+      "name": "llm.layers.9.pre_ffw_norms.1.ada_modulation.bias",
+      "dtype": "torch.float32",
+      "parameters": 3072,
+      "changed_parameters": 3072,
+      "max_absolute_delta": 0.0022763609886169434
+    },
+    {
+      "name": "llm.layers.9.mlps.1.w_gating",
+      "dtype": "torch.bfloat16",
+      "parameters": 8388608,
+      "changed_parameters": 650105,
+      "max_absolute_delta": 0.0009307861328125
+    },
+    {
+      "name": "llm.layers.9.mlps.1.w_linear",
+      "dtype": "torch.bfloat16",
+      "parameters": 4194304,
+      "changed_parameters": 463136,
+      "max_absolute_delta": 0.0010528564453125
+    },
+    {
+      "name": "llm.layers.10.attn.q_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 2097152,
+      "changed_parameters": 175588,
+      "max_absolute_delta": 0.00098419189453125
+    },
+    {
+      "name": "llm.layers.10.attn.k_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 262144,
+      "changed_parameters": 20253,
+      "max_absolute_delta": 0.000762939453125
+    },
+    {
+      "name": "llm.layers.10.attn.v_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 262144,
+      "changed_parameters": 18839,
+      "max_absolute_delta": 0.00093841552734375
+    },
+    {
+      "name": "llm.layers.10.attn.o_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 2097152,
+      "changed_parameters": 193363,
+      "max_absolute_delta": 0.00110626220703125
+    },
+    {
+      "name": "llm.layers.10.pre_attention_norms.1.ada_modulation.weight",
+      "dtype": "torch.float32",
+      "parameters": 3145728,
+      "changed_parameters": 3145721,
+      "max_absolute_delta": 0.0010274648666381836
+    },
+    {
+      "name": "llm.layers.10.pre_attention_norms.1.ada_modulation.bias",
+      "dtype": "torch.float32",
+      "parameters": 3072,
+      "changed_parameters": 3072,
+      "max_absolute_delta": 0.0008840188384056091
+    },
+    {
+      "name": "llm.layers.10.pre_ffw_norms.1.ada_modulation.weight",
+      "dtype": "torch.float32",
+      "parameters": 3145728,
+      "changed_parameters": 3145720,
+      "max_absolute_delta": 0.0019483566284179688
+    },
+    {
+      "name": "llm.layers.10.pre_ffw_norms.1.ada_modulation.bias",
+      "dtype": "torch.float32",
+      "parameters": 3072,
+      "changed_parameters": 3072,
+      "max_absolute_delta": 0.0013623535633087158
+    },
+    {
+      "name": "llm.layers.10.mlps.1.w_gating",
+      "dtype": "torch.bfloat16",
+      "parameters": 8388608,
+      "changed_parameters": 647457,
+      "max_absolute_delta": 0.0010833740234375
+    },
+    {
+      "name": "llm.layers.10.mlps.1.w_linear",
+      "dtype": "torch.bfloat16",
+      "parameters": 4194304,
+      "changed_parameters": 464646,
+      "max_absolute_delta": 0.00115966796875
+    },
+    {
+      "name": "llm.layers.11.attn.q_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 2097152,
+      "changed_parameters": 174590,
+      "max_absolute_delta": 0.001068115234375
+    },
+    {
+      "name": "llm.layers.11.attn.k_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 262144,
+      "changed_parameters": 20542,
+      "max_absolute_delta": 0.00075531005859375
+    },
+    {
+      "name": "llm.layers.11.attn.v_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 262144,
+      "changed_parameters": 21005,
+      "max_absolute_delta": 0.0009765625
+    },
+    {
+      "name": "llm.layers.11.attn.o_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 2097152,
+      "changed_parameters": 194793,
+      "max_absolute_delta": 0.00103759765625
+    },
+    {
+      "name": "llm.layers.11.pre_attention_norms.1.ada_modulation.weight",
+      "dtype": "torch.float32",
+      "parameters": 3145728,
+      "changed_parameters": 3145724,
+      "max_absolute_delta": 0.001033782958984375
+    },
+    {
+      "name": "llm.layers.11.pre_attention_norms.1.ada_modulation.bias",
+      "dtype": "torch.float32",
+      "parameters": 3072,
+      "changed_parameters": 3072,
+      "max_absolute_delta": 0.000718388706445694
+    },
+    {
+      "name": "llm.layers.11.pre_ffw_norms.1.ada_modulation.weight",
+      "dtype": "torch.float32",
+      "parameters": 3145728,
+      "changed_parameters": 3145724,
+      "max_absolute_delta": 0.0013347268104553223
+    },
+    {
+      "name": "llm.layers.11.pre_ffw_norms.1.ada_modulation.bias",
+      "dtype": "torch.float32",
+      "parameters": 3072,
+      "changed_parameters": 3072,
+      "max_absolute_delta": 0.0010817795991897583
+    },
+    {
+      "name": "llm.layers.11.mlps.1.w_gating",
+      "dtype": "torch.bfloat16",
+      "parameters": 8388608,
+      "changed_parameters": 643915,
+      "max_absolute_delta": 0.00098419189453125
+    },
+    {
+      "name": "llm.layers.11.mlps.1.w_linear",
+      "dtype": "torch.bfloat16",
+      "parameters": 4194304,
+      "changed_parameters": 462567,
+      "max_absolute_delta": 0.0012054443359375
+    },
+    {
+      "name": "llm.layers.12.attn.q_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 2097152,
+      "changed_parameters": 178391,
+      "max_absolute_delta": 0.00116729736328125
+    },
+    {
+      "name": "llm.layers.12.attn.k_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 262144,
+      "changed_parameters": 19818,
+      "max_absolute_delta": 0.00078582763671875
+    },
+    {
+      "name": "llm.layers.12.attn.v_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 262144,
+      "changed_parameters": 18182,
+      "max_absolute_delta": 0.001129150390625
+    },
+    {
+      "name": "llm.layers.12.attn.o_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 2097152,
+      "changed_parameters": 199503,
+      "max_absolute_delta": 0.0014495849609375
+    },
+    {
+      "name": "llm.layers.12.pre_attention_norms.1.ada_modulation.weight",
+      "dtype": "torch.float32",
+      "parameters": 3145728,
+      "changed_parameters": 3145722,
+      "max_absolute_delta": 0.0010141506791114807
+    },
+    {
+      "name": "llm.layers.12.pre_attention_norms.1.ada_modulation.bias",
+      "dtype": "torch.float32",
+      "parameters": 3072,
+      "changed_parameters": 3072,
+      "max_absolute_delta": 0.0008893534541130066
+    },
+    {
+      "name": "llm.layers.12.pre_ffw_norms.1.ada_modulation.weight",
+      "dtype": "torch.float32",
+      "parameters": 3145728,
+      "changed_parameters": 3145724,
+      "max_absolute_delta": 0.002253234386444092
+    },
+    {
+      "name": "llm.layers.12.pre_ffw_norms.1.ada_modulation.bias",
+      "dtype": "torch.float32",
+      "parameters": 3072,
+      "changed_parameters": 3072,
+      "max_absolute_delta": 0.0010377317667007446
+    },
+    {
+      "name": "llm.layers.12.mlps.1.w_gating",
+      "dtype": "torch.bfloat16",
+      "parameters": 8388608,
+      "changed_parameters": 647844,
+      "max_absolute_delta": 0.00095367431640625
+    },
+    {
+      "name": "llm.layers.12.mlps.1.w_linear",
+      "dtype": "torch.bfloat16",
+      "parameters": 4194304,
+      "changed_parameters": 457831,
+      "max_absolute_delta": 0.0010223388671875
+    },
+    {
+      "name": "llm.layers.13.attn.q_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 2097152,
+      "changed_parameters": 179447,
+      "max_absolute_delta": 0.0009002685546875
+    },
+    {
+      "name": "llm.layers.13.attn.k_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 262144,
+      "changed_parameters": 21220,
+      "max_absolute_delta": 0.00077056884765625
+    },
+    {
+      "name": "llm.layers.13.attn.v_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 262144,
+      "changed_parameters": 18207,
+      "max_absolute_delta": 0.0009002685546875
+    },
+    {
+      "name": "llm.layers.13.attn.o_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 2097152,
+      "changed_parameters": 199635,
+      "max_absolute_delta": 0.00125885009765625
+    },
+    {
+      "name": "llm.layers.13.pre_attention_norms.1.ada_modulation.weight",
+      "dtype": "torch.float32",
+      "parameters": 3145728,
+      "changed_parameters": 3145722,
+      "max_absolute_delta": 0.0009773410856723785
+    },
+    {
+      "name": "llm.layers.13.pre_attention_norms.1.ada_modulation.bias",
+      "dtype": "torch.float32",
+      "parameters": 3072,
+      "changed_parameters": 3072,
+      "max_absolute_delta": 0.0008124262094497681
+    },
+    {
+      "name": "llm.layers.13.pre_ffw_norms.1.ada_modulation.weight",
+      "dtype": "torch.float32",
+      "parameters": 3145728,
+      "changed_parameters": 3145721,
+      "max_absolute_delta": 0.0015448927879333496
+    },
+    {
+      "name": "llm.layers.13.pre_ffw_norms.1.ada_modulation.bias",
+      "dtype": "torch.float32",
+      "parameters": 3072,
+      "changed_parameters": 3072,
+      "max_absolute_delta": 0.0016930997371673584
+    },
+    {
+      "name": "llm.layers.13.mlps.1.w_gating",
+      "dtype": "torch.bfloat16",
+      "parameters": 8388608,
+      "changed_parameters": 651146,
+      "max_absolute_delta": 0.00115966796875
+    },
+    {
+      "name": "llm.layers.13.mlps.1.w_linear",
+      "dtype": "torch.bfloat16",
+      "parameters": 4194304,
+      "changed_parameters": 462049,
+      "max_absolute_delta": 0.001190185546875
+    },
+    {
+      "name": "llm.layers.14.attn.q_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 2097152,
+      "changed_parameters": 180938,
+      "max_absolute_delta": 0.001312255859375
+    },
+    {
+      "name": "llm.layers.14.attn.k_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 262144,
+      "changed_parameters": 18898,
+      "max_absolute_delta": 0.0011138916015625
+    },
+    {
+      "name": "llm.layers.14.attn.v_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 262144,
+      "changed_parameters": 19507,
+      "max_absolute_delta": 0.000885009765625
+    },
+    {
+      "name": "llm.layers.14.attn.o_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 2097152,
+      "changed_parameters": 203980,
+      "max_absolute_delta": 0.001312255859375
+    },
+    {
+      "name": "llm.layers.14.pre_attention_norms.1.ada_modulation.weight",
+      "dtype": "torch.float32",
+      "parameters": 3145728,
+      "changed_parameters": 3145725,
+      "max_absolute_delta": 0.0010661780834197998
+    },
+    {
+      "name": "llm.layers.14.pre_attention_norms.1.ada_modulation.bias",
+      "dtype": "torch.float32",
+      "parameters": 3072,
+      "changed_parameters": 3072,
+      "max_absolute_delta": 0.0009107217192649841
+    },
+    {
+      "name": "llm.layers.14.pre_ffw_norms.1.ada_modulation.weight",
+      "dtype": "torch.float32",
+      "parameters": 3145728,
+      "changed_parameters": 3145719,
+      "max_absolute_delta": 0.0024968385696411133
+    },
+    {
+      "name": "llm.layers.14.pre_ffw_norms.1.ada_modulation.bias",
+      "dtype": "torch.float32",
+      "parameters": 3072,
+      "changed_parameters": 3072,
+      "max_absolute_delta": 0.0018526911735534668
+    },
+    {
+      "name": "llm.layers.14.mlps.1.w_gating",
+      "dtype": "torch.bfloat16",
+      "parameters": 8388608,
+      "changed_parameters": 653692,
+      "max_absolute_delta": 0.0010223388671875
+    },
+    {
+      "name": "llm.layers.14.mlps.1.w_linear",
+      "dtype": "torch.bfloat16",
+      "parameters": 4194304,
+      "changed_parameters": 465691,
+      "max_absolute_delta": 0.00115203857421875
+    },
+    {
+      "name": "llm.layers.15.attn.q_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 2097152,
+      "changed_parameters": 169734,
+      "max_absolute_delta": 0.00083160400390625
+    },
+    {
+      "name": "llm.layers.15.attn.k_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 262144,
+      "changed_parameters": 19681,
+      "max_absolute_delta": 0.000885009765625
+    },
+    {
+      "name": "llm.layers.15.attn.v_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 262144,
+      "changed_parameters": 17324,
+      "max_absolute_delta": 0.0009307861328125
+    },
+    {
+      "name": "llm.layers.15.attn.o_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 2097152,
+      "changed_parameters": 216634,
+      "max_absolute_delta": 0.0013885498046875
+    },
+    {
+      "name": "llm.layers.15.pre_attention_norms.1.ada_modulation.weight",
+      "dtype": "torch.float32",
+      "parameters": 3145728,
+      "changed_parameters": 3145722,
+      "max_absolute_delta": 0.0009875819087028503
+    },
+    {
+      "name": "llm.layers.15.pre_attention_norms.1.ada_modulation.bias",
+      "dtype": "torch.float32",
+      "parameters": 3072,
+      "changed_parameters": 3072,
+      "max_absolute_delta": 0.0008616447448730469
+    },
+    {
+      "name": "llm.layers.15.pre_ffw_norms.1.ada_modulation.weight",
+      "dtype": "torch.float32",
+      "parameters": 3145728,
+      "changed_parameters": 3145719,
+      "max_absolute_delta": 0.0023183822631835938
+    },
+    {
+      "name": "llm.layers.15.pre_ffw_norms.1.ada_modulation.bias",
+      "dtype": "torch.float32",
+      "parameters": 3072,
+      "changed_parameters": 3072,
+      "max_absolute_delta": 0.002030670642852783
+    },
+    {
+      "name": "llm.layers.15.mlps.1.w_gating",
+      "dtype": "torch.bfloat16",
+      "parameters": 8388608,
+      "changed_parameters": 654126,
+      "max_absolute_delta": 0.001190185546875
+    },
+    {
+      "name": "llm.layers.15.mlps.1.w_linear",
+      "dtype": "torch.bfloat16",
+      "parameters": 4194304,
+      "changed_parameters": 474879,
+      "max_absolute_delta": 0.00113677978515625
+    },
+    {
+      "name": "llm.layers.16.attn.q_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 2097152,
+      "changed_parameters": 168943,
+      "max_absolute_delta": 0.0009613037109375
+    },
+    {
+      "name": "llm.layers.16.attn.k_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 262144,
+      "changed_parameters": 19876,
+      "max_absolute_delta": 0.0009307861328125
+    },
+    {
+      "name": "llm.layers.16.attn.v_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 262144,
+      "changed_parameters": 19288,
+      "max_absolute_delta": 0.00093841552734375
+    },
+    {
+      "name": "llm.layers.16.attn.o_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 2097152,
+      "changed_parameters": 221583,
+      "max_absolute_delta": 0.001434326171875
+    },
+    {
+      "name": "llm.layers.16.pre_attention_norms.1.ada_modulation.weight",
+      "dtype": "torch.float32",
+      "parameters": 3145728,
+      "changed_parameters": 3145727,
+      "max_absolute_delta": 0.001037508249282837
+    },
+    {
+      "name": "llm.layers.16.pre_attention_norms.1.ada_modulation.bias",
+      "dtype": "torch.float32",
+      "parameters": 3072,
+      "changed_parameters": 3072,
+      "max_absolute_delta": 0.0009129010140895844
+    },
+    {
+      "name": "llm.layers.16.pre_ffw_norms.1.ada_modulation.weight",
+      "dtype": "torch.float32",
+      "parameters": 3145728,
+      "changed_parameters": 3145723,
+      "max_absolute_delta": 0.0022250115871429443
+    },
+    {
+      "name": "llm.layers.16.pre_ffw_norms.1.ada_modulation.bias",
+      "dtype": "torch.float32",
+      "parameters": 3072,
+      "changed_parameters": 3072,
+      "max_absolute_delta": 0.001824021339416504
+    },
+    {
+      "name": "llm.layers.16.mlps.1.w_gating",
+      "dtype": "torch.bfloat16",
+      "parameters": 8388608,
+      "changed_parameters": 655920,
+      "max_absolute_delta": 0.00128173828125
+    },
+    {
+      "name": "llm.layers.16.mlps.1.w_linear",
+      "dtype": "torch.bfloat16",
+      "parameters": 4194304,
+      "changed_parameters": 492949,
+      "max_absolute_delta": 0.0015106201171875
+    },
+    {
+      "name": "llm.layers.17.attn.q_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 2097152,
+      "changed_parameters": 179655,
+      "max_absolute_delta": 0.000946044921875
+    },
+    {
+      "name": "llm.layers.17.attn.k_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 262144,
+      "changed_parameters": 21397,
+      "max_absolute_delta": 0.00087738037109375
+    },
+    {
+      "name": "llm.layers.17.attn.v_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 262144,
+      "changed_parameters": 18123,
+      "max_absolute_delta": 0.0011444091796875
+    },
+    {
+      "name": "llm.layers.17.attn.o_proj.1.weight",
+      "dtype": "torch.bfloat16",
+      "parameters": 2097152,
+      "changed_parameters": 204541,
+      "max_absolute_delta": 0.001190185546875
+    },
+    {
+      "name": "llm.layers.17.pre_attention_norms.1.ada_modulation.weight",
+      "dtype": "torch.float32",
+      "parameters": 3145728,
+      "changed_parameters": 3145724,
+      "max_absolute_delta": 0.0010829269886016846
+    },
+    {
+      "name": "llm.layers.17.pre_attention_norms.1.ada_modulation.bias",
+      "dtype": "torch.float32",
+      "parameters": 3072,
+      "changed_parameters": 3072,
+      "max_absolute_delta": 0.0008029874879866838
+    },
+    {
+      "name": "llm.layers.17.pre_ffw_norms.1.ada_modulation.weight",
+      "dtype": "torch.float32",
+      "parameters": 3145728,
+      "changed_parameters": 3145726,
+      "max_absolute_delta": 0.0014047026634216309
+    },
+    {
+      "name": "llm.layers.17.pre_ffw_norms.1.ada_modulation.bias",
+      "dtype": "torch.float32",
+      "parameters": 3072,
+      "changed_parameters": 3072,
+      "max_absolute_delta": 0.0009260624647140503
+    },
+    {
+      "name": "llm.layers.17.mlps.1.w_gating",
+      "dtype": "torch.bfloat16",
+      "parameters": 8388608,
+      "changed_parameters": 649639,
+      "max_absolute_delta": 0.0014190673828125
+    },
+    {
+      "name": "llm.layers.17.mlps.1.w_linear",
+      "dtype": "torch.bfloat16",
+      "parameters": 4194304,
+      "changed_parameters": 579964,
+      "max_absolute_delta": 0.00140380859375
+    },
+    {
+      "name": "llm.final_norms.1.ada_modulation.weight",
+      "dtype": "torch.float32",
+      "parameters": 3145728,
+      "changed_parameters": 2097152,
+      "max_absolute_delta": 0.0010159015655517578
+    },
+    {
+      "name": "llm.final_norms.1.ada_modulation.bias",
+      "dtype": "torch.float32",
+      "parameters": 3072,
+      "changed_parameters": 2048,
+      "max_absolute_delta": 0.000918850302696228
+    },
+    {
+      "name": "action_in_proj.weight",
+      "dtype": "torch.float32",
+      "parameters": 32768,
+      "changed_parameters": 32767,
+      "max_absolute_delta": 0.0006316006183624268
+    },
+    {
+      "name": "action_in_proj.bias",
+      "dtype": "torch.float32",
+      "parameters": 1024,
+      "changed_parameters": 1024,
+      "max_absolute_delta": 0.0006963293999433517
+    },
+    {
+      "name": "time_mlp_in.weight",
+      "dtype": "torch.float32",
+      "parameters": 1048576,
+      "changed_parameters": 1048570,
+      "max_absolute_delta": 0.0010106749832630157
+    },
+    {
+      "name": "time_mlp_in.bias",
+      "dtype": "torch.float32",
+      "parameters": 1024,
+      "changed_parameters": 1024,
+      "max_absolute_delta": 0.000983884558081627
+    },
+    {
+      "name": "time_mlp_out.weight",
+      "dtype": "torch.float32",
+      "parameters": 1048576,
+      "changed_parameters": 1048576,
+      "max_absolute_delta": 0.0009523741900920868
+    },
+    {
+      "name": "time_mlp_out.bias",
+      "dtype": "torch.float32",
+      "parameters": 1024,
+      "changed_parameters": 1024,
+      "max_absolute_delta": 0.0009469063952565193
+    },
+    {
+      "name": "action_out_proj.weight",
+      "dtype": "torch.float32",
+      "parameters": 32768,
+      "changed_parameters": 32768,
+      "max_absolute_delta": 0.0009342501871287823
+    },
+    {
+      "name": "action_out_proj.bias",
+      "dtype": "torch.float32",
+      "parameters": 32,
+      "changed_parameters": 32,
+      "max_absolute_delta": 0.000619952566921711
+    }
+  ],
+  "interpretation": "A nonzero gradient does not imply every BF16 value changed. These measurements describe this full-action diagnostic only; they do not identify the cause of prior LoRA failures."
+}

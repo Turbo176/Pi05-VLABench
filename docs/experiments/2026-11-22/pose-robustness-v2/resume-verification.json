@@ -1,0 +1,8 @@
+{
+  "updates": 3,
+  "resumed_from_update": 1,
+  "identical_policy_tensors": 240,
+  "max_parameter_difference": 0.0,
+  "balanced_windows_per_update": 6,
+  "checkpoint_reload_max_action_difference": 0.0
+}

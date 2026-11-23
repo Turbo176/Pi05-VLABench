@@ -10,7 +10,7 @@ import time
 import numpy as np
 import torch
 
-from pi05_runtime import ACTOR_MODULES, PolicyIO, actor_delta, build_model, restore_trainable, trainable_snapshot
+from pi05_runtime import PolicyIO, actor_delta, build_model, is_actor_parameter, restore_trainable, trainable_snapshot
 from select_fruit import camera_names, open_episode, robot_state, success
 from vlabench_policy_io import IMAGE_SIZE, SCENE_CAMERA, WRIST_CAMERA, simulator_inputs
 
@@ -90,7 +90,7 @@ def recompute(model, policy, transition):
 def update(model, policy, optimizer, transitions, rng, micro_batch):
     advantages = np.array([t['advantage'] for t in transitions])
     advantages = (advantages - advantages.mean()) / max(advantages.std(), 1e-6)
-    actor = [p for name, p in model.named_parameters() if p.requires_grad and name.startswith(ACTOR_MODULES)]
+    actor = [p for name, p in model.named_parameters() if p.requires_grad and is_actor_parameter(name)]
     critic = [p for name, p in model.named_parameters() if p.requires_grad and name.startswith('value_head.')]
     indices = rng.permutation(len(transitions))
     max_grad = 0.0
@@ -133,19 +133,23 @@ def main():
     rng = np.random.default_rng(args.seed)
     checkpoint = torch.load(args.sft, map_location='cpu', weights_only=True)
     execute_steps = checkpoint['metadata']['execute_steps']
-    model, cfg = build_model(args.base, 'cuda', execute_steps, rl=True)
+    lora_rank = checkpoint['metadata'].get('lora_rank', 0)
+    vlm_lora_rank = checkpoint['metadata'].get('vlm_lora_rank', 0)
+    model, cfg = build_model(args.base, 'cuda', execute_steps, rl=True,
+                             lora_rank=lora_rank, vlm_lora_rank=vlm_lora_rank)
     restore_trainable(model, checkpoint['policy'])
     original = trainable_snapshot(model, actor_only=True)
-    policy = PolicyIO(args.stats, 'cuda', cfg.max_token_len)
+    action_space = checkpoint['metadata'].get('action_space', 'absolute')
+    policy = PolicyIO(args.stats, 'cuda', cfg.max_token_len, action_space)
     if policy.stats_sha256 != checkpoint['metadata']['stats_sha256']:
         raise RuntimeError('SFT normalization hash mismatch')
 
     def output_transform(outputs):
-        return {'actions': policy.decode(torch.as_tensor(outputs['actions'])[None])}
+        return {'actions': policy.decode(torch.as_tensor(outputs['actions'])[None], outputs.get('state'), normalized_state=True)}
 
     model.setup_transforms([], [output_transform])
     args.output.mkdir(parents=True, exist_ok=False)
-    groups = [{'params': [p for n, p in model.named_parameters() if p.requires_grad and n.startswith(ACTOR_MODULES)],
+    groups = [{'params': [p for n, p in model.named_parameters() if p.requires_grad and is_actor_parameter(n)],
                'lr': 3e-6},
               {'params': [p for n, p in model.named_parameters() if p.requires_grad and n.startswith('value_head.')],
                'lr': 1e-4}]
@@ -177,7 +181,8 @@ def main():
                     'total_controls': total_steps, 'shaping_weight': args.shaping,
                     'mean_chunk_reward': float(np.mean([t['reward'] for t in samples])), 'max_actor_grad_l2': grad, 'actor_max_abs_delta_from_sft': delta,
                     'preupdate_logp_max_abs_error': max(dev), 'sft_sha256': hashlib.sha256(args.sft.read_bytes()).hexdigest(),
-                    'stats_sha256': policy.stats_sha256, 'execute_steps': execute_steps,
+                    'stats_sha256': policy.stats_sha256, 'execute_steps': execute_steps, 'lora_rank': lora_rank, 'vlm_lora_rank': vlm_lora_rank,
+                    'action_space': action_space,
                     'wall_seconds': time.monotonic() - start,
                     'peak_allocated_bytes': torch.cuda.max_memory_allocated()}
         with (args.output / 'updates.jsonl').open('a', encoding='utf-8') as log:

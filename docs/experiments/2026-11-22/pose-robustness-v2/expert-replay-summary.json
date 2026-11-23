@@ -1,0 +1,15 @@
+{
+  "source_dataset": ".local/reference-aligned/lerobot-tritask-expanded",
+  "render_samples": 0,
+  "episodes": 69,
+  "frames": 13673,
+  "all_successful": true,
+  "groups": {
+    "train/select_fruit": 45,
+    "train/insert_flower": 10,
+    "train/take_out_cool_drink": 8,
+    "validation/select_fruit": 4,
+    "validation/insert_flower": 1,
+    "validation/take_out_cool_drink": 1
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "seed": 54,
+  "task": "take_out_cool_drink",
+  "first_open_step": 94,
+  "first_drink_outside_step": 275,
+  "success_step": 484,
+  "max_door_angle_deg": 87.34446159291878,
+  "max_recorded_state_difference": 0.0,
+  "door_closed_at_success": true
+}

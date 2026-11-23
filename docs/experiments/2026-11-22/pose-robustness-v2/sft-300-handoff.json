@@ -1,0 +1,40 @@
+{
+  "checkpoint_sha256": "1d9d4dd000b38e495fd7ad2a71be8ad1106884dd059e04257d240fa6a0015777",
+  "seed": 42,
+  "executed": 5,
+  "horizon": 10,
+  "settings": {
+    "shortest_euler": false,
+    "discrete_state": false,
+    "reference_noise": true
+  },
+  "measurements": [
+    {
+      "frame": 0,
+      "normalized_prediction_max_error": 0.0,
+      "absolute_prediction_max_error": 0.0,
+      "native_float32_decode_max_error": 1.5835401523389692e-07,
+      "replay_logprob_abs_error": 0.0
+    },
+    {
+      "frame": 66,
+      "normalized_prediction_max_error": 0.0,
+      "absolute_prediction_max_error": 0.0,
+      "native_float32_decode_max_error": 1.4264502290473047e-07,
+      "replay_logprob_abs_error": 0.0
+    },
+    {
+      "frame": 131,
+      "normalized_prediction_max_error": 0.0,
+      "absolute_prediction_max_error": 0.0,
+      "native_float32_decode_max_error": 1.568955940722816e-07,
+      "replay_logprob_abs_error": 0.0
+    }
+  ],
+  "optimizer_updates": 0,
+  "matched_rollouts": 1,
+  "matched_successes": 1,
+  "matched_seeds": [
+    1201
+  ]
+}

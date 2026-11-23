@@ -1,3 +1,7 @@
 * text=auto
 *.sh text eol=lf
 *.py text eol=lf
+# Raw experiment evidence must retain the bytes recorded by SHA-256 manifests.
+docs/experiments/** -text -whitespace
+# Handwritten reports still receive normal text and whitespace checks.
+docs/experiments/**/*.md text whitespace=blank-at-eol,blank-at-eof,space-before-tab

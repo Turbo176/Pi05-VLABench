@@ -1,0 +1,6 @@
+{"task": "select_fruit", "seed": 1201, "success": false, "steps": 600, "ik_nonconverged_steps": 0, "max_target_lift_m": 1.8348655927979962e-12}
+{"task": "select_fruit", "seed": 1202, "success": false, "steps": 600, "ik_nonconverged_steps": 0, "max_target_lift_m": 0.07077014709277152}
+{"task": "select_fruit", "seed": 1203, "success": false, "steps": 600, "ik_nonconverged_steps": 0, "max_target_lift_m": 0.003105190115072043}
+{"task": "select_fruit", "seed": 1204, "success": false, "steps": 600, "ik_nonconverged_steps": 0, "max_target_lift_m": 4.81288411413594e-06}
+{"task": "insert_flower", "seed": 46, "success": false, "steps": 600, "ik_nonconverged_steps": 0, "max_target_lift_m": 1.1480372208438894e-11}
+{"task": "take_out_cool_drink", "seed": 46, "success": false, "steps": 600, "ik_nonconverged_steps": 114, "max_target_lift_m": 0.0}

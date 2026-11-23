@@ -1,0 +1,52 @@
+{
+  "seed": 263,
+  "train_seeds": [
+    42
+  ],
+  "validation_seeds": [],
+  "rejected_by_label_replay": [],
+  "train_frames": 790,
+  "validation_frames": 0,
+  "horizon": 10,
+  "execute": 5,
+  "actor_lora_rank": 16,
+  "vlm_lora_rank": 8,
+  "shortest_euler": true,
+  "discrete_state": true,
+  "input_format": "LeRobot v2.1",
+  "openpi_revision": "788ef1f20e655de5bb40869fb7b7fcdd49732387",
+  "lr": 0.0001,
+  "action_loss": "all",
+  "norm_stats_sha256": "2cb7322c27f5d37b428f72e2cd90e05e51ffc0f61572303c3dea68f6368844c6",
+  "device": "NVIDIA GeForce RTX 4080 SUPER",
+  "interface": {
+    "round_trip_max": 4.1326413935394157e-07,
+    "normalized_state_ablation_max": 2.4521241188049316,
+    "active_image_keys": [
+      "base_0_rgb",
+      "left_wrist_0_rgb",
+      "right_wrist_0_rgb"
+    ],
+    "normalized_padding_value": -1.0
+  },
+  "train_task_seeds": [
+    [
+      "select_fruit",
+      42
+    ],
+    [
+      "insert_flower",
+      42
+    ],
+    [
+      "take_out_cool_drink",
+      43
+    ]
+  ],
+  "validation_task_seeds": [],
+  "first_actor_max_delta": 0.00010061264038085938,
+  "updates": 3,
+  "training_seconds": 0.9379641578998417,
+  "peak_cuda_bytes": 10259143168,
+  "reload_max_action_difference": 0.0
+}

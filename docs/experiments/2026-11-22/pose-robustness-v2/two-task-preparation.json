@@ -1,0 +1,34 @@
+{
+  "checked_at": "2026-11-22T09:47:52.004565+00:00",
+  "execution_level": "CPU verification of archived real-data manifests, actual task-sampler expression, and CLI validation only; GPU training not executed",
+  "tasks": [
+    "select_fruit",
+    "insert_flower"
+  ],
+  "deferred_task": "take_out_cool_drink",
+  "training_episodes": 64,
+  "training_frames": 9904,
+  "validation_episodes": 5,
+  "validation_frames": 744,
+  "sampler_draws": {
+    "select_fruit": 5000,
+    "insert_flower": 5000
+  },
+  "task_seed_overlap": false,
+  "initial_state_overlap": false,
+  "recovery_groups": {
+    "select_fruit": {
+      "expert_demo": 45,
+      "expert_correction": 2
+    },
+    "insert_flower": {
+      "expert_demo": 17,
+      "expert_correction": 0
+    }
+  },
+  "two_task_smoke_cli_accepted": true,
+  "recovery_video_cli_accepted": true,
+  "invalid_training_scope_cli_rejections": 2,
+  "training_source_sha256": "1a18ed94812f9d8ba61f464d9381cdc5ed0505a98b0e47d885be1cadfbe5a176",
+  "cli_validation_method": "Executed actual argparse checks from AST, excluding external framework imports and replacing GPU entry points; no GPU code invoked."
+}

@@ -1,0 +1,20 @@
+{
+  "task": "insert_flower",
+  "seed": 1001,
+  "stage": "ppo",
+  "repeats": 2,
+  "comparisons": [
+    {
+      "repeat": 2,
+      "equal_result_fields": true,
+      "changed_result_fields": [],
+      "first_differing_policy_call": null,
+      "policy_call_counts": [
+        120,
+        120
+      ],
+      "identical": true
+    }
+  ],
+  "all_identical": true
+}

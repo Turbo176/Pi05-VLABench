@@ -1,0 +1,137 @@
+{
+  "cases_per_stage": 12,
+  "stages": {
+    "base": {
+      "insert_flower/official": {
+        "successes": 1,
+        "attempts": 4,
+        "success_rate": 0.25,
+        "wilson_95": [
+          0.04558726080970055,
+          0.6993581574175981
+        ],
+        "failure_reasons": {
+          "step_budget": 3
+        },
+        "failure_types": {
+          "target_moved_goal_unsatisfied": 2,
+          "target_displacement_under_3cm": 1
+        },
+        "environment_control_steps": 1971,
+        "rollout_wall_seconds": 398.5344834399875
+      },
+      "select_fruit/official": {
+        "successes": 2,
+        "attempts": 4,
+        "success_rate": 0.5,
+        "wilson_95": [
+          0.15003898915214947,
+          0.8499610108478506
+        ],
+        "failure_reasons": {
+          "step_budget": 2
+        },
+        "failure_types": {
+          "target_moved_goal_unsatisfied": 2
+        },
+        "environment_control_steps": 1456,
+        "rollout_wall_seconds": 315.5511727081612
+      },
+      "take_out_cool_drink/official": {
+        "successes": 0,
+        "attempts": 4,
+        "success_rate": 0.0,
+        "wilson_95": [
+          0.0,
+          0.4898908364545973
+        ],
+        "failure_reasons": {
+          "step_budget": 4
+        },
+        "failure_types": {
+          "target_displacement_under_3cm": 4
+        },
+        "environment_control_steps": 2400,
+        "rollout_wall_seconds": 472.2744774108287
+      }
+    },
+    "sft": {
+      "insert_flower/official": {
+        "successes": 0,
+        "attempts": 4,
+        "success_rate": 0.0,
+        "wilson_95": [
+          0.0,
+          0.4898908364545973
+        ],
+        "failure_reasons": {
+          "step_budget": 4
+        },
+        "failure_types": {
+          "target_moved_goal_unsatisfied": 3,
+          "target_displacement_under_3cm": 1
+        },
+        "environment_control_steps": 2400,
+        "rollout_wall_seconds": 466.9835936280433
+      },
+      "select_fruit/official": {
+        "successes": 0,
+        "attempts": 4,
+        "success_rate": 0.0,
+        "wilson_95": [
+          0.0,
+          0.4898908364545973
+        ],
+        "failure_reasons": {
+          "step_budget": 4
+        },
+        "failure_types": {
+          "target_moved_goal_unsatisfied": 4
+        },
+        "environment_control_steps": 2400,
+        "rollout_wall_seconds": 401.86778161511756
+      },
+      "take_out_cool_drink/official": {
+        "successes": 0,
+        "attempts": 4,
+        "success_rate": 0.0,
+        "wilson_95": [
+          0.0,
+          0.4898908364545973
+        ],
+        "failure_reasons": {
+          "simulator_instability": 1,
+          "step_budget": 3
+        },
+        "failure_types": {
+          "simulator_instability": 1,
+          "target_displacement_under_3cm": 3
+        },
+        "environment_control_steps": 1900,
+        "rollout_wall_seconds": 337.1616381518543
+      }
+    }
+  },
+  "paired_outcomes": {
+    "base_to_sft": {
+      "insert_flower/official": {
+        "fail_to_success": 0,
+        "success_to_fail": 1,
+        "both_failed": 3,
+        "both_succeeded": 0
+      },
+      "select_fruit/official": {
+        "fail_to_success": 0,
+        "success_to_fail": 2,
+        "both_failed": 2,
+        "both_succeeded": 0
+      },
+      "take_out_cool_drink/official": {
+        "fail_to_success": 0,
+        "success_to_fail": 0,
+        "both_failed": 4,
+        "both_succeeded": 0
+      }
+    }
+  }
+}

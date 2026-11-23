@@ -1,0 +1,84 @@
+{
+  "format": "LeRobot v2.1",
+  "fps": 10,
+  "splits": {
+    "train": {
+      "episodes": 6,
+      "frames": 908,
+      "all_frames_verified": true,
+      "action_chunks": {
+        "horizon": 10,
+        "positions_verified": 18
+      },
+      "episodes_detail": [
+        {
+          "source": ".local/reference-aligned/fruit-policy-corrections/2081.h5",
+          "split": "train",
+          "task": "select_fruit",
+          "seed": 2081,
+          "instruction": "Put the banana into the plate_seen",
+          "frames": 138,
+          "initial_state_sha256": "7feaa6e407afa9e37a9d8b5d6e7a7542d9b3925ec28b5ca8be00868e486022b6",
+          "policy_prefix_steps": 40,
+          "prefix_end_state_sha256": "293c48ed79a9aa27c7d9eb7e8f722de345ae0b77391bfafe13f1fae6a38ddf76"
+        },
+        {
+          "source": ".local/reference-aligned/fruit-policy-corrections/2082.h5",
+          "split": "train",
+          "task": "select_fruit",
+          "seed": 2082,
+          "instruction": "Put the apple into the plate_seen",
+          "frames": 178,
+          "initial_state_sha256": "bdd1d2f881b43b7c0ab5df11ae19478e95a853101798836dc8b5865e8168a98a",
+          "policy_prefix_steps": 80,
+          "prefix_end_state_sha256": "7f4fc3c6f74ad319e4d470a67217a228f5d06e6b6bea58904e008c10e399cdfb"
+        },
+        {
+          "source": ".local/reference-aligned/fruit-policy-corrections/2083.h5",
+          "split": "train",
+          "task": "select_fruit",
+          "seed": 2083,
+          "instruction": "Put the apple into the plate_seen",
+          "frames": 149,
+          "initial_state_sha256": "b595e6390405ee072f2f5f2c9542273ca43a69fff7c08e18390751496d29c07d",
+          "policy_prefix_steps": 120,
+          "prefix_end_state_sha256": "b91070203a0add0b22640d29c238e932c3d835deaeff99d617c7bc36fc4cf374"
+        },
+        {
+          "source": ".local/reference-aligned/fruit-policy-corrections/2084.h5",
+          "split": "train",
+          "task": "select_fruit",
+          "seed": 2084,
+          "instruction": "Put the orange into the plate_seen",
+          "frames": 160,
+          "initial_state_sha256": "5446cc2a96fbe112007db93aeda4a715239faa07ef7f4f11918a12d5d6df70d7",
+          "policy_prefix_steps": 40,
+          "prefix_end_state_sha256": "af12ebfb49f8c08d2c3a31802a3431ed68bd740731087897baf7f4a654fce201"
+        },
+        {
+          "source": ".local/reference-aligned/fruit-policy-corrections/2085.h5",
+          "split": "train",
+          "task": "select_fruit",
+          "seed": 2085,
+          "instruction": "Put the banana into the plate_seen",
+          "frames": 127,
+          "initial_state_sha256": "ae6471038293b547743720fdd49bb1566a15aed4c9985232a595e588bce59b0e",
+          "policy_prefix_steps": 80,
+          "prefix_end_state_sha256": "515174bb6afe8cb24fb4be1d497ce41ecbaef1c09c23f98c8b027eb62a913025"
+        },
+        {
+          "source": ".local/reference-aligned/fruit-policy-corrections/2086.h5",
+          "split": "train",
+          "task": "select_fruit",
+          "seed": 2086,
+          "instruction": "Put the banana into the plate_seen",
+          "frames": 156,
+          "initial_state_sha256": "b4041fef499d69b828bc451bb34cc730cd52608e8d3539eccf96b481c34c14e9",
+          "policy_prefix_steps": 120,
+          "prefix_end_state_sha256": "1c5573af78663d2a06ffa9762602841d73b81dbf7f80c7127b2e20b2567ebf9f"
+        }
+      ]
+    }
+  },
+  "profile": "vlabench_reference_pose"
+}

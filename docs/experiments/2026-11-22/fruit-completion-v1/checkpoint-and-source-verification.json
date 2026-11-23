@@ -1,0 +1,24 @@
+{
+  "all_matched": true,
+  "registered_sources_compared": 11,
+  "checkpoints": [
+    {
+      "local_path": "D:\\Robotics\\Pi05-VLABench\\.local\\autodl-backup\\pose-robustness-v2\\two-task-conservative-90\\sft.pt",
+      "sha256": "998181bb8cc8386766aa5bec3302b938234ab5da2a24e81cef199a8fd560eef3",
+      "bytes": 109378523,
+      "matches_remote": true
+    },
+    {
+      "local_path": "D:\\Robotics\\Pi05-VLABench\\.local\\autodl-backup\\pose-robustness-v2\\two-task-conservative-90\\norm_stats.json",
+      "sha256": "bce33fc1831830d953ef9bc57e520c02ee44e02b7ad07f27ce92b931a879384f",
+      "bytes": 4424,
+      "matches_remote": true
+    },
+    {
+      "local_path": "D:\\Robotics\\Pi05-VLABench\\.local\\autodl-backup\\pose-robustness-v2\\fruit-completion-v1\\ppo-1.pt",
+      "sha256": "0d2fac4c03db18ceac98c2344aec358713251e3b37cbcfa154349392c4ca0ad3",
+      "bytes": 142448755,
+      "matches_remote": true
+    }
+  ]
+}

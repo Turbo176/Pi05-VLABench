@@ -1,0 +1,189 @@
+--- Logging error ---
+Traceback (most recent call last):
+  File "/root/miniconda3/lib/python3.12/logging/__init__.py", line 1160, in emit
+    msg = self.format(record)
+          ^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/logging/__init__.py", line 999, in format
+    return fmt.format(record)
+           ^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/logging/__init__.py", line 703, in format
+    record.message = record.getMessage()
+                     ^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/logging/__init__.py", line 392, in getMessage
+    msg = msg % self.args
+          ~~~~^~~~~~~~~~~
+TypeError: not all arguments converted during string formatting
+Call stack:
+  File "/root/autodl-tmp/Pi05-VLABench/code/scripts/record_fruit_completion.py", line 9, in <module>
+    from train_reference_aligned_fruit import evaluate, load_aligned_policy, paired_episodes
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/root/autodl-tmp/Pi05-VLABench/code/scripts/train_reference_aligned_fruit.py", line 21, in <module>
+    from evaluate_vlabench_reference import MODEL_REVISION, OPENPI_REVISION, TASK, build_episode, load_upstream_adapter
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/root/autodl-tmp/Pi05-VLABench/code/scripts/evaluate_vlabench_reference.py", line 13, in <module>
+    from VLABench.utils.utils import euler_to_quaternion, quaternion_to_euler
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1310, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1310, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/root/autodl-tmp/Pi05-VLABench/.local/upstream/vlabench-sim/VLABench/__init__.py", line 21, in <module>
+    logging.info("Detect Linux, add LM4root as environment variable: ", package_root)
+Message: 'Detect Linux, add LM4root as environment variable: '
+Arguments: ('/root/autodl-tmp/Pi05-VLABench/.local/upstream/vlabench-sim/VLABench',)
+INFO:absl:MUJOCO_GL=egl, attempting to import specified OpenGL backend.
+INFO:OpenGL.acceleratesupport:No OpenGL_accelerate module loaded: No module named 'OpenGL_accelerate'
+INFO:absl:MuJoCo library version is: 3.2.2
+INFO:root:Norm stats not found in /root/autodl-tmp/Pi05-VLABench/assets/pi05_ft_vlabench_primitive/vlabench/vlabench_ft_primitive, skipping.
+INFO:root:Seed 1501 at control step 1/600
+INFO:root:Seed 1501 at control step 100/600
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.263125
+INFO:root:Seed 1501 at control step 200/600
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.590713
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.069693
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0860925
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0788908
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0976306
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.098084
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0949604
+INFO:root:Seed 1501 at control step 300/600
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.768796
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.666153
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.162218
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.74673
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.161707
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0422353
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.624948
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.188553
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.466365
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.394197
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.339441
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.15981
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.128852
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0598409
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.117514
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0917688
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.125379
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0948401
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0938076
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.1006
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.439985
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.143831
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.424263
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.128221
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.101806
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.833656
+INFO:root:Seed 1501 at control step 400/600
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.422427
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0345664
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0942887
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.449953
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.181108
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.101495
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0776649
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0870251
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0988736
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.200414
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.170414
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.410281
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0900646
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.468942
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.119299
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0990873
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.650256
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.188426
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0975207
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0943618
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.412564
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0905506
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.111511
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.12329
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.103008
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.112411
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.698776
+WARNING:absl:Failed to converge after 99 steps: err_norm=1.3813
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.184958
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0682146
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.302316
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.123136
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0747351
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0364963
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0750342
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0741249
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0896715
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.103801
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.101198
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0806214
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.180211
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.020633
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0082307
+INFO:root:Seed 1501 at control step 500/600
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0607855
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.1184
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0921401
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0974525
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.323917
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0358451
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.145053
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.394085
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.102297
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.169615
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.138684
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0612588
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0983714
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.102425
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.10676
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.439475
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0968701
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0560853
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0998456
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0201162
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.173839
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.462873
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.15599
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.474365
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0886256
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.638626
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.230863
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.035771
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0959979
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.162695
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.094843
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0949625
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0993667
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.459753
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.853554
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0786156
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0653174
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0500847
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.122576
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.118796
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0874675
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0410868
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0139553
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0803921
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0857327
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0813146
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.196314
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0814461
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.908022
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0902116
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.72941
+WARNING:absl:Failed to converge after 99 steps: err_norm=1.10774
+INFO:root:Seed 1501 at control step 600/600
+{"seed": 1501, "task": "select_fruit", "instruction": "Put the pear into the plate_seen", "prompt_mode": "official", "camera_names": ["right", "left", "forward", "franka/Franka_wrist_cam"], "model_render_options": {"height": 480, "width": 480}, "evaluation_script_sha256": "4301d17b9abeacbd0ba04b8fd5d6c14552274f3594f23d9ae0d6dca6ef6b65c7", "render_samples": 0, "initial_policy_rgb_sha256": "8ff2e51081e98cceb359ff6a765e028645720c3e714a70b07a34e5c96b74d153", "initial_state_sha256": "06ad49f31d6176129240435e056b027dd79b7550ad6e1b33539e8289a9e30a94", "initial_rgb_sha256": "5c11e1b95d5965aa40d3bc5d0e6e5ffd27501b78c6cc84393cf7b6e6bbed4ffb", "reset_attempts": 1, "first_action_sha256": "2482e902c8d2f7b6865e1785ebb2cc886f83898b5be4f5a868e8a5e45c973b32", "success": false, "stop_reason": "step_budget", "failure_type": "target_moved_goal_unsatisfied", "steps": 600, "policy_calls": 120, "environment_last": false, "ik_nonconverged_steps": 206, "target_max_displacement_m": 2.6866728137693716, "target_max_lift_m": 0.18118346619928927, "min_gripper_to_target_center_m": 0.018911546776577953, "min_close_command_to_target_center_m": 0.018911546776577953, "gripper_target_contact_steps": 101, "action_sha256": "ac8db9b808fdf8b0c05014c40cf52c25838be5e18db8f8b3b6263f1e2a60cdc4", "norm_stats_sha256": "bce33fc1831830d953ef9bc57e520c02ee44e02b7ad07f27ce92b931a879384f", "reference_model_revision": "f658a8bec801aab960fe0ceab370a123b31c1837", "base_sha256": "66975306e09199efdf221e14d6f5d13ea5d6dbe42e8f921f19bd1096721eac61", "configuration_source_sha256": "998181bb8cc8386766aa5bec3302b938234ab5da2a24e81cef199a8fd560eef3", "stage": "published-reference-already-finetuned", "backend": "RLinf", "openpi_revision": "788ef1f20e655de5bb40869fb7b7fcdd49732387", "control_hz": 10, "replan_steps": 5, "max_control_steps": 600, "sampler": "JAX seeded noise", "wall_seconds": 200.85481318831444}
+{"stage": "base", "label": "published-reference-already-finetuned", "seed": 1501, "success": false, "controls": 600, "matched_quantitative_fields": ["success", "steps", "instruction", "action_sha256", "first_action_sha256", "ik_nonconverged_steps", "initial_state_sha256", "initial_policy_rgb_sha256", "render_samples", "norm_stats_sha256", "base_sha256", "sampler"], "video_sha256": "a51a202a08742371dc6441a007323ee4849e21060ee61895fd404b55a240ffc8", "video_bytes": 12419328, "frames": 601, "fps": 10.0, "width": 1024, "height": 1024, "display_only_image_size": 512, "policy_camera_resolution_unchanged": true, "source_sha256": "e90b832ec13cc4d835568cca2a695448f63fe2bc7126ef1d4e9f8d70f5e59d00"}

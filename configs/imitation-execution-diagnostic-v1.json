@@ -1,0 +1,30 @@
+{
+  "registered_at": "2026-11-22T21:12:17.410787+08:00",
+  "purpose": "Diagnostic of prediction execution granularity after the same scene can be fit more closely offline. It changes no weights and is separate from the frozen five-control comparison.",
+  "checkpoint": "imitation-flower42-canonical-lr1e4-300",
+  "case": "insert_flower:42",
+  "changed_factor": {
+    "controls_per_prediction": {
+      "before": 5,
+      "after": 1
+    }
+  },
+  "unchanged": {
+    "official_low_level_controller": true,
+    "control_hz": 10,
+    "predicted_horizon": 10,
+    "max_controls": 600,
+    "normalization": true,
+    "cameras_and_instruction": true,
+    "model_weights": true,
+    "initial_physics": true,
+    "sampler_seed": 42
+  },
+  "coupled_effect": "The same seeded noise stream is consumed more frequently because there are more policy calls; the test does not isolate feedback frequency from noise-consumption frequency.",
+  "required_gate": {
+    "fresh_resets": 3,
+    "successes": 3,
+    "stop_after_completed_failure": true
+  },
+  "reporting_limit": "This diagnostic profile cannot be mixed with five-control baseline, SFT or PPO rates. A chosen profile would require all stages to be evaluated again with identical controls. No generalization or improvement is assumed."
+}

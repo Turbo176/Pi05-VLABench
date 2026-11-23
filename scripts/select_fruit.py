@@ -55,7 +55,9 @@ def configure_asset_aliases(task):
         name2class_xml.setdefault(alias, [cls, relative])
 
 
-def open_episode(seed, task):
+def open_episode(seed, task, *, render_samples=None):
+    if render_samples not in (None, 0, 2, 4, 8):
+        raise ValueError('Render samples must be 0, 2, 4, 8, or the upstream default')
     configure_asset_aliases(task)
     random.seed(seed)
     np.random.seed(seed)
@@ -64,6 +66,9 @@ def open_episode(seed, task):
     # load_env performs its own reset. Seed Composer and reset for the recorded rollout.
     env.random_state.seed(seed)
     env.reset()
+    if render_samples is not None:
+        # Set before the first camera creates its OpenGL framebuffer.
+        env.physics.model.vis.quality.offsamples = render_samples
     return env
 
 

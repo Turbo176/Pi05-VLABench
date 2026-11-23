@@ -1,0 +1,55 @@
+--- Logging error ---
+Traceback (most recent call last):
+  File "/root/miniconda3/lib/python3.12/logging/__init__.py", line 1160, in emit
+    msg = self.format(record)
+          ^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/logging/__init__.py", line 999, in format
+    return fmt.format(record)
+           ^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/logging/__init__.py", line 703, in format
+    record.message = record.getMessage()
+                     ^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/logging/__init__.py", line 392, in getMessage
+    msg = msg % self.args
+          ~~~~^~~~~~~~~~~
+TypeError: not all arguments converted during string formatting
+Call stack:
+  File "/root/autodl-tmp/Pi05-VLABench/code/scripts/record_fruit_completion.py", line 9, in <module>
+    from train_reference_aligned_fruit import evaluate, load_aligned_policy, paired_episodes
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/root/autodl-tmp/Pi05-VLABench/code/scripts/train_reference_aligned_fruit.py", line 21, in <module>
+    from evaluate_vlabench_reference import MODEL_REVISION, OPENPI_REVISION, TASK, build_episode, load_upstream_adapter
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/root/autodl-tmp/Pi05-VLABench/code/scripts/evaluate_vlabench_reference.py", line 13, in <module>
+    from VLABench.utils.utils import euler_to_quaternion, quaternion_to_euler
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1310, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1310, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/root/autodl-tmp/Pi05-VLABench/.local/upstream/vlabench-sim/VLABench/__init__.py", line 21, in <module>
+    logging.info("Detect Linux, add LM4root as environment variable: ", package_root)
+Message: 'Detect Linux, add LM4root as environment variable: '
+Arguments: ('/root/autodl-tmp/Pi05-VLABench/.local/upstream/vlabench-sim/VLABench',)
+INFO:absl:MUJOCO_GL=egl, attempting to import specified OpenGL backend.
+INFO:OpenGL.acceleratesupport:No OpenGL_accelerate module loaded: No module named 'OpenGL_accelerate'
+INFO:absl:MuJoCo library version is: 3.2.2
+INFO:root:Norm stats not found in /root/autodl-tmp/Pi05-VLABench/assets/pi05_ft_vlabench_primitive/vlabench/vlabench_ft_primitive, skipping.
+INFO:root:Seed 1501 at control step 1/600
+INFO:root:Seed 1501 at control step 100/600
+{"seed": 1501, "task": "select_fruit", "instruction": "Put the pear into the plate_seen", "prompt_mode": "official", "camera_names": ["right", "left", "forward", "franka/Franka_wrist_cam"], "model_render_options": {"height": 480, "width": 480}, "evaluation_script_sha256": "4301d17b9abeacbd0ba04b8fd5d6c14552274f3594f23d9ae0d6dca6ef6b65c7", "render_samples": 0, "initial_policy_rgb_sha256": "8ff2e51081e98cceb359ff6a765e028645720c3e714a70b07a34e5c96b74d153", "initial_state_sha256": "06ad49f31d6176129240435e056b027dd79b7550ad6e1b33539e8289a9e30a94", "initial_rgb_sha256": "5c11e1b95d5965aa40d3bc5d0e6e5ffd27501b78c6cc84393cf7b6e6bbed4ffb", "reset_attempts": 1, "first_action_sha256": "fb89de3dc17c3653c1f5a20de77217d4abcf3a27fbc9d4394a3c2c16e9e3a407", "success": true, "stop_reason": "success", "failure_type": null, "steps": 160, "policy_calls": 32, "environment_last": true, "ik_nonconverged_steps": 0, "target_max_displacement_m": 0.609487750316665, "target_max_lift_m": 0.12079248560556644, "min_gripper_to_target_center_m": 0.022404034719915273, "min_close_command_to_target_center_m": 0.022404034719915273, "gripper_target_contact_steps": 80, "action_sha256": "76398adb53c010ed6aed61d68cb028739a1ab9b20fd2e7eefc5bf6f111fe2e1a", "sft_sha256": "998181bb8cc8386766aa5bec3302b938234ab5da2a24e81cef199a8fd560eef3", "norm_stats_sha256": "bce33fc1831830d953ef9bc57e520c02ee44e02b7ad07f27ce92b931a879384f", "reference_model_revision": "f658a8bec801aab960fe0ceab370a123b31c1837", "base_sha256": "66975306e09199efdf221e14d6f5d13ea5d6dbe42e8f921f19bd1096721eac61", "ppo_sha256": "0d2fac4c03db18ceac98c2344aec358713251e3b37cbcfa154349392c4ca0ad3", "stage": "fruit-ppo1", "backend": "RLinf", "openpi_revision": "788ef1f20e655de5bb40869fb7b7fcdd49732387", "control_hz": 10, "replan_steps": 5, "max_control_steps": 600, "sampler": "JAX seeded noise", "wall_seconds": 68.21116905845702}
+{"stage": "ppo", "label": "fruit-ppo1", "seed": 1501, "success": true, "controls": 160, "matched_quantitative_fields": ["success", "steps", "instruction", "action_sha256", "first_action_sha256", "ik_nonconverged_steps", "initial_state_sha256", "initial_policy_rgb_sha256", "render_samples", "norm_stats_sha256", "base_sha256", "sampler", "sft_sha256", "ppo_sha256"], "scored_source": "runs/pose-robustness-v2/fruit-completion-v1/ordinary-ppo/cases/select_fruit-1501-official/episodes.jsonl", "scored_source_sha256": "7f641efb30221ff5b33997304f278090f780f1a801f8e2b13b31a3f7ddea4cd8", "video_sha256": "02745228396f02f2636e0fb4df6b13e1d4b0121997f2ae38d6a6c9bcf9f15c34", "video_bytes": 2338566, "frames": 161, "fps": 10.0, "width": 1024, "height": 1024, "display_only_image_size": 512, "policy_camera_resolution_unchanged": true, "source_sha256": "749e0fed9728e6974f175ab7dbd2733ad742173e32ec65755a2b326401819e06"}

@@ -1,0 +1,32 @@
+{
+  "version": "fruit-completion-v1",
+  "registered_on": "2026-11-22",
+  "parent_protocol": "evaluation-two-task-v2.json",
+  "scope_reason": "User-authorized fruit-first completion. Freeze SFT90 and its single PPO descendant before inspecting reserved outcomes.",
+  "robot": "franka",
+  "interface": "published VLABench pi05 primitive pose control",
+  "control_hz": 10,
+  "max_control_steps": 600,
+  "render_samples": 0,
+  "replan_steps": 5,
+  "action_horizon": 10,
+  "stages": ["published_finetuned_reference", "shared_multitask_sft90", "fruit_ppo1"],
+  "sft_sha256": "998181bb8cc8386766aa5bec3302b938234ab5da2a24e81cef199a8fd560eef3",
+  "development": {"select_fruit": [1201, 1202, 1203, 1204]},
+  "ppo_training_seeds_inclusive": [1301, 1399],
+  "ordinary": {
+    "tasks": ["select_fruit"],
+    "seeds_inclusive": [1501, 1510],
+    "initialization_rule": "Use the first ten numerical seeds of the existing reserved manifests, chosen before reading their outcomes; no exclusions based on policy performance."
+  },
+  "fruit_language": {
+    "tasks": ["select_fruit"],
+    "seeds_inclusive": [1601, 1603],
+    "prompt_modes": ["official", "paraphrase", "alternate_target"],
+    "initialization_rule": "Use the first three numerical seeds of the existing reserved paired language manifests, before inspecting outcomes."
+  },
+  "case_manifest_source": ".local/reference-aligned/msaa0-final-cases-v2",
+  "comparison_rule": "Same complete initial state, input RGB, literal prompt, JAX seeded evaluation noise, control interface and execution budget for all three stages. Training exploration uses RLinf flow-SDE separately.",
+  "reporting": "Report successes/trials, Wilson 95% intervals, paired outcome changes and recorded failure evidence. Development, ordinary and language suites stay separate. These small pilot samples do not prove a statistically significant improvement.",
+  "unexecuted_reserve": "Seeds 1511-1520 and 1604-1610 are outside this bounded pilot and remain pending; do not imply that the original full evaluation suite is complete."
+}

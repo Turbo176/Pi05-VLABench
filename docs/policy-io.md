@@ -1,4 +1,26 @@
-# Policy input and actuator mapping
+# Policy inputs and actions
+
+## Current VLABench primitive pose policy
+
+The active fruit-first run uses the published VLABench OpenPI fork, not the older joint-space mapping below. These same transforms serve the verified LeRobot pose export, SFT and the RLinf actor. [Current experiment](experiments/2026-11-22/fruit-completion-v1/README.md)
+
+| Model slot | Actual VLABench view | Mask |
+| --- | --- | --- |
+| `base_0_rgb` | `forward` | `true` |
+| `left_wrist_0_rgb` | `right` scene camera | `true` |
+| `right_wrist_0_rgb` | `franka/Franka_wrist_cam` | `true` |
+
+The slot names are inherited from the upstream transform; they do not name two physical wrist cameras. Policy renders are 480 × 480 and use the pinned resize/transform path to 224 × 224. The pose LeRobot export stores the corresponding verified 224 × 224 views. Display videos separately render four views at 512 × 512 each; the resulting 1024 × 1024 mosaic is never fed back as a policy input. Recorded policy RGB and complete control hashes must still match scored executions.
+
+The observation whitelist is the three RGB arrays, `observation/state`, and the actual instruction in `prompt`. State is `[x_m, y_m, z_m, roll_rad, pitch_rad, yaw_rad, gripper]`. The official adapter subtracts the published robot origin `[0, -0.4, 0.78]` meters from measured world position. It adds the actual robot-frame origin back to predicted position before IK. Original Euler angles use radians; this run retains the original unwrapped Euler-delta convention. The published `discrete_state_input=False` profile is preserved. Measured state remains available to the shared delta transforms and decoder; explicit state-token conditioning is not claimed.
+
+Stored labels are absolute seven-coordinate end-effector pose/gripper targets. The shared OpenPI data transform subtracts the observation's first six state coordinates, applies the fixed published quantile statistics, and pads to 32 model coordinates. Decoding uses those exact statistics and adds measured state back. Gripper is an absolute command, not a distance: the official adapter maps predictions `>= 0.1` to two finger targets of 0.04 m and lower predictions to two zero targets. The unchanged official inverse kinematics produces seven arm joint targets, followed by the two finger targets.
+
+All policy stages predict ten controls and execute at most five before observing again, at 10 Hz. The budget is 600 controls; official success or environment termination ends a rollout earlier. PPO uses action-chunk transitions, gamma 0.99 and GAE lambda 0.95, with zero terminal bootstrap for this finite-horizon task. Simulator target geometry is reward-only and never enters observations. Expert actions are absent at policy inference. Success and termination metadata remain evidence and labels, not model inputs.
+
+The parent SFT normalization SHA-256 is `bce33fc1831830d953ef9bc57e520c02ee44e02b7ad07f27ce92b931a879384f`. The fresh handoff verifies predictions, shared decoding, sampled/recomputed log probabilities and an entire successful execution before PPO updates.
+
+## Historical joint-space mapping
 
 The same mapping processes LeRobot v2.1 samples and observations from a fresh VLABench simulator. This check runs in the existing WSL environments with local assets and applies the project adapter before OpenPI model transforms.
 

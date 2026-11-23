@@ -1,0 +1,1 @@
+{"task": "take_out_cool_drink", "seed": 43, "stored_replay_state_max_error": 1.1880169825673192e-07, "stored_replay_rgb_max_error": 0.0, "official_adapter_target_rounding_max_m": 5.8412551906528165e-08, "success": true, "steps": 479}

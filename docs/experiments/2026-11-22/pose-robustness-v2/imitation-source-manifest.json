@@ -1,0 +1,59 @@
+{
+  "kind": "local_sources_used_by_imitation_diagnostics",
+  "files": {
+    "scripts/train_reference_aligned_fruit.py": {
+      "bytes": 53075,
+      "sha256": "3683dfa8725721ee20671ea89ef807fb54bcf4e3817a5dd45675ea42fac1372a"
+    },
+    "scripts/pi05_runtime.py": {
+      "bytes": 9537,
+      "sha256": "fa6490445b17ea689cc3ab162aa86910974cda6e2f2a358bd00826a57ff46e11"
+    },
+    "scripts/verify_pose_imitation_gate.py": {
+      "bytes": 4964,
+      "sha256": "189de530cf5bfcb3c387226e62020624e86bf938916f0b39c43d9213f6965193"
+    },
+    "scripts/audit_pose_checkpoint_regression.py": {
+      "bytes": 6370,
+      "sha256": "c949398abc5421bcdec4bdfd9730d75bb31ff9a7d97e66754d3bde7cdb6edf24"
+    },
+    "scripts/audit_pose_training_contract.py": {
+      "bytes": 8547,
+      "sha256": "d6b16112700ddf51d34927d3255b27c43493b25ad8b983be4a6ee9b1f35223b2"
+    },
+    "scripts/audit_pose_flow_fit.py": {
+      "bytes": 3909,
+      "sha256": "fff538742aeecc17ff8fa7470a7362ee4eccae912ab0a4f580d08aa157840843"
+    },
+    "configs/imitation-gate-v1.json": {
+      "bytes": 1507,
+      "sha256": "6576b70c9f0d9de18e0ea052e4f0f7ceb218645544f323bf31cae06955af4cb4"
+    },
+    "configs/imitation-gate-flower-v1.json": {
+      "bytes": 1548,
+      "sha256": "1669092552475f1f3e25aed0f22f46b872895a60b385a6595f1c873c1844429a"
+    },
+    "configs/imitation-gate-flower-canonical-v1.json": {
+      "bytes": 2061,
+      "sha256": "aa57dd1ea323ba6572f63f2534399bc60a0617d7dbb7014fe85d015bfc1cec1f"
+    },
+    "configs/imitation-gate-flower-canonical-lr1e4-v1.json": {
+      "bytes": 2075,
+      "sha256": "4cb68fdf8219b557a3ed6a7ca4a7c301e92963772cead14e798c90b5c034585f"
+    },
+    "scripts/collect_reference_pose_recovery.py": {
+      "bytes": 5754,
+      "sha256": "38793c593041460ee168a62df1e15eb3803192efd847e1beea66fba1da13f779"
+    },
+    "configs/imitation-execution-diagnostic-v1.json": {
+      "bytes": 1308,
+      "sha256": "99296dbc09e089c15a87540fb3c8d9a3d4437b388eab4c80f059ea24594f8c0f"
+    },
+    "configs/flower-corrections-v1.json": {
+      "bytes": 905,
+      "sha256": "090b0290fe286ea4427c9e0ebae60153bd4536e67f83c78a3065b944d11f7f48"
+    }
+  },
+  "historical_successful_gate_source_sha256": "ac19636b123e013a63a74a1f4e2aa52d097be4af4f794845225b3842cf4c9a2f",
+  "historical_successful_gate_source_archived": true
+}

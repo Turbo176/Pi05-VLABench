@@ -1,0 +1,54 @@
+{
+  "version": 2,
+  "frozen_on": "2026-11-22",
+  "robot": "franka",
+  "interface": "published VLABench pi05 primitive pose control",
+  "control_hz": 10,
+  "max_control_steps": 600,
+  "render_samples": 0,
+  "replan_steps": 5,
+  "action_horizon": 10,
+  "checkpoint_selection": {
+    "candidates_updates": [100, 300],
+    "metric": "Total official successes across the same 12 development cases, using one checkpoint for all tasks.",
+    "tie_break": "Fewer optimizer updates.",
+    "follow_up_registered_before_final_outcomes": {
+      "correction_recipe": {
+        "run": "correction-multitask-400",
+        "candidate_updates": [200, 400],
+        "description": "Reference parent, shortest equivalent Euler labels, executed-pose flow loss, gripper weight 5, frozen action heads, verified expert corrections."
+      },
+      "expanded_data_phase": {
+        "run": "correction-expanded-1200",
+        "initialization": "correction-multitask-400 at update 400; a fresh optimizer and additional replay-verified training demonstrations",
+        "candidate_updates": [400, 800, 1200],
+        "training_update_offset": 400
+      },
+      "selection": "Compare complete 12-case development results only. Use one checkpoint for every task. Maximize total official successes; ties choose fewer cumulative optimizer updates, then the earlier registered recipe.",
+      "baseline_blinding": "The fixed published-reference final suite may run concurrently. Do not inspect its outcomes until SFT recipe and checkpoint are frozen."
+    },
+    "reserved": "Do not use ordinary or fruit_language outcomes for checkpoint selection."
+  },
+  "development": {
+    "select_fruit": [1201, 1202, 1203, 1204],
+    "insert_flower": [1211, 1212, 1213, 1214],
+    "take_out_cool_drink": [1221, 1222, 1223, 1224]
+  },
+  "ppo_training_seeds_inclusive": [1301, 1399],
+  "ordinary": {
+    "tasks": ["select_fruit", "insert_flower", "take_out_cool_drink"],
+    "seeds_inclusive": [1501, 1520],
+    "initialization_rule": "First 20 distinct physics-valid resets per task in ascending order from 1501. Record all rejected reset errors before any policy evaluation.",
+    "seeds_by_task": {
+      "insert_flower": [1501, 1502, 1504, 1505, 1506, 1507, 1508, 1509, 1510, 1511, 1512, 1513, 1514, 1515, 1516, 1517, 1518, 1519, 1520, 1521]
+    },
+    "excluded_initializations": [
+      {"task": "insert_flower", "seed": 1503, "reason": "Reset PhysicsError on all four attempts before executing any policy."}
+    ]
+  },
+  "fruit_language": {
+    "tasks": ["select_fruit"],
+    "seeds_inclusive": [1601, 1610],
+    "prompt_modes": ["official", "paraphrase", "alternate_target"]
+  }
+}

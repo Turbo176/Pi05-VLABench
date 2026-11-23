@@ -1,0 +1,106 @@
+{
+  "datasets": {
+    "lerobot-tritask-msaa0-v2": {
+      "protocol_sha256": "afb2ef00ec762e44a445ac4a3708d52a4c1738915957d707b011e998fa597c8b",
+      "dataset_verification_sha256": "912661fbd8af7f4f55479b902dcce8e92c28abe5c924dab399bc789e993c11e4",
+      "source_episodes": 69,
+      "suites": {
+        "ordinary": 10,
+        "fruit_language": 9
+      },
+      "files": {
+        "select_fruit-official.jsonl": {
+          "cases": 10,
+          "sha256": "11b38689e9ec88a7f328a92f3da8ca83f7fa7d2d102bda30fa2cf028fe1626c5"
+        },
+        "select_fruit-language-official.jsonl": {
+          "cases": 3,
+          "sha256": "f03c90bcb54a1d2cacc66745bd82aefd23b1e21e4450766a4745a6caf95787e2"
+        },
+        "select_fruit-paraphrase.jsonl": {
+          "cases": 3,
+          "sha256": "d638ba9d1edd9940739b25441bed81149caed1ffd7c1012cb6bd6ecf4e93578c"
+        },
+        "select_fruit-alternate_target.jsonl": {
+          "cases": 3,
+          "sha256": "af2d48455edb78de5f63ae154727d597dd09ea01bed3c4073069cb669c748032"
+        }
+      },
+      "excluded_initializations": [],
+      "disjoint_from_training_and_validation": true,
+      "language_initial_physics_and_images_match": true,
+      "policy_rollouts_executed": 0
+    },
+    "lerobot-msaa0-small-extras": {
+      "protocol_sha256": "afb2ef00ec762e44a445ac4a3708d52a4c1738915957d707b011e998fa597c8b",
+      "dataset_verification_sha256": "f9ef36fe5aeb57fbbcac4b0d3afe0071ba61092ec62087f731a789f3fb10948c",
+      "source_episodes": 4,
+      "suites": {
+        "ordinary": 10,
+        "fruit_language": 9
+      },
+      "files": {
+        "select_fruit-official.jsonl": {
+          "cases": 10,
+          "sha256": "11b38689e9ec88a7f328a92f3da8ca83f7fa7d2d102bda30fa2cf028fe1626c5"
+        },
+        "select_fruit-language-official.jsonl": {
+          "cases": 3,
+          "sha256": "f03c90bcb54a1d2cacc66745bd82aefd23b1e21e4450766a4745a6caf95787e2"
+        },
+        "select_fruit-paraphrase.jsonl": {
+          "cases": 3,
+          "sha256": "d638ba9d1edd9940739b25441bed81149caed1ffd7c1012cb6bd6ecf4e93578c"
+        },
+        "select_fruit-alternate_target.jsonl": {
+          "cases": 3,
+          "sha256": "af2d48455edb78de5f63ae154727d597dd09ea01bed3c4073069cb669c748032"
+        }
+      },
+      "excluded_initializations": [],
+      "disjoint_from_training_and_validation": true,
+      "language_initial_physics_and_images_match": true,
+      "policy_rollouts_executed": 0
+    },
+    "lerobot-msaa0-flower-105-134": {
+      "protocol_sha256": "afb2ef00ec762e44a445ac4a3708d52a4c1738915957d707b011e998fa597c8b",
+      "dataset_verification_sha256": "83fd93e294ca98402ab6b387c1137704b30679d03fb6e553d21b1f843c28175e",
+      "source_episodes": 6,
+      "suites": {
+        "ordinary": 10,
+        "fruit_language": 9
+      },
+      "files": {
+        "select_fruit-official.jsonl": {
+          "cases": 10,
+          "sha256": "11b38689e9ec88a7f328a92f3da8ca83f7fa7d2d102bda30fa2cf028fe1626c5"
+        },
+        "select_fruit-language-official.jsonl": {
+          "cases": 3,
+          "sha256": "f03c90bcb54a1d2cacc66745bd82aefd23b1e21e4450766a4745a6caf95787e2"
+        },
+        "select_fruit-paraphrase.jsonl": {
+          "cases": 3,
+          "sha256": "d638ba9d1edd9940739b25441bed81149caed1ffd7c1012cb6bd6ecf4e93578c"
+        },
+        "select_fruit-alternate_target.jsonl": {
+          "cases": 3,
+          "sha256": "af2d48455edb78de5f63ae154727d597dd09ea01bed3c4073069cb669c748032"
+        }
+      },
+      "excluded_initializations": [],
+      "disjoint_from_training_and_validation": true,
+      "language_initial_physics_and_images_match": true,
+      "policy_rollouts_executed": 0
+    }
+  },
+  "ppo_training_seeds": [
+    1301,
+    1302
+  ],
+  "ppo_training_disjoint_from_demonstrations_and_tests": true,
+  "training_initial_state_hashes": [
+    "0138e7cbd0c001f748176958ba31bb08f399849780a630b7d6976693c3a6d5b5",
+    "54bef53a684a8bcb2653f27a386e32147e4c56627f55e34d0b478bc3901eb808"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "audited_at": "2026-11-22T16:08:12.620656+00:00",
+  "actor_parameter_changes": {
+    "action_expert_lora": {
+      "tensors": 216,
+      "changed_tensors": 216,
+      "changed_elements": 6930323,
+      "max_abs_delta": 3.5019038477912545e-05,
+      "delta_l2": 0.02436706013739338
+    },
+    "action_heads": {
+      "tensors": 8,
+      "changed_tensors": 8,
+      "changed_elements": 2140024,
+      "max_abs_delta": 3.46573069691658e-05,
+      "delta_l2": 0.01499879704978484
+    }
+  },
+  "actor_tensors_compared": 224,
+  "optimizer_parameter_states": 232,
+  "optimizer_step_min": 19.0,
+  "optimizer_step_max": 19.0,
+  "all_saved_actor_changes_equal_training_report": true,
+  "sft_sha256": "998181bb8cc8386766aa5bec3302b938234ab5da2a24e81cef199a8fd560eef3",
+  "ppo_sha256": "0d2fac4c03db18ceac98c2344aec358713251e3b37cbcfa154349392c4ca0ad3",
+  "additional_critic_tensors": 8
+}

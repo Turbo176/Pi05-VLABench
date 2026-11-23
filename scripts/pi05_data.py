@@ -18,7 +18,7 @@ TASKS = ('select_fruit', 'insert_flower', 'take_out_cool_drink')
 class LeRobotTrajectories:
     """Sample a task, then an episode and frame, without crossing episode boundaries."""
 
-    def __init__(self, root, manifest, episode_filter=None):
+    def __init__(self, root, manifest, episode_filter=None, *, required_tasks=TASKS):
         self.root = Path(root)
         self.info = json.loads((self.root / 'meta/info.json').read_text(encoding='utf-8'))
         if self.root.name != 'train' or self.info['codebase_version'] != 'v2.1' or self.info['fps'] != 10:
@@ -38,8 +38,13 @@ class LeRobotTrajectories:
             if episode_filter is None or idx in episode_filter:
                 self.episodes[task].append(idx)
         indices = [idx for group in self.episodes.values() for idx in group]
-        if len(set(indices)) != len(indices) or not all(self.episodes.values()):
-            raise ValueError('Expected unique episode indices and data for all three tasks')
+        if len(set(indices)) != len(indices) or not indices:
+            raise ValueError('Expected at least one episode and unique episode indices')
+        present = {task for task, episodes in self.episodes.items() if episodes}
+        if episode_filter is None and present != set(required_tasks):
+            raise ValueError(f'Expected tasks {required_tasks}, found {sorted(present)}')
+        if episode_filter is not None and set(indices) != set(episode_filter):
+            raise ValueError('Some requested episodes are missing from the verified training export')
         if episode_filter is None and set(indices) != set(self.lengths):
             raise ValueError('Manifest does not cover all training episodes')
         self._cache = {}

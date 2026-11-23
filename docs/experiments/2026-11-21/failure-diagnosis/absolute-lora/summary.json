@@ -1,0 +1,22 @@
+{
+  "scope": "multitask SFT",
+  "seed": 240,
+  "stats_sha256": "fc89b1b8f11586cd09f963ae9ceb8ef774fa44204905e43ddaa2614a3f3744e2",
+  "execute_steps": 10,
+  "lora_rank": 16,
+  "base_bytes": 13413809816,
+  "torch": "2.8.0+cu128",
+  "trainable_parameters": 9096224,
+  "lr": 0.00015,
+  "training_episodes": {
+    "select_fruit": 20,
+    "insert_flower": 20,
+    "take_out_cool_drink": 20
+  },
+  "first_actor_max_abs_delta": 0.00015085935592651367,
+  "updates": 2400,
+  "wall_seconds": 761.7126517591532,
+  "peak_allocated_bytes": 10367155200,
+  "peak_reserved_bytes": 10538188800,
+  "checkpoint_readback": true
+}

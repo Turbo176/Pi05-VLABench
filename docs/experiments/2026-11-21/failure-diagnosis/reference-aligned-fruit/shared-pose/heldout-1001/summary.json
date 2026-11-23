@@ -1,0 +1,206 @@
+{
+  "cases_per_stage": 3,
+  "stages": {
+    "base": {
+      "insert_flower/official": {
+        "successes": 1,
+        "attempts": 1,
+        "success_rate": 1.0,
+        "wilson_95": [
+          0.20654931437723745,
+          1.0
+        ],
+        "failure_reasons": {},
+        "failure_types": {},
+        "environment_control_steps": 152,
+        "rollout_wall_seconds": 34.51321793394163
+      },
+      "select_fruit/official": {
+        "successes": 1,
+        "attempts": 1,
+        "success_rate": 1.0,
+        "wilson_95": [
+          0.20654931437723745,
+          1.0
+        ],
+        "failure_reasons": {},
+        "failure_types": {},
+        "environment_control_steps": 174,
+        "rollout_wall_seconds": 39.51398332999088
+      },
+      "take_out_cool_drink/official": {
+        "successes": 0,
+        "attempts": 1,
+        "success_rate": 0.0,
+        "wilson_95": [
+          0.0,
+          0.7934506856227626
+        ],
+        "failure_reasons": {
+          "step_budget": 1
+        },
+        "failure_types": {
+          "target_displacement_under_3cm": 1
+        },
+        "environment_control_steps": 600,
+        "rollout_wall_seconds": 119.58687559887767
+      }
+    },
+    "sft": {
+      "insert_flower/official": {
+        "successes": 1,
+        "attempts": 1,
+        "success_rate": 1.0,
+        "wilson_95": [
+          0.20654931437723745,
+          1.0
+        ],
+        "failure_reasons": {},
+        "failure_types": {},
+        "environment_control_steps": 396,
+        "rollout_wall_seconds": 88.78332922188565
+      },
+      "select_fruit/official": {
+        "successes": 1,
+        "attempts": 1,
+        "success_rate": 1.0,
+        "wilson_95": [
+          0.20654931437723745,
+          1.0
+        ],
+        "failure_reasons": {},
+        "failure_types": {},
+        "environment_control_steps": 123,
+        "rollout_wall_seconds": 37.778784340946004
+      },
+      "take_out_cool_drink/official": {
+        "successes": 0,
+        "attempts": 1,
+        "success_rate": 0.0,
+        "wilson_95": [
+          0.0,
+          0.7934506856227626
+        ],
+        "failure_reasons": {
+          "step_budget": 1
+        },
+        "failure_types": {
+          "target_displacement_under_3cm": 1
+        },
+        "environment_control_steps": 600,
+        "rollout_wall_seconds": 121.37881498108618
+      }
+    },
+    "ppo": {
+      "insert_flower/official": {
+        "successes": 1,
+        "attempts": 1,
+        "success_rate": 1.0,
+        "wilson_95": [
+          0.20654931437723745,
+          1.0
+        ],
+        "failure_reasons": {},
+        "failure_types": {},
+        "environment_control_steps": 152,
+        "rollout_wall_seconds": 41.31324504618533
+      },
+      "select_fruit/official": {
+        "successes": 0,
+        "attempts": 1,
+        "success_rate": 0.0,
+        "wilson_95": [
+          0.0,
+          0.7934506856227626
+        ],
+        "failure_reasons": {
+          "step_budget": 1
+        },
+        "failure_types": {
+          "target_moved_goal_unsatisfied": 1
+        },
+        "environment_control_steps": 600,
+        "rollout_wall_seconds": 114.88297717296518
+      },
+      "take_out_cool_drink/official": {
+        "successes": 0,
+        "attempts": 1,
+        "success_rate": 0.0,
+        "wilson_95": [
+          0.0,
+          0.7934506856227626
+        ],
+        "failure_reasons": {
+          "step_budget": 1
+        },
+        "failure_types": {
+          "target_displacement_under_3cm": 1
+        },
+        "environment_control_steps": 600,
+        "rollout_wall_seconds": 121.68448621011339
+      }
+    }
+  },
+  "paired_outcomes": {
+    "base_to_sft": {
+      "insert_flower/official": {
+        "fail_to_success": 0,
+        "success_to_fail": 0,
+        "both_failed": 0,
+        "both_succeeded": 1
+      },
+      "select_fruit/official": {
+        "fail_to_success": 0,
+        "success_to_fail": 0,
+        "both_failed": 0,
+        "both_succeeded": 1
+      },
+      "take_out_cool_drink/official": {
+        "fail_to_success": 0,
+        "success_to_fail": 0,
+        "both_failed": 1,
+        "both_succeeded": 0
+      }
+    },
+    "sft_to_ppo": {
+      "insert_flower/official": {
+        "fail_to_success": 0,
+        "success_to_fail": 0,
+        "both_failed": 0,
+        "both_succeeded": 1
+      },
+      "select_fruit/official": {
+        "fail_to_success": 0,
+        "success_to_fail": 1,
+        "both_failed": 0,
+        "both_succeeded": 0
+      },
+      "take_out_cool_drink/official": {
+        "fail_to_success": 0,
+        "success_to_fail": 0,
+        "both_failed": 1,
+        "both_succeeded": 0
+      }
+    },
+    "base_to_ppo": {
+      "insert_flower/official": {
+        "fail_to_success": 0,
+        "success_to_fail": 0,
+        "both_failed": 0,
+        "both_succeeded": 1
+      },
+      "select_fruit/official": {
+        "fail_to_success": 0,
+        "success_to_fail": 1,
+        "both_failed": 0,
+        "both_succeeded": 0
+      },
+      "take_out_cool_drink/official": {
+        "fail_to_success": 0,
+        "success_to_fail": 0,
+        "both_failed": 1,
+        "both_succeeded": 0
+      }
+    }
+  }
+}

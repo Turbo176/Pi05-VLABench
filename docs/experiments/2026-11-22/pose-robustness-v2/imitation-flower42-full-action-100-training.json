@@ -1,0 +1,77 @@
+{
+  "seed": 263,
+  "train_seeds": [],
+  "validation_seeds": [],
+  "base_sha256": "66975306e09199efdf221e14d6f5d13ea5d6dbe42e8f921f19bd1096721eac61",
+  "rejected_by_label_replay": [],
+  "train_frames": 179,
+  "validation_frames": 0,
+  "horizon": 10,
+  "execute": 5,
+  "actor_lora_rank": 0,
+  "vlm_lora_rank": 0,
+  "shortest_euler": false,
+  "discrete_state": false,
+  "input_format": "LeRobot v2.1",
+  "openpi_revision": "788ef1f20e655de5bb40869fb7b7fcdd49732387",
+  "lr": 1e-05,
+  "action_loss": "all",
+  "gripper_loss_weight": 1.0,
+  "gradient_accumulation": 4,
+  "image_augmentation": false,
+  "micro_batch_size": 2,
+  "instruction_balanced": false,
+  "train_action_heads": true,
+  "train_full_action_expert": true,
+  "render_samples": 0,
+  "training_script_sha256": "d338132ecd4ee5266ec8a0794b33a204bea59409faf69daadd2a0c33bf3a389a",
+  "runtime_script_sha256": "9efb1bc5f744d3df3f2bce5b1c86ac0035e17ab5c2e269dcabb5fa0a83f9979f",
+  "norm_stats_sha256": "bce33fc1831830d953ef9bc57e520c02ee44e02b7ad07f27ce92b931a879384f",
+  "device": "NVIDIA GeForce RTX 4080 SUPER",
+  "interface": {
+    "round_trip_max": 2.384185791015625e-07,
+    "normalized_state_ablation_max": 0.0,
+    "active_image_keys": [
+      "base_0_rgb",
+      "left_wrist_0_rgb",
+      "right_wrist_0_rgb"
+    ],
+    "normalized_padding_value": -1.0
+  },
+  "dataset_verification_sha256": "912661fbd8af7f4f55479b902dcce8e92c28abe5c924dab399bc789e993c11e4",
+  "extra_dataset_verification_sha256": [],
+  "training_scope": "single_training_episode_imitation_not_generalization",
+  "diagnostic_case": "insert_flower:42",
+  "diagnostic_parameter_profile": "full_action_expert_vlm_frozen",
+  "diagnostic_training_mae_before": {
+    "windows": 6,
+    "xyz_mae_m": 0.008978632238641078,
+    "euler_mae_rad": 0.17207409310622507,
+    "gripper_mae": 0.0015669326480627157
+  },
+  "reference_model_revision": "f658a8bec801aab960fe0ceab370a123b31c1837",
+  "trainable_parameter_count": 430098464,
+  "action_expert_parameter_count": 427932672,
+  "training_source_counts": {
+    "insert_flower": {
+      "expert_demo": 1,
+      "expert_correction": 0
+    }
+  },
+  "first_action_expert_grad_l2_after_clip": 0.5994595289230347,
+  "first_vlm_grad_l2_after_clip": 0.0,
+  "first_actor_max_delta": 1.52587890625e-05,
+  "first_action_expert_max_delta": 1.52587890625e-05,
+  "first_vlm_max_delta": 0.0,
+  "updates": 100,
+  "training_seconds": 150.70816035196185,
+  "peak_cuda_bytes": 16397889536,
+  "sampled_windows": 800,
+  "reload_max_action_difference": 0.0,
+  "diagnostic_training_mae_after": {
+    "windows": 6,
+    "xyz_mae_m": 0.008762188861099817,
+    "euler_mae_rad": 0.1351449372666154,
+    "gripper_mae": 0.00535346368068355
+  }
+}

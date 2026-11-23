@@ -1,0 +1,26 @@
+{
+  "all_matched": true,
+  "files": [
+    {
+      "stage": "base",
+      "success": false,
+      "steps": 600,
+      "sha256": "a51a202a08742371dc6441a007323ee4849e21060ee61895fd404b55a240ffc8",
+      "bytes": 12419328
+    },
+    {
+      "stage": "sft",
+      "success": true,
+      "steps": 160,
+      "sha256": "086db70b90997b9d06ad6177e36fd4ff51e1418b88b6173a36513ae0c387621d",
+      "bytes": 2341820
+    },
+    {
+      "stage": "ppo",
+      "success": true,
+      "steps": 160,
+      "sha256": "02745228396f02f2636e0fb4df6b13e1d4b0121997f2ae38d6a6c9bcf9f15c34",
+      "bytes": 2338566
+    }
+  ]
+}

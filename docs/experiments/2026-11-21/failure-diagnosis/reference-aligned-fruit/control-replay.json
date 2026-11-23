@@ -1,0 +1,266 @@
+[
+  {
+    "seed": 42,
+    "frames": 132,
+    "replay_error": 0.0,
+    "seconds": 21.54522233386524
+  },
+  {
+    "seed": 53,
+    "frames": 163,
+    "replay_error": 0.0,
+    "seconds": 28.343223828822374
+  },
+  {
+    "seed": 54,
+    "frames": 164,
+    "replay_error": 0.0,
+    "seconds": 30.851402814034373
+  },
+  {
+    "seed": 55,
+    "frames": 138,
+    "replay_error": 0.0,
+    "seconds": 28.322668727021664
+  },
+  {
+    "seed": 56,
+    "frames": 151,
+    "replay_error": 0.0,
+    "seconds": 31.17326095304452
+  },
+  {
+    "seed": 57,
+    "frames": 131,
+    "replay_error": 0.0,
+    "seconds": 28.511818181956187
+  },
+  {
+    "seed": 58,
+    "frames": 141,
+    "replay_error": 0.0,
+    "seconds": 24.716403166064993
+  },
+  {
+    "seed": 63,
+    "frames": 165,
+    "replay_error": 0.0,
+    "seconds": 30.368206726154312
+  },
+  {
+    "seed": 64,
+    "frames": 155,
+    "replay_error": 0.0,
+    "seconds": 29.62308816309087
+  },
+  {
+    "seed": 65,
+    "frames": 132,
+    "replay_error": 0.0,
+    "seconds": 27.562061069067568
+  },
+  {
+    "seed": 66,
+    "frames": 154,
+    "replay_error": 0.0,
+    "seconds": 27.546406586887315
+  },
+  {
+    "seed": 67,
+    "frames": 153,
+    "replay_error": 0.0,
+    "seconds": 28.82625804003328
+  },
+  {
+    "seed": 68,
+    "frames": 165,
+    "replay_error": 0.0,
+    "seconds": 29.832930363016203
+  },
+  {
+    "seed": 69,
+    "frames": 145,
+    "replay_error": 0.0,
+    "seconds": 26.622703191125765
+  },
+  {
+    "seed": 70,
+    "frames": 142,
+    "replay_error": 0.0,
+    "seconds": 25.59276930615306
+  },
+  {
+    "seed": 71,
+    "frames": 168,
+    "replay_error": 0.0,
+    "seconds": 30.198703325120732
+  },
+  {
+    "seed": 72,
+    "frames": 167,
+    "replay_error": 0.0,
+    "seconds": 29.518202953971922
+  },
+  {
+    "seed": 73,
+    "frames": 162,
+    "replay_error": 0.0,
+    "seconds": 30.40935010020621
+  },
+  {
+    "seed": 74,
+    "frames": 144,
+    "replay_error": 0.0,
+    "seconds": 27.582117970101535
+  },
+  {
+    "seed": 75,
+    "frames": 159,
+    "replay_error": 0.0,
+    "seconds": 30.11944413697347
+  },
+  {
+    "seed": 2010,
+    "frames": 133,
+    "replay_error": 0.0,
+    "seconds": 23.937526947120205
+  },
+  {
+    "seed": 2011,
+    "frames": 142,
+    "replay_error": 0.0,
+    "seconds": 28.186006924835965
+  },
+  {
+    "seed": 2012,
+    "frames": 152,
+    "replay_error": 0.0,
+    "seconds": 27.973860555095598
+  },
+  {
+    "seed": 2013,
+    "frames": 146,
+    "replay_error": 0.0,
+    "seconds": 29.026050981832668
+  },
+  {
+    "seed": 2014,
+    "frames": 129,
+    "replay_error": 0.0,
+    "seconds": 27.51011212496087
+  },
+  {
+    "seed": 2015,
+    "frames": 149,
+    "replay_error": 0.0,
+    "seconds": 26.43381735496223
+  },
+  {
+    "seed": 2016,
+    "frames": 172,
+    "replay_error": 0.0,
+    "seconds": 28.632076404988766
+  },
+  {
+    "seed": 2017,
+    "frames": 175,
+    "replay_error": 0.0,
+    "seconds": 28.076666459208354
+  },
+  {
+    "seed": 2018,
+    "frames": 166,
+    "replay_error": 0.0,
+    "seconds": 27.68919766903855
+  },
+  {
+    "seed": 2019,
+    "frames": 156,
+    "replay_error": 0.0,
+    "seconds": 26.871083444915712
+  },
+  {
+    "seed": 2020,
+    "frames": 165,
+    "replay_error": 0.0,
+    "seconds": 25.446234677918255
+  },
+  {
+    "seed": 2021,
+    "frames": 127,
+    "replay_error": 0.0,
+    "seconds": 30.158160775899887
+  },
+  {
+    "seed": 2022,
+    "frames": 132,
+    "replay_error": 0.0,
+    "seconds": 29.963551005115733
+  },
+  {
+    "seed": 2023,
+    "frames": 147,
+    "replay_error": 0.0,
+    "seconds": 30.90741578792222
+  },
+  {
+    "seed": 2024,
+    "frames": 163,
+    "replay_error": 0.0,
+    "seconds": 32.55794293410145
+  },
+  {
+    "seed": 2025,
+    "frames": 124,
+    "replay_error": 0.0,
+    "seconds": 26.6025253389962
+  },
+  {
+    "seed": 2026,
+    "frames": 161,
+    "replay_error": 0.0,
+    "seconds": 31.764002045849338
+  },
+  {
+    "seed": 2027,
+    "frames": 146,
+    "replay_error": 0.0,
+    "seconds": 30.258302508853376
+  },
+  {
+    "seed": 2028,
+    "frames": 155,
+    "replay_error": 0.0,
+    "seconds": 32.24032860994339
+  },
+  {
+    "seed": 2029,
+    "frames": 145,
+    "replay_error": 0.0,
+    "seconds": 31.442402913002297
+  },
+  {
+    "seed": 2030,
+    "frames": 139,
+    "replay_error": 0.0,
+    "seconds": 30.272523587802425
+  },
+  {
+    "seed": 2031,
+    "frames": 165,
+    "replay_error": 0.0,
+    "seconds": 44.51110249897465
+  },
+  {
+    "seed": 2032,
+    "frames": 133,
+    "replay_error": 0.0,
+    "seconds": 42.01830735895783
+  },
+  {
+    "seed": 2033,
+    "frames": 143,
+    "replay_error": 0.0,
+    "seconds": 42.558621724834666
+  }
+]

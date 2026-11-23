@@ -1,0 +1,46 @@
+[
+  {
+    "seed": 1201,
+    "instruction": "Put the banana into the plate_seen",
+    "success": true,
+    "steps": 126,
+    "initial_state_sha256": "7f5ba71271ef6b4e2fd9c869163306b88c10891e710760d18a1ea3cc010c1c88",
+    "matching_policy_start": {
+      "sft-action-lora-20261121-r1": true,
+      "sft-arm-delta-lora-20261121": true
+    }
+  },
+  {
+    "seed": 1202,
+    "instruction": "Put the pear into the plate_seen",
+    "success": true,
+    "steps": 141,
+    "initial_state_sha256": "26d3ad7789a6032b41e028a708c61696b44bdfab42b83a3a86d457dd45f1c337",
+    "matching_policy_start": {
+      "sft-action-lora-20261121-r1": true,
+      "sft-arm-delta-lora-20261121": true
+    }
+  },
+  {
+    "seed": 1203,
+    "instruction": "Put the orange into the plate_seen",
+    "success": true,
+    "steps": 181,
+    "initial_state_sha256": "ed294ef86e97a2105f3aa211c95ecace9a0d4feababb7c0252391d476146813d",
+    "matching_policy_start": {
+      "sft-action-lora-20261121-r1": true,
+      "sft-arm-delta-lora-20261121": true
+    }
+  },
+  {
+    "seed": 1204,
+    "instruction": "Put the pear into the plate_seen",
+    "success": true,
+    "steps": 121,
+    "initial_state_sha256": "afeac14b16e9238a70bb7cc513e68c8e523e456f98d2cec5a0556c8eb73fc727",
+    "matching_policy_start": {
+      "sft-action-lora-20261121-r1": true,
+      "sft-arm-delta-lora-20261121": true
+    }
+  }
+]

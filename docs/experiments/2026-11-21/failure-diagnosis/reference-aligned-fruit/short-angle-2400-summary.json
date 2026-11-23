@@ -1,0 +1,92 @@
+{
+  "seed": 263,
+  "train_seeds": [
+    42,
+    53,
+    54,
+    56,
+    57,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    70,
+    71,
+    73,
+    74,
+    2010,
+    2011,
+    2013,
+    2015,
+    2016,
+    2018,
+    2021,
+    2022,
+    2026,
+    2031,
+    2032
+  ],
+  "validation_seeds": [
+    55,
+    69,
+    2012,
+    2027
+  ],
+  "rejected_by_label_replay": [
+    58,
+    72,
+    75,
+    2014,
+    2017,
+    2019,
+    2020,
+    2023,
+    2024,
+    2025,
+    2028,
+    2029,
+    2030,
+    2033
+  ],
+  "train_frames": 3907,
+  "validation_frames": 581,
+  "horizon": 10,
+  "execute": 5,
+  "actor_lora_rank": 16,
+  "vlm_lora_rank": 8,
+  "shortest_euler": true,
+  "openpi_revision": "788ef1f20e655de5bb40869fb7b7fcdd49732387",
+  "lr": 0.0001,
+  "norm_stats_sha256": "09e0b730b3ffba194bf574b714c9c839df22b331827fdc3b0ffc7b386b4e3e46",
+  "device": "NVIDIA GeForce RTX 4080 SUPER",
+  "interface": {
+    "round_trip_max": 4.1326413935394157e-07,
+    "normalized_state_ablation_max": 0.0,
+    "active_image_keys": [
+      "base_0_rgb",
+      "left_wrist_0_rgb",
+      "right_wrist_0_rgb"
+    ],
+    "normalized_padding_value": -1.0
+  },
+  "resumed_from_update": 600,
+  "validation_prior_sft": {
+    "windows": 24,
+    "xyz_mae_m": 0.02013621292729023,
+    "euler_mae_rad": 0.004021041523627826,
+    "gripper_mae": 0.13888449751871398
+  },
+  "first_actor_max_delta": 0.00016909302212297916,
+  "updates": 2400,
+  "training_seconds": 785.2183819308411,
+  "peak_cuda_bytes": 10257853440,
+  "reload_max_action_difference": 0.0,
+  "validation_sft": {
+    "windows": 24,
+    "xyz_mae_m": 0.013141736468925701,
+    "euler_mae_rad": 0.002710560510135556,
+    "gripper_mae": 0.07794627837004911
+  }
+}

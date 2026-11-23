@@ -1,0 +1,15 @@
+{
+  "verified_at": "2026-11-22T16:32:35.472942+00:00",
+  "registered_source_and_config_hashes": 11,
+  "json_files_parsed": 42,
+  "jsonl_rows_parsed": 1183,
+  "document_links_checked": 269,
+  "missing_links": [],
+  "artifact_scripts_parsed": 3,
+  "ignored_backups_rehashed": 3,
+  "curated_videos_not_ignored": 3,
+  "quantitative_exit_status": 0,
+  "artifact_exit_status": 0,
+  "github_push_performed": false,
+  "instance_shutdown_performed": false
+}

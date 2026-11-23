@@ -1,0 +1,353 @@
+{
+  "completed_at": "2026-11-22T16:10:00.572679+00:00",
+  "suite": "ordinary",
+  "stages": {
+    "base": {
+      "successes": 4,
+      "trials": 10,
+      "success_rate": 0.4,
+      "wilson_95": [
+        0.16818032970623614,
+        0.6873262302663417
+      ],
+      "failure_types": {
+        "target_moved_goal_unsatisfied": 6
+      },
+      "total_controls": 4198,
+      "ik_nonconverged_controls": 1304,
+      "summed_episode_wall_seconds": 804.0322567927651
+    },
+    "sft": {
+      "successes": 5,
+      "trials": 10,
+      "success_rate": 0.5,
+      "wilson_95": [
+        0.236593090512564,
+        0.7634069094874361
+      ],
+      "failure_types": {
+        "target_moved_goal_unsatisfied": 5
+      },
+      "total_controls": 3861,
+      "ik_nonconverged_controls": 1067,
+      "summed_episode_wall_seconds": 2334.7616724669933
+    },
+    "ppo": {
+      "successes": 5,
+      "trials": 10,
+      "success_rate": 0.5,
+      "wilson_95": [
+        0.236593090512564,
+        0.7634069094874361
+      ],
+      "failure_types": {
+        "target_moved_goal_unsatisfied": 5
+      },
+      "total_controls": 3737,
+      "ik_nonconverged_controls": 769,
+      "summed_episode_wall_seconds": 2321.5745968595147
+    }
+  },
+  "sft_vs_reference": {
+    "counts": {
+      "improved": 3,
+      "both_failure": 3,
+      "regressed": 2,
+      "both_success": 2
+    },
+    "improved_cases": [
+      [
+        1501,
+        "official"
+      ],
+      [
+        1504,
+        "official"
+      ],
+      [
+        1506,
+        "official"
+      ]
+    ],
+    "regressed_cases": [
+      [
+        1503,
+        "official"
+      ],
+      [
+        1507,
+        "official"
+      ]
+    ]
+  },
+  "ppo_vs_sft": {
+    "counts": {
+      "both_success": 3,
+      "both_failure": 3,
+      "regressed": 2,
+      "improved": 2
+    },
+    "improved_cases": [
+      [
+        1507,
+        "official"
+      ],
+      [
+        1509,
+        "official"
+      ]
+    ],
+    "regressed_cases": [
+      [
+        1504,
+        "official"
+      ],
+      [
+        1506,
+        "official"
+      ]
+    ]
+  },
+  "cases": [
+    {
+      "seed": 1501,
+      "instruction": "Put the pear into the plate_seen",
+      "outcomes": {
+        "base": {
+          "success": false,
+          "steps": 600,
+          "failure_type": "target_moved_goal_unsatisfied",
+          "ik_nonconverged_steps": 206
+        },
+        "sft": {
+          "success": true,
+          "steps": 160,
+          "failure_type": null,
+          "ik_nonconverged_steps": 0
+        },
+        "ppo": {
+          "success": true,
+          "steps": 160,
+          "failure_type": null,
+          "ik_nonconverged_steps": 0
+        }
+      }
+    },
+    {
+      "seed": 1502,
+      "instruction": "Put the pear into the plate_seen",
+      "outcomes": {
+        "base": {
+          "success": false,
+          "steps": 600,
+          "failure_type": "target_moved_goal_unsatisfied",
+          "ik_nonconverged_steps": 293
+        },
+        "sft": {
+          "success": false,
+          "steps": 600,
+          "failure_type": "target_moved_goal_unsatisfied",
+          "ik_nonconverged_steps": 257
+        },
+        "ppo": {
+          "success": false,
+          "steps": 600,
+          "failure_type": "target_moved_goal_unsatisfied",
+          "ik_nonconverged_steps": 264
+        }
+      }
+    },
+    {
+      "seed": 1503,
+      "instruction": "Put the banana into the plate_seen",
+      "outcomes": {
+        "base": {
+          "success": true,
+          "steps": 146,
+          "failure_type": null,
+          "ik_nonconverged_steps": 0
+        },
+        "sft": {
+          "success": false,
+          "steps": 600,
+          "failure_type": "target_moved_goal_unsatisfied",
+          "ik_nonconverged_steps": 162
+        },
+        "ppo": {
+          "success": false,
+          "steps": 600,
+          "failure_type": "target_moved_goal_unsatisfied",
+          "ik_nonconverged_steps": 43
+        }
+      }
+    },
+    {
+      "seed": 1504,
+      "instruction": "Put the banana into the plate_seen",
+      "outcomes": {
+        "base": {
+          "success": false,
+          "steps": 600,
+          "failure_type": "target_moved_goal_unsatisfied",
+          "ik_nonconverged_steps": 243
+        },
+        "sft": {
+          "success": true,
+          "steps": 268,
+          "failure_type": null,
+          "ik_nonconverged_steps": 0
+        },
+        "ppo": {
+          "success": false,
+          "steps": 600,
+          "failure_type": "target_moved_goal_unsatisfied",
+          "ik_nonconverged_steps": 93
+        }
+      }
+    },
+    {
+      "seed": 1505,
+      "instruction": "Put the apple into the plate_seen",
+      "outcomes": {
+        "base": {
+          "success": true,
+          "steps": 154,
+          "failure_type": null,
+          "ik_nonconverged_steps": 0
+        },
+        "sft": {
+          "success": true,
+          "steps": 156,
+          "failure_type": null,
+          "ik_nonconverged_steps": 0
+        },
+        "ppo": {
+          "success": true,
+          "steps": 153,
+          "failure_type": null,
+          "ik_nonconverged_steps": 0
+        }
+      }
+    },
+    {
+      "seed": 1506,
+      "instruction": "Put the pear into the plate_seen",
+      "outcomes": {
+        "base": {
+          "success": false,
+          "steps": 600,
+          "failure_type": "target_moved_goal_unsatisfied",
+          "ik_nonconverged_steps": 183
+        },
+        "sft": {
+          "success": true,
+          "steps": 146,
+          "failure_type": null,
+          "ik_nonconverged_steps": 1
+        },
+        "ppo": {
+          "success": false,
+          "steps": 600,
+          "failure_type": "target_moved_goal_unsatisfied",
+          "ik_nonconverged_steps": 101
+        }
+      }
+    },
+    {
+      "seed": 1507,
+      "instruction": "Put the pear into the plate_seen",
+      "outcomes": {
+        "base": {
+          "success": true,
+          "steps": 146,
+          "failure_type": null,
+          "ik_nonconverged_steps": 0
+        },
+        "sft": {
+          "success": false,
+          "steps": 600,
+          "failure_type": "target_moved_goal_unsatisfied",
+          "ik_nonconverged_steps": 172
+        },
+        "ppo": {
+          "success": true,
+          "steps": 127,
+          "failure_type": null,
+          "ik_nonconverged_steps": 0
+        }
+      }
+    },
+    {
+      "seed": 1508,
+      "instruction": "Put the banana into the plate_seen",
+      "outcomes": {
+        "base": {
+          "success": false,
+          "steps": 600,
+          "failure_type": "target_moved_goal_unsatisfied",
+          "ik_nonconverged_steps": 202
+        },
+        "sft": {
+          "success": false,
+          "steps": 600,
+          "failure_type": "target_moved_goal_unsatisfied",
+          "ik_nonconverged_steps": 250
+        },
+        "ppo": {
+          "success": false,
+          "steps": 600,
+          "failure_type": "target_moved_goal_unsatisfied",
+          "ik_nonconverged_steps": 268
+        }
+      }
+    },
+    {
+      "seed": 1509,
+      "instruction": "Put the banana into the plate_seen",
+      "outcomes": {
+        "base": {
+          "success": false,
+          "steps": 600,
+          "failure_type": "target_moved_goal_unsatisfied",
+          "ik_nonconverged_steps": 177
+        },
+        "sft": {
+          "success": false,
+          "steps": 600,
+          "failure_type": "target_moved_goal_unsatisfied",
+          "ik_nonconverged_steps": 225
+        },
+        "ppo": {
+          "success": true,
+          "steps": 141,
+          "failure_type": null,
+          "ik_nonconverged_steps": 0
+        }
+      }
+    },
+    {
+      "seed": 1510,
+      "instruction": "Put the pear into the plate_seen",
+      "outcomes": {
+        "base": {
+          "success": true,
+          "steps": 152,
+          "failure_type": null,
+          "ik_nonconverged_steps": 0
+        },
+        "sft": {
+          "success": true,
+          "steps": 131,
+          "failure_type": null,
+          "ik_nonconverged_steps": 0
+        },
+        "ppo": {
+          "success": true,
+          "steps": 156,
+          "failure_type": null,
+          "ik_nonconverged_steps": 0
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "verified_at": "2026-11-22T16:30:47.123249+00:00",
+  "archive_sha256": "7c741948d594fbaea9b7456c46a750ed218f41da8c59f31a4e032e36e96bd436",
+  "archive_bytes": 32861917,
+  "manifest_files_verified": 201,
+  "archive_regular_files": 202,
+  "files_created": 179,
+  "existing_identical_files": 23,
+  "unsafe_members": 0,
+  "differing_files_overwritten": 0,
+  "sft_sha256": "998181bb8cc8386766aa5bec3302b938234ab5da2a24e81cef199a8fd560eef3",
+  "ppo_sha256": "0d2fac4c03db18ceac98c2344aec358713251e3b37cbcfa154349392c4ca0ad3"
+}

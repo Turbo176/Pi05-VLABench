@@ -1,0 +1,14 @@
+{
+  "kind": "official_expert_screening_and_fresh_action_replay_not_policy_evaluation",
+  "attempts": {
+    "insert_flower": 7
+  },
+  "admitted": {
+    "insert_flower": 2
+  },
+  "render_samples": 0,
+  "max_controls_per_attempt": 600,
+  "wall_seconds": 369.8322173561901,
+  "instruction_filter": "tulip",
+  "stop_at_cap": true
+}

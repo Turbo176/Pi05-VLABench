@@ -1,0 +1,14 @@
+{
+  "comparison_sha256": "42d03b6c32d54ee789172df04de1a36e7fdaabdeae48f5d6c8a8788a82de1420",
+  "source_sha256": "f1e98603788ea3d3795557562cd4ad80fad9e867d6e7594ca8a820bab4e24085",
+  "figures": [
+    {
+      "path": "runs/pose-robustness-v2/fruit-completion-v1/figures/success-rates.png",
+      "sha256": "1811a0c9f7bb71f252b9a8d60e6bfe13e2317128777a9c8b8df2e9e79e1d7d8b"
+    },
+    {
+      "path": "runs/pose-robustness-v2/fruit-completion-v1/figures/success-rates.svg",
+      "sha256": "f2227506a46635732ca858dd85cf24f12d62de95fdb6e276da5818c37dfafe80"
+    }
+  ]
+}

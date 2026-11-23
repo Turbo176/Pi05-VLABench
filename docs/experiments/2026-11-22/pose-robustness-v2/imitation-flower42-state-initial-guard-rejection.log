@@ -1,0 +1,84 @@
+--- Logging error ---
+Traceback (most recent call last):
+  File "/root/miniconda3/lib/python3.12/logging/__init__.py", line 1160, in emit
+    msg = self.format(record)
+          ^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/logging/__init__.py", line 999, in format
+    return fmt.format(record)
+           ^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/logging/__init__.py", line 703, in format
+    record.message = record.getMessage()
+                     ^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/logging/__init__.py", line 392, in getMessage
+    msg = msg % self.args
+          ~~~~^~~~~~~~~~~
+TypeError: not all arguments converted during string formatting
+Call stack:
+  File "/root/autodl-tmp/Pi05-VLABench/code/scripts/train_reference_aligned_fruit.py", line 21, in <module>
+    from evaluate_vlabench_reference import MODEL_REVISION, OPENPI_REVISION, TASK, build_episode, load_upstream_adapter
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/root/autodl-tmp/Pi05-VLABench/code/scripts/evaluate_vlabench_reference.py", line 13, in <module>
+    from VLABench.utils.utils import euler_to_quaternion, quaternion_to_euler
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1310, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1310, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/root/autodl-tmp/Pi05-VLABench/.local/upstream/vlabench-sim/VLABench/__init__.py", line 21, in <module>
+    logging.info("Detect Linux, add LM4root as environment variable: ", package_root)
+Message: 'Detect Linux, add LM4root as environment variable: '
+Arguments: ('/root/autodl-tmp/Pi05-VLABench/.local/upstream/vlabench-sim/VLABench',)
+INFO:absl:MUJOCO_GL=egl, attempting to import specified OpenGL backend.
+INFO:OpenGL.acceleratesupport:No OpenGL_accelerate module loaded: No module named 'OpenGL_accelerate'
+INFO:absl:MuJoCo library version is: 3.2.2
+usage: train_reference_aligned_fruit.py [-h] --base BASE --fork FORK
+                                        --paired-episodes PAIRED_EPISODES
+                                        --output OUTPUT
+                                        [--cache CACHE | --lerobot LEROBOT]
+                                        [--diagnostic-case TASK:SEED]
+                                        [--diagnostic-rollout]
+                                        [--gripper-loss-weight GRIPPER_LOSS_WEIGHT]
+                                        [--discrete-state]
+                                        [--load-run LOAD_RUN]
+                                        [--resume-run RESUME_RUN]
+                                        [--reference-start REFERENCE_START]
+                                        [--extra-lerobot EXTRA_LEROBOT]
+                                        [--init-run INIT_RUN]
+                                        [--recovery-share RECOVERY_SHARE]
+                                        [--eval-stage {base,sft,ppo}]
+                                        [--ppo-weights PPO_WEIGHTS]
+                                        [--eval-execute {1,2,3,4,5,6,7,8,9,10}]
+                                        [--train-eval-seed {1201,1202,1203,1204}]
+                                        [--actor-lora-rank ACTOR_LORA_RANK]
+                                        [--vlm-lora-rank VLM_LORA_RANK]
+                                        [--freeze-action-heads]
+                                        [--action-loss {all,executed-poses}]
+                                        [--eval-seed EVAL_SEED]
+                                        [--eval-task {select_fruit,insert_flower,take_out_cool_drink}]
+                                        [--prompt-mode {official,paraphrase,alternate_target}]
+                                        [--multitask] [--instruction-balanced]
+                                        [--training-tasks {select_fruit,insert_flower,take_out_cool_drink} [{select_fruit,insert_flower,take_out_cool_drink} ...]]
+                                        [--resume-evaluation]
+                                        [--trace-controls] [--smoke] [--video]
+                                        [--compare-base]
+                                        [--label-audit LABEL_AUDIT]
+                                        [--shortest-euler] [--seed SEED]
+                                        [--lr LR] [--updates UPDATES]
+                                        [--save-every SAVE_EVERY]
+                                        [--skip-evaluation]
+                                        [--max-steps MAX_STEPS]
+                                        [--render-samples {0,2,4,8}]
+                                        [--gradient-accumulation GRADIENT_ACCUMULATION]
+                                        [--micro-batch-size MICRO_BATCH_SIZE]
+                                        [--no-image-augmentation]
+train_reference_aligned_fruit.py: error: Use the published weights and their unchanged state conditioning and normalization

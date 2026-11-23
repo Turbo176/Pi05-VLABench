@@ -1,0 +1,108 @@
+{
+  "version": "two-task-v2",
+  "frozen_on": "2026-11-22",
+  "parent_protocol": "evaluation-two-task-v1.json",
+  "scope_reason": "The user deferred fridge retrieval before new two-task GPU training or inspection of reserved final outcomes.",
+  "robot": "franka",
+  "interface": "published VLABench pi05 primitive pose control",
+  "control_hz": 10,
+  "max_control_steps": 600,
+  "render_samples": 0,
+  "replan_steps": 5,
+  "action_horizon": 10,
+  "checkpoint_selection": {
+    "run": "two-task-reference-1200",
+    "candidates_updates": [
+      600,
+      1200
+    ],
+    "metric": "Official successes across the same complete eight development cases for all three candidates; one checkpoint serves both tasks.",
+    "tie_break": "Fewer optimizer updates, then the earlier registered recipe.",
+    "minimum_for_ppo": "At least one success in each task. This gate is not evidence of an improvement over the reference.",
+    "reserved": "Do not inspect ordinary or fruit_language outcomes until the SFT recipe and checkpoint are frozen.",
+    "additional_candidate": {
+      "run": "two-task-conservative-90",
+      "updates": 90,
+      "initialization": "Published VLABench reference, fresh optimizer and zero-initialized action LoRA; no legacy SFT weights reused.",
+      "recipe": "All 64 fruit/flower episodes; action LoRA rank 16; frozen VLM; train action heads; learning rate 1e-6; no image augmentation; eight balanced windows per update.",
+      "reason": "Recheck the small-learning-rate action-expert recipe that previously solved both task types, using the corrected rendering and current verified data."
+    }
+  },
+  "development": {
+    "select_fruit": [
+      1201,
+      1202,
+      1203,
+      1204
+    ],
+    "insert_flower": [
+      1211,
+      1212,
+      1213,
+      1214
+    ]
+  },
+  "ppo_training_seeds_inclusive": [
+    1301,
+    1399
+  ],
+  "ordinary": {
+    "tasks": [
+      "select_fruit",
+      "insert_flower"
+    ],
+    "seeds_inclusive": [
+      1501,
+      1520
+    ],
+    "initialization_rule": "Retain the exact pre-policy manifests from evaluation-v2; no new outcome-dependent exclusions.",
+    "seeds_by_task": {
+      "insert_flower": [
+        1501,
+        1502,
+        1504,
+        1505,
+        1506,
+        1507,
+        1508,
+        1509,
+        1510,
+        1511,
+        1512,
+        1513,
+        1514,
+        1515,
+        1516,
+        1517,
+        1518,
+        1519,
+        1520,
+        1521
+      ]
+    },
+    "excluded_initializations": [
+      {
+        "task": "insert_flower",
+        "seed": 1503,
+        "reason": "Reset PhysicsError on all four attempts before executing any policy."
+      }
+    ]
+  },
+  "fruit_language": {
+    "tasks": [
+      "select_fruit"
+    ],
+    "seeds_inclusive": [
+      1601,
+      1610
+    ],
+    "prompt_modes": [
+      "official",
+      "paraphrase",
+      "alternate_target"
+    ]
+  },
+  "parent_protocol_sha256": "a37ef375174b3cfcf8cde85064c42ed08a7f76298e750b780c928c14ede453b9",
+  "registered_at": "2026-11-22T19:22:00.005169+08:00",
+  "registration_context": "The update-600 development comparison was in progress, with no new completed episode outcome inspected; reserved final outcomes remain unopened."
+}

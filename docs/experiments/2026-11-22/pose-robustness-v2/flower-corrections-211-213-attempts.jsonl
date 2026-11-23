@@ -1,0 +1,3 @@
+{"seed": 211, "policy_steps": 80, "expert_steps": 180, "held_at_takeover": false, "expert_success": false, "task": "insert_flower", "render_samples": 0, "policy_parent_sha256": "e334f6d40f3d65b31c6261208d5191918cc05bc94c11761774eb966e3bf68b1f"}
+{"seed": 212, "policy_steps": 80, "expert_steps": 115, "held_at_takeover": true, "expert_success": false, "task": "insert_flower", "render_samples": 0, "policy_parent_sha256": "e334f6d40f3d65b31c6261208d5191918cc05bc94c11761774eb966e3bf68b1f"}
+{"seed": 213, "policy_steps": 80, "expert_steps": 164, "held_at_takeover": false, "expert_success": false, "task": "insert_flower", "render_samples": 0, "policy_parent_sha256": "e334f6d40f3d65b31c6261208d5191918cc05bc94c11761774eb966e3bf68b1f"}

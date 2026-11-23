@@ -1,0 +1,68 @@
+{
+  "format": "LeRobot v2.1",
+  "fps": 10,
+  "splits": {
+    "train": {
+      "episodes": 4,
+      "frames": 881,
+      "all_frames_verified": true,
+      "action_chunks": {
+        "horizon": 10,
+        "positions_verified": 12
+      },
+      "episodes_detail": [
+        {
+          "source": ".local/reference-aligned/msaa0-new-pose-experts-small/replays/train-insert_flower-104.h5",
+          "split": "train",
+          "task": "insert_flower",
+          "seed": 104,
+          "instruction": "Insert the rose into the vase_seen.",
+          "frames": 175,
+          "initial_state_sha256": "fd4e027d5014983db1087f1c1f7b7f865405afb7dfa6aa3de5716a7565a2d445",
+          "render_samples": 0
+        },
+        {
+          "source": ".local/reference-aligned/msaa0-new-pose-experts-small/replays/train-take_out_cool_drink-103.h5",
+          "split": "train",
+          "task": "take_out_cool_drink",
+          "seed": 103,
+          "instruction": "I am so thirsty after sport, I want to drink something healthy cool",
+          "frames": 482,
+          "initial_state_sha256": "10ee28d58d8d0a7ed2753d2deb5bce8e8badb588e9f49ed9583a71c55727eeb7",
+          "render_samples": 0
+        },
+        {
+          "source": ".local/reference-aligned/msaa0-fruit-corrections-small/2080.h5",
+          "split": "train",
+          "task": "select_fruit",
+          "seed": 2080,
+          "instruction": "Put the pear into the plate_seen",
+          "frames": 107,
+          "initial_state_sha256": "ba124687dc16c659ddccd3a197dfde990aab02f3ff9e42343bb3a1cee6626c6a",
+          "render_samples": 0,
+          "policy_prefix_steps": 60,
+          "prefix_end_state_sha256": "f3c3121555a151146f7d86e57c4e1a62ede864f7bf8b1a4df32b8d2474f9829b",
+          "policy_parent_sha256": "e597674c257f7fc8114650ec13e515f2257fa3506ca5e2c83ce8b82f18b79965",
+          "norm_stats_sha256": "bce33fc1831830d953ef9bc57e520c02ee44e02b7ad07f27ce92b931a879384f",
+          "base_sha256": "66975306e09199efdf221e14d6f5d13ea5d6dbe42e8f921f19bd1096721eac61"
+        },
+        {
+          "source": ".local/reference-aligned/msaa0-fruit-corrections-small/2081.h5",
+          "split": "train",
+          "task": "select_fruit",
+          "seed": 2081,
+          "instruction": "Put the banana into the plate_seen",
+          "frames": 117,
+          "initial_state_sha256": "7feaa6e407afa9e37a9d8b5d6e7a7542d9b3925ec28b5ca8be00868e486022b6",
+          "render_samples": 0,
+          "policy_prefix_steps": 100,
+          "prefix_end_state_sha256": "c327c088de4a6e3fbe0e00c7d35aedb0a25667781d26e8ed35ebc0c0cdbea489",
+          "policy_parent_sha256": "e597674c257f7fc8114650ec13e515f2257fa3506ca5e2c83ce8b82f18b79965",
+          "norm_stats_sha256": "bce33fc1831830d953ef9bc57e520c02ee44e02b7ad07f27ce92b931a879384f",
+          "base_sha256": "66975306e09199efdf221e14d6f5d13ea5d6dbe42e8f921f19bd1096721eac61"
+        }
+      ]
+    }
+  },
+  "profile": "vlabench_reference_pose"
+}

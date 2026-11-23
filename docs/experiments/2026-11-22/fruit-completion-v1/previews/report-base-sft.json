@@ -1,0 +1,27 @@
+{
+  "source_sha256": "94ebe7327a08e0f7cb0fa0450f04c97cae18605cc9980aa70c8b758691874b1a",
+  "previews": [
+    {
+      "stage": "base",
+      "success": false,
+      "controls": 600,
+      "input_video_sha256": "a51a202a08742371dc6441a007323ee4849e21060ee61895fd404b55a240ffc8",
+      "preview_playback_speed": 2,
+      "gif": "runs/pose-robustness-v2/fruit-completion-v1/previews/fruit-completion-v1-base-1501.gif",
+      "gif_bytes": 6668237,
+      "gif_sha256": "15d14e0c8b8b2ff6d719c749690ebf156502f4f2efe8926cf6a8d5a6bcfee7bb",
+      "final_frame_sheet": "runs/pose-robustness-v2/fruit-completion-v1/video-base/observed-final-frames.jpg"
+    },
+    {
+      "stage": "sft",
+      "success": true,
+      "controls": 160,
+      "input_video_sha256": "086db70b90997b9d06ad6177e36fd4ff51e1418b88b6173a36513ae0c387621d",
+      "preview_playback_speed": 2,
+      "gif": "runs/pose-robustness-v2/fruit-completion-v1/previews/fruit-completion-v1-sft-1501.gif",
+      "gif_bytes": 1683846,
+      "gif_sha256": "839e8fa1cb66f338b68dad4462576e2c67832ed202a6966d177607a813bb4c3b",
+      "final_frame_sheet": "runs/pose-robustness-v2/fruit-completion-v1/video-sft/observed-final-frames.jpg"
+    }
+  ]
+}

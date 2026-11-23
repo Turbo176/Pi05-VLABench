@@ -1,0 +1,999 @@
+{
+  "created_at": "2026-11-22T16:22:53.708866+00:00",
+  "scope": "Fruit-only bounded pilot; flower and fridge are incomplete.",
+  "reference": "Published VLABench pi05 primitive model, already fine-tuned upstream.",
+  "sft_sha256": "998181bb8cc8386766aa5bec3302b938234ab5da2a24e81cef199a8fd560eef3",
+  "ppo_sha256": "0d2fac4c03db18ceac98c2344aec358713251e3b37cbcfa154349392c4ca0ad3",
+  "protocol_sha256": "afb2ef00ec762e44a445ac4a3708d52a4c1738915957d707b011e998fa597c8b",
+  "registration_sha256": "40afe28d29367ab7c184bc7d6eff2147821f674671ed8c0c033d0dcd4e1294f8",
+  "handoff": {
+    "checkpoint_sha256": "998181bb8cc8386766aa5bec3302b938234ab5da2a24e81cef199a8fd560eef3",
+    "cases": [
+      {
+        "task": "select_fruit",
+        "seed": 42
+      }
+    ],
+    "base_sha256": "66975306e09199efdf221e14d6f5d13ea5d6dbe42e8f921f19bd1096721eac61",
+    "norm_stats_sha256": "bce33fc1831830d953ef9bc57e520c02ee44e02b7ad07f27ce92b931a879384f",
+    "render_samples": 0,
+    "executed": 5,
+    "horizon": 10,
+    "settings": {
+      "shortest_euler": false,
+      "discrete_state": false,
+      "reference_noise": true
+    },
+    "measurements": [
+      {
+        "task": "select_fruit",
+        "seed": 42,
+        "frame": 0,
+        "normalized_prediction_max_error": 0.0,
+        "absolute_prediction_max_error": 0.0,
+        "native_float32_decode_max_error": 1.667728684040526e-07,
+        "replay_logprob_abs_error": 0.0
+      },
+      {
+        "task": "select_fruit",
+        "seed": 42,
+        "frame": 66,
+        "normalized_prediction_max_error": 0.0,
+        "absolute_prediction_max_error": 0.0,
+        "native_float32_decode_max_error": 1.3624678274481994e-07,
+        "replay_logprob_abs_error": 0.0
+      },
+      {
+        "task": "select_fruit",
+        "seed": 42,
+        "frame": 131,
+        "normalized_prediction_max_error": 0.0,
+        "absolute_prediction_max_error": 0.0,
+        "native_float32_decode_max_error": 4.804858537710288e-07,
+        "replay_logprob_abs_error": 0.0
+      }
+    ],
+    "optimizer_updates": 0,
+    "matched_rollouts": 1,
+    "matched_successes": 1,
+    "matched_seeds": [
+      1201
+    ]
+  },
+  "ppo_update": {
+    "sft_sha256": "998181bb8cc8386766aa5bec3302b938234ab5da2a24e81cef199a8fd560eef3",
+    "norm_stats_sha256": "bce33fc1831830d953ef9bc57e520c02ee44e02b7ad07f27ce92b931a879384f",
+    "horizon": 10,
+    "executed": 5,
+    "optimizer_iterations": 1,
+    "successes": 1,
+    "trials": 2,
+    "total_controls": 731,
+    "seeds": [
+      1301,
+      1302
+    ],
+    "rng_seed": 372,
+    "iteration_controls": 731,
+    "action_chunks": 147,
+    "reward_min": -0.4135543898266659,
+    "reward_max": 0.9906585841635588,
+    "rewarded_chunks": 57,
+    "shaping": 0.5,
+    "lr": 2e-06,
+    "critic_lr": 0.0001,
+    "weight_decay": 0,
+    "clip": 0.2,
+    "gamma": 0.99,
+    "gae_lambda": 0.95,
+    "max_steps": 600,
+    "replay_logprob_abs_error": 3.814697265625e-06,
+    "render_samples": 0,
+    "base_sha256": "66975306e09199efdf221e14d6f5d13ea5d6dbe42e8f921f19bd1096721eac61",
+    "train_action_heads": true,
+    "training_script_sha256": "f6530b0884ab15ce801ee9801bfb5a9ef31e3e43bf08b2e62abf979dc99ee5a3",
+    "shared_ppo_script_sha256": "f125599b86eb91056301bd95c273788c5dd3c926817d69393c3633b4f9ba2fbc",
+    "actor_params": [
+      "llm.layers.0.attn.q_proj.1.q_lora_a",
+      "llm.layers.0.attn.q_proj.1.q_lora_b",
+      "llm.layers.0.attn.k_proj.1.q_lora_a",
+      "llm.layers.0.attn.k_proj.1.q_lora_b",
+      "llm.layers.0.attn.v_proj.1.q_lora_a",
+      "llm.layers.0.attn.v_proj.1.q_lora_b",
+      "llm.layers.0.attn.o_proj.1.q_lora_a",
+      "llm.layers.0.attn.o_proj.1.q_lora_b",
+      "llm.layers.0.mlps.1.w_gating_lora_a",
+      "llm.layers.0.mlps.1.w_gating_lora_b",
+      "llm.layers.0.mlps.1.w_linear_lora_a",
+      "llm.layers.0.mlps.1.w_linear_lora_b",
+      "llm.layers.1.attn.q_proj.1.q_lora_a",
+      "llm.layers.1.attn.q_proj.1.q_lora_b",
+      "llm.layers.1.attn.k_proj.1.q_lora_a",
+      "llm.layers.1.attn.k_proj.1.q_lora_b",
+      "llm.layers.1.attn.v_proj.1.q_lora_a",
+      "llm.layers.1.attn.v_proj.1.q_lora_b",
+      "llm.layers.1.attn.o_proj.1.q_lora_a",
+      "llm.layers.1.attn.o_proj.1.q_lora_b",
+      "llm.layers.1.mlps.1.w_gating_lora_a",
+      "llm.layers.1.mlps.1.w_gating_lora_b",
+      "llm.layers.1.mlps.1.w_linear_lora_a",
+      "llm.layers.1.mlps.1.w_linear_lora_b",
+      "llm.layers.2.attn.q_proj.1.q_lora_a",
+      "llm.layers.2.attn.q_proj.1.q_lora_b",
+      "llm.layers.2.attn.k_proj.1.q_lora_a",
+      "llm.layers.2.attn.k_proj.1.q_lora_b",
+      "llm.layers.2.attn.v_proj.1.q_lora_a",
+      "llm.layers.2.attn.v_proj.1.q_lora_b",
+      "llm.layers.2.attn.o_proj.1.q_lora_a",
+      "llm.layers.2.attn.o_proj.1.q_lora_b",
+      "llm.layers.2.mlps.1.w_gating_lora_a",
+      "llm.layers.2.mlps.1.w_gating_lora_b",
+      "llm.layers.2.mlps.1.w_linear_lora_a",
+      "llm.layers.2.mlps.1.w_linear_lora_b",
+      "llm.layers.3.attn.q_proj.1.q_lora_a",
+      "llm.layers.3.attn.q_proj.1.q_lora_b",
+      "llm.layers.3.attn.k_proj.1.q_lora_a",
+      "llm.layers.3.attn.k_proj.1.q_lora_b",
+      "llm.layers.3.attn.v_proj.1.q_lora_a",
+      "llm.layers.3.attn.v_proj.1.q_lora_b",
+      "llm.layers.3.attn.o_proj.1.q_lora_a",
+      "llm.layers.3.attn.o_proj.1.q_lora_b",
+      "llm.layers.3.mlps.1.w_gating_lora_a",
+      "llm.layers.3.mlps.1.w_gating_lora_b",
+      "llm.layers.3.mlps.1.w_linear_lora_a",
+      "llm.layers.3.mlps.1.w_linear_lora_b",
+      "llm.layers.4.attn.q_proj.1.q_lora_a",
+      "llm.layers.4.attn.q_proj.1.q_lora_b",
+      "llm.layers.4.attn.k_proj.1.q_lora_a",
+      "llm.layers.4.attn.k_proj.1.q_lora_b",
+      "llm.layers.4.attn.v_proj.1.q_lora_a",
+      "llm.layers.4.attn.v_proj.1.q_lora_b",
+      "llm.layers.4.attn.o_proj.1.q_lora_a",
+      "llm.layers.4.attn.o_proj.1.q_lora_b",
+      "llm.layers.4.mlps.1.w_gating_lora_a",
+      "llm.layers.4.mlps.1.w_gating_lora_b",
+      "llm.layers.4.mlps.1.w_linear_lora_a",
+      "llm.layers.4.mlps.1.w_linear_lora_b",
+      "llm.layers.5.attn.q_proj.1.q_lora_a",
+      "llm.layers.5.attn.q_proj.1.q_lora_b",
+      "llm.layers.5.attn.k_proj.1.q_lora_a",
+      "llm.layers.5.attn.k_proj.1.q_lora_b",
+      "llm.layers.5.attn.v_proj.1.q_lora_a",
+      "llm.layers.5.attn.v_proj.1.q_lora_b",
+      "llm.layers.5.attn.o_proj.1.q_lora_a",
+      "llm.layers.5.attn.o_proj.1.q_lora_b",
+      "llm.layers.5.mlps.1.w_gating_lora_a",
+      "llm.layers.5.mlps.1.w_gating_lora_b",
+      "llm.layers.5.mlps.1.w_linear_lora_a",
+      "llm.layers.5.mlps.1.w_linear_lora_b",
+      "llm.layers.6.attn.q_proj.1.q_lora_a",
+      "llm.layers.6.attn.q_proj.1.q_lora_b",
+      "llm.layers.6.attn.k_proj.1.q_lora_a",
+      "llm.layers.6.attn.k_proj.1.q_lora_b",
+      "llm.layers.6.attn.v_proj.1.q_lora_a",
+      "llm.layers.6.attn.v_proj.1.q_lora_b",
+      "llm.layers.6.attn.o_proj.1.q_lora_a",
+      "llm.layers.6.attn.o_proj.1.q_lora_b",
+      "llm.layers.6.mlps.1.w_gating_lora_a",
+      "llm.layers.6.mlps.1.w_gating_lora_b",
+      "llm.layers.6.mlps.1.w_linear_lora_a",
+      "llm.layers.6.mlps.1.w_linear_lora_b",
+      "llm.layers.7.attn.q_proj.1.q_lora_a",
+      "llm.layers.7.attn.q_proj.1.q_lora_b",
+      "llm.layers.7.attn.k_proj.1.q_lora_a",
+      "llm.layers.7.attn.k_proj.1.q_lora_b",
+      "llm.layers.7.attn.v_proj.1.q_lora_a",
+      "llm.layers.7.attn.v_proj.1.q_lora_b",
+      "llm.layers.7.attn.o_proj.1.q_lora_a",
+      "llm.layers.7.attn.o_proj.1.q_lora_b",
+      "llm.layers.7.mlps.1.w_gating_lora_a",
+      "llm.layers.7.mlps.1.w_gating_lora_b",
+      "llm.layers.7.mlps.1.w_linear_lora_a",
+      "llm.layers.7.mlps.1.w_linear_lora_b",
+      "llm.layers.8.attn.q_proj.1.q_lora_a",
+      "llm.layers.8.attn.q_proj.1.q_lora_b",
+      "llm.layers.8.attn.k_proj.1.q_lora_a",
+      "llm.layers.8.attn.k_proj.1.q_lora_b",
+      "llm.layers.8.attn.v_proj.1.q_lora_a",
+      "llm.layers.8.attn.v_proj.1.q_lora_b",
+      "llm.layers.8.attn.o_proj.1.q_lora_a",
+      "llm.layers.8.attn.o_proj.1.q_lora_b",
+      "llm.layers.8.mlps.1.w_gating_lora_a",
+      "llm.layers.8.mlps.1.w_gating_lora_b",
+      "llm.layers.8.mlps.1.w_linear_lora_a",
+      "llm.layers.8.mlps.1.w_linear_lora_b",
+      "llm.layers.9.attn.q_proj.1.q_lora_a",
+      "llm.layers.9.attn.q_proj.1.q_lora_b",
+      "llm.layers.9.attn.k_proj.1.q_lora_a",
+      "llm.layers.9.attn.k_proj.1.q_lora_b",
+      "llm.layers.9.attn.v_proj.1.q_lora_a",
+      "llm.layers.9.attn.v_proj.1.q_lora_b",
+      "llm.layers.9.attn.o_proj.1.q_lora_a",
+      "llm.layers.9.attn.o_proj.1.q_lora_b",
+      "llm.layers.9.mlps.1.w_gating_lora_a",
+      "llm.layers.9.mlps.1.w_gating_lora_b",
+      "llm.layers.9.mlps.1.w_linear_lora_a",
+      "llm.layers.9.mlps.1.w_linear_lora_b",
+      "llm.layers.10.attn.q_proj.1.q_lora_a",
+      "llm.layers.10.attn.q_proj.1.q_lora_b",
+      "llm.layers.10.attn.k_proj.1.q_lora_a",
+      "llm.layers.10.attn.k_proj.1.q_lora_b",
+      "llm.layers.10.attn.v_proj.1.q_lora_a",
+      "llm.layers.10.attn.v_proj.1.q_lora_b",
+      "llm.layers.10.attn.o_proj.1.q_lora_a",
+      "llm.layers.10.attn.o_proj.1.q_lora_b",
+      "llm.layers.10.mlps.1.w_gating_lora_a",
+      "llm.layers.10.mlps.1.w_gating_lora_b",
+      "llm.layers.10.mlps.1.w_linear_lora_a",
+      "llm.layers.10.mlps.1.w_linear_lora_b",
+      "llm.layers.11.attn.q_proj.1.q_lora_a",
+      "llm.layers.11.attn.q_proj.1.q_lora_b",
+      "llm.layers.11.attn.k_proj.1.q_lora_a",
+      "llm.layers.11.attn.k_proj.1.q_lora_b",
+      "llm.layers.11.attn.v_proj.1.q_lora_a",
+      "llm.layers.11.attn.v_proj.1.q_lora_b",
+      "llm.layers.11.attn.o_proj.1.q_lora_a",
+      "llm.layers.11.attn.o_proj.1.q_lora_b",
+      "llm.layers.11.mlps.1.w_gating_lora_a",
+      "llm.layers.11.mlps.1.w_gating_lora_b",
+      "llm.layers.11.mlps.1.w_linear_lora_a",
+      "llm.layers.11.mlps.1.w_linear_lora_b",
+      "llm.layers.12.attn.q_proj.1.q_lora_a",
+      "llm.layers.12.attn.q_proj.1.q_lora_b",
+      "llm.layers.12.attn.k_proj.1.q_lora_a",
+      "llm.layers.12.attn.k_proj.1.q_lora_b",
+      "llm.layers.12.attn.v_proj.1.q_lora_a",
+      "llm.layers.12.attn.v_proj.1.q_lora_b",
+      "llm.layers.12.attn.o_proj.1.q_lora_a",
+      "llm.layers.12.attn.o_proj.1.q_lora_b",
+      "llm.layers.12.mlps.1.w_gating_lora_a",
+      "llm.layers.12.mlps.1.w_gating_lora_b",
+      "llm.layers.12.mlps.1.w_linear_lora_a",
+      "llm.layers.12.mlps.1.w_linear_lora_b",
+      "llm.layers.13.attn.q_proj.1.q_lora_a",
+      "llm.layers.13.attn.q_proj.1.q_lora_b",
+      "llm.layers.13.attn.k_proj.1.q_lora_a",
+      "llm.layers.13.attn.k_proj.1.q_lora_b",
+      "llm.layers.13.attn.v_proj.1.q_lora_a",
+      "llm.layers.13.attn.v_proj.1.q_lora_b",
+      "llm.layers.13.attn.o_proj.1.q_lora_a",
+      "llm.layers.13.attn.o_proj.1.q_lora_b",
+      "llm.layers.13.mlps.1.w_gating_lora_a",
+      "llm.layers.13.mlps.1.w_gating_lora_b",
+      "llm.layers.13.mlps.1.w_linear_lora_a",
+      "llm.layers.13.mlps.1.w_linear_lora_b",
+      "llm.layers.14.attn.q_proj.1.q_lora_a",
+      "llm.layers.14.attn.q_proj.1.q_lora_b",
+      "llm.layers.14.attn.k_proj.1.q_lora_a",
+      "llm.layers.14.attn.k_proj.1.q_lora_b",
+      "llm.layers.14.attn.v_proj.1.q_lora_a",
+      "llm.layers.14.attn.v_proj.1.q_lora_b",
+      "llm.layers.14.attn.o_proj.1.q_lora_a",
+      "llm.layers.14.attn.o_proj.1.q_lora_b",
+      "llm.layers.14.mlps.1.w_gating_lora_a",
+      "llm.layers.14.mlps.1.w_gating_lora_b",
+      "llm.layers.14.mlps.1.w_linear_lora_a",
+      "llm.layers.14.mlps.1.w_linear_lora_b",
+      "llm.layers.15.attn.q_proj.1.q_lora_a",
+      "llm.layers.15.attn.q_proj.1.q_lora_b",
+      "llm.layers.15.attn.k_proj.1.q_lora_a",
+      "llm.layers.15.attn.k_proj.1.q_lora_b",
+      "llm.layers.15.attn.v_proj.1.q_lora_a",
+      "llm.layers.15.attn.v_proj.1.q_lora_b",
+      "llm.layers.15.attn.o_proj.1.q_lora_a",
+      "llm.layers.15.attn.o_proj.1.q_lora_b",
+      "llm.layers.15.mlps.1.w_gating_lora_a",
+      "llm.layers.15.mlps.1.w_gating_lora_b",
+      "llm.layers.15.mlps.1.w_linear_lora_a",
+      "llm.layers.15.mlps.1.w_linear_lora_b",
+      "llm.layers.16.attn.q_proj.1.q_lora_a",
+      "llm.layers.16.attn.q_proj.1.q_lora_b",
+      "llm.layers.16.attn.k_proj.1.q_lora_a",
+      "llm.layers.16.attn.k_proj.1.q_lora_b",
+      "llm.layers.16.attn.v_proj.1.q_lora_a",
+      "llm.layers.16.attn.v_proj.1.q_lora_b",
+      "llm.layers.16.attn.o_proj.1.q_lora_a",
+      "llm.layers.16.attn.o_proj.1.q_lora_b",
+      "llm.layers.16.mlps.1.w_gating_lora_a",
+      "llm.layers.16.mlps.1.w_gating_lora_b",
+      "llm.layers.16.mlps.1.w_linear_lora_a",
+      "llm.layers.16.mlps.1.w_linear_lora_b",
+      "llm.layers.17.attn.q_proj.1.q_lora_a",
+      "llm.layers.17.attn.q_proj.1.q_lora_b",
+      "llm.layers.17.attn.k_proj.1.q_lora_a",
+      "llm.layers.17.attn.k_proj.1.q_lora_b",
+      "llm.layers.17.attn.v_proj.1.q_lora_a",
+      "llm.layers.17.attn.v_proj.1.q_lora_b",
+      "llm.layers.17.attn.o_proj.1.q_lora_a",
+      "llm.layers.17.attn.o_proj.1.q_lora_b",
+      "llm.layers.17.mlps.1.w_gating_lora_a",
+      "llm.layers.17.mlps.1.w_gating_lora_b",
+      "llm.layers.17.mlps.1.w_linear_lora_a",
+      "llm.layers.17.mlps.1.w_linear_lora_b",
+      "action_in_proj.weight",
+      "action_in_proj.bias",
+      "time_mlp_in.weight",
+      "time_mlp_in.bias",
+      "time_mlp_out.weight",
+      "time_mlp_out.bias",
+      "action_out_proj.weight",
+      "action_out_proj.bias"
+    ],
+    "actor_grad_l2": 77.07901763916016,
+    "actor_delta_from_sft": 3.5019038477912545e-05,
+    "optimizer_steps": 19,
+    "total_optimizer_steps": 19,
+    "actor_parameter_changes": {
+      "action_expert_lora": {
+        "tensors": 216,
+        "changed_tensors": 216,
+        "changed_elements": 6930323,
+        "max_abs_delta": 3.5019038477912545e-05,
+        "delta_l2": 0.02436706013739338
+      },
+      "action_heads": {
+        "tensors": 8,
+        "changed_tensors": 8,
+        "changed_elements": 2140024,
+        "max_abs_delta": 3.46573069691658e-05,
+        "delta_l2": 0.01499879704978484
+      }
+    },
+    "wall_seconds": 232.50529009103775,
+    "cuda_peak_allocated_bytes": 7328862208
+  },
+  "ppo_training_rollouts": [
+    {
+      "iteration": 0,
+      "seed": 1301,
+      "task": "select_fruit",
+      "instruction": "Put the pear into the plate_seen",
+      "prompt_mode": "official",
+      "camera_names": [
+        "right",
+        "left",
+        "forward",
+        "franka/Franka_wrist_cam"
+      ],
+      "model_render_options": {
+        "height": 480,
+        "width": 480
+      },
+      "evaluation_script_sha256": "4301d17b9abeacbd0ba04b8fd5d6c14552274f3594f23d9ae0d6dca6ef6b65c7",
+      "render_samples": 0,
+      "initial_policy_rgb_sha256": "93f5043278340d240d9e1994eaf28798561d81bc92447750de00cf0687f6c677",
+      "initial_state_sha256": "0138e7cbd0c001f748176958ba31bb08f399849780a630b7d6976693c3a6d5b5",
+      "initial_rgb_sha256": "e8c9e01763340e5fc4fd88c3dfb7bca656a96724fd48bd35dbc565554c6836b2",
+      "first_action_sha256": "ae290810d96ffe985b3d56730ab7d7ff7de167718c8781cde13d99eb64386008",
+      "success": true,
+      "stop_reason": "success",
+      "failure_type": null,
+      "steps": 131,
+      "policy_calls": 27,
+      "environment_last": true,
+      "ik_nonconverged_steps": 0,
+      "target_max_displacement_m": 0.4608473122737225,
+      "target_max_lift_m": 0.14765708461585147,
+      "min_gripper_to_target_center_m": 0.018093693004970234,
+      "min_close_command_to_target_center_m": 0.019308423942934538,
+      "gripper_target_contact_steps": 79,
+      "action_sha256": "906758f7fa34418981eec45ae507a2432f7442a7c9b0902dec25bab752f719fc",
+      "reward_sum": 1.4290310041962808,
+      "rewarded_chunks": 27
+    },
+    {
+      "iteration": 0,
+      "seed": 1302,
+      "task": "select_fruit",
+      "instruction": "Put the apple into the plate_seen",
+      "prompt_mode": "official",
+      "camera_names": [
+        "right",
+        "left",
+        "forward",
+        "franka/Franka_wrist_cam"
+      ],
+      "model_render_options": {
+        "height": 480,
+        "width": 480
+      },
+      "evaluation_script_sha256": "4301d17b9abeacbd0ba04b8fd5d6c14552274f3594f23d9ae0d6dca6ef6b65c7",
+      "render_samples": 0,
+      "initial_policy_rgb_sha256": "dcf829e79ced09fc0657c6dd057813f0d5f4e3656f69f8c3e9fc2922ecd356ab",
+      "initial_state_sha256": "54bef53a684a8bcb2653f27a386e32147e4c56627f55e34d0b478bc3901eb808",
+      "initial_rgb_sha256": "4f17cb314124cc19b30286d3a600294c7a3a109a5881ee30f9d7a7cf9159948a",
+      "first_action_sha256": "ce405d9cf8946f49cbac368df2dad016c7dc4d27a722519f9c6f12c8f0ed1d03",
+      "success": false,
+      "stop_reason": "step_budget",
+      "failure_type": "target_moved_goal_unsatisfied",
+      "steps": 600,
+      "policy_calls": 120,
+      "environment_last": false,
+      "ik_nonconverged_steps": 98,
+      "target_max_displacement_m": 2.5170093194230483,
+      "target_max_lift_m": 0.45609590954407075,
+      "min_gripper_to_target_center_m": 0.018904072144547406,
+      "min_close_command_to_target_center_m": 0.018904072144547406,
+      "gripper_target_contact_steps": 70,
+      "action_sha256": "148c619c8fc0dadf71acd6ce7be289c19937294f9f16c0b18554c444f52bdd45",
+      "reward_sum": -0.01733328630176198,
+      "rewarded_chunks": 30
+    }
+  ],
+  "paired_interface_fields": [
+    "task",
+    "seed",
+    "prompt_mode",
+    "instruction",
+    "initial_state_sha256",
+    "initial_policy_rgb_sha256",
+    "render_samples",
+    "control_hz",
+    "replan_steps",
+    "max_control_steps",
+    "norm_stats_sha256",
+    "base_sha256",
+    "sampler"
+  ],
+  "inputs": {
+    "development/base": {
+      "path": "runs/pose-robustness-v2/base-development/select_fruit/episodes.jsonl",
+      "sha256": "383d13b47106050d3f19be7e24090327864b1b307d9987b6752499cc4476f793"
+    },
+    "development/sft": {
+      "path": "runs/pose-robustness-v2/two-task-conservative-development/episodes.jsonl",
+      "sha256": "b84e313f0b3a5bd1e3e778b8569f0eb93d258ce093d22659902940ebd7454d50"
+    },
+    "development/ppo": {
+      "path": "runs/pose-robustness-v2/fruit-completion-v1/development-ppo/episodes.jsonl",
+      "sha256": "2fc0c6a691b15fdae327e918230537401e9d5bf8c707b7d6cb2f58ff1864d764"
+    },
+    "ordinary/base": {
+      "path": "runs/pose-robustness-v2/fruit-completion-v1/ordinary-base/episodes.jsonl",
+      "sha256": "3b0c686494d6cd590b97da200ad5360b6c15cf3dae6f3254b4701c65d7284292"
+    },
+    "ordinary/sft": {
+      "path": "runs/pose-robustness-v2/fruit-completion-v1/ordinary-sft/episodes.jsonl",
+      "sha256": "483739c65f94699493528a065fff401fc38b165a89627be0e6de1837407059ff"
+    },
+    "ordinary/ppo": {
+      "path": "runs/pose-robustness-v2/fruit-completion-v1/ordinary-ppo/episodes.jsonl",
+      "sha256": "e751676bf317cf5c38d491a1ee8d987a989f623c0b660406adb193f29b85fabb"
+    },
+    "fruit_language/base": {
+      "path": "runs/pose-robustness-v2/fruit-completion-v1/fruit_language-base/episodes.jsonl",
+      "sha256": "e5c87c2a5d5c69eea97afa0f903659c8b88683ecae5fa066a689b2a2154948cc"
+    },
+    "fruit_language/sft": {
+      "path": "runs/pose-robustness-v2/fruit-completion-v1/fruit_language-sft/episodes.jsonl",
+      "sha256": "92277ae2af66fab59e6cffd9f84491a1d08beb653bf0365c3523599813a92082"
+    },
+    "fruit_language/ppo": {
+      "path": "runs/pose-robustness-v2/fruit-completion-v1/fruit_language-ppo/episodes.jsonl",
+      "sha256": "b953d552474419ac2b224575984e63ea4a9b8e5ceea5adb9327965916bf14583"
+    }
+  },
+  "suites": {
+    "development": {
+      "official": {
+        "stages": {
+          "base": {
+            "successes": 2,
+            "trials": 4,
+            "success_rate": 0.5,
+            "wilson_95": [
+              0.15003898915214947,
+              0.8499610108478506
+            ],
+            "failure_types": {
+              "target_moved_goal_unsatisfied": 2
+            },
+            "total_controls": 1456,
+            "ik_nonconverged_controls": 249,
+            "summed_episode_wall_seconds": 315.5511727081612
+          },
+          "sft": {
+            "successes": 3,
+            "trials": 4,
+            "success_rate": 0.75,
+            "wilson_95": [
+              0.30064184258240184,
+              0.9544127391902995
+            ],
+            "failure_types": {
+              "target_moved_goal_unsatisfied": 1
+            },
+            "total_controls": 1009,
+            "ik_nonconverged_controls": 139,
+            "summed_episode_wall_seconds": 669.8862076234072
+          },
+          "ppo": {
+            "successes": 3,
+            "trials": 4,
+            "success_rate": 0.75,
+            "wilson_95": [
+              0.30064184258240184,
+              0.9544127391902995
+            ],
+            "failure_types": {
+              "target_moved_goal_unsatisfied": 1
+            },
+            "total_controls": 1076,
+            "ik_nonconverged_controls": 285,
+            "summed_episode_wall_seconds": 562.9397366531193
+          }
+        },
+        "sft_vs_reference": {
+          "counts": {
+            "both_success": 2,
+            "both_failure": 1,
+            "improved": 1
+          },
+          "improved_cases": [
+            [
+              1204,
+              "official"
+            ]
+          ],
+          "regressed_cases": []
+        },
+        "ppo_vs_sft": {
+          "counts": {
+            "both_success": 3,
+            "both_failure": 1
+          },
+          "improved_cases": [],
+          "regressed_cases": []
+        }
+      }
+    },
+    "ordinary": {
+      "official": {
+        "stages": {
+          "base": {
+            "successes": 4,
+            "trials": 10,
+            "success_rate": 0.4,
+            "wilson_95": [
+              0.16818032970623614,
+              0.6873262302663417
+            ],
+            "failure_types": {
+              "target_moved_goal_unsatisfied": 6
+            },
+            "total_controls": 4198,
+            "ik_nonconverged_controls": 1304,
+            "summed_episode_wall_seconds": 804.0322567927651
+          },
+          "sft": {
+            "successes": 5,
+            "trials": 10,
+            "success_rate": 0.5,
+            "wilson_95": [
+              0.236593090512564,
+              0.7634069094874361
+            ],
+            "failure_types": {
+              "target_moved_goal_unsatisfied": 5
+            },
+            "total_controls": 3861,
+            "ik_nonconverged_controls": 1067,
+            "summed_episode_wall_seconds": 2334.7616724669933
+          },
+          "ppo": {
+            "successes": 5,
+            "trials": 10,
+            "success_rate": 0.5,
+            "wilson_95": [
+              0.236593090512564,
+              0.7634069094874361
+            ],
+            "failure_types": {
+              "target_moved_goal_unsatisfied": 5
+            },
+            "total_controls": 3737,
+            "ik_nonconverged_controls": 769,
+            "summed_episode_wall_seconds": 2321.5745968595147
+          }
+        },
+        "sft_vs_reference": {
+          "counts": {
+            "improved": 3,
+            "both_failure": 3,
+            "regressed": 2,
+            "both_success": 2
+          },
+          "improved_cases": [
+            [
+              1501,
+              "official"
+            ],
+            [
+              1504,
+              "official"
+            ],
+            [
+              1506,
+              "official"
+            ]
+          ],
+          "regressed_cases": [
+            [
+              1503,
+              "official"
+            ],
+            [
+              1507,
+              "official"
+            ]
+          ]
+        },
+        "ppo_vs_sft": {
+          "counts": {
+            "both_success": 3,
+            "both_failure": 3,
+            "regressed": 2,
+            "improved": 2
+          },
+          "improved_cases": [
+            [
+              1507,
+              "official"
+            ],
+            [
+              1509,
+              "official"
+            ]
+          ],
+          "regressed_cases": [
+            [
+              1504,
+              "official"
+            ],
+            [
+              1506,
+              "official"
+            ]
+          ]
+        }
+      }
+    },
+    "fruit_language": {
+      "alternate_target": {
+        "stages": {
+          "base": {
+            "successes": 1,
+            "trials": 3,
+            "success_rate": 0.3333333333333333,
+            "wilson_95": [
+              0.06149194472039621,
+              0.7923403991979522
+            ],
+            "failure_types": {
+              "target_displacement_under_3cm": 1,
+              "target_moved_goal_unsatisfied": 1
+            },
+            "total_controls": 1334,
+            "ik_nonconverged_controls": 263,
+            "summed_episode_wall_seconds": 621.781346840784
+          },
+          "sft": {
+            "successes": 1,
+            "trials": 3,
+            "success_rate": 0.3333333333333333,
+            "wilson_95": [
+              0.06149194472039621,
+              0.7923403991979522
+            ],
+            "failure_types": {
+              "target_moved_goal_unsatisfied": 2
+            },
+            "total_controls": 1331,
+            "ik_nonconverged_controls": 580,
+            "summed_episode_wall_seconds": 782.7960241958499
+          },
+          "ppo": {
+            "successes": 1,
+            "trials": 3,
+            "success_rate": 0.3333333333333333,
+            "wilson_95": [
+              0.06149194472039621,
+              0.7923403991979522
+            ],
+            "failure_types": {
+              "target_moved_goal_unsatisfied": 2
+            },
+            "total_controls": 1333,
+            "ik_nonconverged_controls": 400,
+            "summed_episode_wall_seconds": 664.364691445604
+          }
+        },
+        "sft_vs_reference": {
+          "counts": {
+            "both_failure": 2,
+            "both_success": 1
+          },
+          "improved_cases": [],
+          "regressed_cases": []
+        },
+        "ppo_vs_sft": {
+          "counts": {
+            "both_failure": 2,
+            "both_success": 1
+          },
+          "improved_cases": [],
+          "regressed_cases": []
+        }
+      },
+      "official": {
+        "stages": {
+          "base": {
+            "successes": 1,
+            "trials": 3,
+            "success_rate": 0.3333333333333333,
+            "wilson_95": [
+              0.06149194472039621,
+              0.7923403991979522
+            ],
+            "failure_types": {
+              "target_moved_goal_unsatisfied": 2
+            },
+            "total_controls": 1334,
+            "ik_nonconverged_controls": 512,
+            "summed_episode_wall_seconds": 853.7280475832522
+          },
+          "sft": {
+            "successes": 1,
+            "trials": 3,
+            "success_rate": 0.3333333333333333,
+            "wilson_95": [
+              0.06149194472039621,
+              0.7923403991979522
+            ],
+            "failure_types": {
+              "target_moved_goal_unsatisfied": 2
+            },
+            "total_controls": 1343,
+            "ik_nonconverged_controls": 364,
+            "summed_episode_wall_seconds": 855.9474698211998
+          },
+          "ppo": {
+            "successes": 0,
+            "trials": 3,
+            "success_rate": 0.0,
+            "wilson_95": [
+              5.551115123125783e-17,
+              0.5614970317550454
+            ],
+            "failure_types": {
+              "target_moved_goal_unsatisfied": 3
+            },
+            "total_controls": 1800,
+            "ik_nonconverged_controls": 447,
+            "summed_episode_wall_seconds": 1108.1888273973018
+          }
+        },
+        "sft_vs_reference": {
+          "counts": {
+            "both_success": 1,
+            "both_failure": 2
+          },
+          "improved_cases": [],
+          "regressed_cases": []
+        },
+        "ppo_vs_sft": {
+          "counts": {
+            "regressed": 1,
+            "both_failure": 2
+          },
+          "improved_cases": [],
+          "regressed_cases": [
+            [
+              1601,
+              "official"
+            ]
+          ]
+        }
+      },
+      "paraphrase": {
+        "stages": {
+          "base": {
+            "successes": 0,
+            "trials": 3,
+            "success_rate": 0.0,
+            "wilson_95": [
+              5.551115123125783e-17,
+              0.5614970317550454
+            ],
+            "failure_types": {
+              "target_moved_goal_unsatisfied": 3
+            },
+            "total_controls": 1800,
+            "ik_nonconverged_controls": 322,
+            "summed_episode_wall_seconds": 1077.905831227079
+          },
+          "sft": {
+            "successes": 1,
+            "trials": 3,
+            "success_rate": 0.3333333333333333,
+            "wilson_95": [
+              0.06149194472039621,
+              0.7923403991979522
+            ],
+            "failure_types": {
+              "target_moved_goal_unsatisfied": 1,
+              "target_displacement_under_3cm": 1
+            },
+            "total_controls": 1297,
+            "ik_nonconverged_controls": 431,
+            "summed_episode_wall_seconds": 795.2741255518049
+          },
+          "ppo": {
+            "successes": 0,
+            "trials": 3,
+            "success_rate": 0.0,
+            "wilson_95": [
+              5.551115123125783e-17,
+              0.5614970317550454
+            ],
+            "failure_types": {
+              "target_moved_goal_unsatisfied": 3
+            },
+            "total_controls": 1800,
+            "ik_nonconverged_controls": 437,
+            "summed_episode_wall_seconds": 1062.6402945369482
+          }
+        },
+        "sft_vs_reference": {
+          "counts": {
+            "both_failure": 2,
+            "improved": 1
+          },
+          "improved_cases": [
+            [
+              1603,
+              "paraphrase"
+            ]
+          ],
+          "regressed_cases": []
+        },
+        "ppo_vs_sft": {
+          "counts": {
+            "both_failure": 2,
+            "regressed": 1
+          },
+          "improved_cases": [],
+          "regressed_cases": [
+            [
+              1603,
+              "paraphrase"
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "language_evidence": {
+    "base": [
+      {
+        "seed": 1601,
+        "official_instruction": "Put the pear into the plate_seen",
+        "paraphrase": "Please place the pear on the plate.",
+        "alternate_instruction": "Put the lemon into the plate_seen",
+        "official_success": true,
+        "paraphrase_success": false,
+        "alternate_success": false,
+        "both_goal_instructions_succeeded": false,
+        "alternate_first_action_changed": true,
+        "paraphrase_first_action_changed": true
+      },
+      {
+        "seed": 1602,
+        "official_instruction": "Put the orange into the plate_seen",
+        "paraphrase": "Please place the orange on the plate.",
+        "alternate_instruction": "Put the lemon into the plate_seen",
+        "official_success": false,
+        "paraphrase_success": false,
+        "alternate_success": false,
+        "both_goal_instructions_succeeded": false,
+        "alternate_first_action_changed": true,
+        "paraphrase_first_action_changed": true
+      },
+      {
+        "seed": 1603,
+        "official_instruction": "Put the pear into the plate_seen",
+        "paraphrase": "Please place the pear on the plate.",
+        "alternate_instruction": "Put the banana into the plate_seen",
+        "official_success": false,
+        "paraphrase_success": false,
+        "alternate_success": true,
+        "both_goal_instructions_succeeded": false,
+        "alternate_first_action_changed": true,
+        "paraphrase_first_action_changed": true
+      }
+    ],
+    "sft": [
+      {
+        "seed": 1601,
+        "official_instruction": "Put the pear into the plate_seen",
+        "paraphrase": "Please place the pear on the plate.",
+        "alternate_instruction": "Put the lemon into the plate_seen",
+        "official_success": true,
+        "paraphrase_success": false,
+        "alternate_success": false,
+        "both_goal_instructions_succeeded": false,
+        "alternate_first_action_changed": true,
+        "paraphrase_first_action_changed": true
+      },
+      {
+        "seed": 1602,
+        "official_instruction": "Put the orange into the plate_seen",
+        "paraphrase": "Please place the orange on the plate.",
+        "alternate_instruction": "Put the lemon into the plate_seen",
+        "official_success": false,
+        "paraphrase_success": false,
+        "alternate_success": false,
+        "both_goal_instructions_succeeded": false,
+        "alternate_first_action_changed": true,
+        "paraphrase_first_action_changed": true
+      },
+      {
+        "seed": 1603,
+        "official_instruction": "Put the pear into the plate_seen",
+        "paraphrase": "Please place the pear on the plate.",
+        "alternate_instruction": "Put the banana into the plate_seen",
+        "official_success": false,
+        "paraphrase_success": true,
+        "alternate_success": true,
+        "both_goal_instructions_succeeded": false,
+        "alternate_first_action_changed": true,
+        "paraphrase_first_action_changed": true
+      }
+    ],
+    "ppo": [
+      {
+        "seed": 1601,
+        "official_instruction": "Put the pear into the plate_seen",
+        "paraphrase": "Please place the pear on the plate.",
+        "alternate_instruction": "Put the lemon into the plate_seen",
+        "official_success": false,
+        "paraphrase_success": false,
+        "alternate_success": false,
+        "both_goal_instructions_succeeded": false,
+        "alternate_first_action_changed": true,
+        "paraphrase_first_action_changed": true
+      },
+      {
+        "seed": 1602,
+        "official_instruction": "Put the orange into the plate_seen",
+        "paraphrase": "Please place the orange on the plate.",
+        "alternate_instruction": "Put the lemon into the plate_seen",
+        "official_success": false,
+        "paraphrase_success": false,
+        "alternate_success": false,
+        "both_goal_instructions_succeeded": false,
+        "alternate_first_action_changed": true,
+        "paraphrase_first_action_changed": true
+      },
+      {
+        "seed": 1603,
+        "official_instruction": "Put the pear into the plate_seen",
+        "paraphrase": "Please place the pear on the plate.",
+        "alternate_instruction": "Put the banana into the plate_seen",
+        "official_success": false,
+        "paraphrase_success": false,
+        "alternate_success": true,
+        "both_goal_instructions_succeeded": false,
+        "alternate_first_action_changed": true,
+        "paraphrase_first_action_changed": true
+      }
+    ]
+  },
+  "limitations": [
+    "Development starts informed checkpoint selection; report them separately from held-out cases.",
+    "Ten ordinary starts and three paired language scenes are a small pilot.",
+    "One PPO iteration is a real policy update, not a convergence or reliable-improvement claim.",
+    "Changed actions under changed prompts alone do not establish correct language use.",
+    "Previously reported experiments with a different rendering profile remain separate."
+  ]
+}

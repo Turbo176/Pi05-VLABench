@@ -1,0 +1,18 @@
+{
+  "summary_script_sha256": "c63129febf47f7e20b84c6dfecc298896c104db7d5c616fae5c3f2ac4b40b79e",
+  "real_development_check": {
+    "successes": 3,
+    "trials": 4,
+    "success_rate": 0.75,
+    "wilson_95": [
+      0.30064184258240184,
+      0.9544127391902995
+    ],
+    "failure_types": {
+      "target_moved_goal_unsatisfied": 1
+    },
+    "total_controls": 1009,
+    "ik_nonconverged_controls": 139,
+    "summed_episode_wall_seconds": 669.8862076234072
+  }
+}

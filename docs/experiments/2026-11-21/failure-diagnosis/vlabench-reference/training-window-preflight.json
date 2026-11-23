@@ -1,0 +1,42 @@
+{
+  "seed": 42,
+  "split": "train",
+  "lerobot_episode_index": 0,
+  "frame_index": 34,
+  "instruction": "Put the apple into the plate_seen",
+  "replay_success": true,
+  "replay_controls": 132,
+  "max_state_error": 0.0,
+  "cameras": [
+    "forward",
+    "right",
+    "franka/Franka_wrist_cam"
+  ],
+  "image_hashes": {
+    "base_0_rgb": "55aab15008a0e13283004dbc5d61ff4285c90d80713f1f450d8766a3361bbea3",
+    "left_wrist_0_rgb": "193e1b3a958132c7aaeaa269798b5127d409b7d2489ed3b89cbc62748559e750",
+    "right_wrist_0_rgb": "e2983c272f3469d8455f83aa0a137e896275ab07a29842e643d948196ae62468"
+  },
+  "image_shapes": {
+    "base_0_rgb": [
+      224,
+      224,
+      3
+    ],
+    "left_wrist_0_rgb": [
+      224,
+      224,
+      3
+    ],
+    "right_wrist_0_rgb": [
+      224,
+      224,
+      3
+    ]
+  },
+  "model_action_shape": [
+    10,
+    32
+  ],
+  "delta_absolute_round_trip_max": 2.384185791015625e-07
+}

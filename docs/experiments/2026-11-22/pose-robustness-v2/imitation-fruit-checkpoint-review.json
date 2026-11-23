@@ -1,0 +1,65 @@
+{
+  "kind": "matched_checkpoint_training_reset_review",
+  "case": "select_fruit:42",
+  "scope": "One seen training reset, fixed sampler, fresh environments; not a population success-rate estimate.",
+  "checkpoint_outcomes": [
+    {
+      "updates": 100,
+      "autonomous_completed_repeats": 3,
+      "successes": 3,
+      "passed": true,
+      "first_repeat_steps": 144,
+      "first_close_control": 60,
+      "first_grasp_control": 54,
+      "last_grasp_control": 143,
+      "grasped_controls": 90,
+      "ik_nonconverged_controls": 0,
+      "closest_post_step_gripper_distance_m": 0.001115122043037103,
+      "sft_sha256": "f928039e3a2b4334c35878a7ae7e7f12c7b92672868183d8149ca65bda68071d"
+    },
+    {
+      "updates": 300,
+      "autonomous_completed_repeats": 1,
+      "successes": 0,
+      "passed": false,
+      "first_repeat_steps": 600,
+      "first_close_control": 146,
+      "first_grasp_control": null,
+      "last_grasp_control": null,
+      "grasped_controls": 0,
+      "ik_nonconverged_controls": 208,
+      "closest_post_step_gripper_distance_m": 0.12399641302470743,
+      "sft_sha256": "c2102649659e8ffd355c83fb170dad51f3bc759832994c289ab2ea50f1889e3c"
+    }
+  ],
+  "training_loss_windows": [
+    {
+      "updates_inclusive": [
+        1,
+        25
+      ],
+      "mean_flow_loss": 0.07587840981781482
+    },
+    {
+      "updates_inclusive": [
+        76,
+        100
+      ],
+      "mean_flow_loss": 0.06635255008935928
+    },
+    {
+      "updates_inclusive": [
+        276,
+        300
+      ],
+      "mean_flow_loss": 0.047662306688725946
+    }
+  ],
+  "backup": {
+    "path": ".local/autodl-backup/pose-robustness-v2/imitation-fruit42-reference-100/sft.pt",
+    "bytes": 109376155,
+    "sha256": "f928039e3a2b4334c35878a7ae7e7f12c7b92672868183d8149ca65bda68071d",
+    "remote_checkpoint_sha256_match": true
+  },
+  "conclusion": "Update 100 passes the predeclared 3/3 gate, while update 300 is rejected after one completed failure. Further training changed the learned behavior under matched deployment; the responsible parameter groups have not yet been isolated."
+}

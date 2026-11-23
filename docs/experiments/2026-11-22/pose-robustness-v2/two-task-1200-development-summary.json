@@ -1,0 +1,95 @@
+{
+  "cases_per_stage": 8,
+  "stages": {
+    "base": {
+      "insert_flower/official": {
+        "successes": 1,
+        "attempts": 4,
+        "success_rate": 0.25,
+        "wilson_95": [
+          0.04558726080970055,
+          0.6993581574175981
+        ],
+        "failure_reasons": {
+          "step_budget": 3
+        },
+        "failure_types": {
+          "target_moved_goal_unsatisfied": 2,
+          "target_displacement_under_3cm": 1
+        },
+        "environment_control_steps": 1971,
+        "rollout_wall_seconds": 398.5344834399875
+      },
+      "select_fruit/official": {
+        "successes": 2,
+        "attempts": 4,
+        "success_rate": 0.5,
+        "wilson_95": [
+          0.15003898915214947,
+          0.8499610108478506
+        ],
+        "failure_reasons": {
+          "step_budget": 2
+        },
+        "failure_types": {
+          "target_moved_goal_unsatisfied": 2
+        },
+        "environment_control_steps": 1456,
+        "rollout_wall_seconds": 315.5511727081612
+      }
+    },
+    "sft": {
+      "insert_flower/official": {
+        "successes": 0,
+        "attempts": 4,
+        "success_rate": 0.0,
+        "wilson_95": [
+          0.0,
+          0.4898908364545973
+        ],
+        "failure_reasons": {
+          "step_budget": 4
+        },
+        "failure_types": {
+          "target_moved_goal_unsatisfied": 3,
+          "target_displacement_under_3cm": 1
+        },
+        "environment_control_steps": 2400,
+        "rollout_wall_seconds": 1301.0719963125885
+      },
+      "select_fruit/official": {
+        "successes": 0,
+        "attempts": 4,
+        "success_rate": 0.0,
+        "wilson_95": [
+          0.0,
+          0.4898908364545973
+        ],
+        "failure_reasons": {
+          "step_budget": 4
+        },
+        "failure_types": {
+          "target_moved_goal_unsatisfied": 4
+        },
+        "environment_control_steps": 2400,
+        "rollout_wall_seconds": 1465.1284830663353
+      }
+    }
+  },
+  "paired_outcomes": {
+    "base_to_sft": {
+      "insert_flower/official": {
+        "fail_to_success": 0,
+        "success_to_fail": 1,
+        "both_failed": 3,
+        "both_succeeded": 0
+      },
+      "select_fruit/official": {
+        "fail_to_success": 0,
+        "success_to_fail": 2,
+        "both_failed": 2,
+        "both_succeeded": 0
+      }
+    }
+  }
+}

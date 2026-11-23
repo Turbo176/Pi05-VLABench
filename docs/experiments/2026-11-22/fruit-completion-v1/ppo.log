@@ -1,0 +1,141 @@
+--- Logging error ---
+Traceback (most recent call last):
+  File "/root/miniconda3/lib/python3.12/logging/__init__.py", line 1160, in emit
+    msg = self.format(record)
+          ^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/logging/__init__.py", line 999, in format
+    return fmt.format(record)
+           ^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/logging/__init__.py", line 703, in format
+    record.message = record.getMessage()
+                     ^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/logging/__init__.py", line 392, in getMessage
+    msg = msg % self.args
+          ~~~~^~~~~~~~~~~
+TypeError: not all arguments converted during string formatting
+Call stack:
+  File "/root/autodl-tmp/Pi05-VLABench/code/scripts/ppo_reference_aligned_fruit.py", line 13, in <module>
+    from check_reference_rl_handoff import RLPolicy
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/root/autodl-tmp/Pi05-VLABench/code/scripts/check_reference_rl_handoff.py", line 13, in <module>
+    from ppo_pi05 import recompute
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/root/autodl-tmp/Pi05-VLABench/code/scripts/ppo_pi05.py", line 14, in <module>
+    from select_fruit import camera_names, open_episode, robot_state, success
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/root/autodl-tmp/Pi05-VLABench/code/scripts/select_fruit.py", line 15, in <module>
+    import VLABench.robots  # register official robot classes
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1310, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/root/autodl-tmp/Pi05-VLABench/.local/upstream/vlabench-sim/VLABench/__init__.py", line 21, in <module>
+    logging.info("Detect Linux, add LM4root as environment variable: ", package_root)
+Message: 'Detect Linux, add LM4root as environment variable: '
+Arguments: ('/root/autodl-tmp/Pi05-VLABench/.local/upstream/vlabench-sim/VLABench',)
+INFO:absl:MUJOCO_GL=egl, attempting to import specified OpenGL backend.
+INFO:OpenGL.acceleratesupport:No OpenGL_accelerate module loaded: No module named 'OpenGL_accelerate'
+INFO:absl:MuJoCo library version is: 3.2.2
+INFO:root:Norm stats not found in /root/autodl-tmp/Pi05-VLABench/assets/pi05_ft_vlabench_primitive/vlabench/vlabench_ft_primitive, skipping.
+INFO:root:Seed 1301 at control step 1/600
+INFO:root:Seed 1301 at control step 100/600
+INFO:root:Seed 1302 at control step 1/600
+INFO:root:Seed 1302 at control step 100/600
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0585057
+INFO:root:Seed 1302 at control step 200/600
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0984533
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.137294
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.104721
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.370356
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.107619
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0142265
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.267992
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0432657
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.265642
+INFO:root:Seed 1302 at control step 300/600
+INFO:root:Seed 1302 at control step 400/600
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.175414
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0968216
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0846821
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.102176
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0303241
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.082828
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0603529
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.115943
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.171498
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0226427
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0158996
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0114119
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.11505
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.089756
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.544592
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0937697
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.095162
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0758475
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0415823
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.315907
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0956573
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0993126
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0482425
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.335159
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0455192
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0918084
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.223519
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.11256
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0953299
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.401975
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0984202
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.085144
+INFO:root:Seed 1302 at control step 500/600
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0349634
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0813897
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.502713
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.307622
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.056011
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0421834
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0376138
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0424076
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0485443
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.843168
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.327214
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.223857
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.175132
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0486791
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0247588
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.092522
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0787961
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.130668
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.178077
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.105245
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.134212
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0654261
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.168638
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.178718
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0530919
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.654221
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0565287
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.228693
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.619974
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0521261
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0267146
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.0935536
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.04547
+WARNING:absl:Failed to converge after 99 steps: err_norm=0.058106
+INFO:root:Seed 1302 at control step 600/600
+{"sft_sha256": "998181bb8cc8386766aa5bec3302b938234ab5da2a24e81cef199a8fd560eef3", "norm_stats_sha256": "bce33fc1831830d953ef9bc57e520c02ee44e02b7ad07f27ce92b931a879384f", "horizon": 10, "executed": 5, "optimizer_iterations": 1, "successes": 1, "trials": 2, "total_controls": 731, "seeds": [1301, 1302], "rng_seed": 372, "iteration_controls": 731, "action_chunks": 147, "reward_min": -0.4135543898266659, "reward_max": 0.9906585841635588, "rewarded_chunks": 57, "shaping": 0.5, "lr": 2e-06, "critic_lr": 0.0001, "weight_decay": 0, "clip": 0.2, "gamma": 0.99, "gae_lambda": 0.95, "max_steps": 600, "replay_logprob_abs_error": 3.814697265625e-06, "render_samples": 0, "base_sha256": "66975306e09199efdf221e14d6f5d13ea5d6dbe42e8f921f19bd1096721eac61", "train_action_heads": true, "training_script_sha256": "f6530b0884ab15ce801ee9801bfb5a9ef31e3e43bf08b2e62abf979dc99ee5a3", "shared_ppo_script_sha256": "f125599b86eb91056301bd95c273788c5dd3c926817d69393c3633b4f9ba2fbc", "actor_params": ["llm.layers.0.attn.q_proj.1.q_lora_a", "llm.layers.0.attn.q_proj.1.q_lora_b", "llm.layers.0.attn.k_proj.1.q_lora_a", "llm.layers.0.attn.k_proj.1.q_lora_b", "llm.layers.0.attn.v_proj.1.q_lora_a", "llm.layers.0.attn.v_proj.1.q_lora_b", "llm.layers.0.attn.o_proj.1.q_lora_a", "llm.layers.0.attn.o_proj.1.q_lora_b", "llm.layers.0.mlps.1.w_gating_lora_a", "llm.layers.0.mlps.1.w_gating_lora_b", "llm.layers.0.mlps.1.w_linear_lora_a", "llm.layers.0.mlps.1.w_linear_lora_b", "llm.layers.1.attn.q_proj.1.q_lora_a", "llm.layers.1.attn.q_proj.1.q_lora_b", "llm.layers.1.attn.k_proj.1.q_lora_a", "llm.layers.1.attn.k_proj.1.q_lora_b", "llm.layers.1.attn.v_proj.1.q_lora_a", "llm.layers.1.attn.v_proj.1.q_lora_b", "llm.layers.1.attn.o_proj.1.q_lora_a", "llm.layers.1.attn.o_proj.1.q_lora_b", "llm.layers.1.mlps.1.w_gating_lora_a", "llm.layers.1.mlps.1.w_gating_lora_b", "llm.layers.1.mlps.1.w_linear_lora_a", "llm.layers.1.mlps.1.w_linear_lora_b", "llm.layers.2.attn.q_proj.1.q_lora_a", "llm.layers.2.attn.q_proj.1.q_lora_b", "llm.layers.2.attn.k_proj.1.q_lora_a", "llm.layers.2.attn.k_proj.1.q_lora_b", "llm.layers.2.attn.v_proj.1.q_lora_a", "llm.layers.2.attn.v_proj.1.q_lora_b", "llm.layers.2.attn.o_proj.1.q_lora_a", "llm.layers.2.attn.o_proj.1.q_lora_b", "llm.layers.2.mlps.1.w_gating_lora_a", "llm.layers.2.mlps.1.w_gating_lora_b", "llm.layers.2.mlps.1.w_linear_lora_a", "llm.layers.2.mlps.1.w_linear_lora_b", "llm.layers.3.attn.q_proj.1.q_lora_a", "llm.layers.3.attn.q_proj.1.q_lora_b", "llm.layers.3.attn.k_proj.1.q_lora_a", "llm.layers.3.attn.k_proj.1.q_lora_b", "llm.layers.3.attn.v_proj.1.q_lora_a", "llm.layers.3.attn.v_proj.1.q_lora_b", "llm.layers.3.attn.o_proj.1.q_lora_a", "llm.layers.3.attn.o_proj.1.q_lora_b", "llm.layers.3.mlps.1.w_gating_lora_a", "llm.layers.3.mlps.1.w_gating_lora_b", "llm.layers.3.mlps.1.w_linear_lora_a", "llm.layers.3.mlps.1.w_linear_lora_b", "llm.layers.4.attn.q_proj.1.q_lora_a", "llm.layers.4.attn.q_proj.1.q_lora_b", "llm.layers.4.attn.k_proj.1.q_lora_a", "llm.layers.4.attn.k_proj.1.q_lora_b", "llm.layers.4.attn.v_proj.1.q_lora_a", "llm.layers.4.attn.v_proj.1.q_lora_b", "llm.layers.4.attn.o_proj.1.q_lora_a", "llm.layers.4.attn.o_proj.1.q_lora_b", "llm.layers.4.mlps.1.w_gating_lora_a", "llm.layers.4.mlps.1.w_gating_lora_b", "llm.layers.4.mlps.1.w_linear_lora_a", "llm.layers.4.mlps.1.w_linear_lora_b", "llm.layers.5.attn.q_proj.1.q_lora_a", "llm.layers.5.attn.q_proj.1.q_lora_b", "llm.layers.5.attn.k_proj.1.q_lora_a", "llm.layers.5.attn.k_proj.1.q_lora_b", "llm.layers.5.attn.v_proj.1.q_lora_a", "llm.layers.5.attn.v_proj.1.q_lora_b", "llm.layers.5.attn.o_proj.1.q_lora_a", "llm.layers.5.attn.o_proj.1.q_lora_b", "llm.layers.5.mlps.1.w_gating_lora_a", "llm.layers.5.mlps.1.w_gating_lora_b", "llm.layers.5.mlps.1.w_linear_lora_a", "llm.layers.5.mlps.1.w_linear_lora_b", "llm.layers.6.attn.q_proj.1.q_lora_a", "llm.layers.6.attn.q_proj.1.q_lora_b", "llm.layers.6.attn.k_proj.1.q_lora_a", "llm.layers.6.attn.k_proj.1.q_lora_b", "llm.layers.6.attn.v_proj.1.q_lora_a", "llm.layers.6.attn.v_proj.1.q_lora_b", "llm.layers.6.attn.o_proj.1.q_lora_a", "llm.layers.6.attn.o_proj.1.q_lora_b", "llm.layers.6.mlps.1.w_gating_lora_a", "llm.layers.6.mlps.1.w_gating_lora_b", "llm.layers.6.mlps.1.w_linear_lora_a", "llm.layers.6.mlps.1.w_linear_lora_b", "llm.layers.7.attn.q_proj.1.q_lora_a", "llm.layers.7.attn.q_proj.1.q_lora_b", "llm.layers.7.attn.k_proj.1.q_lora_a", "llm.layers.7.attn.k_proj.1.q_lora_b", "llm.layers.7.attn.v_proj.1.q_lora_a", "llm.layers.7.attn.v_proj.1.q_lora_b", "llm.layers.7.attn.o_proj.1.q_lora_a", "llm.layers.7.attn.o_proj.1.q_lora_b", "llm.layers.7.mlps.1.w_gating_lora_a", "llm.layers.7.mlps.1.w_gating_lora_b", "llm.layers.7.mlps.1.w_linear_lora_a", "llm.layers.7.mlps.1.w_linear_lora_b", "llm.layers.8.attn.q_proj.1.q_lora_a", "llm.layers.8.attn.q_proj.1.q_lora_b", "llm.layers.8.attn.k_proj.1.q_lora_a", "llm.layers.8.attn.k_proj.1.q_lora_b", "llm.layers.8.attn.v_proj.1.q_lora_a", "llm.layers.8.attn.v_proj.1.q_lora_b", "llm.layers.8.attn.o_proj.1.q_lora_a", "llm.layers.8.attn.o_proj.1.q_lora_b", "llm.layers.8.mlps.1.w_gating_lora_a", "llm.layers.8.mlps.1.w_gating_lora_b", "llm.layers.8.mlps.1.w_linear_lora_a", "llm.layers.8.mlps.1.w_linear_lora_b", "llm.layers.9.attn.q_proj.1.q_lora_a", "llm.layers.9.attn.q_proj.1.q_lora_b", "llm.layers.9.attn.k_proj.1.q_lora_a", "llm.layers.9.attn.k_proj.1.q_lora_b", "llm.layers.9.attn.v_proj.1.q_lora_a", "llm.layers.9.attn.v_proj.1.q_lora_b", "llm.layers.9.attn.o_proj.1.q_lora_a", "llm.layers.9.attn.o_proj.1.q_lora_b", "llm.layers.9.mlps.1.w_gating_lora_a", "llm.layers.9.mlps.1.w_gating_lora_b", "llm.layers.9.mlps.1.w_linear_lora_a", "llm.layers.9.mlps.1.w_linear_lora_b", "llm.layers.10.attn.q_proj.1.q_lora_a", "llm.layers.10.attn.q_proj.1.q_lora_b", "llm.layers.10.attn.k_proj.1.q_lora_a", "llm.layers.10.attn.k_proj.1.q_lora_b", "llm.layers.10.attn.v_proj.1.q_lora_a", "llm.layers.10.attn.v_proj.1.q_lora_b", "llm.layers.10.attn.o_proj.1.q_lora_a", "llm.layers.10.attn.o_proj.1.q_lora_b", "llm.layers.10.mlps.1.w_gating_lora_a", "llm.layers.10.mlps.1.w_gating_lora_b", "llm.layers.10.mlps.1.w_linear_lora_a", "llm.layers.10.mlps.1.w_linear_lora_b", "llm.layers.11.attn.q_proj.1.q_lora_a", "llm.layers.11.attn.q_proj.1.q_lora_b", "llm.layers.11.attn.k_proj.1.q_lora_a", "llm.layers.11.attn.k_proj.1.q_lora_b", "llm.layers.11.attn.v_proj.1.q_lora_a", "llm.layers.11.attn.v_proj.1.q_lora_b", "llm.layers.11.attn.o_proj.1.q_lora_a", "llm.layers.11.attn.o_proj.1.q_lora_b", "llm.layers.11.mlps.1.w_gating_lora_a", "llm.layers.11.mlps.1.w_gating_lora_b", "llm.layers.11.mlps.1.w_linear_lora_a", "llm.layers.11.mlps.1.w_linear_lora_b", "llm.layers.12.attn.q_proj.1.q_lora_a", "llm.layers.12.attn.q_proj.1.q_lora_b", "llm.layers.12.attn.k_proj.1.q_lora_a", "llm.layers.12.attn.k_proj.1.q_lora_b", "llm.layers.12.attn.v_proj.1.q_lora_a", "llm.layers.12.attn.v_proj.1.q_lora_b", "llm.layers.12.attn.o_proj.1.q_lora_a", "llm.layers.12.attn.o_proj.1.q_lora_b", "llm.layers.12.mlps.1.w_gating_lora_a", "llm.layers.12.mlps.1.w_gating_lora_b", "llm.layers.12.mlps.1.w_linear_lora_a", "llm.layers.12.mlps.1.w_linear_lora_b", "llm.layers.13.attn.q_proj.1.q_lora_a", "llm.layers.13.attn.q_proj.1.q_lora_b", "llm.layers.13.attn.k_proj.1.q_lora_a", "llm.layers.13.attn.k_proj.1.q_lora_b", "llm.layers.13.attn.v_proj.1.q_lora_a", "llm.layers.13.attn.v_proj.1.q_lora_b", "llm.layers.13.attn.o_proj.1.q_lora_a", "llm.layers.13.attn.o_proj.1.q_lora_b", "llm.layers.13.mlps.1.w_gating_lora_a", "llm.layers.13.mlps.1.w_gating_lora_b", "llm.layers.13.mlps.1.w_linear_lora_a", "llm.layers.13.mlps.1.w_linear_lora_b", "llm.layers.14.attn.q_proj.1.q_lora_a", "llm.layers.14.attn.q_proj.1.q_lora_b", "llm.layers.14.attn.k_proj.1.q_lora_a", "llm.layers.14.attn.k_proj.1.q_lora_b", "llm.layers.14.attn.v_proj.1.q_lora_a", "llm.layers.14.attn.v_proj.1.q_lora_b", "llm.layers.14.attn.o_proj.1.q_lora_a", "llm.layers.14.attn.o_proj.1.q_lora_b", "llm.layers.14.mlps.1.w_gating_lora_a", "llm.layers.14.mlps.1.w_gating_lora_b", "llm.layers.14.mlps.1.w_linear_lora_a", "llm.layers.14.mlps.1.w_linear_lora_b", "llm.layers.15.attn.q_proj.1.q_lora_a", "llm.layers.15.attn.q_proj.1.q_lora_b", "llm.layers.15.attn.k_proj.1.q_lora_a", "llm.layers.15.attn.k_proj.1.q_lora_b", "llm.layers.15.attn.v_proj.1.q_lora_a", "llm.layers.15.attn.v_proj.1.q_lora_b", "llm.layers.15.attn.o_proj.1.q_lora_a", "llm.layers.15.attn.o_proj.1.q_lora_b", "llm.layers.15.mlps.1.w_gating_lora_a", "llm.layers.15.mlps.1.w_gating_lora_b", "llm.layers.15.mlps.1.w_linear_lora_a", "llm.layers.15.mlps.1.w_linear_lora_b", "llm.layers.16.attn.q_proj.1.q_lora_a", "llm.layers.16.attn.q_proj.1.q_lora_b", "llm.layers.16.attn.k_proj.1.q_lora_a", "llm.layers.16.attn.k_proj.1.q_lora_b", "llm.layers.16.attn.v_proj.1.q_lora_a", "llm.layers.16.attn.v_proj.1.q_lora_b", "llm.layers.16.attn.o_proj.1.q_lora_a", "llm.layers.16.attn.o_proj.1.q_lora_b", "llm.layers.16.mlps.1.w_gating_lora_a", "llm.layers.16.mlps.1.w_gating_lora_b", "llm.layers.16.mlps.1.w_linear_lora_a", "llm.layers.16.mlps.1.w_linear_lora_b", "llm.layers.17.attn.q_proj.1.q_lora_a", "llm.layers.17.attn.q_proj.1.q_lora_b", "llm.layers.17.attn.k_proj.1.q_lora_a", "llm.layers.17.attn.k_proj.1.q_lora_b", "llm.layers.17.attn.v_proj.1.q_lora_a", "llm.layers.17.attn.v_proj.1.q_lora_b", "llm.layers.17.attn.o_proj.1.q_lora_a", "llm.layers.17.attn.o_proj.1.q_lora_b", "llm.layers.17.mlps.1.w_gating_lora_a", "llm.layers.17.mlps.1.w_gating_lora_b", "llm.layers.17.mlps.1.w_linear_lora_a", "llm.layers.17.mlps.1.w_linear_lora_b", "action_in_proj.weight", "action_in_proj.bias", "time_mlp_in.weight", "time_mlp_in.bias", "time_mlp_out.weight", "time_mlp_out.bias", "action_out_proj.weight", "action_out_proj.bias"], "actor_grad_l2": 77.07901763916016, "actor_delta_from_sft": 3.5019038477912545e-05, "optimizer_steps": 19, "total_optimizer_steps": 19, "actor_parameter_changes": {"action_expert_lora": {"tensors": 216, "changed_tensors": 216, "changed_elements": 6930323, "max_abs_delta": 3.5019038477912545e-05, "delta_l2": 0.02436706013739338}, "action_heads": {"tensors": 8, "changed_tensors": 8, "changed_elements": 2140024, "max_abs_delta": 3.46573069691658e-05, "delta_l2": 0.01499879704978484}}, "wall_seconds": 232.50529009103775, "cuda_peak_allocated_bytes": 7328862208}

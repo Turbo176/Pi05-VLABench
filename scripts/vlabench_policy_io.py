@@ -4,6 +4,8 @@ import numpy as np
 
 IMAGE_SIZE = 256
 ACTUATOR_DIM = 9
+ARM_JOINTS = 7
+ACTION_SPACES = ('absolute', 'arm_delta')
 MODEL_ACTION_DIM = 32
 ACTION_HORIZON = 50
 SCENE_CAMERA = 'forward'
@@ -69,3 +71,16 @@ def actuator_targets(actions):
     if not np.issubdtype(targets.dtype, np.floating) or not np.isfinite(targets).all():
         raise ValueError('Actuator targets must be finite floats')
     return targets
+
+
+def relative_arm_targets(actions, state):
+    """Express each action in a chunk relative to its initial measured arm pose."""
+    result = np.array(actions, copy=True)
+    result[..., :ARM_JOINTS] -= np.asarray(state)[..., None, :ARM_JOINTS]
+    return result
+
+
+def absolute_arm_targets(actions, state):
+    result = np.array(actions, copy=True)
+    result[..., :ARM_JOINTS] += np.asarray(state)[..., None, :ARM_JOINTS]
+    return result

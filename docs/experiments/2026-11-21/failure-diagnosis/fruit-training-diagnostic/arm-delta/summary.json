@@ -1,0 +1,24 @@
+{
+  "scope": "single training episode diagnostic",
+  "seed": 240,
+  "stats_sha256": "da89ad4b77d43b689d4226ef7efb3064c984f5e23995f35a7b04a512e2296b74",
+  "execute_steps": 10,
+  "lora_rank": 16,
+  "action_space": "arm_delta",
+  "base_bytes": 13413809816,
+  "torch": "2.8.0+cu128",
+  "trainable_parameters": 9096224,
+  "lr": 0.00015,
+  "training_episodes": {
+    "select_fruit": 1,
+    "insert_flower": 0,
+    "take_out_cool_drink": 0
+  },
+  "diagnostic_episode": 0,
+  "first_actor_max_abs_delta": 0.00015085935592651367,
+  "updates": 600,
+  "wall_seconds": 165.48513262998313,
+  "peak_allocated_bytes": 10367155200,
+  "peak_reserved_bytes": 10538188800,
+  "checkpoint_readback": true
+}

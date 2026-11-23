@@ -1,0 +1,128 @@
+{
+  "kind": "expert_prefix_assisted_diagnostic_not_autonomous_success",
+  "source_sha256": "e9362f1f3f3fae1677907027cb057ed8730f1796233d09c8ac5c014cc8b339e0",
+  "sft_sha256": "330d85ccd761c304783d5c092176c06eb47c02bbb9258e2b522b98fd19c9e6b9",
+  "dataset_verification_sha256": "912661fbd8af7f4f55479b902dcce8e92c28abe5c924dab399bc789e993c11e4",
+  "prefix_controls": 140,
+  "max_total_controls": 600,
+  "control_hz": 10,
+  "execute_controls": 5,
+  "optimizer_updates": 0,
+  "sampler_rule": "Reset seed 42 and consume one noise chunk per five expert controls before takeover.",
+  "complete": true,
+  "stages": {
+    "reference": {
+      "seed": 42,
+      "task": "insert_flower",
+      "instruction": "Insert the rose into the vase_seen.",
+      "prompt_mode": "official",
+      "camera_names": [
+        "right",
+        "left",
+        "forward",
+        "franka/Franka_wrist_cam"
+      ],
+      "model_render_options": {
+        "height": 480,
+        "width": 480
+      },
+      "evaluation_script_sha256": "4301d17b9abeacbd0ba04b8fd5d6c14552274f3594f23d9ae0d6dca6ef6b65c7",
+      "render_samples": 0,
+      "initial_policy_rgb_sha256": "796f727fffcbc01a0104e7972cdb835287b0c8d2e84e32e2aea36df10eb962a8",
+      "initial_state_sha256": "ef0e26dad0d344397e4bcdd3e4a410112bc8b88699866e03f5182a9507d8c134",
+      "initial_rgb_sha256": "5ba8135d33dec05cbec7a75cf4aeb5d7afe9a9dfa40d6b4ae0e51d6afcb0018e",
+      "reset_attempts": 1,
+      "first_action_sha256": "1fa91cfb26356dcd8d1061487c4fd2901b9212782fdba8a80f0233323a57d9bd",
+      "success": false,
+      "stop_reason": "step_budget",
+      "failure_type": "target_moved_goal_unsatisfied",
+      "steps": 600,
+      "policy_calls": 92,
+      "environment_last": false,
+      "ik_nonconverged_steps": 49,
+      "target_max_displacement_m": 1.3675141862501856,
+      "target_max_lift_m": 0.3999991093992564,
+      "min_gripper_to_target_center_m": 0.00492323416368702,
+      "min_close_command_to_target_center_m": 0.00492323416368702,
+      "gripper_target_contact_steps": 125,
+      "action_sha256": "44eb08c35cf59eff1bc328232f80063166232a6da43090a5dd641b86eaf14476",
+      "expert_controls": 140,
+      "adapter_calls": 120,
+      "prefix_state_max_error": 0.002408031555068746,
+      "takeover": {
+        "measured_state": [
+          0.00012054457937730468,
+          0.46977796975810404,
+          0.3532977156846764,
+          3.0017404160571988,
+          1.5525277456189701,
+          -1.7111895734711422,
+          1.0
+        ],
+        "state_sha256": "db4f30bf08295a6081f336161fd3cda6398a78e3b2092494c659576b2ffb32d1",
+        "rgb_sha256": "09e8f43606d71c669a3b8491f72be9c16e211b119769f9bd005bbc842063bba2",
+        "instruction": "Insert the rose into the vase_seen."
+      },
+      "wall_seconds": 198.99119291640818,
+      "counts_as_autonomous_policy_success": false,
+      "control_trace_sha256": "0902027ca5582f37b8bb0e8aee63311660f96a08d904137e55c05d604c5a2df0"
+    },
+    "sft": {
+      "seed": 42,
+      "task": "insert_flower",
+      "instruction": "Insert the rose into the vase_seen.",
+      "prompt_mode": "official",
+      "camera_names": [
+        "right",
+        "left",
+        "forward",
+        "franka/Franka_wrist_cam"
+      ],
+      "model_render_options": {
+        "height": 480,
+        "width": 480
+      },
+      "evaluation_script_sha256": "4301d17b9abeacbd0ba04b8fd5d6c14552274f3594f23d9ae0d6dca6ef6b65c7",
+      "render_samples": 0,
+      "initial_policy_rgb_sha256": "796f727fffcbc01a0104e7972cdb835287b0c8d2e84e32e2aea36df10eb962a8",
+      "initial_state_sha256": "ef0e26dad0d344397e4bcdd3e4a410112bc8b88699866e03f5182a9507d8c134",
+      "initial_rgb_sha256": "5ba8135d33dec05cbec7a75cf4aeb5d7afe9a9dfa40d6b4ae0e51d6afcb0018e",
+      "reset_attempts": 1,
+      "first_action_sha256": "1fa91cfb26356dcd8d1061487c4fd2901b9212782fdba8a80f0233323a57d9bd",
+      "success": false,
+      "stop_reason": "step_budget",
+      "failure_type": "target_moved_goal_unsatisfied",
+      "steps": 600,
+      "policy_calls": 92,
+      "environment_last": false,
+      "ik_nonconverged_steps": 97,
+      "target_max_displacement_m": 4.843428963575822,
+      "target_max_lift_m": 1.8139877968901592,
+      "min_gripper_to_target_center_m": 0.0263869425714971,
+      "min_close_command_to_target_center_m": 0.0263869425714971,
+      "gripper_target_contact_steps": 115,
+      "action_sha256": "f2d4b38cb047844178875644f4986dfd1f92ed9c0d281c6a5ddf3d91020deb93",
+      "expert_controls": 140,
+      "adapter_calls": 120,
+      "prefix_state_max_error": 0.002408031555068746,
+      "takeover": {
+        "measured_state": [
+          0.00012054457937730468,
+          0.46977796975810404,
+          0.3532977156846764,
+          3.0017404160571988,
+          1.5525277456189701,
+          -1.7111895734711422,
+          1.0
+        ],
+        "state_sha256": "db4f30bf08295a6081f336161fd3cda6398a78e3b2092494c659576b2ffb32d1",
+        "rgb_sha256": "09e8f43606d71c669a3b8491f72be9c16e211b119769f9bd005bbc842063bba2",
+        "instruction": "Insert the rose into the vase_seen."
+      },
+      "wall_seconds": 208.56968421675265,
+      "counts_as_autonomous_policy_success": false,
+      "control_trace_sha256": "877f2410fba0c9482c3141bc5d7786677ee591d6cbbc93c77707a0a9bc1fa7ed"
+    }
+  },
+  "interpretation_limit": "Matched expert-prefix takeover can test a near-demonstration suffix. Its outcomes are neither autonomous success rates nor proof of a unique training cause."
+}

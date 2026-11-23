@@ -1,0 +1,8 @@
+{
+  "recorded_input_cases": 4,
+  "passed_checks": [
+    "explicit_seed_override",
+    "wrong_renderer",
+    "missing_cases"
+  ]
+}

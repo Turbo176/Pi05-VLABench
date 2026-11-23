@@ -1,0 +1,85 @@
+{
+  "checkpoint_sha256": "998181bb8cc8386766aa5bec3302b938234ab5da2a24e81cef199a8fd560eef3",
+  "cases": [
+    {
+      "task": "select_fruit",
+      "seed": 42
+    },
+    {
+      "task": "insert_flower",
+      "seed": 42
+    }
+  ],
+  "base_sha256": "66975306e09199efdf221e14d6f5d13ea5d6dbe42e8f921f19bd1096721eac61",
+  "norm_stats_sha256": "bce33fc1831830d953ef9bc57e520c02ee44e02b7ad07f27ce92b931a879384f",
+  "render_samples": 0,
+  "executed": 5,
+  "horizon": 10,
+  "settings": {
+    "shortest_euler": false,
+    "discrete_state": false,
+    "reference_noise": true
+  },
+  "measurements": [
+    {
+      "task": "select_fruit",
+      "seed": 42,
+      "frame": 0,
+      "normalized_prediction_max_error": 0.0,
+      "absolute_prediction_max_error": 0.0,
+      "native_float32_decode_max_error": 1.667728684040526e-07,
+      "replay_logprob_abs_error": 0.0
+    },
+    {
+      "task": "select_fruit",
+      "seed": 42,
+      "frame": 66,
+      "normalized_prediction_max_error": 0.0,
+      "absolute_prediction_max_error": 0.0,
+      "native_float32_decode_max_error": 1.3624678274481994e-07,
+      "replay_logprob_abs_error": 0.0
+    },
+    {
+      "task": "select_fruit",
+      "seed": 42,
+      "frame": 131,
+      "normalized_prediction_max_error": 0.0,
+      "absolute_prediction_max_error": 0.0,
+      "native_float32_decode_max_error": 4.804858537710288e-07,
+      "replay_logprob_abs_error": 0.0
+    },
+    {
+      "task": "insert_flower",
+      "seed": 42,
+      "frame": 0,
+      "normalized_prediction_max_error": 0.0,
+      "absolute_prediction_max_error": 0.0,
+      "native_float32_decode_max_error": 1.6023113769136899e-07,
+      "replay_logprob_abs_error": 0.0
+    },
+    {
+      "task": "insert_flower",
+      "seed": 42,
+      "frame": 89,
+      "normalized_prediction_max_error": 0.0,
+      "absolute_prediction_max_error": 0.0,
+      "native_float32_decode_max_error": 1.567600103058453e-07,
+      "replay_logprob_abs_error": 0.0
+    },
+    {
+      "task": "insert_flower",
+      "seed": 42,
+      "frame": 178,
+      "normalized_prediction_max_error": 0.0,
+      "absolute_prediction_max_error": 0.0,
+      "native_float32_decode_max_error": 2.4814759491675886e-07,
+      "replay_logprob_abs_error": 0.0
+    }
+  ],
+  "optimizer_updates": 0,
+  "matched_rollouts": 1,
+  "matched_successes": 1,
+  "matched_seeds": [
+    1201
+  ]
+}

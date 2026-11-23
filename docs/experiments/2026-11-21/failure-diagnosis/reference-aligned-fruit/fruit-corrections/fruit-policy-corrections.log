@@ -1,0 +1,43 @@
+INFO:root:Norm stats not found in /root/autodl-tmp/Pi05-VLABench/assets/pi05_ft_vlabench_primitive/vlabench/vlabench_ft_primitive, skipping.
+INFO:root:Seed 2081 at control step 1/40
+Checking if can connect to goal at 39 samples
+Can connect to goal
+Checking if can connect to goal at 13 samples
+Can connect to goal
+{"seed": 2081, "policy_steps": 40, "expert_steps": 138, "held_at_takeover": false, "expert_success": true, "replay_success": true}
+INFO:root:Seed 2082 at control step 1/80
+Checking if can connect to goal at 3 samples
+Can connect to goal
+Checking if can connect to goal at 49 samples
+Can connect to goal
+{"seed": 2082, "policy_steps": 80, "expert_steps": 178, "held_at_takeover": false, "expert_success": true, "replay_success": true}
+INFO:root:Seed 2083 at control step 1/120
+INFO:root:Seed 2083 at control step 100/120
+Checking if can connect to goal at 5 samples
+Can connect to goal
+Checking if can connect to goal at 3 samples
+Can connect to goal
+{"seed": 2083, "policy_steps": 120, "expert_steps": 149, "held_at_takeover": false, "expert_success": true, "replay_success": true}
+INFO:root:Seed 2084 at control step 1/40
+Checking if can connect to goal at 41 samples
+Can connect to goal
+Checking if can connect to goal at 33 samples
+Can connect to goal
+{"seed": 2084, "policy_steps": 40, "expert_steps": 160, "held_at_takeover": false, "expert_success": true, "replay_success": true}
+INFO:root:Seed 2085 at control step 1/80
+Checking if can connect to goal at 11 samples
+Can connect to goal
+Checking if can connect to goal at 27 samples
+Can connect to goal
+{"seed": 2085, "policy_steps": 80, "expert_steps": 127, "held_at_takeover": false, "expert_success": true, "replay_success": true}
+INFO:root:Seed 2086 at control step 1/120
+INFO:root:Seed 2086 at control step 100/120
+Checking if can connect to goal at 35 samples
+Can connect to goal
+Checking if can connect to goal at 15 samples
+Could not connect to goal
+Checking if can connect to goal at 31 samples
+Could not connect to goal
+Checking if can connect to goal at 43 samples
+Can connect to goal
+{"seed": 2086, "policy_steps": 120, "expert_steps": 156, "held_at_takeover": false, "expert_success": true, "replay_success": true}

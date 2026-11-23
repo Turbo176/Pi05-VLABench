@@ -1,0 +1,153 @@
+{
+  "kind": "parameter_group_intervention_not_a_trained_policy_result",
+  "case": "select_fruit:42",
+  "optimizer_updates": 0,
+  "expert_actions_supplied_to_policy": false,
+  "script_sha256": "c949398abc5421bcdec4bdfd9730d75bb31ff9a7d97e66754d3bde7cdb6edf24",
+  "source_gates": {
+    "early": {
+      "source_sha256": "d86a38008d1fc433049789844c9d69c6706a13299c59b4de8481b498ab6c6c24",
+      "sft_sha256": "f928039e3a2b4334c35878a7ae7e7f12c7b92672868183d8149ca65bda68071d",
+      "passed": true,
+      "successes": 3,
+      "completed_repeats": 3
+    },
+    "late": {
+      "source_sha256": "67c32f83aa6e5d1b51397ec6b84cda35abe6ec55021b0b174748893e0bbab25f",
+      "sft_sha256": "c2102649659e8ffd355c83fb170dad51f3bc759832994c289ab2ea50f1889e3c",
+      "passed": false,
+      "successes": 0,
+      "completed_repeats": 1
+    }
+  },
+  "parameter_group_differences": {
+    "action_heads": {
+      "tensors": 8,
+      "elements": 2165792,
+      "change_l2": 0.39146730860456974,
+      "max_abs_change": 0.0016106609255075455
+    },
+    "action_adapters": {
+      "tensors": 216,
+      "elements": 6930432,
+      "change_l2": 2.2887732092886393,
+      "max_abs_change": 0.0028990525752305984
+    }
+  },
+  "interventions": [
+    {
+      "name": "early_heads_late_adapters",
+      "result": {
+        "seed": 42,
+        "task": "select_fruit",
+        "instruction": "Put the apple into the plate_seen",
+        "prompt_mode": "official",
+        "camera_names": [
+          "right",
+          "left",
+          "forward",
+          "franka/Franka_wrist_cam"
+        ],
+        "model_render_options": {
+          "height": 480,
+          "width": 480
+        },
+        "evaluation_script_sha256": "4301d17b9abeacbd0ba04b8fd5d6c14552274f3594f23d9ae0d6dca6ef6b65c7",
+        "render_samples": 0,
+        "initial_policy_rgb_sha256": "1d40a567e210675e20450e3f6ec19a77b61137d516729a97bbb0a952076e1976",
+        "initial_state_sha256": "d6c5c851d32135ffa16ce7e7a5da550fa55aae608e14a3807b7416c6aeccf75f",
+        "initial_rgb_sha256": "a8db24b3e070aa2f18fdfac680875c66c1091bcb44cd2e31d5dce4a507c78c40",
+        "reset_attempts": 1,
+        "first_action_sha256": "dc5666376eebaa01ad8ca713fc1841f44a04a2843a45bdcc52bb9e69e872e6c2",
+        "success": false,
+        "stop_reason": "step_budget",
+        "failure_type": "target_moved_goal_unsatisfied",
+        "steps": 600,
+        "policy_calls": 120,
+        "environment_last": false,
+        "ik_nonconverged_steps": 137,
+        "target_max_displacement_m": 2.964882000152822,
+        "target_max_lift_m": 0.5813604163508008,
+        "min_gripper_to_target_center_m": 0.09166734111659781,
+        "min_close_command_to_target_center_m": 0.5933704177661272,
+        "gripper_target_contact_steps": 0,
+        "action_sha256": "91bde85f6a1f8e3d6211a9baedd81a4ac31893b2e2b36eced7b1e22a1bf15422",
+        "norm_stats_sha256": "bce33fc1831830d953ef9bc57e520c02ee44e02b7ad07f27ce92b931a879384f",
+        "reference_model_revision": "f658a8bec801aab960fe0ceab370a123b31c1837",
+        "base_sha256": "66975306e09199efdf221e14d6f5d13ea5d6dbe42e8f921f19bd1096721eac61",
+        "training_scope": "single_training_episode_imitation_not_generalization",
+        "diagnostic_case": "select_fruit:42",
+        "diagnostic_intervention": "early_heads_late_adapters",
+        "hybrid_parameters_sha256": "b6d4dae016f9e86b5172a993854512045ae3b5ddd6a6196f158efa4fee4a458f",
+        "source_early_sft_sha256": "f928039e3a2b4334c35878a7ae7e7f12c7b92672868183d8149ca65bda68071d",
+        "source_late_sft_sha256": "c2102649659e8ffd355c83fb170dad51f3bc759832994c289ab2ea50f1889e3c",
+        "stage": "sft",
+        "backend": "RLinf",
+        "openpi_revision": "788ef1f20e655de5bb40869fb7b7fcdd49732387",
+        "control_hz": 10,
+        "replan_steps": 5,
+        "max_control_steps": 600,
+        "sampler": "JAX seeded noise",
+        "wall_seconds": 102.20694348029792
+      }
+    },
+    {
+      "name": "late_heads_early_adapters",
+      "result": {
+        "seed": 42,
+        "task": "select_fruit",
+        "instruction": "Put the apple into the plate_seen",
+        "prompt_mode": "official",
+        "camera_names": [
+          "right",
+          "left",
+          "forward",
+          "franka/Franka_wrist_cam"
+        ],
+        "model_render_options": {
+          "height": 480,
+          "width": 480
+        },
+        "evaluation_script_sha256": "4301d17b9abeacbd0ba04b8fd5d6c14552274f3594f23d9ae0d6dca6ef6b65c7",
+        "render_samples": 0,
+        "initial_policy_rgb_sha256": "1d40a567e210675e20450e3f6ec19a77b61137d516729a97bbb0a952076e1976",
+        "initial_state_sha256": "d6c5c851d32135ffa16ce7e7a5da550fa55aae608e14a3807b7416c6aeccf75f",
+        "initial_rgb_sha256": "a8db24b3e070aa2f18fdfac680875c66c1091bcb44cd2e31d5dce4a507c78c40",
+        "reset_attempts": 1,
+        "first_action_sha256": "cf31686e76a136c20eba78c3563a00fbc6b971c4996bcd256a4e5c55ef3c48bb",
+        "success": false,
+        "stop_reason": "step_budget",
+        "failure_type": "target_moved_goal_unsatisfied",
+        "steps": 600,
+        "policy_calls": 120,
+        "environment_last": false,
+        "ik_nonconverged_steps": 294,
+        "target_max_displacement_m": 1.9578574118278438,
+        "target_max_lift_m": 0.12315362085580639,
+        "min_gripper_to_target_center_m": 0.07127991835338605,
+        "min_close_command_to_target_center_m": 0.43649666882956284,
+        "gripper_target_contact_steps": 0,
+        "action_sha256": "06be48a0d389d0a0a79ca8724121735836de65404e3fd0fb97d2207adcac25d5",
+        "norm_stats_sha256": "bce33fc1831830d953ef9bc57e520c02ee44e02b7ad07f27ce92b931a879384f",
+        "reference_model_revision": "f658a8bec801aab960fe0ceab370a123b31c1837",
+        "base_sha256": "66975306e09199efdf221e14d6f5d13ea5d6dbe42e8f921f19bd1096721eac61",
+        "training_scope": "single_training_episode_imitation_not_generalization",
+        "diagnostic_case": "select_fruit:42",
+        "diagnostic_intervention": "late_heads_early_adapters",
+        "hybrid_parameters_sha256": "1472fb76e48e674043916718745e598f61f5edfd5d1cf899af6e98f820d573c6",
+        "source_early_sft_sha256": "f928039e3a2b4334c35878a7ae7e7f12c7b92672868183d8149ca65bda68071d",
+        "source_late_sft_sha256": "c2102649659e8ffd355c83fb170dad51f3bc759832994c289ab2ea50f1889e3c",
+        "stage": "sft",
+        "backend": "RLinf",
+        "openpi_revision": "788ef1f20e655de5bb40869fb7b7fcdd49732387",
+        "control_hz": 10,
+        "replan_steps": 5,
+        "max_control_steps": 600,
+        "sampler": "JAX seeded noise",
+        "wall_seconds": 107.72207388654351
+      }
+    }
+  ],
+  "complete": true,
+  "interpretation_limit": "Each hybrid executes once from this fixed seen reset and sampler. The swaps isolate parameter-group interactions here; they do not establish generalization, a universal cause, or improvement of a normally trained checkpoint."
+}

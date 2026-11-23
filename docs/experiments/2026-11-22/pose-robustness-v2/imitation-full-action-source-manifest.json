@@ -1,0 +1,37 @@
+{
+  "kind": "executed_full_action_diagnostic_sources",
+  "files": {
+    "scripts/pi05_runtime.py": {
+      "bytes": 9940,
+      "sha256": "9efb1bc5f744d3df3f2bce5b1c86ac0035e17ab5c2e269dcabb5fa0a83f9979f"
+    },
+    "scripts/train_reference_aligned_fruit.py": {
+      "bytes": 57975,
+      "sha256": "d338132ecd4ee5266ec8a0794b33a204bea59409faf69daadd2a0c33bf3a389a"
+    },
+    "scripts/audit_action_expert_updates.py": {
+      "bytes": 3350,
+      "sha256": "998af8a47ee2e0cd8f6d37a37829c90f612a26afcae04600d0f1b55226c1e9bf"
+    },
+    "scripts/verify_pose_imitation_gate.py": {
+      "bytes": 4964,
+      "sha256": "189de530cf5bfcb3c387226e62020624e86bf938916f0b39c43d9213f6965193"
+    },
+    "configs/imitation-gate-flower-full-action-v1.json": {
+      "bytes": 2334,
+      "sha256": "4c5795fa84727d9977d62fcd6494b4e0f98791fad5ee6a9191743c6fc148d52e"
+    },
+    "docs/experiments/2026-11-22/pose-robustness-v2/review-flower-control-traces.py": {
+      "bytes": 3404,
+      "sha256": "f0e6f62b25f23fe895453283955bfd4878fbbfedd8e74e85374beeb435c2cccc"
+    },
+    "docs/experiments/2026-11-22/pose-robustness-v2/run-imitation-flower-full-action.sh": {
+      "bytes": 1026,
+      "sha256": "9bc4cef85e93b657881e04267afa449ecf366980d1d60e6da4864dd56bd64a4a"
+    },
+    "docs/experiments/2026-11-22/pose-robustness-v2/run-imitation-flower-full-action-evaluation.sh": {
+      "bytes": 749,
+      "sha256": "6a9957d0f0f752455c220c59dfbb869f90dfc493916a63b2cc5f4872cd2b1ff2"
+    }
+  }
+}

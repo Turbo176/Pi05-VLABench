@@ -1,0 +1,58 @@
+{
+  "registered_at": "2026-11-22T21:53:20.946381+08:00",
+  "purpose": "Bounded representation-adaptation diagnostic on the same seen rose-42 demonstration; not a multitask result.",
+  "case": {
+    "task": "insert_flower",
+    "seed": 42,
+    "render_samples": 0,
+    "training_split": "lerobot-tritask-msaa0-v2/train"
+  },
+  "initialization": "Fresh published weights and unchanged reference normalization; retain canonical Euler labels and official five-control interface.",
+  "train": {
+    "updates": 300,
+    "save_every": 100,
+    "learning_rate": 0.0001,
+    "action_expert_lora_rank": 16,
+    "vlm_lora_rank": 8,
+    "train_action_heads": true,
+    "image_augmentation": false,
+    "micro_batch_size": 2,
+    "gradient_accumulation": 4,
+    "gripper_loss_weight": 1,
+    "action_loss": "all",
+    "shortest_euler": true
+  },
+  "candidates": [
+    100,
+    300
+  ],
+  "gate": {
+    "independent_environment_resets": 3,
+    "sampler_seed": 42,
+    "max_controls_per_repeat": 600,
+    "required_successes": 3,
+    "allow_early_rejection_after_completed_failure": true,
+    "expert_action_replay_does_not_count": true
+  },
+  "failed_prior_diagnostic": "Original-Euler, canonical-angle, learning-rate, and one-control gates failed. The explicit-state update-100 gate failed. Its update-300 gate is still running when this follow-up is registered.",
+  "next_step": "Retain both registered outcomes. Do not start PPO; never initialize the reported multitask model from a single-scene diagnostic.",
+  "comparison_run": "imitation-flower42-canonical-lr1e4-300",
+  "hypothesis": "Action-only adapters have not learned a successful closed-loop insertion. Allowing measured visual/language representation adaptation may fit this demonstration sufficiently for autonomous execution. Success is not assumed.",
+  "changed_factors": {
+    "vlm_lora_rank": {
+      "before": 0,
+      "after": 8
+    },
+    "micro_batch_size": {
+      "before": 4,
+      "after": 2
+    },
+    "gradient_accumulation": {
+      "before": 2,
+      "after": 4
+    }
+  },
+  "effective_batch_windows": 8,
+  "reporting_limit": "The VLM adapters and minibatch grouping both change. This is a bounded fitting recipe, not a single-factor causal ablation. Trained on one complete training episode only; cannot initialize the reported multitask model.",
+  "start_condition": "The completed measured-state update-300 gate must first reject. Do not overlap new training with that gate."
+}

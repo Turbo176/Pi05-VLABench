@@ -1,0 +1,38 @@
+{
+  "registered_at": "2026-11-22T20:28:14.0082563+08:00",
+  "purpose": "Check the same autonomous imitation gate on one fixed seen rose demonstration, before returning to a shared two-task checkpoint.",
+  "case": {
+    "task": "insert_flower",
+    "seed": 42,
+    "render_samples": 0,
+    "training_split": "lerobot-tritask-msaa0-v2/train"
+  },
+  "initialization": "Fresh published VLABench primitive reference; unchanged upstream normalization, Euler label convention, sampler and deployment controller.",
+  "train": {
+    "updates": 300,
+    "save_every": 100,
+    "learning_rate": 1E-05,
+    "action_expert_lora_rank": 16,
+    "vlm_lora_rank": 0,
+    "train_action_heads": true,
+    "image_augmentation": false,
+    "micro_batch_size": 4,
+    "gradient_accumulation": 2,
+    "gripper_loss_weight": 1,
+    "action_loss": "all"
+  },
+  "candidates": [
+    100,
+    300
+  ],
+  "gate": {
+    "independent_environment_resets": 3,
+    "sampler_seed": 42,
+    "max_controls_per_repeat": 600,
+    "required_successes": 3,
+    "allow_early_rejection_after_completed_failure": true,
+    "expert_action_replay_does_not_count": true
+  },
+  "failed_prior_diagnostic": "Fruit-42 update 100 passed three identical autonomous executions; update 300 failed its first completed 600-control execution. Those outcomes do not establish a causal explanation or success on flowers.",
+  "next_step": "Retain both registered outcomes. Do not start PPO; never initialize the reported multitask model from a single-scene diagnostic."
+}

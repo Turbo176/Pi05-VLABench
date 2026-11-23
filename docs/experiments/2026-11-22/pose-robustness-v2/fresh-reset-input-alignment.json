@@ -1,0 +1,93 @@
+{
+  "kind": "fresh_reset_to_stored_lerobot_input_alignment_not_policy_evaluation",
+  "script_sha256": "b9e585476d7f1f3fe5e8166759900fb120f83ab0e6f5b05b0985c836d29783d9",
+  "policy_updates": 0,
+  "model_loaded": false,
+  "measurements": [
+    {
+      "task": "select_fruit",
+      "seed": 42,
+      "initialization_sha256": "d6c5c851d32135ffa16ce7e7a5da550fa55aae608e14a3807b7416c6aeccf75f",
+      "state_max_abs_difference": 3.7579555023370403e-08,
+      "cameras": {
+        "forward": {
+          "max_pixel_difference": 0,
+          "rgb_sha256": "b71b5c6c92338c9ea2a3fee342e762235c2f20aecc5a969a65b3c32c23465adf"
+        },
+        "right": {
+          "max_pixel_difference": 0,
+          "rgb_sha256": "111be543d0dd5eb675c7af7b0553c364ee13abc5e22ea77f51cd5c588a14d093"
+        },
+        "franka/Franka_wrist_cam": {
+          "max_pixel_difference": 0,
+          "rgb_sha256": "5f6eb36dce7c83af61e37090ade8a76a9fad8ac15abd72962d0f71583b602484"
+        }
+      },
+      "instruction_matches": true,
+      "input_fields": [
+        "observation/image",
+        "observation/second_image",
+        "observation/state",
+        "observation/wrist_image",
+        "prompt"
+      ]
+    },
+    {
+      "task": "insert_flower",
+      "seed": 42,
+      "initialization_sha256": "ef0e26dad0d344397e4bcdd3e4a410112bc8b88699866e03f5182a9507d8c134",
+      "state_max_abs_difference": 3.756494515450015e-08,
+      "cameras": {
+        "forward": {
+          "max_pixel_difference": 0,
+          "rgb_sha256": "8016557cb94e39358814f4a14494126481f0dd1f7afdf76932a24649b0214119"
+        },
+        "right": {
+          "max_pixel_difference": 0,
+          "rgb_sha256": "c840283666dd22b5c89b361b0f9903819a79f4d9f07c00019262c26d18fd1f7e"
+        },
+        "franka/Franka_wrist_cam": {
+          "max_pixel_difference": 0,
+          "rgb_sha256": "04609274e3b813c3e342552489a6a6b3e351fe8e3d360969f55842503d910808"
+        }
+      },
+      "instruction_matches": true,
+      "input_fields": [
+        "observation/image",
+        "observation/second_image",
+        "observation/state",
+        "observation/wrist_image",
+        "prompt"
+      ]
+    },
+    {
+      "task": "insert_flower",
+      "seed": 111,
+      "initialization_sha256": "454b36a3d3f6f1b3c3b4c53ac5e946d07538fff87f1c19466fbd49af6649ca3b",
+      "state_max_abs_difference": 3.756494515450015e-08,
+      "cameras": {
+        "forward": {
+          "max_pixel_difference": 0,
+          "rgb_sha256": "08a0cbf22736c19276d21b77eaa1c4a6710832ae9d00e225db09552f999301cf"
+        },
+        "right": {
+          "max_pixel_difference": 0,
+          "rgb_sha256": "85346257e165a99875b8363387532c7e3520578269404bb818991db9cc71e66a"
+        },
+        "franka/Franka_wrist_cam": {
+          "max_pixel_difference": 0,
+          "rgb_sha256": "d1007fcce162bf42efb9a6c45d03d717d8f78035fe79fac4812959bf8c424746"
+        }
+      },
+      "instruction_matches": true,
+      "input_fields": [
+        "observation/image",
+        "observation/second_image",
+        "observation/state",
+        "observation/wrist_image",
+        "prompt"
+      ]
+    }
+  ],
+  "all_passed": true
+}

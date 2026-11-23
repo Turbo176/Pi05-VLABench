@@ -1,0 +1,47 @@
+{
+  "registered_at": "2026-11-22T21:02:40.731811+08:00",
+  "purpose": "Bounded one-factor step-size comparison on the same seen rose episode after the canonical-angle recipe still failed.",
+  "case": {
+    "task": "insert_flower",
+    "seed": 42,
+    "render_samples": 0,
+    "training_split": "lerobot-tritask-msaa0-v2/train"
+  },
+  "initialization": "Fresh published reference; same single rose-42 demonstration, canonical labels, reference normalization, frozen VLM, trainable action heads and LoRA, batch, sampling seed and deployment. Only learning rate differs from the canonical comparison.",
+  "train": {
+    "updates": 300,
+    "save_every": 100,
+    "learning_rate": 0.0001,
+    "action_expert_lora_rank": 16,
+    "vlm_lora_rank": 0,
+    "train_action_heads": true,
+    "image_augmentation": false,
+    "micro_batch_size": 4,
+    "gradient_accumulation": 2,
+    "gripper_loss_weight": 1,
+    "action_loss": "all",
+    "shortest_euler": true
+  },
+  "candidates": [
+    100,
+    300
+  ],
+  "gate": {
+    "independent_environment_resets": 3,
+    "sampler_seed": 42,
+    "max_controls_per_repeat": 600,
+    "required_successes": 3,
+    "allow_early_rejection_after_completed_failure": true,
+    "expert_action_replay_does_not_count": true
+  },
+  "failed_prior_diagnostic": "Canonical-angle updates 100 and 300 each failed their first complete 600-control execution; no later repeats were counted.",
+  "next_step": "Retain both registered outcomes. Do not start PPO; never initialize the reported multitask model from a single-scene diagnostic.",
+  "comparison_run": "imitation-flower42-canonical-300",
+  "changed_factor": {
+    "learning_rate": {
+      "before": 1e-05,
+      "after": 0.0001
+    }
+  },
+  "hypothesis": "Under the original one-scene recipe, fixed-noise physical-coordinate flow error decreased but inference position error barely improved; canonical update 300 grasped transiently but failed insertion. A larger step size may fit the recorded trajectory more closely. Autonomous success is not assumed."
+}

@@ -1,0 +1,233 @@
+{
+  "format": "LeRobot v2.1",
+  "fps": 10,
+  "splits": {
+    "train": {
+      "episodes": 24,
+      "frames": 3565,
+      "all_frames_verified": true,
+      "action_chunks": {
+        "horizon": 50,
+        "positions_verified": 72
+      },
+      "episodes_detail": [
+        {
+          "source": "runs/fruit-expert-expansion-20261121/rendered/2010/episode.h5",
+          "split": "train",
+          "task": "select_fruit",
+          "seed": 2010,
+          "instruction": "Put the pear into the plate_seen",
+          "frames": 133,
+          "initial_state_sha256": "6cd301f31eeafaf66662ece8ffcd1b823035ba5d64b3a93d3d0c570d5f4b8399"
+        },
+        {
+          "source": "runs/fruit-expert-expansion-20261121/rendered/2011/episode.h5",
+          "split": "train",
+          "task": "select_fruit",
+          "seed": 2011,
+          "instruction": "Put the orange into the plate_seen",
+          "frames": 142,
+          "initial_state_sha256": "dd72303af846085ae3632867ec1f5a5613e1257dd86aa27b59bf452dc1e815da"
+        },
+        {
+          "source": "runs/fruit-expert-expansion-20261121/rendered/2012/episode.h5",
+          "split": "train",
+          "task": "select_fruit",
+          "seed": 2012,
+          "instruction": "Put the pear into the plate_seen",
+          "frames": 152,
+          "initial_state_sha256": "e261429fdaf1e959d296236ab248405d1315a6df3a7dcfdda84b038d6bbe5c7b"
+        },
+        {
+          "source": "runs/fruit-expert-expansion-20261121/rendered/2013/episode.h5",
+          "split": "train",
+          "task": "select_fruit",
+          "seed": 2013,
+          "instruction": "Put the apple into the plate_seen",
+          "frames": 146,
+          "initial_state_sha256": "8f52caaf46e7a72bf2816c2be598e3e49d39729446d9128a7756e2bc070cc409"
+        },
+        {
+          "source": "runs/fruit-expert-expansion-20261121/rendered/2014/episode.h5",
+          "split": "train",
+          "task": "select_fruit",
+          "seed": 2014,
+          "instruction": "Put the pear into the plate_seen",
+          "frames": 129,
+          "initial_state_sha256": "8b58989305469e72c2497c703d275c511fe23b12dae50a9799d487d036cf9c67"
+        },
+        {
+          "source": "runs/fruit-expert-expansion-20261121/rendered/2015/episode.h5",
+          "split": "train",
+          "task": "select_fruit",
+          "seed": 2015,
+          "instruction": "Put the apple into the plate_seen",
+          "frames": 149,
+          "initial_state_sha256": "83bce27242c02252e01581324fecaf850a201532e0c438230b5e185c405edb90"
+        },
+        {
+          "source": "runs/fruit-expert-expansion-20261121/rendered/2016/episode.h5",
+          "split": "train",
+          "task": "select_fruit",
+          "seed": 2016,
+          "instruction": "Put the orange into the plate_seen",
+          "frames": 172,
+          "initial_state_sha256": "82e92c5309958de0b5bdfc2581a72faa5cf12b3c0ac1540fdacdff4ea19a5340"
+        },
+        {
+          "source": "runs/fruit-expert-expansion-20261121/rendered/2017/episode.h5",
+          "split": "train",
+          "task": "select_fruit",
+          "seed": 2017,
+          "instruction": "Put the pear into the plate_seen",
+          "frames": 175,
+          "initial_state_sha256": "0eefb4952bd4437c8f5d7960259d758f5658b68aee4c4c5688aea46aaf480f57"
+        },
+        {
+          "source": "runs/fruit-expert-expansion-20261121/rendered/2018/episode.h5",
+          "split": "train",
+          "task": "select_fruit",
+          "seed": 2018,
+          "instruction": "Put the apple into the plate_seen",
+          "frames": 166,
+          "initial_state_sha256": "4398c19e5c0daaf65ed5b14520a6b7ba5875d65524e607ef90d568858e46d8fa"
+        },
+        {
+          "source": "runs/fruit-expert-expansion-20261121/rendered/2019/episode.h5",
+          "split": "train",
+          "task": "select_fruit",
+          "seed": 2019,
+          "instruction": "Put the banana into the plate_seen",
+          "frames": 156,
+          "initial_state_sha256": "adac3178fce4bf95c6d4acc7d29b7377aebfd4ee0fa342e9e141483f2245c352"
+        },
+        {
+          "source": "runs/fruit-expert-expansion-20261121/rendered/2020/episode.h5",
+          "split": "train",
+          "task": "select_fruit",
+          "seed": 2020,
+          "instruction": "Put the pear into the plate_seen",
+          "frames": 165,
+          "initial_state_sha256": "ed85bb3910d9c3705f53a42688f281bbd95cbc3a2a85fc442e5261413b7687ba"
+        },
+        {
+          "source": "runs/fruit-expert-expansion-20261121/rendered/2021/episode.h5",
+          "split": "train",
+          "task": "select_fruit",
+          "seed": 2021,
+          "instruction": "Put the orange into the plate_seen",
+          "frames": 127,
+          "initial_state_sha256": "9785e1d7a4fba693b778cb58bc703f127b88e1ccf3dbc946a9bcd46b301f2c1b"
+        },
+        {
+          "source": "runs/fruit-expert-expansion-20261121/rendered/2022/episode.h5",
+          "split": "train",
+          "task": "select_fruit",
+          "seed": 2022,
+          "instruction": "Put the pear into the plate_seen",
+          "frames": 132,
+          "initial_state_sha256": "798d9216e31d2e7b99c97a4da7c603aabf06d2ebf7c072ec795d9bf6647d3c60"
+        },
+        {
+          "source": "runs/fruit-expert-expansion-20261121/rendered/2023/episode.h5",
+          "split": "train",
+          "task": "select_fruit",
+          "seed": 2023,
+          "instruction": "Put the pear into the plate_seen",
+          "frames": 147,
+          "initial_state_sha256": "b254a6d213e2127bd47bd9ad1fdb419afce5c6157a7131846bac488f6effd92f"
+        },
+        {
+          "source": "runs/fruit-expert-expansion-20261121/rendered/2024/episode.h5",
+          "split": "train",
+          "task": "select_fruit",
+          "seed": 2024,
+          "instruction": "Put the banana into the plate_seen",
+          "frames": 163,
+          "initial_state_sha256": "1fc0c08439ae43617d2b33f0bae136d64062a6a92bdbb9475be8cc20677d2e40"
+        },
+        {
+          "source": "runs/fruit-expert-expansion-20261121/rendered/2025/episode.h5",
+          "split": "train",
+          "task": "select_fruit",
+          "seed": 2025,
+          "instruction": "Put the pear into the plate_seen",
+          "frames": 124,
+          "initial_state_sha256": "5c22035cfda4c7a5705463d844885ec007ee20a5b815f23832dbc8baa14030ff"
+        },
+        {
+          "source": "runs/fruit-expert-expansion-20261121/rendered/2026/episode.h5",
+          "split": "train",
+          "task": "select_fruit",
+          "seed": 2026,
+          "instruction": "Put the orange into the plate_seen",
+          "frames": 161,
+          "initial_state_sha256": "d8e762b6938e2c91b87a027b0958d2aa54b589917a2758baa6e94d3f3f11f66a"
+        },
+        {
+          "source": "runs/fruit-expert-expansion-20261121/rendered/2027/episode.h5",
+          "split": "train",
+          "task": "select_fruit",
+          "seed": 2027,
+          "instruction": "Put the pear into the plate_seen",
+          "frames": 146,
+          "initial_state_sha256": "96f9221d6b5501821da05d8a82ce900985a69752e2a2a1af859cbf9af066e9d6"
+        },
+        {
+          "source": "runs/fruit-expert-expansion-20261121/rendered/2028/episode.h5",
+          "split": "train",
+          "task": "select_fruit",
+          "seed": 2028,
+          "instruction": "Put the banana into the plate_seen",
+          "frames": 155,
+          "initial_state_sha256": "84b73cdd1bbb6d028c589103b007f481a01c16c9c1101938feab346190d74b25"
+        },
+        {
+          "source": "runs/fruit-expert-expansion-20261121/rendered/2029/episode.h5",
+          "split": "train",
+          "task": "select_fruit",
+          "seed": 2029,
+          "instruction": "Put the pear into the plate_seen",
+          "frames": 145,
+          "initial_state_sha256": "9b94c9293de29e37e6f4a7f0ecac29e001b06cd53794bca359b88938406b9cf6"
+        },
+        {
+          "source": "runs/fruit-expert-expansion-20261121/rendered/2030/episode.h5",
+          "split": "train",
+          "task": "select_fruit",
+          "seed": 2030,
+          "instruction": "Put the pear into the plate_seen",
+          "frames": 139,
+          "initial_state_sha256": "4e2c43206374f4e7832648a9474381b7cffca5b864b68b0a424a34dcaeb1854f"
+        },
+        {
+          "source": "runs/fruit-expert-expansion-20261121/rendered/2031/episode.h5",
+          "split": "train",
+          "task": "select_fruit",
+          "seed": 2031,
+          "instruction": "Put the orange into the plate_seen",
+          "frames": 165,
+          "initial_state_sha256": "e8bf730b6215e61b2c2046dd75a92cc81d0a5ffd8f82bd37252a1716529e4c46"
+        },
+        {
+          "source": "runs/fruit-expert-expansion-20261121/rendered/2032/episode.h5",
+          "split": "train",
+          "task": "select_fruit",
+          "seed": 2032,
+          "instruction": "Put the pear into the plate_seen",
+          "frames": 133,
+          "initial_state_sha256": "03b1f244c784f9c7c393afa02eeb67bb01df3ef125a712b0713e0bda74c8f917"
+        },
+        {
+          "source": "runs/fruit-expert-expansion-20261121/rendered/2033/episode.h5",
+          "split": "train",
+          "task": "select_fruit",
+          "seed": 2033,
+          "instruction": "Put the banana into the plate_seen",
+          "frames": 143,
+          "initial_state_sha256": "cfdb1a18c1373739699285ea0ea77cc40222f81e68e61a41115c3020e2ed0b92"
+        }
+      ]
+    }
+  }
+}

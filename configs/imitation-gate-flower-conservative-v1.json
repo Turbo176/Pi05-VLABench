@@ -1,0 +1,47 @@
+{
+  "registered_at": "2026-11-22T22:21:57.530017+08:00",
+  "purpose": "Test whether a tenfold smaller actual SFT update preserves autonomous reference insertion on the seen start.",
+  "case": {
+    "task": "insert_flower",
+    "seed": 42,
+    "render_samples": 0,
+    "training_split": "lerobot-tritask-msaa0-v2/train"
+  },
+  "initialization": "Fresh published VLABench primitive reference; unchanged upstream normalization, Euler label convention, sampler and deployment controller.",
+  "train": {
+    "updates": 100,
+    "save_every": 0,
+    "learning_rate": 1e-06,
+    "action_expert_lora_rank": 16,
+    "vlm_lora_rank": 0,
+    "train_action_heads": true,
+    "image_augmentation": false,
+    "micro_batch_size": 4,
+    "gradient_accumulation": 2,
+    "gripper_loss_weight": 1,
+    "action_loss": "all"
+  },
+  "candidates": [
+    100
+  ],
+  "gate": {
+    "independent_environment_resets": 3,
+    "sampler_seed": 42,
+    "max_controls_per_repeat": 600,
+    "required_successes": 3,
+    "allow_early_rejection_after_completed_failure": true,
+    "expert_action_replay_does_not_count": true
+  },
+  "failed_prior_diagnostic": "Both state and VLM registered checkpoints failed. The unchanged reference passed 3/3 at 211 controls. Action-quantile checks are ongoing when this is registered.",
+  "next_step": "Retain both registered outcomes. Do not start PPO; never initialize the reported multitask model from a single-scene diagnostic.",
+  "comparison_run": "imitation-flower42-reference-300/checkpoint-0100",
+  "changed_factor": {
+    "learning_rate": {
+      "before": 1e-05,
+      "after": 1e-06
+    }
+  },
+  "hypothesis": "The unchanged reference passes three times while tested SFT updates regress. A smaller update may retain the pretrained behavior. Passing this gate would establish trained-policy execution, not evidence that SFT acquired or improved insertion.",
+  "reporting_limit": "Use unchanged published normalization, original Euler labels, disabled discrete-state input and action-only adapters/heads. Reference already solves this case; do not claim imitation was newly acquired or success improved. No single-scene weights may initialize the formal multitask model.",
+  "start_condition": "Wait for completion of action-norm-100 so only one evaluation model overlaps training."
+}

@@ -1,0 +1,297 @@
+{
+  "kind": "real_dataset_transform_and_controller_oracle_audit",
+  "model_loaded": false,
+  "optimizer_updates": 0,
+  "source_sha256": "0bede33d6c2ff4abd1546da3e8618d36e0e019062052c1f369100b1333281ee9",
+  "norm_stats_sha256": "bce33fc1831830d953ef9bc57e520c02ee44e02b7ad07f27ce92b931a879384f",
+  "dataset_verification_sha256": {
+    ".local/reference-aligned/lerobot-tritask-msaa0-v2": "912661fbd8af7f4f55479b902dcce8e92c28abe5c924dab399bc789e993c11e4",
+    ".local/reference-aligned/lerobot-msaa0-small-extras": "f9ef36fe5aeb57fbbcac4b0d3afe0071ba61092ec62087f731a789f3fb10948c",
+    ".local/reference-aligned/lerobot-msaa0-flower-105-134": "83fd93e294ca98402ab6b387c1137704b30679d03fb6e553d21b1f843c28175e"
+  },
+  "label_statistics": {
+    "insert_flower": {
+      "episodes": 17,
+      "frames": 2918,
+      "instructions": {
+        "Insert the rose into the vase_seen.": 14,
+        "Insert the tulip into the vase_seen.": 3
+      },
+      "closed_frames": 1833,
+      "closed_fraction": 0.6281699794379713,
+      "gripper_transitions": 17,
+      "normalized_label_quantiles": [
+        [
+          -7.28342427677815,
+          -3.9810851028865364,
+          -7.089989784363573,
+          -1.000152808176215,
+          0.0706377108614038,
+          -0.12740665362804493,
+          -1.0
+        ],
+        [
+          -5.740111915239516,
+          -2.104094698934559,
+          -6.0781367823609855,
+          -0.9999460742585468,
+          0.12003271479735246,
+          -0.10103867366682465,
+          -1.0
+        ],
+        [
+          0.13721288496810158,
+          0.33040760261426827,
+          -0.19393087084428867,
+          0.00048648153456909426,
+          0.2880249659418199,
+          0.008240652563516915,
+          -1.0
+        ],
+        [
+          5.121819249185005,
+          5.6685521701938475,
+          6.4611687071686,
+          0.99073870152633,
+          8.096820268364556,
+          0.14014109346002068,
+          1.000398079217764
+        ],
+        [
+          8.128249164221328,
+          8.291090106438787,
+          6.783446066385437,
+          0.9950234764479022,
+          8.439901066969998,
+          0.9448369523234366,
+          1.000398079217764
+        ]
+      ],
+      "normalized_outside_minus1_plus1_fraction": [
+        0.5196367374914325,
+        0.3837217272104181,
+        0.6722755311857437,
+        0.0041809458533241944,
+        0.1890335846470185,
+        0.0,
+        0.3456134338588074
+      ],
+      "all_windows_round_trip_max_abs_error": 7.940414130658269e-07
+    },
+    "select_fruit": {
+      "episodes": 47,
+      "frames": 6986,
+      "instructions": {
+        "Put the apple into the plate_seen": 9,
+        "Put the pear into the plate_seen": 16,
+        "Put the orange into the plate_seen": 10,
+        "Put the banana into the plate_seen": 12
+      },
+      "closed_frames": 3698,
+      "closed_fraction": 0.5293444030918981,
+      "gripper_transitions": 93,
+      "normalized_label_quantiles": [
+        [
+          -8.50989252379826,
+          -8.331243051897008,
+          -7.179251986412047,
+          -1.0003541516759051,
+          -7.259307453701983,
+          -0.6391348389891144,
+          -1.0
+        ],
+        [
+          -5.636838191326423,
+          -5.547864845662517,
+          -5.709125064910992,
+          -1.0000684769849817,
+          0.08402867328263097,
+          2.4119892250595854e-05,
+          -1.0
+        ],
+        [
+          -0.007385221216702709,
+          0.16381167215229264,
+          -0.24631245504620203,
+          -0.00015545271345307476,
+          0.2716266220511332,
+          0.006435048083260897,
+          -1.0
+        ],
+        [
+          5.803201331810351,
+          5.979236108659089,
+          3.635454297170868,
+          0.9996044518005173,
+          0.5134823178526158,
+          0.012142488896732367,
+          1.000398079217764
+        ],
+        [
+          8.951620095627025,
+          8.494284456615476,
+          6.7070678672644055,
+          1.0004001526562551,
+          5.2681468065458805,
+          0.0970491884362108,
+          1.000398079217764
+        ]
+      ],
+      "normalized_outside_minus1_plus1_fraction": [
+        0.644102490695677,
+        0.6123103349556256,
+        0.44312911537360433,
+        0.018894932722588034,
+        0.006169481820784426,
+        0.0,
+        0.47001145147437734
+      ],
+      "all_windows_round_trip_max_abs_error": 1.2731267302612537e-06
+    }
+  },
+  "oracle_replays": [
+    {
+      "seed": 42,
+      "task": "select_fruit",
+      "instruction": "Put the apple into the plate_seen",
+      "prompt_mode": "official",
+      "camera_names": [
+        "right",
+        "left",
+        "forward",
+        "franka/Franka_wrist_cam"
+      ],
+      "model_render_options": {
+        "height": 480,
+        "width": 480
+      },
+      "evaluation_script_sha256": "4301d17b9abeacbd0ba04b8fd5d6c14552274f3594f23d9ae0d6dca6ef6b65c7",
+      "render_samples": 0,
+      "initial_policy_rgb_sha256": "1d40a567e210675e20450e3f6ec19a77b61137d516729a97bbb0a952076e1976",
+      "initial_state_sha256": "d6c5c851d32135ffa16ce7e7a5da550fa55aae608e14a3807b7416c6aeccf75f",
+      "initial_rgb_sha256": "a8db24b3e070aa2f18fdfac680875c66c1091bcb44cd2e31d5dce4a507c78c40",
+      "first_action_sha256": "877ea26846e98088dd6f41882cafdeb628be28374205b727de7f04d4e11d2b1c",
+      "success": true,
+      "stop_reason": "success",
+      "failure_type": null,
+      "steps": 132,
+      "policy_calls": 27,
+      "environment_last": true,
+      "ik_nonconverged_steps": 0,
+      "target_max_displacement_m": 0.6140110101818479,
+      "target_max_lift_m": 0.10177747922907343,
+      "min_gripper_to_target_center_m": 0.005115848612554264,
+      "min_close_command_to_target_center_m": 0.005115848612554264,
+      "gripper_target_contact_steps": 78,
+      "action_sha256": "fff840d457d4eb149799d21f1021fdbce5b0789c5d7113891b7696122935259d",
+      "transform_and_input_maxima": {
+        "observation/image_pixel_mae": 0.010881696428571428,
+        "observation/second_image_pixel_mae": 0.010429953231292517,
+        "observation/wrist_image_pixel_mae": 0.03841810161564626,
+        "round_trip_abs_error": 1.0135608148331698e-06,
+        "base_0_rgb_model_image_mae": 0.010881696827709675,
+        "left_wrist_0_rgb_model_image_mae": 0.01042995322495699,
+        "right_wrist_0_rgb_model_image_mae": 0.03841810300946236,
+        "measured_state_error": 4.3553437325538624e-06
+      },
+      "expert_label_oracle": true,
+      "model_loaded": false
+    },
+    {
+      "seed": 42,
+      "task": "insert_flower",
+      "instruction": "Insert the rose into the vase_seen.",
+      "prompt_mode": "official",
+      "camera_names": [
+        "right",
+        "left",
+        "forward",
+        "franka/Franka_wrist_cam"
+      ],
+      "model_render_options": {
+        "height": 480,
+        "width": 480
+      },
+      "evaluation_script_sha256": "4301d17b9abeacbd0ba04b8fd5d6c14552274f3594f23d9ae0d6dca6ef6b65c7",
+      "render_samples": 0,
+      "initial_policy_rgb_sha256": "796f727fffcbc01a0104e7972cdb835287b0c8d2e84e32e2aea36df10eb962a8",
+      "initial_state_sha256": "ef0e26dad0d344397e4bcdd3e4a410112bc8b88699866e03f5182a9507d8c134",
+      "initial_rgb_sha256": "5ba8135d33dec05cbec7a75cf4aeb5d7afe9a9dfa40d6b4ae0e51d6afcb0018e",
+      "first_action_sha256": "179cd3e7922d3ff3e9e76706ce207e34b81ec2cab03872c1bace6fff138aafa2",
+      "success": true,
+      "stop_reason": "success",
+      "failure_type": null,
+      "steps": 179,
+      "policy_calls": 36,
+      "environment_last": true,
+      "ik_nonconverged_steps": 0,
+      "target_max_displacement_m": 0.6859057870804562,
+      "target_max_lift_m": 0.3648249233635511,
+      "min_gripper_to_target_center_m": 0.030968691415412176,
+      "min_close_command_to_target_center_m": 0.030968691415412176,
+      "gripper_target_contact_steps": 118,
+      "action_sha256": "108114d4527ca9659f0f1c1e69f856d7b4a7a1ba4fd9b1fbfceb5354328ada8c",
+      "transform_and_input_maxima": {
+        "observation/image_pixel_mae": 0.2612138605442177,
+        "observation/second_image_pixel_mae": 0.31982754039115646,
+        "observation/wrist_image_pixel_mae": 0.7175276360544217,
+        "round_trip_abs_error": 3.887321193829507e-07,
+        "base_0_rgb_model_image_mae": 0.26121386885643005,
+        "left_wrist_0_rgb_model_image_mae": 0.31982752680778503,
+        "right_wrist_0_rgb_model_image_mae": 0.7175276279449463,
+        "measured_state_error": 0.0015347386526203266
+      },
+      "expert_label_oracle": true,
+      "model_loaded": false
+    },
+    {
+      "seed": 111,
+      "task": "insert_flower",
+      "instruction": "Insert the tulip into the vase_seen.",
+      "prompt_mode": "official",
+      "camera_names": [
+        "right",
+        "left",
+        "forward",
+        "franka/Franka_wrist_cam"
+      ],
+      "model_render_options": {
+        "height": 480,
+        "width": 480
+      },
+      "evaluation_script_sha256": "4301d17b9abeacbd0ba04b8fd5d6c14552274f3594f23d9ae0d6dca6ef6b65c7",
+      "render_samples": 0,
+      "initial_policy_rgb_sha256": "b7254e1285eff72ff004fb61bbf6036c69e8a0a625c8350048132ea11e3d1fc2",
+      "initial_state_sha256": "454b36a3d3f6f1b3c3b4c53ac5e946d07538fff87f1c19466fbd49af6649ca3b",
+      "initial_rgb_sha256": "161bf5a2f26b329619a8a6a0f09f74c54b343add96af240ccb277aed35e1d4c3",
+      "first_action_sha256": "bc76384129d9fffc7d16d092389d5e59ce03fbcbaf29a9f1596d6af83ff1410c",
+      "success": true,
+      "stop_reason": "success",
+      "failure_type": null,
+      "steps": 171,
+      "policy_calls": 35,
+      "environment_last": true,
+      "ik_nonconverged_steps": 0,
+      "target_max_displacement_m": 0.6108070946874318,
+      "target_max_lift_m": 0.38412368038365485,
+      "min_gripper_to_target_center_m": 0.0324164345776686,
+      "min_close_command_to_target_center_m": 0.0324164345776686,
+      "gripper_target_contact_steps": 114,
+      "action_sha256": "a2e4d3b02ea342a41bc4e23780acdbea19d4132620c45b2e360ba7fd795c8705",
+      "transform_and_input_maxima": {
+        "observation/image_pixel_mae": 0.15866151147959184,
+        "observation/second_image_pixel_mae": 0.3078231292517007,
+        "observation/wrist_image_pixel_mae": 0.05207004676870748,
+        "round_trip_abs_error": 4.014693786302814e-07,
+        "base_0_rgb_model_image_mae": 0.15866151452064514,
+        "left_wrist_0_rgb_model_image_mae": 0.307823121547699,
+        "right_wrist_0_rgb_model_image_mae": 0.052070047706365585,
+        "measured_state_error": 0.0019902584667566003
+      },
+      "expert_label_oracle": true,
+      "model_loaded": false
+    }
+  ],
+  "complete": true,
+  "all_selected_oracles_successful": true
+}

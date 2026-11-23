@@ -22,7 +22,7 @@ run_stage() {
         sft) weights=(--checkpoint "$sft") ;;
         ppo) weights=(--checkpoint "$ppo") ;;
     esac
-    "$python" -u "$scripts/evaluate_pi05.py" --base "$base" --stats "$stats" "${weights[@]}" \
+    "$python" -u "$scripts/evaluate_pi05.py" --base "$base" --stats "$stats" --action-space "${PI05_ACTION_SPACE:-absolute}" "${weights[@]}" \
         --stage "$stage" --suite "$suite" --workers "${PI05_EVAL_WORKERS:-1}" \
         --resume --video-dir "$result/videos" \
         --output "$result/$suite-$stage.jsonl" "$@"

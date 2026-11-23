@@ -1,0 +1,105 @@
+{
+  "kind": "offline_parameter_ablation_not_new_policy_training",
+  "results": {
+    "reference": {
+      "insert_flower": {
+        "windows": 6,
+        "xyz_mae_m": 0.006938997487114837,
+        "euler_mae_rad": 0.07852251246637147,
+        "gripper_mae": 0.16770377677850823
+      },
+      "select_fruit": {
+        "windows": 24,
+        "xyz_mae_m": 0.011080347634221555,
+        "euler_mae_rad": 0.09479385827821896,
+        "gripper_mae": 0.13519818246011264
+      },
+      "take_out_cool_drink": {
+        "windows": 6,
+        "xyz_mae_m": 0.033694018985007686,
+        "euler_mae_rad": 0.30879104501419236,
+        "gripper_mae": 0.07222868822162747
+      }
+    },
+    "heads_only": {
+      "insert_flower": {
+        "windows": 6,
+        "xyz_mae_m": 0.007876580526380366,
+        "euler_mae_rad": 0.07914795790232065,
+        "gripper_mae": 0.16895914774920243
+      },
+      "select_fruit": {
+        "windows": 24,
+        "xyz_mae_m": 0.011270659571008082,
+        "euler_mae_rad": 0.1117254450208301,
+        "gripper_mae": 0.13644020895684386
+      },
+      "take_out_cool_drink": {
+        "windows": 6,
+        "xyz_mae_m": 0.029831852130092384,
+        "euler_mae_rad": 0.2568075417988065,
+        "gripper_mae": 0.07126879416269262
+      }
+    },
+    "lora_only": {
+      "insert_flower": {
+        "windows": 6,
+        "xyz_mae_m": 0.00693939524541002,
+        "euler_mae_rad": 0.07850138785296981,
+        "gripper_mae": 0.16761722124018472
+      },
+      "select_fruit": {
+        "windows": 24,
+        "xyz_mae_m": 0.011074722720112966,
+        "euler_mae_rad": 0.09381628968847261,
+        "gripper_mae": 0.13507065472840146
+      },
+      "take_out_cool_drink": {
+        "windows": 6,
+        "xyz_mae_m": 0.0335946177771042,
+        "euler_mae_rad": 0.307129639367093,
+        "gripper_mae": 0.07209436740079919
+      }
+    },
+    "vlm_only": {
+      "insert_flower": {
+        "windows": 6,
+        "xyz_mae_m": 0.006942273003173069,
+        "euler_mae_rad": 0.07863152574914922,
+        "gripper_mae": 0.1677200591935158
+      },
+      "select_fruit": {
+        "windows": 24,
+        "xyz_mae_m": 0.01108299426646016,
+        "euler_mae_rad": 0.09661350172579942,
+        "gripper_mae": 0.13524202048140316
+      },
+      "take_out_cool_drink": {
+        "windows": 6,
+        "xyz_mae_m": 0.03372376917097114,
+        "euler_mae_rad": 0.309174318083329,
+        "gripper_mae": 0.07213367214098174
+      }
+    },
+    "action_lora_only": {
+      "insert_flower": {
+        "windows": 6,
+        "xyz_mae_m": 0.006936702781567821,
+        "euler_mae_rad": 0.07855359124460518,
+        "gripper_mae": 0.1676706998040537
+      },
+      "select_fruit": {
+        "windows": 24,
+        "xyz_mae_m": 0.01107757807590634,
+        "euler_mae_rad": 0.09414429458140626,
+        "gripper_mae": 0.13511030743824215
+      },
+      "take_out_cool_drink": {
+        "windows": 6,
+        "xyz_mae_m": 0.033587977827046,
+        "euler_mae_rad": 0.3079172095591141,
+        "gripper_mae": 0.07217679911850786
+      }
+    }
+  }
+}

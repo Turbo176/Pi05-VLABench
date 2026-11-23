@@ -1,0 +1,13 @@
+{
+  "seed": 42,
+  "instruction": "Put the apple into the plate_seen",
+  "initial_qpos_qvel_mae": 0.0,
+  "initial_qpos_qvel_max_abs": 0.0,
+  "initial_body_position_max_abs_m": 0.0,
+  "initial_body_quaternion_max_abs": 0.0,
+  "export_action_max_abs": 1.1908143227046253e-07,
+  "max_post_state_error": 0.17570612602459199,
+  "success": true,
+  "executed_steps": 132,
+  "expert_actions": 132
+}

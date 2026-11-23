@@ -1,0 +1,28 @@
+{
+  "executed_at": "2026-11-22T10:34:32.669425+00:00",
+  "authorization": "User requested data-disk cleanup after clone completion",
+  "targets": [
+    {
+      "path": ".local/autodl-backup/pose-robustness-v2/active-lerobot-rgb.zip",
+      "allocated_bytes": 2346094592,
+      "reason": "Verified duplicate archive retained locally"
+    },
+    {
+      "path": ".local/cache/reference-aligned-lerobot/datasets",
+      "allocated_bytes": 5881176064,
+      "reason": "Rebuildable Arrow cache; current trainer reads original Parquet"
+    },
+    {
+      "path": ".local/cache/fruit-expansion/datasets",
+      "allocated_bytes": 871493632,
+      "reason": "Rebuildable Arrow cache; current trainer reads original Parquet"
+    }
+  ],
+  "free_bytes_before": 5577113600,
+  "free_bytes_after": 14675877888,
+  "reclaimed_bytes": 9098764288,
+  "original_dataset_files_deleted": false,
+  "model_weights_deleted": false,
+  "experiment_records_deleted": false,
+  "all_targets_absent": true
+}

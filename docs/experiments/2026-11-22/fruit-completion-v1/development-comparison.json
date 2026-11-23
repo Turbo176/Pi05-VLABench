@@ -1,0 +1,119 @@
+{
+  "scope": "Development only; not held-out performance",
+  "cases": [
+    {
+      "seed": 1201,
+      "instruction": "Put the banana into the plate_seen",
+      "stages": {
+        "reference": {
+          "success": true,
+          "steps": 120,
+          "action_sha256": "673b6387b3c0235712c9ccada038e83b5e6c518edfd79dab11e4edffca118d3c",
+          "ik_nonconverged_steps": 0,
+          "failure_type": null
+        },
+        "sft": {
+          "success": true,
+          "steps": 135,
+          "action_sha256": "f9b5ae1358cf15c92e860148bd1addf90264eeca89f414d8735890198a3f97e6",
+          "ik_nonconverged_steps": 0,
+          "failure_type": null
+        },
+        "ppo": {
+          "success": true,
+          "steps": 174,
+          "action_sha256": "ac16e2ccb29b4e85f0d64ca643e442d3d43dcdedd5cb50bd21c435122f531c9d",
+          "ik_nonconverged_steps": 5,
+          "failure_type": null
+        }
+      }
+    },
+    {
+      "seed": 1202,
+      "instruction": "Put the pear into the plate_seen",
+      "stages": {
+        "reference": {
+          "success": true,
+          "steps": 136,
+          "action_sha256": "75a9635f16e094d8d649294ce410fc51d730eb01fe445b7a75ec0e1d122da4db",
+          "ik_nonconverged_steps": 0,
+          "failure_type": null
+        },
+        "sft": {
+          "success": true,
+          "steps": 149,
+          "action_sha256": "d93602914ab7f7492f099e0d4ff5355d8842cb49e33e9c87b30254730ef98be2",
+          "ik_nonconverged_steps": 0,
+          "failure_type": null
+        },
+        "ppo": {
+          "success": true,
+          "steps": 179,
+          "action_sha256": "9e1862693761651f8fb3cb315a9365ce8676351c409eb8f434964d63811fa5b5",
+          "ik_nonconverged_steps": 0,
+          "failure_type": null
+        }
+      }
+    },
+    {
+      "seed": 1203,
+      "instruction": "Put the orange into the plate_seen",
+      "stages": {
+        "reference": {
+          "success": false,
+          "steps": 600,
+          "action_sha256": "98fdc7b0ee643401e3254e874ccb7601deae12f6fb6a743c2838f775b4761d11",
+          "ik_nonconverged_steps": 164,
+          "failure_type": "target_moved_goal_unsatisfied"
+        },
+        "sft": {
+          "success": false,
+          "steps": 600,
+          "action_sha256": "463eaf824bd97c6678bfca36830afdfd6041cf8f25fb6dde737a0c921359a780",
+          "ik_nonconverged_steps": 139,
+          "failure_type": "target_moved_goal_unsatisfied"
+        },
+        "ppo": {
+          "success": false,
+          "steps": 600,
+          "action_sha256": "4c2809e0879e42acf40dba25dc3ef15afe6fc27c07c472255dca720c2c405fb7",
+          "ik_nonconverged_steps": 280,
+          "failure_type": "target_moved_goal_unsatisfied"
+        }
+      }
+    },
+    {
+      "seed": 1204,
+      "instruction": "Put the pear into the plate_seen",
+      "stages": {
+        "reference": {
+          "success": false,
+          "steps": 600,
+          "action_sha256": "e12102007597585ae16a85dafd948150e4c61a260dac07366492ae5fde6bf8b0",
+          "ik_nonconverged_steps": 85,
+          "failure_type": "target_moved_goal_unsatisfied"
+        },
+        "sft": {
+          "success": true,
+          "steps": 125,
+          "action_sha256": "8853b3fec88829b180c19deebc8f9071cb395309deb0867c54d4ce84936597a4",
+          "ik_nonconverged_steps": 0,
+          "failure_type": null
+        },
+        "ppo": {
+          "success": true,
+          "steps": 123,
+          "action_sha256": "89f3afa246385bf70f0fb1a7ba797c6aaff7e29c52c36d20c5b48ddb12c2c7c8",
+          "ik_nonconverged_steps": 0,
+          "failure_type": null
+        }
+      }
+    }
+  ],
+  "successes": {
+    "reference": 2,
+    "sft": 3,
+    "ppo": 3
+  },
+  "trials_per_stage": 4
+}

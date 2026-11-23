@@ -1,0 +1,12 @@
+{
+  "seed": 1201,
+  "action_trace_sha256": "e481c3566abb8c50e425e7d463d3edb57d4785a8f0cd65a40c35184c46f82fb1",
+  "first_grasp_step": 131,
+  "release_step": 276,
+  "release_closed_command": false,
+  "release_height_m": 1.5678951232569995,
+  "release_plate_xy_distance_m": 0.888814696857242,
+  "smallest_held_plate_xy_distance_m": 0.39103104667093563,
+  "smallest_held_plate_xy_distance_step": 175,
+  "max_target_lift_m": 0.830618383255133
+}

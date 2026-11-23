@@ -1,0 +1,31 @@
+{
+  "task": "insert_flower",
+  "seed": 1001,
+  "stage": "ppo",
+  "repeats": 2,
+  "comparisons": [
+    {
+      "repeat": 2,
+      "equal_result_fields": false,
+      "changed_result_fields": [
+        "action_sha256",
+        "success",
+        "steps",
+        "stop_reason"
+      ],
+      "first_differing_policy_call": {
+        "call": 1,
+        "fields": [
+          "image_sha256",
+          "actions_sha256"
+        ]
+      },
+      "policy_call_counts": [
+        120,
+        32
+      ],
+      "identical": false
+    }
+  ],
+  "all_identical": false
+}

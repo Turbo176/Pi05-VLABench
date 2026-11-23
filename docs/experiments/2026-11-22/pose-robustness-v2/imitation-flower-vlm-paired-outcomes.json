@@ -1,0 +1,67 @@
+{
+  "kind": "paired_seen_rose_reference_and_single_demonstration_sft_not_generalization",
+  "matched_profiles": true,
+  "outcomes": {
+    "published_reference": {
+      "file": "imitation-gate-published-reference-flower42.json",
+      "successes": 3,
+      "completed_repeats": 3,
+      "passed": true,
+      "controls": [
+        211,
+        211,
+        211
+      ],
+      "initial_state_sha256": "ef0e26dad0d344397e4bcdd3e4a410112bc8b88699866e03f5182a9507d8c134",
+      "initial_policy_rgb_sha256": "796f727fffcbc01a0104e7972cdb835287b0c8d2e84e32e2aea36df10eb962a8",
+      "instruction": "Insert the rose into the vase_seen.",
+      "norm_stats_sha256": "bce33fc1831830d953ef9bc57e520c02ee44e02b7ad07f27ce92b931a879384f",
+      "base_sha256": "66975306e09199efdf221e14d6f5d13ea5d6dbe42e8f921f19bd1096721eac61",
+      "replan_steps": 5,
+      "control_hz": 10,
+      "max_control_steps": 600,
+      "sampler": "JAX seeded noise",
+      "render_samples": 0
+    },
+    "sft_vlm_100": {
+      "file": "imitation-gate-vlm-100-flower42.json",
+      "successes": 0,
+      "completed_repeats": 1,
+      "passed": false,
+      "controls": [
+        600
+      ],
+      "initial_state_sha256": "ef0e26dad0d344397e4bcdd3e4a410112bc8b88699866e03f5182a9507d8c134",
+      "initial_policy_rgb_sha256": "796f727fffcbc01a0104e7972cdb835287b0c8d2e84e32e2aea36df10eb962a8",
+      "instruction": "Insert the rose into the vase_seen.",
+      "norm_stats_sha256": "bce33fc1831830d953ef9bc57e520c02ee44e02b7ad07f27ce92b931a879384f",
+      "base_sha256": "66975306e09199efdf221e14d6f5d13ea5d6dbe42e8f921f19bd1096721eac61",
+      "replan_steps": 5,
+      "control_hz": 10,
+      "max_control_steps": 600,
+      "sampler": "JAX seeded noise",
+      "render_samples": 0
+    },
+    "sft_vlm_300": {
+      "file": "imitation-gate-vlm-300-flower42.json",
+      "successes": 0,
+      "completed_repeats": 1,
+      "passed": false,
+      "controls": [
+        600
+      ],
+      "initial_state_sha256": "ef0e26dad0d344397e4bcdd3e4a410112bc8b88699866e03f5182a9507d8c134",
+      "initial_policy_rgb_sha256": "796f727fffcbc01a0104e7972cdb835287b0c8d2e84e32e2aea36df10eb962a8",
+      "instruction": "Insert the rose into the vase_seen.",
+      "norm_stats_sha256": "bce33fc1831830d953ef9bc57e520c02ee44e02b7ad07f27ce92b931a879384f",
+      "base_sha256": "66975306e09199efdf221e14d6f5d13ea5d6dbe42e8f921f19bd1096721eac61",
+      "replan_steps": 5,
+      "control_hz": 10,
+      "max_control_steps": 600,
+      "sampler": "JAX seeded noise",
+      "render_samples": 0
+    }
+  },
+  "conclusion": "Published reference passed three repeated autonomous executions. Both registered VLM-adapted single-episode SFT checkpoints regressed and failed one complete execution. Interface feasibility is established on this reset; the exact cause of SFT regression is not isolated.",
+  "baseline_note": "Reference loader used checkpoint architecture and normalization but did not restore trained SFT parameters. It is an upstream finetuned reference, not generic original pi0.5."
+}

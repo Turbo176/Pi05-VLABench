@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/root/autodl-tmp/Pi05-VLABench/code/scripts/plot_fruit_completion.py", line 70, in <module>
+    main()
+  File "/root/autodl-tmp/Pi05-VLABench/code/scripts/plot_fruit_completion.py", line 37, in main
+    axis.errorbar(x, rates, yerr=np.vstack([rates - intervals[:, 0], intervals[:, 1] - rates]),
+  File "/root/autodl-tmp/Pi05-VLABench/.local/torch28-venv/lib/python3.12/site-packages/matplotlib/_api/deprecation.py", line 477, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/Pi05-VLABench/.local/torch28-venv/lib/python3.12/site-packages/matplotlib/__init__.py", line 1531, in inner
+    return func(
+           ^^^^^
+  File "/root/autodl-tmp/Pi05-VLABench/.local/torch28-venv/lib/python3.12/site-packages/matplotlib/axes/_axes.py", line 4232, in errorbar
+    raise ValueError(
+ValueError: 'yerr' must not contain negative values

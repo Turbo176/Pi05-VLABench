@@ -1,0 +1,132 @@
+[
+  {
+    "repeat": 2,
+    "before_equal": true,
+    "after_equal": true,
+    "max_integration_difference": 0.0,
+    "per_camera_changed_channels": [
+      0,
+      0,
+      103,
+      0
+    ],
+    "per_camera_max_byte_difference": [
+      0,
+      0,
+      1,
+      0
+    ],
+    "camera_same_state_repeat_changes": [
+      0,
+      0,
+      50,
+      0
+    ],
+    "model_equal": true,
+    "commands_equal": true
+  },
+  {
+    "repeat": 3,
+    "before_equal": true,
+    "after_equal": true,
+    "max_integration_difference": 0.0,
+    "per_camera_changed_channels": [
+      0,
+      3,
+      87,
+      0
+    ],
+    "per_camera_max_byte_difference": [
+      0,
+      1,
+      1,
+      0
+    ],
+    "camera_same_state_repeat_changes": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "model_equal": true,
+    "commands_equal": true
+  },
+  {
+    "repeat": 4,
+    "before_equal": true,
+    "after_equal": true,
+    "max_integration_difference": 0.0,
+    "per_camera_changed_channels": [
+      0,
+      3,
+      87,
+      0
+    ],
+    "per_camera_max_byte_difference": [
+      0,
+      1,
+      1,
+      0
+    ],
+    "camera_same_state_repeat_changes": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "model_equal": true,
+    "commands_equal": true
+  },
+  {
+    "repeat": 5,
+    "before_equal": true,
+    "after_equal": true,
+    "max_integration_difference": 0.0,
+    "per_camera_changed_channels": [
+      0,
+      0,
+      87,
+      0
+    ],
+    "per_camera_max_byte_difference": [
+      0,
+      0,
+      1,
+      0
+    ],
+    "camera_same_state_repeat_changes": [
+      0,
+      3,
+      0,
+      0
+    ],
+    "model_equal": true,
+    "commands_equal": true
+  },
+  {
+    "repeat": 6,
+    "before_equal": true,
+    "after_equal": true,
+    "max_integration_difference": 0.0,
+    "per_camera_changed_channels": [
+      0,
+      0,
+      87,
+      0
+    ],
+    "per_camera_max_byte_difference": [
+      0,
+      0,
+      1,
+      0
+    ],
+    "camera_same_state_repeat_changes": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "model_equal": true,
+    "commands_equal": true
+  }
+]

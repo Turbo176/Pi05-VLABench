@@ -1,0 +1,78 @@
+{
+  "format": "LeRobot v2.1",
+  "fps": 10,
+  "splits": {
+    "train": {
+      "episodes": 6,
+      "frames": 1081,
+      "all_frames_verified": true,
+      "action_chunks": {
+        "horizon": 10,
+        "positions_verified": 18
+      },
+      "episodes_detail": [
+        {
+          "source": ".local/reference-aligned/msaa0-new-flower-105-134/replays/train-insert_flower-111.h5",
+          "split": "train",
+          "task": "insert_flower",
+          "seed": 111,
+          "instruction": "Insert the tulip into the vase_seen.",
+          "frames": 171,
+          "initial_state_sha256": "454b36a3d3f6f1b3c3b4c53ac5e946d07538fff87f1c19466fbd49af6649ca3b",
+          "render_samples": 0
+        },
+        {
+          "source": ".local/reference-aligned/msaa0-new-flower-105-134/replays/train-insert_flower-115.h5",
+          "split": "train",
+          "task": "insert_flower",
+          "seed": 115,
+          "instruction": "Insert the rose into the vase_seen.",
+          "frames": 186,
+          "initial_state_sha256": "7a41bd83df7322bf79d4715823a72c6ad62b044fcbdd4ccc0eec16636f336f7e",
+          "render_samples": 0
+        },
+        {
+          "source": ".local/reference-aligned/msaa0-new-flower-105-134/replays/train-insert_flower-117.h5",
+          "split": "train",
+          "task": "insert_flower",
+          "seed": 117,
+          "instruction": "Insert the rose into the vase_seen.",
+          "frames": 175,
+          "initial_state_sha256": "040b4fca3e684246fcd376a087bd573253392a315e4a50f198dbfcb6d74f70a5",
+          "render_samples": 0
+        },
+        {
+          "source": ".local/reference-aligned/msaa0-new-flower-105-134/replays/train-insert_flower-119.h5",
+          "split": "train",
+          "task": "insert_flower",
+          "seed": 119,
+          "instruction": "Insert the rose into the vase_seen.",
+          "frames": 199,
+          "initial_state_sha256": "1ce4c37036026e5e3d599ab7fbb9b8a3e85ce5ee1aaeacf4e35ff4a53d35a643",
+          "render_samples": 0
+        },
+        {
+          "source": ".local/reference-aligned/msaa0-new-flower-105-134/replays/train-insert_flower-120.h5",
+          "split": "train",
+          "task": "insert_flower",
+          "seed": 120,
+          "instruction": "Insert the rose into the vase_seen.",
+          "frames": 169,
+          "initial_state_sha256": "4924283fffea3f5d144e112ab4c30d27c1bc721625f92b7c730a2b9833e6ee72",
+          "render_samples": 0
+        },
+        {
+          "source": ".local/reference-aligned/msaa0-new-flower-105-134/replays/train-insert_flower-121.h5",
+          "split": "train",
+          "task": "insert_flower",
+          "seed": 121,
+          "instruction": "Insert the rose into the vase_seen.",
+          "frames": 181,
+          "initial_state_sha256": "6d258cefefa3cae84deea13ba032fc66f4f3cd6d80bfcb80d3ce2ace557d61bf",
+          "render_samples": 0
+        }
+      ]
+    }
+  },
+  "profile": "vlabench_reference_pose"
+}

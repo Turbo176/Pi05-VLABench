@@ -1,0 +1,14 @@
+{
+  "kind": "official_expert_screening_and_fresh_action_replay_not_policy_evaluation",
+  "attempts": {
+    "insert_flower": 46
+  },
+  "admitted": {
+    "insert_flower": 0
+  },
+  "render_samples": 0,
+  "max_controls_per_attempt": 600,
+  "wall_seconds": 1443.4588748719543,
+  "instruction_filter": "chrysanthemum",
+  "stop_at_cap": true
+}

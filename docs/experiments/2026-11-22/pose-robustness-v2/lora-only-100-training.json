@@ -1,0 +1,391 @@
+{
+  "seed": 263,
+  "train_seeds": [
+    42,
+    53,
+    54,
+    56,
+    57,
+    58,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    2010,
+    2011,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026,
+    2028,
+    2029,
+    2030,
+    2031,
+    2032,
+    2033,
+    2050,
+    2063,
+    2067,
+    2071,
+    2072
+  ],
+  "validation_seeds": [
+    55,
+    69,
+    2012,
+    2027
+  ],
+  "base_sha256": "66975306e09199efdf221e14d6f5d13ea5d6dbe42e8f921f19bd1096721eac61",
+  "rejected_by_label_replay": [],
+  "train_frames": 12426,
+  "validation_frames": 1247,
+  "horizon": 10,
+  "execute": 5,
+  "actor_lora_rank": 16,
+  "vlm_lora_rank": 8,
+  "shortest_euler": false,
+  "discrete_state": false,
+  "input_format": "LeRobot v2.1",
+  "openpi_revision": "788ef1f20e655de5bb40869fb7b7fcdd49732387",
+  "lr": 0.0001,
+  "action_loss": "all",
+  "gradient_accumulation": 6,
+  "image_augmentation": true,
+  "train_action_heads": false,
+  "render_samples": 0,
+  "training_script_sha256": "dd3566829d00fa9e868d25d205ff53eb440ce7aacb6d79b1becf59cd4cce3308",
+  "runtime_script_sha256": "fa6490445b17ea689cc3ab162aa86910974cda6e2f2a358bd00826a57ff46e11",
+  "norm_stats_sha256": "bce33fc1831830d953ef9bc57e520c02ee44e02b7ad07f27ce92b931a879384f",
+  "device": "NVIDIA GeForce RTX 4080 SUPER",
+  "interface": {
+    "round_trip_max": 2.384185791015625e-07,
+    "normalized_state_ablation_max": 0.0,
+    "active_image_keys": [
+      "base_0_rgb",
+      "left_wrist_0_rgb",
+      "right_wrist_0_rgb"
+    ],
+    "normalized_padding_value": -1.0
+  },
+  "dataset_verification_sha256": "912661fbd8af7f4f55479b902dcce8e92c28abe5c924dab399bc789e993c11e4",
+  "reference_model_revision": "f658a8bec801aab960fe0ceab370a123b31c1837",
+  "train_task_seeds": [
+    [
+      "select_fruit",
+      42
+    ],
+    [
+      "select_fruit",
+      53
+    ],
+    [
+      "select_fruit",
+      54
+    ],
+    [
+      "select_fruit",
+      56
+    ],
+    [
+      "select_fruit",
+      57
+    ],
+    [
+      "select_fruit",
+      58
+    ],
+    [
+      "select_fruit",
+      63
+    ],
+    [
+      "select_fruit",
+      64
+    ],
+    [
+      "select_fruit",
+      65
+    ],
+    [
+      "select_fruit",
+      66
+    ],
+    [
+      "select_fruit",
+      67
+    ],
+    [
+      "select_fruit",
+      68
+    ],
+    [
+      "select_fruit",
+      70
+    ],
+    [
+      "select_fruit",
+      71
+    ],
+    [
+      "select_fruit",
+      72
+    ],
+    [
+      "select_fruit",
+      73
+    ],
+    [
+      "select_fruit",
+      74
+    ],
+    [
+      "select_fruit",
+      75
+    ],
+    [
+      "select_fruit",
+      2010
+    ],
+    [
+      "select_fruit",
+      2011
+    ],
+    [
+      "select_fruit",
+      2013
+    ],
+    [
+      "select_fruit",
+      2014
+    ],
+    [
+      "select_fruit",
+      2015
+    ],
+    [
+      "select_fruit",
+      2016
+    ],
+    [
+      "select_fruit",
+      2017
+    ],
+    [
+      "select_fruit",
+      2018
+    ],
+    [
+      "select_fruit",
+      2019
+    ],
+    [
+      "select_fruit",
+      2020
+    ],
+    [
+      "select_fruit",
+      2021
+    ],
+    [
+      "select_fruit",
+      2022
+    ],
+    [
+      "select_fruit",
+      2023
+    ],
+    [
+      "select_fruit",
+      2024
+    ],
+    [
+      "select_fruit",
+      2025
+    ],
+    [
+      "select_fruit",
+      2026
+    ],
+    [
+      "select_fruit",
+      2028
+    ],
+    [
+      "select_fruit",
+      2029
+    ],
+    [
+      "select_fruit",
+      2030
+    ],
+    [
+      "select_fruit",
+      2031
+    ],
+    [
+      "select_fruit",
+      2032
+    ],
+    [
+      "select_fruit",
+      2033
+    ],
+    [
+      "select_fruit",
+      2050
+    ],
+    [
+      "select_fruit",
+      2063
+    ],
+    [
+      "select_fruit",
+      2067
+    ],
+    [
+      "select_fruit",
+      2071
+    ],
+    [
+      "select_fruit",
+      2072
+    ],
+    [
+      "insert_flower",
+      42
+    ],
+    [
+      "take_out_cool_drink",
+      43
+    ],
+    [
+      "insert_flower",
+      58
+    ],
+    [
+      "insert_flower",
+      62
+    ],
+    [
+      "insert_flower",
+      64
+    ],
+    [
+      "insert_flower",
+      65
+    ],
+    [
+      "insert_flower",
+      69
+    ],
+    [
+      "insert_flower",
+      78
+    ],
+    [
+      "insert_flower",
+      79
+    ],
+    [
+      "insert_flower",
+      84
+    ],
+    [
+      "insert_flower",
+      88
+    ],
+    [
+      "take_out_cool_drink",
+      54
+    ],
+    [
+      "take_out_cool_drink",
+      56
+    ],
+    [
+      "take_out_cool_drink",
+      58
+    ],
+    [
+      "take_out_cool_drink",
+      59
+    ],
+    [
+      "take_out_cool_drink",
+      60
+    ],
+    [
+      "take_out_cool_drink",
+      61
+    ],
+    [
+      "take_out_cool_drink",
+      75
+    ]
+  ],
+  "validation_task_seeds": [
+    [
+      "select_fruit",
+      55
+    ],
+    [
+      "select_fruit",
+      69
+    ],
+    [
+      "select_fruit",
+      2012
+    ],
+    [
+      "select_fruit",
+      2027
+    ],
+    [
+      "insert_flower",
+      55
+    ],
+    [
+      "take_out_cool_drink",
+      52
+    ]
+  ],
+  "validation_base": {
+    "windows": 36,
+    "xyz_mae_m": 0.01415906783483479,
+    "euler_mae_rad": 0.12774816509890663,
+    "gripper_mae": 0.13012086580676435
+  },
+  "first_vlm_grad_l2_after_clip": 0.0033316791523247957,
+  "first_actor_max_delta": 9.999913891078904e-05,
+  "first_vlm_max_delta": 9.999745088862255e-05,
+  "updates": 100,
+  "training_seconds": 189.2516728900373,
+  "peak_cuda_bytes": 10271090688,
+  "sampled_windows": 600,
+  "frozen_action_heads_unchanged": true,
+  "reload_max_action_difference": 0.0,
+  "validation_sft": {
+    "windows": 36,
+    "xyz_mae_m": 0.012414441339049035,
+    "euler_mae_rad": 0.11069115359891661,
+    "gripper_mae": 0.13464172868891958
+  }
+}

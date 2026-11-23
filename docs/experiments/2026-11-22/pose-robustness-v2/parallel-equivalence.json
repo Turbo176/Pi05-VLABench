@@ -1,0 +1,35 @@
+{
+  "stage": "base",
+  "norm_stats_sha256": "bce33fc1831830d953ef9bc57e520c02ee44e02b7ad07f27ce92b931a879384f",
+  "reference_model_revision": "f658a8bec801aab960fe0ceab370a123b31c1837",
+  "base_sha256": "66975306e09199efdf221e14d6f5d13ea5d6dbe42e8f921f19bd1096721eac61",
+  "configuration_source_sha256": "c2ed9c99273dc696365c04956ea2fef4ed4a72eed0d1a75fc016c71c1e3ebfad",
+  "protocol_sha256": "a37ef375174b3cfcf8cde85064c42ed08a7f76298e750b780c928c14ede453b9",
+  "evaluator_sha256": "9fe24d1114b98ce22508b20ec6694d51150a39bfcae81d1ace709c9d227f923c",
+  "suite": "development",
+  "workers": 3,
+  "tasks": [
+    "select_fruit",
+    "insert_flower"
+  ],
+  "cases": 8,
+  "successes": 3,
+  "serial_equivalence": {
+    "serial_source_sha256": "e096ee8de76d9d286c692481f5fb96e846e3c19b3a68be60938ca950f5de880f",
+    "identical_cases": 8,
+    "compared_fields": [
+      "success",
+      "steps",
+      "action_sha256",
+      "first_action_sha256",
+      "ik_nonconverged_steps",
+      "initial_state_sha256",
+      "initial_policy_rgb_sha256",
+      "instruction",
+      "render_samples",
+      "base_sha256",
+      "norm_stats_sha256",
+      "sampler"
+    ]
+  }
+}

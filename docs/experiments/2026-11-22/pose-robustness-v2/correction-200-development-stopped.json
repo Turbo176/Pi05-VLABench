@@ -1,0 +1,9 @@
+{
+  "kind": "development_only_resource_stop_after_observed_failures",
+  "decision_time_utc": "2026-11-22T05:12:46.153911+00:00",
+  "completed_fruit_cases": 4,
+  "fruit_successes": 0,
+  "full_12_case_evaluation_complete": false,
+  "eligible_for_final_checkpoint_selection": false,
+  "reason": "Reject a candidate with no fruit development success; retain every completed result and use the slot for a bounded imitation-capacity check."
+}

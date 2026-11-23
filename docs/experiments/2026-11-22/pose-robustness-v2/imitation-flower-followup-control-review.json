@@ -1,0 +1,63 @@
+{
+  "kind": "completed_trace_comparison_not_training_cause_identification",
+  "matched_contract": {
+    "initial_state_sha256": "ef0e26dad0d344397e4bcdd3e4a410112bc8b88699866e03f5182a9507d8c134",
+    "initial_policy_rgb_sha256": "796f727fffcbc01a0104e7972cdb835287b0c8d2e84e32e2aea36df10eb962a8",
+    "instruction": "Insert the rose into the vase_seen.",
+    "norm_stats_sha256": "bce33fc1831830d953ef9bc57e520c02ee44e02b7ad07f27ce92b931a879384f",
+    "base_sha256": "66975306e09199efdf221e14d6f5d13ea5d6dbe42e8f921f19bd1096721eac61",
+    "control_hz": 10,
+    "replan_steps": 5,
+    "max_control_steps": 600,
+    "render_samples": 0,
+    "sampler": "JAX seeded noise"
+  },
+  "outcomes": {
+    "published_reference": {
+      "controls": 211,
+      "success": true,
+      "official_grasp_controls": 143,
+      "nonconverged_ik_controls": 0,
+      "first_official_grasp_control": 69,
+      "first_nonconverged_ik_control": null,
+      "first_closed_gripper_command": 69,
+      "closed_gripper_command_count": 143,
+      "minimum_recorded_gripper_target_distance_m": 0.026568241422277657,
+      "stage": "completed_goal",
+      "gate_sha256": "a36f8de2d4b53b7acb97c9f411904a9912a458524d84f7e2127eb7afbbda045b",
+      "trace_sha256": "151fc824b1b223a170559b79f7a0960b38c50add288cf7197790fa0459ccb1d2"
+    },
+    "sft_lr1e6_100": {
+      "controls": 600,
+      "success": false,
+      "official_grasp_controls": 175,
+      "nonconverged_ik_controls": 252,
+      "first_official_grasp_control": 66,
+      "first_nonconverged_ik_control": 171,
+      "first_closed_gripper_command": 68,
+      "closed_gripper_command_count": 245,
+      "minimum_recorded_gripper_target_distance_m": 0.009041453388627472,
+      "stage": "grasp_recorded_goal_unsatisfied",
+      "gate_sha256": "34716cbf00663f9ca6b8dfa419cf224ed6629e95180bd52a81721a39a76de5f4",
+      "trace_sha256": "c995f0a9da1945f480e58344cdbb1df0162f16000dd907fec08c5fdc91401160"
+    },
+    "sft_full_action_100": {
+      "controls": 600,
+      "success": false,
+      "official_grasp_controls": 0,
+      "nonconverged_ik_controls": 322,
+      "first_official_grasp_control": null,
+      "first_nonconverged_ik_control": 141,
+      "first_closed_gripper_command": 16,
+      "closed_gripper_command_count": 136,
+      "minimum_recorded_gripper_target_distance_m": 0.15123673481503064,
+      "stage": "no_official_grasp_recorded",
+      "gate_sha256": "1e8d5f96f7f96cce5a6fcf9c8dcec0090839cae038d4a1403507879ebeb632c4",
+      "trace_sha256": "13a5a5306cb410a09bacfa09b118e66db39f66d91ee1ac74cbd4513f9969ef73"
+    }
+  },
+  "source_sha256": "f0e6f62b25f23fe895453283955bfd4878fbbfedd8e74e85374beeb435c2cccc",
+  "policy_updates": 0,
+  "additional_simulator_controls": 0,
+  "limitation": "These traces locate observed rollout failure stages. They cannot identify the unique data or optimization cause of SFT regression."
+}

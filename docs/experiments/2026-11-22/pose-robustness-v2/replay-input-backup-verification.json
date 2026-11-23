@@ -1,0 +1,9 @@
+{
+  "artifact_kind": "expert_pose_replay_inputs_without_rgb_not_a_complete_lerobot_dataset",
+  "episodes": 69,
+  "frames": 13673,
+  "array_round_trips_verified": true,
+  "includes_rgb": false,
+  "bytes": 625808,
+  "sha256": "1ddead7117207f06385aee66f163daed7236d26caa20b6b7637ffd1110cc6efd"
+}

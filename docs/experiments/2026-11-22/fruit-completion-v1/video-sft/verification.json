@@ -1,0 +1,30 @@
+{
+  "stage": "sft",
+  "label": "multitask-sft90",
+  "seed": 1501,
+  "success": true,
+  "controls": 160,
+  "matched_quantitative_fields": [
+    "success",
+    "steps",
+    "instruction",
+    "action_sha256",
+    "first_action_sha256",
+    "ik_nonconverged_steps",
+    "initial_state_sha256",
+    "initial_policy_rgb_sha256",
+    "render_samples",
+    "norm_stats_sha256",
+    "base_sha256",
+    "sampler"
+  ],
+  "video_sha256": "086db70b90997b9d06ad6177e36fd4ff51e1418b88b6173a36513ae0c387621d",
+  "video_bytes": 2341820,
+  "frames": 161,
+  "fps": 10.0,
+  "width": 1024,
+  "height": 1024,
+  "display_only_image_size": 512,
+  "policy_camera_resolution_unchanged": true,
+  "source_sha256": "e90b832ec13cc4d835568cca2a695448f63fe2bc7126ef1d4e9f8d70f5e59d00"
+}

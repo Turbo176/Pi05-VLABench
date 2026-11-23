@@ -16,7 +16,8 @@ import torch
 from evaluate_policy import ROOT, run_episode
 from pi05_data import TASKS
 from pi05_runtime import DENOISE_STEPS, PolicyIO, build_model, restore_trainable
-from select_fruit import digest_arrays, open_episode, physics_state, render_views, set_fruit_prompt, video
+from select_fruit import camera_names, digest_arrays, open_episode, physics_state, render_views, set_fruit_prompt, video
+from vlabench_policy_io import ACTION_SPACES, SCENE_CAMERA, WRIST_CAMERA
 
 
 RESET_LOCK = Lock()
@@ -24,16 +25,18 @@ INFERENCE_LOCK = Lock()
 
 
 def load_stage(args):
-    model, config = build_model(args.base, 'cuda', args.execute_steps, rl=args.stage in ('handoff', 'ppo'))
-    policy = PolicyIO(args.stats, 'cuda', config.max_token_len)
-    if args.stage == 'base':
-        if args.checkpoint:
-            raise ValueError('The base stage accepts only the converted official weights')
+    if (args.stage == 'base') != (args.checkpoint is None):
+        raise ValueError('Only the base stage runs without a trainable checkpoint')
+    checkpoint = torch.load(args.checkpoint, map_location='cpu', weights_only=True) if args.checkpoint else None
+    metadata = checkpoint['metadata'] if checkpoint else {}
+    model, config = build_model(args.base, 'cuda', args.execute_steps, rl=args.stage in ('handoff', 'ppo'),
+                               lora_rank=metadata.get('lora_rank', 0), vlm_lora_rank=metadata.get('vlm_lora_rank', 0))
+    action_space = checkpoint['metadata'].get('action_space', 'absolute') if checkpoint else args.action_space
+    if args.action_space is not None and args.action_space != action_space:
+        raise ValueError('Action space differs from the checkpoint')
+    policy = PolicyIO(args.stats, 'cuda', config.max_token_len, action_space or 'absolute')
+    if checkpoint is None:
         return model, policy, None
-    if not args.checkpoint:
-        raise ValueError('This stage needs a checkpoint')
-    checkpoint = torch.load(args.checkpoint, map_location='cpu', weights_only=True)
-    metadata = checkpoint['metadata']
     if metadata['stats_sha256'] != policy.stats_sha256 or metadata['execute_steps'] != args.execute_steps:
         raise ValueError('Checkpoint preprocessing or execution budget differs from this run')
     restore_trainable(model, checkpoint['policy'])
@@ -53,28 +56,34 @@ def evaluate(model, policy, task, seed, prompt_mode, execute_steps, max_steps, n
         set_fruit_prompt(env, prompt_mode)
         prompt = env.task.get_instruction()
         initial_rgb = render_views(env)
+        names = camera_names(env)
+        policy_rgb = [initial_rgb[names.index(name)] for name in (SCENE_CAMERA, WRIST_CAMERA)]
         target = env.task.entities[env.task.target_entity]
         initial_target = target.get_xpos(env.physics).copy()
         furthest_target_displacement = 0.0
+        highest_target_lift = 0.0
         fridge = env.task.entities[env.task.init_container] if task == 'take_out_cool_drink' else None
         fridge_opened = False
         hashes = {'initial_state_sha256': digest_arrays(physics_state(env), env.physics.data.xpos, env.physics.data.xquat),
-                  'initial_rgb_sha256': digest_arrays(initial_rgb)}
+                  'initial_rgb_sha256': digest_arrays(initial_rgb),
+                  'initial_policy_rgb_sha256': digest_arrays(*policy_rgb)}
 
         @torch.inference_mode()
         def infer(row):
             with INFERENCE_LOCK:
                 obs, _ = policy.encode(row)
-                actions = policy.decode(model.sample_actions(obs, num_steps=DENOISE_STEPS, rng=rng))
+                actions = policy.decode(model.sample_actions(obs, num_steps=DENOISE_STEPS, rng=rng), row['state'])
             action_digest.update(actions.tobytes())
             return actions
 
         frames = [initial_rgb] if video_path else None
 
         def record(current_env):
-            nonlocal fridge_opened, furthest_target_displacement
+            nonlocal fridge_opened, furthest_target_displacement, highest_target_lift
             physics = current_env.physics
-            distance = np.linalg.norm(target.get_xpos(physics) - initial_target)
+            displacement = target.get_xpos(physics) - initial_target
+            distance = np.linalg.norm(displacement)
+            highest_target_lift = max(highest_target_lift, float(displacement[2]))
             furthest_target_displacement = max(furthest_target_displacement, float(distance))
             if fridge and not fridge_opened:
                 fridge_opened = fridge.is_open(physics)
@@ -98,6 +107,7 @@ def evaluate(model, policy, task, seed, prompt_mode, execute_steps, max_steps, n
         video(video_path, frames, 10, label, prompt, crf=18)
     return {'task': task, 'seed': seed, 'prompt_mode': prompt_mode, 'instruction': prompt,
             'noise_seed': noise_seed, 'failure_type': failure_type, 'target_max_displacement_m': furthest_target_displacement,
+            'target_max_lift_m': highest_target_lift,
             'fridge_opened': fridge_opened if fridge_closed is not None else None, 'fridge_closed': fridge_closed,
             'action_chunks_sha256': action_digest.hexdigest(), 'wall_seconds': time.monotonic() - start, **hashes, **result}
 
@@ -108,14 +118,15 @@ def main():
         parser.add_argument(f'--{arg}', required=True, type=Path)
     parser.add_argument('--checkpoint', type=Path)
     parser.add_argument('--stage', choices=('base', 'sft', 'handoff', 'ppo'), required=True)
-    parser.add_argument('--suite', choices=('smoke', 'development', 'ppo_development', 'ordinary', 'fruit_language'), required=True)
+    parser.add_argument('--suite', choices=('smoke', 'development', 'ppo_development', 'fruit_training_diagnostic', 'ordinary', 'fruit_language'), required=True)
+    parser.add_argument('--action-space', choices=ACTION_SPACES, help='Base action adapter, or assert checkpoint action space')
     parser.add_argument('--execute-steps', type=int, default=10)
     parser.add_argument('--max-seeds-per-task', type=int)
     parser.add_argument('--case', nargs=3, metavar=('TASK', 'SEED', 'PROMPT'),
                         help='Reproduce one case in a separate log within the specified suite')
     parser.add_argument('--workers', default=1, type=int, help='Concurrent MuJoCo rollouts per loaded policy')
     parser.add_argument('--resume', action='store_true', help='Append cases after checking the recorded run identity')
-    parser.add_argument('--video-dir', type=Path, help='Record the first ordinary test seed per task')
+    parser.add_argument('--video-dir', type=Path, help='Record the first ordinary test seed per task or all development/diagnostic cases')
     args = parser.parse_args()
     if args.workers < 1:
         parser.error('--workers must be positive')
@@ -128,6 +139,9 @@ def main():
         max_steps = protocol['max_control_steps']
     elif args.suite == 'ppo_development':
         cases = [(TASKS[0], seed, 'official') for seed in range(1201, 1205)]
+        max_steps = protocol['max_control_steps']
+    elif args.suite == 'fruit_training_diagnostic':
+        cases = [(TASKS[0], 42, 'official')]
         max_steps = protocol['max_control_steps']
     else:
         suite = protocol[args.suite]
@@ -164,20 +178,23 @@ def main():
         for line in args.output.read_text(encoding='utf-8').splitlines():
             row = json.loads(line)
             key = row['task'], row['seed'], row['prompt_mode']
-            if key in completed or key not in cases or any(row[name] != value for name, value in identity.items()):
+            if (key in completed or key not in cases or row.get('action_space', 'absolute') != policy.action_space
+                    or any(row[name] != value for name, value in identity.items())):
                 raise ValueError(f'Inconsistent saved result for {key} in {args.output}')
             completed.add(key)
     def run_case(case):
         task, seed, prompt = case
         video_path = None
-        if args.video_dir and args.suite == 'ordinary' and seed == low:
+        record_case = (seed == low if args.suite == 'ordinary'
+                       else args.suite in ('development', 'ppo_development', 'fruit_training_diagnostic'))
+        if args.video_dir and record_case:
             video_path = args.video_dir / f'{args.stage}-{task}-{seed}.mp4'
         label = f'Pi0.5 {args.stage} | {task} | seed {seed}'
         result = evaluate(model, policy, task, seed, prompt, args.execute_steps, max_steps,
                           noise_seed=seed, video_path=video_path, label=label)
         if expected_instructions and result['instruction'] != expected_instructions[seed][prompt]['instruction']:
             raise RuntimeError(f'Frozen prompt differs in case {seed} {prompt}')
-        result.update(identity)
+        result.update(identity, action_space=policy.action_space)
         return result
 
     def write(log, result):

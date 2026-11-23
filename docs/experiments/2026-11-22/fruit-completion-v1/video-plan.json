@@ -1,0 +1,12 @@
+{
+  "seed": 1501,
+  "stages": [
+    "base",
+    "sft",
+    "ppo"
+  ],
+  "selection_rule": "Choose the first ordinary held-out seed before viewing any ordinary policy outcomes. Capture all three regardless of success.",
+  "replay_rule": "Fresh model-controlled simulation, identical observation and complete action hashes to the quantitative episode required.",
+  "rendered_video_hz": 10,
+  "registered_at": "2026-11-22T15:16:56.116284+00:00"
+}
