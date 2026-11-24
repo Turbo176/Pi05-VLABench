@@ -1,0 +1,20 @@
+{
+  "recorded_at": "2026-11-24T11:38:44.100454+00:00",
+  "potential_completed_iterations": 2,
+  "milestone_saved_iterations": [
+    1
+  ],
+  "milestone_iteration2": {
+    "rejected_before_save": true,
+    "full_batch_prefix_score": 0.050613024675426665,
+    "guard": 0.02,
+    "reason": "Final whole-rollout prefix-score guard; previous valid saved checkpoint remains eligible",
+    "controls_used": 2751,
+    "actor_updates_this_iteration": 49
+  },
+  "valid_saved_candidates": 3,
+  "evaluation_plan_changed": false,
+  "test_policy_calls_so_far": 0,
+  "no_guard_relaxation": true,
+  "additional_training_launched": false
+}

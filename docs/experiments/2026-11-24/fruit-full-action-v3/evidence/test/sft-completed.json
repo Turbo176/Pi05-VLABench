@@ -1,0 +1,17 @@
+{
+  "stage": "sft",
+  "sft_sha256": "954f168626a30a068aae7e5c0ef0cc37a361e4ac068136d26e1ce02e46964bee",
+  "norm_stats_sha256": "2f89fa57106178d3451bd4582f6454085ada19686de382dec37b55ac7594a6da",
+  "reference_model_revision": "f658a8bec801aab960fe0ceab370a123b31c1837",
+  "base_sha256": "66975306e09199efdf221e14d6f5d13ea5d6dbe42e8f921f19bd1096721eac61",
+  "reference_action_profile": "train_split_shortest_euler_chunk_quantiles",
+  "protocol_sha256": "6db275d6761ae6eb6b69627d7b0718bfe7c3174702578cd50705324bb77a0784",
+  "evaluator_sha256": "9fe24d1114b98ce22508b20ec6694d51150a39bfcae81d1ace709c9d227f923c",
+  "suite": "ordinary",
+  "workers": 2,
+  "tasks": [
+    "select_fruit"
+  ],
+  "cases": 40,
+  "successes": 29
+}

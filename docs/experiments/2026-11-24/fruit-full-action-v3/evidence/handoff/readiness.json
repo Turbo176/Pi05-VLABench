@@ -1,0 +1,59 @@
+{
+  "checkpoint_sha256": "954f168626a30a068aae7e5c0ef0cc37a361e4ac068136d26e1ce02e46964bee",
+  "cases": [
+    {
+      "task": "select_fruit",
+      "seed": 42
+    }
+  ],
+  "base_sha256": "66975306e09199efdf221e14d6f5d13ea5d6dbe42e8f921f19bd1096721eac61",
+  "norm_stats_sha256": "2f89fa57106178d3451bd4582f6454085ada19686de382dec37b55ac7594a6da",
+  "render_samples": 0,
+  "executed": 5,
+  "horizon": 10,
+  "settings": {
+    "shortest_euler": true,
+    "discrete_state": false,
+    "reference_noise": true
+  },
+  "measurements": [
+    {
+      "task": "select_fruit",
+      "seed": 42,
+      "frame": 0,
+      "normalized_prediction_max_error": 0.0,
+      "absolute_prediction_max_error": 0.0,
+      "native_float32_decode_max_error": 1.475439241893639e-07,
+      "replay_logprob_abs_error": 0.0
+    },
+    {
+      "task": "select_fruit",
+      "seed": 42,
+      "frame": 66,
+      "normalized_prediction_max_error": 0.0,
+      "absolute_prediction_max_error": 0.0,
+      "native_float32_decode_max_error": 1.2953683059535592e-07,
+      "replay_logprob_abs_error": 0.0
+    },
+    {
+      "task": "select_fruit",
+      "seed": 42,
+      "frame": 131,
+      "normalized_prediction_max_error": 0.0,
+      "absolute_prediction_max_error": 0.0,
+      "native_float32_decode_max_error": 1.56938108730742e-07,
+      "replay_logprob_abs_error": 0.0
+    }
+  ],
+  "optimizer_updates": 0,
+  "readiness_diagnostic_only": false,
+  "qualification": "Multi-episode checkpoint; development selection and heldout evaluation remain separate",
+  "training_scope": null,
+  "eligible_as_final_model": false,
+  "train_full_action_expert": true,
+  "matched_rollouts": 1,
+  "matched_successes": 1,
+  "matched_seeds": [
+    42
+  ]
+}

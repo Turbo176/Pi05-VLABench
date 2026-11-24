@@ -1,5 +1,7 @@
 # Script guide
 
+The latest fruit experiment uses its [exact phase-specific SFT/PPO sources](../docs/experiments/2026-11-24/fruit-full-action-v3/commands.md). Shared scripts below retain collection, simulator and historical experiment support. Full-action optimizer and reward changes remain versioned with the run that used them.
+
 The supported learned-policy path uses seven-coordinate pose actions. Start with the entry points below; the other Python files supply their shared data, model, controller, and scoring functions.
 
 | Step | Entry point | Instructions |

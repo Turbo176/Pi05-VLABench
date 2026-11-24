@@ -1,0 +1,16 @@
+{
+  "registered_at": "2026-11-24T11:21:45.681116+00:00",
+  "purpose": "One paired comparison of the fixed upstream reference, completed train47 SFT, and development-selected PPO on40reservednaturalresets",
+  "reserved_test_manifest_sha256": "8d62b9aaee8fd018143cd82efbfeb8c301472adf4ab6e0c730a89cebf5e1da78",
+  "selection": "No test results used in model selection or further training",
+  "upstream_reference_normalization_sha256": "bce33fc1831830d953ef9bc57e520c02ee44e02b7ad07f27ce92b931a879384f",
+  "reference_configuration": "PriorSFT180configurationwithstagebase:trainedadaptersarenevermapped;originalupstreamweightsandstatistics",
+  "max_concurrent_models": 2,
+  "workers_per_model": 2,
+  "render_samples": 0,
+  "max_controls_per_episode": 600,
+  "driver_sha256": "d3fb1a20fa98429003d78525e72244b22468869d337b3ffc33ba774efd321e91",
+  "evaluator_sha256": "9fe24d1114b98ce22508b20ec6694d51150a39bfcae81d1ace709c9d227f923c",
+  "policy_calls_before_registration": 0,
+  "launch_requires": "Developmentselectioncompleteandfinaltestmodellockwritten"
+}

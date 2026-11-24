@@ -1,0 +1,111 @@
+{
+  "registered_at": "2026-11-24T09:26:18.492065+00:00",
+  "purpose": "Transfer the seen-reset-validated full-expert/continuous-Euler/train-action-statistics recipe to the verified 47-episode fruit training split. Fresh upstream initialization; diagnostic weights are never used.",
+  "initialization": "original upstream VLABench finetuned reference model; not raw foundation pretraining and not the single-demo diagnostic",
+  "single_demo_gate": {
+    "run": "runs/fruit-full-normalized-fit-20261124",
+    "checkpoint_sha256": "d7ec3b5e85159db004af5be9cd691a8a46cee1307bd7acd9889d7b834893e8d6",
+    "successes": 3,
+    "trials": 3,
+    "controls": [
+      131,
+      131,
+      131
+    ],
+    "used_for_initialization": false
+  },
+  "training": {
+    "tasks": [
+      "select_fruit"
+    ],
+    "episodes": 47,
+    "frames": 6986,
+    "validation_episodes": 4,
+    "validation_frames": 589,
+    "updates": 3000,
+    "candidates": [
+      1000,
+      2000,
+      3000
+    ],
+    "lr": 1e-05,
+    "micro_batch": 2,
+    "accumulation": 4,
+    "full_action_expert": true,
+    "fp32_master": true,
+    "vlm_frozen": true,
+    "shortest_euler": true,
+    "fit_action_quantiles": "training split only",
+    "state_quantiles": "unchanged upstream",
+    "loss": "all[10,32]",
+    "image_augmentation": false,
+    "horizon": 10,
+    "execute": 5,
+    "control_hz": 10
+  },
+  "evaluation": {
+    "seen_gate": {
+      "task": "select_fruit",
+      "seed": 42,
+      "repeats": 3,
+      "stop_first_failure": true
+    },
+    "development_manifest": "runs/fruit-recovery-20261124/development-sft180/episodes.jsonl",
+    "development_scenes": 16,
+    "max_controls": 600,
+    "reserved_test_used": false
+  },
+  "selection": "Only candidates passing the seen-reset gate reach the existing 16-scene development set. More official successes, then fewer controls, then earlier update. Retained SFT180 has9/16; treat a small count difference as selection, not reliable improvement.",
+  "storage": {
+    "actual_checkpoint_root": "/root/pi05-vlabench-scratch/fruit-full-train47-20261124",
+    "system_free_bytes": 16505552896,
+    "max_new_bytes": 8100000000,
+    "data_disk_weights": false
+  },
+  "source_sha256": {
+    "runs/fruit-full-train47-20261124/source/train_reference_aligned_fruit.py": "731c5d5372eba8bafe84bf5643a08a6a479e9d329386166212280f1575f5a2b7",
+    "runs/fruit-full-train47-20261124/source/pi05_runtime.py": "9efb1bc5f744d3df3f2bce5b1c86ac0035e17ab5c2e269dcabb5fa0a83f9979f",
+    "runs/fruit-full-train47-20261124/source/fp32_master_adamw.py": "c290799d8134aa37dee453d1f07d6deb30696346b021c1e6d783c9242a269a75",
+    "runs/fruit-full-train47-20261124/source/verify_pose_imitation_gate.py": "189de530cf5bfcb3c387226e62020624e86bf938916f0b39c43d9213f6965193"
+  },
+  "ppo_updates": 0,
+  "reserved_test_policy_calls": 0,
+  "verified_data_audit": {
+    "train_episodes": 47,
+    "train_frames": 6986,
+    "validation_episodes": 4,
+    "validation_frames": 589,
+    "sources": {
+      "expert_demo": 45,
+      "expert_correction": 2
+    },
+    "instructions": {
+      "Put the apple into the plate_seen": 9,
+      "Put the pear into the plate_seen": 16,
+      "Put the orange into the plate_seen": 10,
+      "Put the banana into the plate_seen": 12
+    },
+    "split_initializations": {
+      "train": 47,
+      "validation": 4,
+      "development": 16,
+      "reserved_test": 40
+    },
+    "all_split_overlaps_zero": true,
+    "state_statistics_unchanged": true,
+    "train_action_norm_sha256": "2f89fa57106178d3451bd4582f6454085ada19686de382dec37b55ac7594a6da",
+    "development_manifest_sha256": "95cb49b29144fe5aa2f0efaa0c79518e469dfd2ed9bbfb9791ecf26be63cff64",
+    "reserved_test_policy_calls": 0,
+    "dataset_verification_sha256": {
+      ".local/reference-aligned/lerobot-tritask-msaa0-v2": "912661fbd8af7f4f55479b902dcce8e92c28abe5c924dab399bc789e993c11e4",
+      ".local/reference-aligned/lerobot-msaa0-small-extras": "f9ef36fe5aeb57fbbcac4b0d3afe0071ba61092ec62087f731a789f3fb10948c"
+    }
+  },
+  "data_audit_correction": {
+    "time": "2026-11-24T09:33:05.968030+00:00",
+    "reason": "The45completeexpert and2correctionepisodes live in separate verified datasets; include both explicitly before any training.",
+    "training_started_before_correction": false
+  },
+  "runtime_image_cache_episodes": 64,
+  "memory_available_before": 1054274818048
+}

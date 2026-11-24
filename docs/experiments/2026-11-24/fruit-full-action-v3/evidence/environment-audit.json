@@ -1,0 +1,24 @@
+{
+  "python": "3.12.3",
+  "platform": "Linux-5.15.0-124-generic-x86_64-with-glibc2.35",
+  "packages": {
+    "torch": "2.8.0+cu128",
+    "mujoco": "3.2.2",
+    "dm-control": "1.0.22",
+    "jax": "0.5.3",
+    "transformers": "4.53.2",
+    "lerobot": "Source checkout or import shim",
+    "pyarrow": "18.1.0",
+    "numpy": "1.26.4",
+    "matplotlib": "3.11.2"
+  },
+  "source_revisions": {
+    ".local/upstream/RLinf-a29c0a6c37b02881b8d4af0900fa97f35e44b34c": "No .git metadata; see pinned path and installation record",
+    ".local/upstream/VLABench-openpi-788ef1f20e655de5bb40869fb7b7fcdd49732387": "No .git metadata; see pinned path and installation record",
+    ".local/upstream/vlabench-sim": "No .git metadata; see pinned path and installation record"
+  },
+  "gpu_reported_name": "NVIDIA GeForce RTX4080SUPER",
+  "gpu_reported_vram_mib": 32760,
+  "environment_changed": false,
+  "large_downloads": false
+}

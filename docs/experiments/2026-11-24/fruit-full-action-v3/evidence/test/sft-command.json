@@ -1,0 +1,28 @@
+{
+  "label": "sft",
+  "command": [
+    "/root/autodl-tmp/Pi05-VLABench/.local/torch28-venv/bin/python",
+    "runs/fruit-full-ppo-reward-compare-20261124/source/evaluate_pose_development.py",
+    "--base",
+    ".local/checkpoints/vlabench-primitive-rlinf/model.safetensors",
+    "--fork",
+    "/root/autodl-tmp/Pi05-VLABench/.local/upstream/VLABench-openpi-788ef1f20e655de5bb40869fb7b7fcdd49732387",
+    "--run",
+    "runs/fruit-full-train47-20261124/storage/sft",
+    "--cases",
+    "runs/fruit-long-sft-20261124/reserved-test",
+    "--protocol",
+    "runs/fruit-long-sft-20261124/reserved-test/protocol.json",
+    "--output",
+    "runs/fruit-full-ppo-reward-compare-20261124/final-test/sft",
+    "--tasks",
+    "select_fruit",
+    "--suite",
+    "ordinary",
+    "--workers",
+    "2",
+    "--stage",
+    "sft"
+  ],
+  "started_at": "2026-11-24T11:51:39.622856+00:00"
+}

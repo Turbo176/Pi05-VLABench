@@ -1,0 +1,3 @@
+{"total_controls": 1029, "chunks": 207, "passed": true, "aggregate_max_abs_error": 7.62939453125e-06, "coordinate_max_abs_error": 0.0, "worst_coordinate_chunk": 0}
+{"total_controls": 1643, "chunks": 124, "passed": true, "aggregate_max_abs_error": 7.62939453125e-06, "coordinate_max_abs_error": 0.0, "worst_coordinate_chunk": 0}
+{"total_controls": 3133, "chunks": 299, "passed": true, "aggregate_max_abs_error": 7.62939453125e-06, "coordinate_max_abs_error": 0.0, "worst_coordinate_chunk": 0}

@@ -1,0 +1,22 @@
+{
+  "reserved_test_manifest": "runs/fruit-long-sft-20261124/reserved-test/select_fruit-official.jsonl",
+  "reserved_test_manifest_sha256": "8d62b9aaee8fd018143cd82efbfeb8c301472adf4ab6e0c730a89cebf5e1da78",
+  "test_policy_calls_so_far": 0,
+  "selection_used_only_development": true,
+  "upstream_reference": {
+    "base_sha256": "66975306e09199efdf221e14d6f5d13ea5d6dbe42e8f921f19bd1096721eac61",
+    "normalization_sha256": "bce33fc1831830d953ef9bc57e520c02ee44e02b7ad07f27ce92b931a879384f",
+    "label": "upstream VLABench-finetuned reference, not raw foundation model"
+  },
+  "sft": {
+    "checkpoint": "runs/fruit-full-train47-20261124/storage/sft",
+    "sha256": "954f168626a30a068aae7e5c0ef0cc37a361e4ac068136d26e1ce02e46964bee",
+    "normalization_sha256": "2f89fa57106178d3451bd4582f6454085ada19686de382dec37b55ac7594a6da"
+  },
+  "ppo": {
+    "checkpoint": "runs/fruit-full-ppo-reward-compare-20261124/storage/potential/ppo-2.pt",
+    "sha256": "f38f00969c17a7841004429cb47a94af0255bdd0dfcb247a9dbf6ef0a91df660",
+    "parent_sft_sha256": "954f168626a30a068aae7e5c0ef0cc37a361e4ac068136d26e1ce02e46964bee",
+    "normalization_sha256": "2f89fa57106178d3451bd4582f6454085ada19686de382dec37b55ac7594a6da"
+  }
+}

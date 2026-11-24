@@ -1,0 +1,539 @@
+{
+  "seed": 263,
+  "train_seeds": [
+    42,
+    53,
+    54,
+    56,
+    57,
+    58,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    2010,
+    2011,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026,
+    2028,
+    2029,
+    2030,
+    2031,
+    2032,
+    2033,
+    2050,
+    2063,
+    2067,
+    2071,
+    2072,
+    2080,
+    2081
+  ],
+  "validation_seeds": [
+    55,
+    69,
+    2012,
+    2027
+  ],
+  "base_sha256": "66975306e09199efdf221e14d6f5d13ea5d6dbe42e8f921f19bd1096721eac61",
+  "rejected_by_label_replay": [],
+  "train_frames": 6986,
+  "validation_frames": 589,
+  "horizon": 10,
+  "execute": 5,
+  "actor_lora_rank": 0,
+  "vlm_lora_rank": 0,
+  "shortest_euler": true,
+  "discrete_state": false,
+  "input_format": "LeRobot v2.1",
+  "openpi_revision": "788ef1f20e655de5bb40869fb7b7fcdd49732387",
+  "lr": 1e-05,
+  "action_loss": "all",
+  "gripper_loss_weight": 1.0,
+  "gradient_accumulation": 4,
+  "image_augmentation": false,
+  "micro_batch_size": 2,
+  "instruction_balanced": false,
+  "train_action_heads": true,
+  "train_full_action_expert": true,
+  "render_samples": 0,
+  "training_script_sha256": "731c5d5372eba8bafe84bf5643a08a6a479e9d329386166212280f1575f5a2b7",
+  "runtime_script_sha256": "9efb1bc5f744d3df3f2bce5b1c86ac0035e17ab5c2e269dcabb5fa0a83f9979f",
+  "norm_stats_sha256": "2f89fa57106178d3451bd4582f6454085ada19686de382dec37b55ac7594a6da",
+  "device": "NVIDIA GeForce RTX 4080 SUPER",
+  "interface": {
+    "round_trip_max": 4.1326413935394157e-07,
+    "normalized_state_ablation_max": 0.0,
+    "active_image_keys": [
+      "base_0_rgb",
+      "left_wrist_0_rgb",
+      "right_wrist_0_rgb"
+    ],
+    "normalized_padding_value": -1.0
+  },
+  "dataset_verification_sha256": "912661fbd8af7f4f55479b902dcce8e92c28abe5c924dab399bc789e993c11e4",
+  "extra_dataset_verification_sha256": [
+    "f9ef36fe5aeb57fbbcac4b0d3afe0071ba61092ec62087f731a789f3fb10948c"
+  ],
+  "reference_model_revision": "f658a8bec801aab960fe0ceab370a123b31c1837",
+  "training_tasks": [
+    "select_fruit"
+  ],
+  "train_task_seeds": [
+    [
+      "select_fruit",
+      42
+    ],
+    [
+      "select_fruit",
+      53
+    ],
+    [
+      "select_fruit",
+      54
+    ],
+    [
+      "select_fruit",
+      56
+    ],
+    [
+      "select_fruit",
+      57
+    ],
+    [
+      "select_fruit",
+      58
+    ],
+    [
+      "select_fruit",
+      63
+    ],
+    [
+      "select_fruit",
+      64
+    ],
+    [
+      "select_fruit",
+      65
+    ],
+    [
+      "select_fruit",
+      66
+    ],
+    [
+      "select_fruit",
+      67
+    ],
+    [
+      "select_fruit",
+      68
+    ],
+    [
+      "select_fruit",
+      70
+    ],
+    [
+      "select_fruit",
+      71
+    ],
+    [
+      "select_fruit",
+      72
+    ],
+    [
+      "select_fruit",
+      73
+    ],
+    [
+      "select_fruit",
+      74
+    ],
+    [
+      "select_fruit",
+      75
+    ],
+    [
+      "select_fruit",
+      2010
+    ],
+    [
+      "select_fruit",
+      2011
+    ],
+    [
+      "select_fruit",
+      2013
+    ],
+    [
+      "select_fruit",
+      2014
+    ],
+    [
+      "select_fruit",
+      2015
+    ],
+    [
+      "select_fruit",
+      2016
+    ],
+    [
+      "select_fruit",
+      2017
+    ],
+    [
+      "select_fruit",
+      2018
+    ],
+    [
+      "select_fruit",
+      2019
+    ],
+    [
+      "select_fruit",
+      2020
+    ],
+    [
+      "select_fruit",
+      2021
+    ],
+    [
+      "select_fruit",
+      2022
+    ],
+    [
+      "select_fruit",
+      2023
+    ],
+    [
+      "select_fruit",
+      2024
+    ],
+    [
+      "select_fruit",
+      2025
+    ],
+    [
+      "select_fruit",
+      2026
+    ],
+    [
+      "select_fruit",
+      2028
+    ],
+    [
+      "select_fruit",
+      2029
+    ],
+    [
+      "select_fruit",
+      2030
+    ],
+    [
+      "select_fruit",
+      2031
+    ],
+    [
+      "select_fruit",
+      2032
+    ],
+    [
+      "select_fruit",
+      2033
+    ],
+    [
+      "select_fruit",
+      2050
+    ],
+    [
+      "select_fruit",
+      2063
+    ],
+    [
+      "select_fruit",
+      2067
+    ],
+    [
+      "select_fruit",
+      2071
+    ],
+    [
+      "select_fruit",
+      2072
+    ],
+    [
+      "select_fruit",
+      2080
+    ],
+    [
+      "select_fruit",
+      2081
+    ]
+  ],
+  "validation_task_seeds": [
+    [
+      "select_fruit",
+      55
+    ],
+    [
+      "select_fruit",
+      69
+    ],
+    [
+      "select_fruit",
+      2012
+    ],
+    [
+      "select_fruit",
+      2027
+    ]
+  ],
+  "training_parameter_profile": "full_action_expert_vlm_frozen",
+  "reference_action_profile": "train_split_shortest_euler_chunk_quantiles",
+  "action_quantile_fit_task_seeds": [
+    [
+      "select_fruit",
+      42
+    ],
+    [
+      "select_fruit",
+      53
+    ],
+    [
+      "select_fruit",
+      54
+    ],
+    [
+      "select_fruit",
+      56
+    ],
+    [
+      "select_fruit",
+      57
+    ],
+    [
+      "select_fruit",
+      58
+    ],
+    [
+      "select_fruit",
+      63
+    ],
+    [
+      "select_fruit",
+      64
+    ],
+    [
+      "select_fruit",
+      65
+    ],
+    [
+      "select_fruit",
+      66
+    ],
+    [
+      "select_fruit",
+      67
+    ],
+    [
+      "select_fruit",
+      68
+    ],
+    [
+      "select_fruit",
+      70
+    ],
+    [
+      "select_fruit",
+      71
+    ],
+    [
+      "select_fruit",
+      72
+    ],
+    [
+      "select_fruit",
+      73
+    ],
+    [
+      "select_fruit",
+      74
+    ],
+    [
+      "select_fruit",
+      75
+    ],
+    [
+      "select_fruit",
+      2010
+    ],
+    [
+      "select_fruit",
+      2011
+    ],
+    [
+      "select_fruit",
+      2013
+    ],
+    [
+      "select_fruit",
+      2014
+    ],
+    [
+      "select_fruit",
+      2015
+    ],
+    [
+      "select_fruit",
+      2016
+    ],
+    [
+      "select_fruit",
+      2017
+    ],
+    [
+      "select_fruit",
+      2018
+    ],
+    [
+      "select_fruit",
+      2019
+    ],
+    [
+      "select_fruit",
+      2020
+    ],
+    [
+      "select_fruit",
+      2021
+    ],
+    [
+      "select_fruit",
+      2022
+    ],
+    [
+      "select_fruit",
+      2023
+    ],
+    [
+      "select_fruit",
+      2024
+    ],
+    [
+      "select_fruit",
+      2025
+    ],
+    [
+      "select_fruit",
+      2026
+    ],
+    [
+      "select_fruit",
+      2028
+    ],
+    [
+      "select_fruit",
+      2029
+    ],
+    [
+      "select_fruit",
+      2030
+    ],
+    [
+      "select_fruit",
+      2031
+    ],
+    [
+      "select_fruit",
+      2032
+    ],
+    [
+      "select_fruit",
+      2033
+    ],
+    [
+      "select_fruit",
+      2050
+    ],
+    [
+      "select_fruit",
+      2063
+    ],
+    [
+      "select_fruit",
+      2067
+    ],
+    [
+      "select_fruit",
+      2071
+    ],
+    [
+      "select_fruit",
+      2072
+    ],
+    [
+      "select_fruit",
+      2080
+    ],
+    [
+      "select_fruit",
+      2081
+    ]
+  ],
+  "action_quantile_fit_frames": 6986,
+  "state_normalization_source": "unchanged_upstream_reference",
+  "trainable_parameter_count": 430098464,
+  "action_expert_parameter_count": 427932672,
+  "optimizer_precision_profile": "fp32-master-adamw-v1",
+  "fp32_master_numel": 311427072,
+  "fp32_master_optimizer": true,
+  "optimizer_state_saved": true,
+  "intermediate_snapshots_omit_optimizer": true,
+  "validation_base": {
+    "windows": 24,
+    "xyz_mae_m": 0.07846086616426763,
+    "euler_mae_rad": 0.0058746655883659335,
+    "gripper_mae": 0.13518562830644973
+  },
+  "training_source_counts": {
+    "select_fruit": {
+      "expert_demo": 45,
+      "expert_correction": 2
+    }
+  },
+  "first_action_expert_grad_l2_after_clip": 0.5683921575546265,
+  "first_vlm_grad_l2_after_clip": 0.0,
+  "first_actor_max_delta": 1.52587890625e-05,
+  "first_action_expert_max_delta": 1.52587890625e-05,
+  "first_vlm_max_delta": 0.0,
+  "updates": 3000,
+  "training_seconds": 3846.566078737378,
+  "peak_cuda_bytes": 18877537792,
+  "sampled_windows": 24000,
+  "reload_max_action_difference": 0.0,
+  "validation_sft": {
+    "windows": 24,
+    "xyz_mae_m": 0.0072306315409337565,
+    "euler_mae_rad": 0.0020918538239382907,
+    "gripper_mae": 0.1439739116642117
+  }
+}

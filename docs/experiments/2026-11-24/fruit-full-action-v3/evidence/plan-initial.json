@@ -1,0 +1,59 @@
+{
+  "registered_at": "2026-11-24T10:50:43.715210+00:00",
+  "status": "prepared_only",
+  "launch_conditions": [
+    "train47 selected_candidate exists and development successes>9/16",
+    "zero-updateRL all16development trajectories match SFT; teacher and seen42handoff passed"
+  ],
+  "parent_sft_sha256": "954f168626a30a068aae7e5c0ef0cc37a361e4ac068136d26e1ce02e46964bee",
+  "training": {
+    "iterations_per_arm": 2,
+    "training_scenes_per_arm": 4,
+    "seed_selection": "First natural reset for each of apple,banana,orange,pear within1301..1399; choose by instruction only before any policy call",
+    "critic_warmup_epochs": 2,
+    "actor_lr": 1e-06,
+    "critic_lr": 0.0001,
+    "target_kl": 0.02,
+    "minibatch": 4,
+    "max_controls": 600,
+    "sampler_seed": 372,
+    "train_full_action_expert": true,
+    "fp32_master": true,
+    "vlm_frozen": true
+  },
+  "arms": [
+    {
+      "name": "potential",
+      "reward": "discounted-terminal-potential-v2",
+      "shaping": 0.5
+    },
+    {
+      "name": "milestone",
+      "reward": "grasp-lift-completion-v3",
+      "shaping": 0
+    }
+  ],
+  "selection": "Screen all four PPO checkpoints on same1201..1204development; rank successes,controls,earlieriteration,armname. Extend selected PPO checkpoint toall16. Keep SFT independently for final comparison; do not require PPO improvement and do not select using reserved40.",
+  "baseline_reference": "Final evaluation must use true upstream normalization/profile for upstream reference, never selectedSFTnewnorm with untrainedbaseweights.",
+  "storage": {
+    "checkpoints_per_arm": 2,
+    "checkpoint_format": "inference actor/critic weights+metadata,no optimizer; not resumable",
+    "maximum_new_bytes": 4600000000,
+    "root": "/root/pi05-vlabench-scratch/fruit-full-ppo-reward-compare-20261124",
+    "minimum_free_bytes": 2147483648
+  },
+  "ppo_updates": 0,
+  "reserved_test_policy_calls": 0,
+  "maximum_env_controls": 14400,
+  "source_sha256": {
+    "runs/fruit-full-ppo-reward-compare-20261124/source/fp32_master_adamw.py": "c0b0d1074fa7fc4eb9ee1ea1a3c6419de50718147e36ae1ff823bcb877eae055",
+    "runs/fruit-full-ppo-reward-compare-20261124/source/ppo_pi05.py": "f125599b86eb91056301bd95c273788c5dd3c926817d69393c3633b4f9ba2fbc",
+    "runs/fruit-full-ppo-reward-compare-20261124/source/ppo_reference_aligned_fruit.py": "538efff68c312445b56ff97170f2291d9347269a37924b53e31fc3450971acef",
+    "runs/fruit-full-ppo-reward-compare-20261124/source/train_fruit_ppo.py": "8f031dfe921a550b01c2d45abecbdfee0941837cfac78aa88d1c82ceba0b558a",
+    "runs/fruit-full-ppo-reward-compare-20261124/source/train_reference_aligned_fruit.py": "0f4952eeb11427b6abcb5bc307074b9b1a79f352256c4699ffc5989f820d4b0d",
+    "runs/fruit-full-ppo-reward-compare-20261124/source/pi05_runtime.py": "9efb1bc5f744d3df3f2bce5b1c86ac0035e17ab5c2e269dcabb5fa0a83f9979f",
+    "runs/fruit-full-ppo-reward-compare-20261124/source/check_reference_rl_handoff.py": "295f1b419f1909a4abd80b7b16fc3afb0e34f1795753e128628948800e6b39aa",
+    "runs/fruit-full-ppo-reward-compare-20261124/source/milestones.py": "81d1b3acd5c3030f2b292b3ce0f92635176010b7be4a50d64d37d511988e8784",
+    "runs/fruit-full-ppo-reward-compare-20261124/source/milestone_rollout.py": "5288964b211cf8d617e3c84aee6f44c6c48eb85ccc3340406281ffdac94cbb21"
+  }
+}

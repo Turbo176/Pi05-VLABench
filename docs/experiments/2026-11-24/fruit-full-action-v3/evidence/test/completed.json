@@ -1,0 +1,32 @@
+{
+  "complete": true,
+  "finished_at": "2026-11-24T12:34:36.319656+00:00",
+  "wall_seconds": 2576.6983834318817,
+  "models_selected_only_on_development": true,
+  "reports": [
+    {
+      "policy": "sft",
+      "successes": 29,
+      "trials": 40,
+      "controls": 11185,
+      "completed_sha256": "0161ece4b550944c24bbd4c8eae457ba633a8aed2e6e35363e626fef3547acbd",
+      "episodes_sha256": "415ecf17e7979dfc9298fb5d65f4554178180a32b5e8970678db9d1002922f5d"
+    },
+    {
+      "policy": "reference",
+      "successes": 19,
+      "trials": 40,
+      "controls": 16415,
+      "completed_sha256": "e119c93f798fa1e14600ee5dda0f702d5f0fd12f686c99cdeebdc58e2f53ca9c",
+      "episodes_sha256": "06a69268bd2915be3baa60218fb88c353fb272637773f23dd4cc696659e39153"
+    },
+    {
+      "policy": "ppo",
+      "successes": 28,
+      "trials": 40,
+      "controls": 11668,
+      "completed_sha256": "b854a008b0ee0fb34e7335cabdcef52fd784fac149e49e0acaff45c4338615d6",
+      "episodes_sha256": "98be12ab9014c4150e16f0231a71296f39f6c57792d2ff1cf30ee35fce22b477"
+    }
+  ]
+}

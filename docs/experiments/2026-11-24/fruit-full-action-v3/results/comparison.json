@@ -1,0 +1,317 @@
+{
+  "complete": true,
+  "verified_export_files": 88,
+  "test_manifest_sha256": "8d62b9aaee8fd018143cd82efbfeb8c301472adf4ab6e0c730a89cebf5e1da78",
+  "test": [
+    {
+      "policy": "reference",
+      "successes": 19,
+      "trials": 40,
+      "success_rate": 0.475,
+      "wilson_95": [
+        0.329354701126789,
+        0.6250263789330753
+      ],
+      "controls": 16415,
+      "ik_nonconverged_controls": 4135,
+      "failures": {
+        "target_moved_goal_unsatisfied": 21
+      },
+      "by_fruit": {
+        "apple": {
+          "successes": 6,
+          "trials": 10,
+          "success_rate": 0.6,
+          "wilson_95": [
+            0.31267376973365824,
+            0.8318196702937638
+          ],
+          "controls": 3690,
+          "ik_nonconverged_controls": 667,
+          "failures": {
+            "target_moved_goal_unsatisfied": 4
+          }
+        },
+        "banana": {
+          "successes": 4,
+          "trials": 10,
+          "success_rate": 0.4,
+          "wilson_95": [
+            0.16818032970623614,
+            0.6873262302663417
+          ],
+          "controls": 4686,
+          "ik_nonconverged_controls": 1340,
+          "failures": {
+            "target_moved_goal_unsatisfied": 6
+          }
+        },
+        "orange": {
+          "successes": 3,
+          "trials": 10,
+          "success_rate": 0.3,
+          "wilson_95": [
+            0.10779126740630099,
+            0.6032218525388546
+          ],
+          "controls": 4655,
+          "ik_nonconverged_controls": 1158,
+          "failures": {
+            "target_moved_goal_unsatisfied": 7
+          }
+        },
+        "pear": {
+          "successes": 6,
+          "trials": 10,
+          "success_rate": 0.6,
+          "wilson_95": [
+            0.31267376973365824,
+            0.8318196702937638
+          ],
+          "controls": 3384,
+          "ik_nonconverged_controls": 970,
+          "failures": {
+            "target_moved_goal_unsatisfied": 4
+          }
+        }
+      }
+    },
+    {
+      "policy": "sft",
+      "successes": 29,
+      "trials": 40,
+      "success_rate": 0.725,
+      "wilson_95": [
+        0.5716504419378943,
+        0.8389198375233267
+      ],
+      "controls": 11185,
+      "ik_nonconverged_controls": 605,
+      "failures": {
+        "target_moved_goal_unsatisfied": 9,
+        "target_displacement_under_3cm": 2
+      },
+      "by_fruit": {
+        "apple": {
+          "successes": 7,
+          "trials": 10,
+          "success_rate": 0.7,
+          "wilson_95": [
+            0.39677814746114537,
+            0.8922087325936989
+          ],
+          "controls": 2887,
+          "ik_nonconverged_controls": 249,
+          "failures": {
+            "target_moved_goal_unsatisfied": 2,
+            "target_displacement_under_3cm": 1
+          }
+        },
+        "banana": {
+          "successes": 10,
+          "trials": 10,
+          "success_rate": 1.0,
+          "wilson_95": [
+            0.7224672001371107,
+            0.9999999999999999
+          ],
+          "controls": 1599,
+          "ik_nonconverged_controls": 0,
+          "failures": {}
+        },
+        "orange": {
+          "successes": 6,
+          "trials": 10,
+          "success_rate": 0.6,
+          "wilson_95": [
+            0.31267376973365824,
+            0.8318196702937638
+          ],
+          "controls": 3355,
+          "ik_nonconverged_controls": 302,
+          "failures": {
+            "target_moved_goal_unsatisfied": 4
+          }
+        },
+        "pear": {
+          "successes": 6,
+          "trials": 10,
+          "success_rate": 0.6,
+          "wilson_95": [
+            0.31267376973365824,
+            0.8318196702937638
+          ],
+          "controls": 3344,
+          "ik_nonconverged_controls": 54,
+          "failures": {
+            "target_moved_goal_unsatisfied": 3,
+            "target_displacement_under_3cm": 1
+          }
+        }
+      }
+    },
+    {
+      "policy": "ppo",
+      "successes": 28,
+      "trials": 40,
+      "success_rate": 0.7,
+      "wilson_95": [
+        0.5456998118185507,
+        0.8192515477025347
+      ],
+      "controls": 11668,
+      "ik_nonconverged_controls": 608,
+      "failures": {
+        "target_moved_goal_unsatisfied": 9,
+        "target_displacement_under_3cm": 3
+      },
+      "by_fruit": {
+        "apple": {
+          "successes": 7,
+          "trials": 10,
+          "success_rate": 0.7,
+          "wilson_95": [
+            0.39677814746114537,
+            0.8922087325936989
+          ],
+          "controls": 2850,
+          "ik_nonconverged_controls": 331,
+          "failures": {
+            "target_moved_goal_unsatisfied": 2,
+            "target_displacement_under_3cm": 1
+          }
+        },
+        "banana": {
+          "successes": 9,
+          "trials": 10,
+          "success_rate": 0.9,
+          "wilson_95": [
+            0.5958499732047615,
+            0.9821237869049271
+          ],
+          "controls": 2055,
+          "ik_nonconverged_controls": 18,
+          "failures": {
+            "target_moved_goal_unsatisfied": 1
+          }
+        },
+        "orange": {
+          "successes": 5,
+          "trials": 10,
+          "success_rate": 0.5,
+          "wilson_95": [
+            0.236593090512564,
+            0.7634069094874361
+          ],
+          "controls": 3864,
+          "ik_nonconverged_controls": 242,
+          "failures": {
+            "target_moved_goal_unsatisfied": 4,
+            "target_displacement_under_3cm": 1
+          }
+        },
+        "pear": {
+          "successes": 7,
+          "trials": 10,
+          "success_rate": 0.7,
+          "wilson_95": [
+            0.39677814746114537,
+            0.8922087325936989
+          ],
+          "controls": 2899,
+          "ik_nonconverged_controls": 17,
+          "failures": {
+            "target_moved_goal_unsatisfied": 2,
+            "target_displacement_under_3cm": 1
+          }
+        }
+      }
+    }
+  ],
+  "paired": {
+    "sft_minus_reference": {
+      "gained_scenes": 17,
+      "lost_scenes": 7,
+      "unchanged_scenes": 16,
+      "success_rate_difference": 0.25,
+      "exact_mcnemar_two_sided_p": 0.06391465663909912
+    },
+    "ppo_minus_sft": {
+      "gained_scenes": 3,
+      "lost_scenes": 4,
+      "unchanged_scenes": 33,
+      "success_rate_difference": -0.025,
+      "exact_mcnemar_two_sided_p": 1.0
+    }
+  },
+  "selected_ppo": {
+    "arm": "potential",
+    "iteration": 2,
+    "checkpoint": "runs/fruit-full-ppo-reward-compare-20261124/storage/potential/ppo-2.pt",
+    "sha256": "f38f00969c17a7841004429cb47a94af0255bdd0dfcb247a9dbf6ef0a91df660",
+    "screen_successes": 4,
+    "screen_trials": 4,
+    "screen_controls": 621
+  },
+  "development_successes": 11,
+  "development_trials": 16,
+  "sft_training_seconds": 3846.566078737378,
+  "ppo_training": {
+    "potential": {
+      "iterations": [
+        {
+          "iteration": 1,
+          "saved": true,
+          "actor_optimizer_steps": 9,
+          "cumulative_actor_optimizer_steps": 9,
+          "controls": 1643,
+          "full_batch_prefix_score": 0.009340540016766376,
+          "checkpoint_sha256": "f3d2ebcd37f8c6ffd941332f21b9e5474edeb1248a9cfad006ec891129e73311"
+        },
+        {
+          "iteration": 2,
+          "saved": true,
+          "actor_optimizer_steps": 12,
+          "cumulative_actor_optimizer_steps": 21,
+          "controls": 3133,
+          "full_batch_prefix_score": 0.007203434306126334,
+          "checkpoint_sha256": "f38f00969c17a7841004429cb47a94af0255bdd0dfcb247a9dbf6ef0a91df660"
+        }
+      ],
+      "total_controls": 3133,
+      "actor_optimizer_steps": 21,
+      "critic_optimizer_steps": 125,
+      "wall_seconds": 830.2168393023312,
+      "checkpoint_training_resume_supported": false
+    },
+    "milestone": {
+      "iterations": [
+        {
+          "iteration": 1,
+          "saved": true,
+          "actor_optimizer_steps": 23,
+          "cumulative_actor_optimizer_steps": 23,
+          "controls": 1643,
+          "full_batch_prefix_score": 0.019816204254333593,
+          "checkpoint_sha256": "cac97dece5a7e6f67810bd21e82f3575c7f2ca557ed616e5b86d5b3fdba3b4ee"
+        },
+        {
+          "iteration": 2,
+          "saved": false,
+          "rejected_for_full_batch_score": true,
+          "full_batch_prefix_score": 0.050613024675426665,
+          "controls": 2751,
+          "actor_optimizer_steps": 49
+        }
+      ],
+      "total_controls": 2751,
+      "actor_optimizer_steps": 72,
+      "critic_optimizer_steps": 176,
+      "wall_seconds": 940.2657047249377,
+      "checkpoint_training_resume_supported": false
+    }
+  },
+  "total_reward_comparison_controls": 5884,
+  "zero_update_matched_scenes": 16,
+  "source_of_optimizer_steps": "Logs and saved actor deltas; PPO inference checkpoints omit optimizer state"
+}

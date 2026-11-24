@@ -1,6 +1,6 @@
 # Demonstrations and LeRobot data
 
-The learned-policy experiment uses a pose dataset with **64 training episodes / 9,904 frames** and **five validation episodes / 744 frames**. Fruit contributes 47 training episodes, including two expert corrections; flower contributes 17. See the [data card](system-design.md#data-card) and [transform/controller audit](experiments/2026-11-22/pose-robustness-v2/training-contract-audit.json).
+The current fruit policy uses **47 training episodes / 6,986 frames** and **four validation episodes / 589 frames**. The earlier shared fruit/flower experiment used **64 training episodes / 9,904 frames** and **five validation episodes / 744 frames**: 47 fruit episodes, including two expert corrections, plus 17 flower episodes. The [data card](system-design.md#data-card) separates these checkpoints; the [transform/controller audit](experiments/2026-11-22/pose-robustness-v2/training-contract-audit.json) documents the common pose interface.
 
 ## Capture, replay, export
 

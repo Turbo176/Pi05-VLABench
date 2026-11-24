@@ -1,0 +1,13 @@
+{
+  "parent_checkpoint": "runs/fruit-full-train47-20261124/storage/sft",
+  "parent_sft_sha256": "954f168626a30a068aae7e5c0ef0cc37a361e4ac068136d26e1ce02e46964bee",
+  "selected_for": "bounded reward-objective PPO pilot",
+  "seen_reset_successes": 3,
+  "seen_reset_trials": 3,
+  "development_successes": 9,
+  "development_trials": 16,
+  "prior_strict_upgrade_qualified": false,
+  "promotion_of_old_public_results": false,
+  "ppo_updates": 0,
+  "reserved_test_used": false
+}

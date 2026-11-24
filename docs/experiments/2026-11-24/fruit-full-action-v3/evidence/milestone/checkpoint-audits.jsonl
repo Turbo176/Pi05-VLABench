@@ -1,0 +1,1 @@
+{"iteration": 1, "checkpoint_sha256": "cac97dece5a7e6f67810bd21e82f3575c7f2ca557ed616e5b86d5b3fdba3b4ee", "actor_and_critic_tensors_equal": true, "reload_normalized_prediction_max_error": 0.0, "optimizer_state_saved": false, "training_resume_supported": false}

@@ -1,0 +1,65 @@
+{
+  "complete": true,
+  "audited_at": "2026-11-24T11:24:35.260765+00:00",
+  "sft_sha256": "954f168626a30a068aae7e5c0ef0cc37a361e4ac068136d26e1ce02e46964bee",
+  "audit_source_sha256": "8f466e0224d7249f09390f0e336b9106ae90ad15e776166467a1e1334228cc24",
+  "arm": "potential",
+  "checkpoints": [
+    {
+      "iteration": 1,
+      "checkpoint_sha256": "f3d2ebcd37f8c6ffd941332f21b9e5474edeb1248a9cfad006ec891129e73311",
+      "actor_parameter_changes": {
+        "action_expert_full": {
+          "tensors": 182,
+          "changed_tensors": 182,
+          "changed_elements": 124039821,
+          "max_abs_delta": 1.52587890625e-05,
+          "delta_l2": 0.04275287499277576
+        },
+        "action_heads": {
+          "tensors": 8,
+          "changed_tensors": 8,
+          "changed_elements": 2139837,
+          "max_abs_delta": 8.952803909778595e-06,
+          "delta_l2": 0.005127077717744541
+        }
+      },
+      "cumulative_actor_optimizer_steps": 9,
+      "iteration_actor_optimizer_steps": 9,
+      "cumulative_critic_optimizer_steps": 113,
+      "actor_grad_l2_max": 146.01931762695312,
+      "total_controls": 1643,
+      "optimizer_counters_independently_reconstructed": false,
+      "optimizer_evidence": "Applied updates and gradients from logs; inference-onlycheckpoint has no optimizer state",
+      "matches_training_report": true
+    },
+    {
+      "iteration": 2,
+      "checkpoint_sha256": "f38f00969c17a7841004429cb47a94af0255bdd0dfcb247a9dbf6ef0a91df660",
+      "actor_parameter_changes": {
+        "action_expert_full": {
+          "tensors": 182,
+          "changed_tensors": 182,
+          "changed_elements": 127995032,
+          "max_abs_delta": 3.0517578125e-05,
+          "delta_l2": 0.06747041551251542
+        },
+        "action_heads": {
+          "tensors": 8,
+          "changed_tensors": 8,
+          "changed_elements": 2139913,
+          "max_abs_delta": 1.904461532831192e-05,
+          "delta_l2": 0.007705549411301915
+        }
+      },
+      "cumulative_actor_optimizer_steps": 21,
+      "iteration_actor_optimizer_steps": 12,
+      "cumulative_critic_optimizer_steps": 125,
+      "actor_grad_l2_max": 168.82757568359375,
+      "total_controls": 3133,
+      "optimizer_counters_independently_reconstructed": false,
+      "optimizer_evidence": "Applied updates and gradients from logs; inference-onlycheckpoint has no optimizer state",
+      "matches_training_report": true
+    }
+  ]
+}

@@ -1,0 +1,252 @@
+{
+  "complete": true,
+  "optimizer_updates": 0,
+  "reserved_test_used": false,
+  "source_sft_sha256": "954f168626a30a068aae7e5c0ef0cc37a361e4ac068136d26e1ce02e46964bee",
+  "expected_development_scenes": 16,
+  "matches": [
+    {
+      "seed": 1201,
+      "success": true,
+      "controls": 175,
+      "comparisons": {
+        "initial_state_sha256": true,
+        "initial_policy_rgb_sha256": true,
+        "instruction": true,
+        "success": true,
+        "steps": true,
+        "action_sha256": true,
+        "ik_nonconverged_steps": true
+      },
+      "matched": true
+    },
+    {
+      "seed": 1202,
+      "success": true,
+      "controls": 114,
+      "comparisons": {
+        "initial_state_sha256": true,
+        "initial_policy_rgb_sha256": true,
+        "instruction": true,
+        "success": true,
+        "steps": true,
+        "action_sha256": true,
+        "ik_nonconverged_steps": true
+      },
+      "matched": true
+    },
+    {
+      "seed": 1203,
+      "success": true,
+      "controls": 178,
+      "comparisons": {
+        "initial_state_sha256": true,
+        "initial_policy_rgb_sha256": true,
+        "instruction": true,
+        "success": true,
+        "steps": true,
+        "action_sha256": true,
+        "ik_nonconverged_steps": true
+      },
+      "matched": true
+    },
+    {
+      "seed": 1204,
+      "success": false,
+      "controls": 600,
+      "comparisons": {
+        "initial_state_sha256": true,
+        "initial_policy_rgb_sha256": true,
+        "instruction": true,
+        "success": true,
+        "steps": true,
+        "action_sha256": true,
+        "ik_nonconverged_steps": true
+      },
+      "matched": true
+    },
+    {
+      "seed": 1211,
+      "success": false,
+      "controls": 600,
+      "comparisons": {
+        "initial_state_sha256": true,
+        "initial_policy_rgb_sha256": true,
+        "instruction": true,
+        "success": true,
+        "steps": true,
+        "action_sha256": true,
+        "ik_nonconverged_steps": true
+      },
+      "matched": true
+    },
+    {
+      "seed": 1212,
+      "success": false,
+      "controls": 600,
+      "comparisons": {
+        "initial_state_sha256": true,
+        "initial_policy_rgb_sha256": true,
+        "instruction": true,
+        "success": true,
+        "steps": true,
+        "action_sha256": true,
+        "ik_nonconverged_steps": true
+      },
+      "matched": true
+    },
+    {
+      "seed": 1213,
+      "success": true,
+      "controls": 162,
+      "comparisons": {
+        "initial_state_sha256": true,
+        "initial_policy_rgb_sha256": true,
+        "instruction": true,
+        "success": true,
+        "steps": true,
+        "action_sha256": true,
+        "ik_nonconverged_steps": true
+      },
+      "matched": true
+    },
+    {
+      "seed": 1214,
+      "success": false,
+      "controls": 600,
+      "comparisons": {
+        "initial_state_sha256": true,
+        "initial_policy_rgb_sha256": true,
+        "instruction": true,
+        "success": true,
+        "steps": true,
+        "action_sha256": true,
+        "ik_nonconverged_steps": true
+      },
+      "matched": true
+    },
+    {
+      "seed": 1215,
+      "success": true,
+      "controls": 143,
+      "comparisons": {
+        "initial_state_sha256": true,
+        "initial_policy_rgb_sha256": true,
+        "instruction": true,
+        "success": true,
+        "steps": true,
+        "action_sha256": true,
+        "ik_nonconverged_steps": true
+      },
+      "matched": true
+    },
+    {
+      "seed": 1216,
+      "success": true,
+      "controls": 160,
+      "comparisons": {
+        "initial_state_sha256": true,
+        "initial_policy_rgb_sha256": true,
+        "instruction": true,
+        "success": true,
+        "steps": true,
+        "action_sha256": true,
+        "ik_nonconverged_steps": true
+      },
+      "matched": true
+    },
+    {
+      "seed": 1217,
+      "success": false,
+      "controls": 600,
+      "comparisons": {
+        "initial_state_sha256": true,
+        "initial_policy_rgb_sha256": true,
+        "instruction": true,
+        "success": true,
+        "steps": true,
+        "action_sha256": true,
+        "ik_nonconverged_steps": true
+      },
+      "matched": true
+    },
+    {
+      "seed": 1218,
+      "success": true,
+      "controls": 163,
+      "comparisons": {
+        "initial_state_sha256": true,
+        "initial_policy_rgb_sha256": true,
+        "instruction": true,
+        "success": true,
+        "steps": true,
+        "action_sha256": true,
+        "ik_nonconverged_steps": true
+      },
+      "matched": true
+    },
+    {
+      "seed": 1219,
+      "success": true,
+      "controls": 151,
+      "comparisons": {
+        "initial_state_sha256": true,
+        "initial_policy_rgb_sha256": true,
+        "instruction": true,
+        "success": true,
+        "steps": true,
+        "action_sha256": true,
+        "ik_nonconverged_steps": true
+      },
+      "matched": true
+    },
+    {
+      "seed": 1220,
+      "success": true,
+      "controls": 204,
+      "comparisons": {
+        "initial_state_sha256": true,
+        "initial_policy_rgb_sha256": true,
+        "instruction": true,
+        "success": true,
+        "steps": true,
+        "action_sha256": true,
+        "ik_nonconverged_steps": true
+      },
+      "matched": true
+    },
+    {
+      "seed": 1221,
+      "success": false,
+      "controls": 600,
+      "comparisons": {
+        "initial_state_sha256": true,
+        "initial_policy_rgb_sha256": true,
+        "instruction": true,
+        "success": true,
+        "steps": true,
+        "action_sha256": true,
+        "ik_nonconverged_steps": true
+      },
+      "matched": true
+    },
+    {
+      "seed": 1222,
+      "success": false,
+      "controls": 600,
+      "comparisons": {
+        "initial_state_sha256": true,
+        "initial_policy_rgb_sha256": true,
+        "instruction": true,
+        "success": true,
+        "steps": true,
+        "action_sha256": true,
+        "ik_nonconverged_steps": true
+      },
+      "matched": true
+    }
+  ],
+  "matched_rollouts": 16,
+  "matched_successes": 9,
+  "completed_at": "2026-11-24T11:05:27.901455+00:00"
+}

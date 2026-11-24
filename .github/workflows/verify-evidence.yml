@@ -30,3 +30,6 @@ jobs:
           --ppo evidence/test-ppo.jsonl
           --selection evidence/final-selection.json
           --output results
+      - name: Verify full-action SFT and PPO comparison
+        working-directory: docs/experiments/2026-11-24/fruit-full-action-v3
+        run: python3 analyze.py --evidence evidence --output results --verify-only

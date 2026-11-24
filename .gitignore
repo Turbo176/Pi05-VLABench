@@ -34,3 +34,4 @@ __pycache__/
 !/media/policy/fruit-recovery-v2-*-6005.mp4
 *.safetensors
 *.pt
+!/media/policy/fruit-full-action-v3-*-7001.mp4

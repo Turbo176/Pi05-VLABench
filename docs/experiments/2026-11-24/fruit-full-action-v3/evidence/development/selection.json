@@ -1,0 +1,48 @@
+{
+  "complete": true,
+  "reserved_test_used": false,
+  "parent_sft_sha256": "954f168626a30a068aae7e5c0ef0cc37a361e4ac068136d26e1ce02e46964bee",
+  "candidates": [
+    {
+      "arm": "potential",
+      "iteration": 1,
+      "checkpoint": "runs/fruit-full-ppo-reward-compare-20261124/storage/potential/ppo-1.pt",
+      "sha256": "f3d2ebcd37f8c6ffd941332f21b9e5474edeb1248a9cfad006ec891129e73311",
+      "screen_successes": 4,
+      "screen_trials": 4,
+      "screen_controls": 627
+    },
+    {
+      "arm": "potential",
+      "iteration": 2,
+      "checkpoint": "runs/fruit-full-ppo-reward-compare-20261124/storage/potential/ppo-2.pt",
+      "sha256": "f38f00969c17a7841004429cb47a94af0255bdd0dfcb247a9dbf6ef0a91df660",
+      "screen_successes": 4,
+      "screen_trials": 4,
+      "screen_controls": 621
+    },
+    {
+      "arm": "milestone",
+      "iteration": 1,
+      "checkpoint": "runs/fruit-full-ppo-reward-compare-20261124/storage/milestone/ppo-1.pt",
+      "sha256": "cac97dece5a7e6f67810bd21e82f3575c7f2ca557ed616e5b86d5b3fdba3b4ee",
+      "screen_successes": 3,
+      "screen_trials": 4,
+      "screen_controls": 1092
+    }
+  ],
+  "selected_candidate": {
+    "arm": "potential",
+    "iteration": 2,
+    "checkpoint": "runs/fruit-full-ppo-reward-compare-20261124/storage/potential/ppo-2.pt",
+    "sha256": "f38f00969c17a7841004429cb47a94af0255bdd0dfcb247a9dbf6ef0a91df660",
+    "screen_successes": 4,
+    "screen_trials": 4,
+    "screen_controls": 621
+  },
+  "selected_development_successes": 11,
+  "selected_development_trials": 16,
+  "selected_development_controls": 4670,
+  "sft_development_successes": 9,
+  "ppo_better_than_sft_development": true
+}

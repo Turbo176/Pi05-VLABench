@@ -1,0 +1,34 @@
+{
+  "complete": true,
+  "reserved_test_used": false,
+  "ppo_updates": 0,
+  "results": [
+    {
+      "updates": 1000,
+      "checkpoint": "runs/fruit-full-train47-20261124/storage/sft/checkpoint-1000",
+      "seen_gate_passed": false,
+      "seen_successes": 0,
+      "seen_completed": 1
+    },
+    {
+      "updates": 2000,
+      "checkpoint": "runs/fruit-full-train47-20261124/storage/sft/checkpoint-2000",
+      "seen_gate_passed": false,
+      "seen_successes": 0,
+      "seen_completed": 1
+    },
+    {
+      "updates": 3000,
+      "checkpoint": "runs/fruit-full-train47-20261124/storage/sft",
+      "seen_gate_passed": true,
+      "seen_successes": 3,
+      "seen_completed": 3,
+      "development_successes": 9,
+      "development_trials": 16,
+      "development_controls": 5650
+    }
+  ],
+  "candidate_eligible_for_rl_handoff": false,
+  "selected_candidate": null,
+  "baseline_sft180_development_successes": 9
+}

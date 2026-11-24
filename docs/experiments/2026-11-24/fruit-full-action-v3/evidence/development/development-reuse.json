@@ -1,0 +1,26 @@
+{
+  "screen_source": "runs/fruit-full-ppo-reward-compare-20261124/evaluation/potential-2-screen/episodes.jsonl",
+  "screen_source_sha256": "7c4756a4e3d050bc249662f89849f872291ea004c358e17c13e4ec2417450d75",
+  "reused_seeds": [
+    1201,
+    1202,
+    1203,
+    1204
+  ],
+  "newly_executed_seeds": [
+    1211,
+    1212,
+    1213,
+    1214,
+    1215,
+    1216,
+    1217,
+    1218,
+    1219,
+    1220,
+    1221,
+    1222
+  ],
+  "policy_sha256": "f38f00969c17a7841004429cb47a94af0255bdd0dfcb247a9dbf6ef0a91df660",
+  "same_initializations_sampler_and_control_budget": true
+}

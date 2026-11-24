@@ -1,0 +1,7 @@
+{
+  "seed": 7001,
+  "selected_at": "2026-11-24T12:34:41.567617+00:00",
+  "selection_rule": "First seed with SFT/PPO success and reference failure; otherwise first shared success, then first PPOsuccess, then firstscene. Selected after all40outcomes, for illustrationonly.",
+  "representative_success_rate_claim": false,
+  "full_aggregate_count": 40
+}

@@ -1,6 +1,8 @@
 # GPU training and evaluation
 
-The completed experiment uses the [pinned VLABench OpenPI fork and RLinf](upstream.md), a shared fruit/flower SFT checkpoint, and fruit PPO from that exact parent. It uses the pose interface in [system design](system-design.md). The older joint-space training route is retired.
+The current fruit full-action experiment uses 3,000 SFT updates and PPO from the exact same checkpoint. Use its [verified commands](experiments/2026-11-24/fruit-full-action-v3/commands.md) and [phase-specific sources](experiments/2026-11-24/fruit-full-action-v3/implementation/rl/source/train_fruit_ppo.py). They include the 33-test CPU check, FP32 master optimizer, current reward variants and reference normalization.
+
+The recipes below document the earlier shared fruit/flower SFT90/SFT180 experiments; their results remain separate. They use the pose interface in [system design](system-design.md).
 
 ## Prepared environment
 

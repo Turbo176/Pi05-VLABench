@@ -1,0 +1,18 @@
+{
+  "registered_at": "2026-11-24T11:11:18.775567+00:00",
+  "parent_sft_sha256": "954f168626a30a068aae7e5c0ef0cc37a361e4ac068136d26e1ce02e46964bee",
+  "candidates": "All successfully saved checkpoints from both planned arms, iterations1/2",
+  "screen_seeds": [
+    1201,
+    1202,
+    1203,
+    1204
+  ],
+  "rank": "more official successes, fewer controls, earlieriteration, armname",
+  "extension": "Reuses4identical selected-checkpoint screen episodes and executes12remaining development scenes once",
+  "evaluation_source_sha256": "070caa8d9185a8b28cb1dbcc87bee2b2c8aa6fb4cd37635ccf5c67a08236c1ac",
+  "inference_models_loaded": 1,
+  "hot_swap": "Exact complete trainable actor tensors; frozenVLM and normalization identical",
+  "workers": 2,
+  "reserved_test_policy_calls": 0
+}

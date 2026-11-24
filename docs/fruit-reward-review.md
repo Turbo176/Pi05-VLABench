@@ -1,8 +1,17 @@
 # 🍐 Fruit PPO reward review
 
+The latest [full-action fruit experiment](experiments/2026-11-24/fruit-full-action-v3/README.md) ran both the potential and milestone reward arms from the exact same SFT3000 parent. Development selection retained potential iteration two; final reference → SFT → PPO counts are **19/40 → 29/40 → 28/40** on forty reserved paired scenes. The complete comparison used 5,884 controls. Milestone iteration two exceeded the unchanged update guard and was rejected before saving; its cost remains included.
+
+The implemented milestone pays +0.2 once for the instructed fruit grasped and held at least 4 cm above reset for three physical controls, then +0.8 once on official success. It was checked against the real official expert and tested for repeated events, wrong targets, pushes and chunk boundaries. [Reward event implementation](experiments/2026-11-24/fruit-full-action-v3/implementation/rl/source/milestones.py) · [Collector checks](experiments/2026-11-24/fruit-full-action-v3/implementation/rl/tests/test_milestone_collector.py)
+
+The potential arm uses the objective's chunk discount and zero terminal potential. The milestone arm changes the objective; no policy-invariance claim is made for it. Neither reward guarantees PPO improvement. Both preserve the official success predicate and policy observation whitelist. All 33 CPU tests and saved actor-delta audits are retained in the report.
+
+The review below records the earlier rewards and the literature reasoning that led to the follow-up. Its SFT90/SFT180 development and test results belong to those historical checkpoints.
+
+
 Updated on November 24, 2026. This note explains the original experiment's reward and a separate follow-up. Both reward variants completed a full-model GPU smoke run, including critic warmup, actor updates, checkpoint saving and paired development evaluation. The legacy reward scored 10/16 and the corrected potential reward 5/16, against their SFT90 parent at 8/16. These are development results used for selection. The separate SFT180-to-PPO expansion completed a forty-scene test: reference 20/40, SFT180 17/40 and PPO1 16/40. It did not improve overall success. The frozen November 22 checkpoint, configuration and scores remain the historical baseline. [Follow-up results and costs](experiments/2026-11-24/fruit-recovery-v2/README.md)
 
-## 🔎 What actually ran
+## 🔎 Historical reward
 
 The completed run used the reward in [`PPOClient.finish_chunk`](../scripts/ppo_reference_aligned_fruit.py) and [`fruit_potential`](../scripts/ppo_pi05.py):
 
@@ -66,7 +75,7 @@ Both variants restarted from SFT90 with training starts 1301 and 1302 and the sa
 
 For the corrected reward, the critic's MSE on its warmup data decreased from 0.59479 to 0.03539, while the actor stayed exactly unchanged during warmup. This measures fitting of the sampled training returns, not generalization of the critic. The two successful fresh training rollouts were collected before the actor update; they are not evidence of a PPO success-rate improvement. Saved-policy development evaluation and the larger follow-up are separate steps.
 
-## 🧪 Separate milestone proposal, not yet implemented
+## 🧪 Milestone design, subsequently implemented in the current report
 
 The suggested split of +0.5 for lifting and +0.5 for placement is a reasonable candidate to compare. A more completion-focused starting candidate is:
 
@@ -75,7 +84,7 @@ The suggested split of +0.5 for lifting and +0.5 for placement is a reasonable c
 | Securely grasp and lift the instructed fruit | +0.2 | Verified grasp/contact and sustained lift above its reset height; do not count a push, bounce, or wrong fruit |
 | Complete the official fruit task | +0.8 | The unchanged official success predicate becomes true; do not wait for an additional release or stability condition |
 
-The values are proposed hyperparameters, not validated settings. The undiscounted event reward is at most 1 per episode; a success without the lift milestone receives 0.8. Track an episode-local ledger so lifting, hovering, releasing and regrasping do not repeatedly collect the same milestone reward. Detect lift persistence at each underlying control tick even though rewards are accumulated per policy chunk. Determine and freeze the height and persistence thresholds using training/development trajectories before PPO. Check wrong-object lifts, pushes, bounces, repeated grasps, and suspended objects above the plate as negative cases.
+The values were candidate hyperparameters and were subsequently used in the current comparison; that does not establish that they are optimal. The undiscounted event reward is at most 1 per episode; a success without the lift milestone receives 0.8. An episode-local ledger prevents repeated payments during lifting, hovering, releasing and regrasping. The current implementation checks persistence at every underlying control tick and freezes the lift threshold at 4 cm for three controls. Tests include wrong-object lifts, pushes, repeated grasps and chunk boundaries.
 
 Release and stable placement remain separate diagnostics under this candidate. Official success can end an episode before a stricter stability test would pass; withholding the final reward until after termination would be a bug. An additional settling period would require its own explicitly different protocol. The proposal keeps the present success criterion, 600-control limit, and termination handling.
 

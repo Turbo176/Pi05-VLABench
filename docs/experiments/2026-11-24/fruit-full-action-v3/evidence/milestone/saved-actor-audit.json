@@ -1,0 +1,37 @@
+{
+  "complete": true,
+  "audited_at": "2026-11-24T11:38:58.737787+00:00",
+  "sft_sha256": "954f168626a30a068aae7e5c0ef0cc37a361e4ac068136d26e1ce02e46964bee",
+  "audit_source_sha256": "9892666436cc66bf49962aee7f9df081ad0fce0c3e12c02dc60bc4394511be2a",
+  "arm": "milestone",
+  "checkpoints": [
+    {
+      "iteration": 1,
+      "checkpoint_sha256": "cac97dece5a7e6f67810bd21e82f3575c7f2ca557ed616e5b86d5b3fdba3b4ee",
+      "actor_parameter_changes": {
+        "action_expert_full": {
+          "tensors": 182,
+          "changed_tensors": 182,
+          "changed_elements": 127776905,
+          "max_abs_delta": 3.0517578125e-05,
+          "delta_l2": 0.06653068269901774
+        },
+        "action_heads": {
+          "tensors": 8,
+          "changed_tensors": 8,
+          "changed_elements": 2139891,
+          "max_abs_delta": 2.01445072889328e-05,
+          "delta_l2": 0.008351145476099605
+        }
+      },
+      "cumulative_actor_optimizer_steps": 23,
+      "iteration_actor_optimizer_steps": 23,
+      "cumulative_critic_optimizer_steps": 127,
+      "actor_grad_l2_max": 277.75177001953125,
+      "total_controls": 1643,
+      "optimizer_counters_independently_reconstructed": false,
+      "optimizer_evidence": "Applied updates and gradients from logs; inference-onlycheckpoint has no optimizer state",
+      "matches_training_report": true
+    }
+  ]
+}

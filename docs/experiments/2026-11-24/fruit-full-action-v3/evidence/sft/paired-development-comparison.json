@@ -1,0 +1,29 @@
+{
+  "measurement": "paired development only; success count tied, not an improvement claim",
+  "models": {
+    "retained_sft180": {
+      "successes": 9,
+      "trials": 16,
+      "total_controls": 5665,
+      "ik_nonconverged_controls": 1633,
+      "ik_nonconverged_fraction": 0.288261253309797
+    },
+    "full_train47_sft3000": {
+      "successes": 9,
+      "trials": 16,
+      "total_controls": 5650,
+      "ik_nonconverged_controls": 468,
+      "ik_nonconverged_fraction": 0.08283185840707964
+    }
+  },
+  "new_only_successes": [
+    1203,
+    1219,
+    1220
+  ],
+  "old_only_successes": [
+    1211,
+    1217,
+    1222
+  ]
+}

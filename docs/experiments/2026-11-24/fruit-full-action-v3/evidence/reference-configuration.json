@@ -1,0 +1,19 @@
+{
+  "purpose": "Reference construction metadata only; no trained tensors are required or restored for stage base",
+  "recorded_configuration_source_sha256": "695378ced44c199107772e69df7b9904f6c1636b0bb4cc273afb2b1e0bb625e7",
+  "metadata": {
+    "base_sha256": "66975306e09199efdf221e14d6f5d13ea5d6dbe42e8f921f19bd1096721eac61",
+    "norm_stats_sha256": "bce33fc1831830d953ef9bc57e520c02ee44e02b7ad07f27ce92b931a879384f",
+    "horizon": 10,
+    "execute": 5,
+    "seed": 263,
+    "actor_lora_rank": 16,
+    "vlm_lora_rank": 0,
+    "discrete_state": false,
+    "train_action_heads": true,
+    "train_full_action_expert": false,
+    "shortest_euler": false,
+    "reference_model_revision": "f658a8bec801aab960fe0ceab370a123b31c1837",
+    "render_samples": 0
+  }
+}

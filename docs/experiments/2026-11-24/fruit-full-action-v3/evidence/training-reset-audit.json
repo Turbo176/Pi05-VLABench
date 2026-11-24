@@ -1,0 +1,75 @@
+{
+  "complete": true,
+  "selection_rule": "Firstnaturalresetforeachfruitbyinstructiononly,notpolicyperformance",
+  "seeds": [
+    1302,
+    1308,
+    1303,
+    1301
+  ],
+  "instructions": [
+    "Put the apple into the plate_seen",
+    "Put the banana into the plate_seen",
+    "Put the orange into the plate_seen",
+    "Put the pear into the plate_seen"
+  ],
+  "inspected_resets": [
+    {
+      "seed": 1301,
+      "instruction": "Put the pear into the plate_seen",
+      "target_name": "pear",
+      "policy_calls": 0
+    },
+    {
+      "seed": 1302,
+      "instruction": "Put the apple into the plate_seen",
+      "target_name": "apple",
+      "policy_calls": 0
+    },
+    {
+      "seed": 1303,
+      "instruction": "Put the orange into the plate_seen",
+      "target_name": "orange",
+      "policy_calls": 0
+    },
+    {
+      "seed": 1304,
+      "instruction": "Put the orange into the plate_seen",
+      "target_name": "orange",
+      "policy_calls": 0
+    },
+    {
+      "seed": 1305,
+      "instruction": "Put the pear into the plate_seen",
+      "target_name": "pear",
+      "policy_calls": 0
+    },
+    {
+      "seed": 1306,
+      "instruction": "Put the apple into the plate_seen",
+      "target_name": "apple",
+      "policy_calls": 0
+    },
+    {
+      "seed": 1307,
+      "instruction": "Put the pear into the plate_seen",
+      "target_name": "pear",
+      "policy_calls": 0
+    },
+    {
+      "seed": 1308,
+      "instruction": "Put the banana into the plate_seen",
+      "target_name": "banana",
+      "policy_calls": 0
+    }
+  ],
+  "policy_calls": 0,
+  "split_initialization_overlaps": 0,
+  "expert_action_calls": 0,
+  "reserved_test_manifest": "runs/fruit-long-sft-20261124/reserved-test/select_fruit-official.jsonl",
+  "reserved_test_manifest_sha256": "8d62b9aaee8fd018143cd82efbfeb8c301472adf4ab6e0c730a89cebf5e1da78",
+  "reserved_test_scenes": 40,
+  "reserved_test_initialization_overlaps": 0,
+  "reserved_test_policy_calls": 0,
+  "source_path_correction": "Use actual select_fruit-official.jsonl; overlap was checked explicitly after reset collection, before any PPOpolicycall"
+}
