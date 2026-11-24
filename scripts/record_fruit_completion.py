@@ -17,21 +17,28 @@ def main():
     for name in ('root', 'base', 'fork', 'run'):
         parser.add_argument('--' + name, type=Path, required=True)
     parser.add_argument('--stage', choices=('base', 'sft', 'ppo'), required=True)
+    parser.add_argument('--ppo-weights', type=Path,
+                        help='Use a selected PPO checkpoint; defaults to root/ppo/ppo-1.pt')
+    parser.add_argument('--label', help='Explicit video provenance, such as shared-sft180 or fruit-ppo-v2-iter2')
     parser.add_argument('--scored-episodes', type=Path,
                         help='Completed raw case record when the larger fixed suite is still running')
     parser.add_argument('--display-image-size', type=int, choices=(256, 384, 512, 768), default=512,
                         help='Display camera resolution only; policy cameras remain at the scored resolution')
     args = parser.parse_args()
+    if args.ppo_weights and args.stage != 'ppo':
+        parser.error('--ppo-weights requires --stage ppo')
     root = args.root
     plan = json.loads((root / 'video-plan.json').read_text())
     seed = plan['seed']
     policy = load_aligned_policy(args.run, args.base, args.fork, args.stage,
-                                 root / 'ppo/ppo-1.pt' if args.stage == 'ppo' else None)
+                                 (args.ppo_weights or root / 'ppo/ppo-1.pt') if args.stage == 'ppo' else None)
     cases = paired_episodes(root / 'cases/select_fruit-official.jsonl')
     scored_source = args.scored_episodes or root / ('ordinary-' + args.stage) / 'episodes.jsonl'
     expected = paired_episodes(scored_source)[seed]
     output = root / ('video-' + args.stage)
     labels = dict(base='published-reference-already-finetuned', sft='multitask-sft90', ppo='fruit-ppo1')
+    if args.label:
+        labels[args.stage] = args.label
     original_views, original_video = rollout.render_views, trainer.video
     rollout.render_views = partial(select_fruit.render_views, image_size=args.display_image_size)
     trainer.video = partial(select_fruit.video, image_size=args.display_image_size, crf=18)

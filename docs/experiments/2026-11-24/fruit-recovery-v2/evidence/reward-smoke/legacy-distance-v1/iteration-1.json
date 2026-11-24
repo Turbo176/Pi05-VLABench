@@ -1,0 +1,72 @@
+{
+  "arguments": {
+    "base": ".local/checkpoints/vlabench-primitive-rlinf/model.safetensors",
+    "fork": "/root/autodl-tmp/Pi05-VLABench/.local/upstream/VLABench-openpi-788ef1f20e655de5bb40869fb7b7fcdd49732387",
+    "sft_run": "runs/pose-robustness-v2/two-task-conservative-90",
+    "output": "runs/fruit-recovery-20261124/ppo-reward-smoke/legacy-distance-v1",
+    "seeds": [
+      1301,
+      1302
+    ],
+    "reward_version": "legacy-distance-v1",
+    "iterations": 1,
+    "critic_warmup_epochs": 2,
+    "max_steps": 600,
+    "minibatch": 8,
+    "shaping": 0.5,
+    "seed": 372,
+    "lr": 2e-06,
+    "critic_lr": 0.0001,
+    "target_kl": 0.02,
+    "trace_controls": true
+  },
+  "sft_sha256": "998181bb8cc8386766aa5bec3302b938234ab5da2a24e81cef199a8fd560eef3",
+  "norm_stats_sha256": "bce33fc1831830d953ef9bc57e520c02ee44e02b7ad07f27ce92b931a879384f",
+  "base_sha256": "66975306e09199efdf221e14d6f5d13ea5d6dbe42e8f921f19bd1096721eac61",
+  "training_script_sha256": "5bfa530d969ca756ac53b0377020cdfe8196ab79e887126ce5aa09b830021a1b",
+  "shared_ppo_script_sha256": "f125599b86eb91056301bd95c273788c5dd3c926817d69393c3633b4f9ba2fbc",
+  "legacy_entry_sha256": "f6530b0884ab15ce801ee9801bfb5a9ef31e3e43bf08b2e62abf979dc99ee5a3",
+  "gamma": 0.99,
+  "gae_lambda": 0.95,
+  "clip": 0.2,
+  "horizon": 10,
+  "executed": 5,
+  "action_dim": 7,
+  "finite_horizon": true,
+  "likelihood": "selected flow transition; sum over executed steps and action dimensions",
+  "kl_diagnostic": "sampled executed-prefix score estimate; not full-chain or decoded-action KL",
+  "maximum_controls": 2400,
+  "optimizer_iterations": 1,
+  "successes": 2,
+  "trials": 2,
+  "total_controls": 1032,
+  "total_optimizer_steps": 46,
+  "actor_optimizer_steps": 8,
+  "replay_logprob_abs_error": 7.62939453125e-06,
+  "postupdate_full_batch_prefix_approx_kl": 0.004880231564968902,
+  "fresh_rollout_value_metrics": {
+    "mc_value_mse": 0.6485861975149085,
+    "mc_explained_variance": -30.453608997155502,
+    "mean_value": 0.3636389080874935,
+    "mean_mc_return": 1.0579076485391123
+  },
+  "actor_parameter_changes": {
+    "action_expert_lora": {
+      "tensors": 216,
+      "changed_tensors": 216,
+      "changed_elements": 6930240,
+      "max_abs_delta": 1.5910920410533436e-05,
+      "delta_l2": 0.015213215674172213
+    },
+    "action_heads": {
+      "tensors": 8,
+      "changed_tensors": 8,
+      "changed_elements": 2139964,
+      "max_abs_delta": 1.589115709066391e-05,
+      "delta_l2": 0.009805300872925683
+    }
+  },
+  "stopped_for_kl": false,
+  "wall_seconds": 347.1533882059157,
+  "cuda_peak_allocated_bytes": 7471946240
+}

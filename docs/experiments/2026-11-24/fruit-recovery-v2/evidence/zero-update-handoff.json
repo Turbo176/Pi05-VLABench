@@ -1,0 +1,54 @@
+{
+  "checkpoint_sha256": "695378ced44c199107772e69df7b9904f6c1636b0bb4cc273afb2b1e0bb625e7",
+  "cases": [
+    {
+      "task": "select_fruit",
+      "seed": 42
+    }
+  ],
+  "base_sha256": "66975306e09199efdf221e14d6f5d13ea5d6dbe42e8f921f19bd1096721eac61",
+  "norm_stats_sha256": "bce33fc1831830d953ef9bc57e520c02ee44e02b7ad07f27ce92b931a879384f",
+  "render_samples": 0,
+  "executed": 5,
+  "horizon": 10,
+  "settings": {
+    "shortest_euler": false,
+    "discrete_state": false,
+    "reference_noise": true
+  },
+  "measurements": [
+    {
+      "task": "select_fruit",
+      "seed": 42,
+      "frame": 0,
+      "normalized_prediction_max_error": 0.0,
+      "absolute_prediction_max_error": 0.0,
+      "native_float32_decode_max_error": 1.1381170939017693e-07,
+      "replay_logprob_abs_error": 0.0
+    },
+    {
+      "task": "select_fruit",
+      "seed": 42,
+      "frame": 66,
+      "normalized_prediction_max_error": 0.0,
+      "absolute_prediction_max_error": 0.0,
+      "native_float32_decode_max_error": 1.0883113166215708e-07,
+      "replay_logprob_abs_error": 0.0
+    },
+    {
+      "task": "select_fruit",
+      "seed": 42,
+      "frame": 131,
+      "normalized_prediction_max_error": 0.0,
+      "absolute_prediction_max_error": 0.0,
+      "native_float32_decode_max_error": 4.84380935361628e-07,
+      "replay_logprob_abs_error": 0.0
+    }
+  ],
+  "optimizer_updates": 0,
+  "matched_rollouts": 1,
+  "matched_successes": 1,
+  "matched_seeds": [
+    1201
+  ]
+}

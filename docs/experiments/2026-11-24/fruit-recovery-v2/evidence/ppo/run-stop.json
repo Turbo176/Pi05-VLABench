@@ -1,0 +1,23 @@
+{
+  "recorded_at": "2026-11-24T04:18:45.344730+00:00",
+  "exit_code": 1,
+  "requested_iterations": 3,
+  "completed_actor_iterations": 1,
+  "failure_iteration": 2,
+  "seed": 1314,
+  "phase": "fresh rollout collection before actor update",
+  "failure": "dm_control PhysicsError: mjWARN_BADQACC at DOF 33",
+  "joint_name": "banana/",
+  "body_name": "banana/",
+  "completed_controls_in_partial_episode": 334,
+  "attempted_failed_control": 335,
+  "complete_episode_controls": 9744,
+  "total_successfully_completed_controls": 10078,
+  "total_attempted_controls": 10079,
+  "last_saved_checkpoint": "ppo-1.pt",
+  "checkpoint_training_controls": 6897,
+  "decoded_actions_all_finite": true,
+  "target_already_off_table": true,
+  "evidence_limit": "Finite actions and acceleration failure identify simulator instability; the exact contact or model defect was not isolated.",
+  "handling": "Preserve the failed rollout and costs. Do not change the controller or train on the incomplete batch. Evaluate the valid saved checkpoint under the registered development rule."
+}

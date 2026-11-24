@@ -1,0 +1,20 @@
+{
+  "selected_at": "2026-11-24T03:12:53.805270+00:00",
+  "scores": {
+    "original": {
+      "successes": 8,
+      "trials": 16,
+      "controls": 5943
+    },
+    "candidate": {
+      "successes": 9,
+      "trials": 16,
+      "controls": 5665
+    }
+  },
+  "selected_sft_run": "runs/fruit-recovery-20261124/sft-continuation-360/checkpoint-0180",
+  "selected_sft_sha256": "695378ced44c199107772e69df7b9904f6c1636b0bb4cc273afb2b1e0bb625e7",
+  "norm_stats_sha256": "bce33fc1831830d953ef9bc57e520c02ee44e02b7ad07f27ce92b931a879384f",
+  "test_outcomes_consulted": false,
+  "selection_rule": "Highest old-development success count, then fewer controls, then lower update count. Final replacement requires strictly more successes on sixteen combined development scenes than SFT90; ties keep SFT90."
+}

@@ -20,3 +20,13 @@ jobs:
           persist-credentials: false
       - name: Verify hashes and recompute paired results
         run: python3 scripts/review_fruit_experiment.py
+      - name: Recompute the forty-scene fruit comparison
+        working-directory: docs/experiments/2026-11-24/fruit-recovery-v2
+        run: >-
+          python3 analyze.py --verify-only
+          --cases evidence/test-cases.jsonl
+          --base evidence/test-reference.jsonl
+          --sft evidence/test-sft.jsonl
+          --ppo evidence/test-ppo.jsonl
+          --selection evidence/final-selection.json
+          --output results

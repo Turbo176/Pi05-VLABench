@@ -1,0 +1,24 @@
+{
+  "recorded_at": "2026-11-24T04:28:51.703900+00:00",
+  "python": "3.12.3 | packaged by Anaconda, Inc. | (main, May  6 2024, 19:46:43) [GCC 11.2.0]",
+  "packages": {
+    "torch": "2.8.0+cu128",
+    "mujoco": "3.2.2",
+    "dm-control": "1.0.22",
+    "transformers": "4.53.2",
+    "numpy": "1.26.4",
+    "pyarrow": "18.1.0",
+    "datasets": "4.4.2",
+    "matplotlib": "3.11.2"
+  },
+  "gpu_runtime_report": "NVIDIA GeForce RTX 4080 SUPER, 32760 MiB, 595.58.03",
+  "revision_provenance": "Pinned source archives and retained training metadata; extracted runtime directories do not contain .git.",
+  "source_archives": {
+    "OpenPI-215abfb217dbac7d5f1273282331b9b1866c0479.tar.gz": "20fc377546b741bb31d1e12aa4003e6e6a54fa0ee3c7b7d8b438157cffb3c683",
+    "RLinf-a29c0a6c37b02881b8d4af0900fa97f35e44b34c.tar.gz": "bdc8c6070beb3bf1fea9c32eec86d58c7cfa19bbced37028f67861af975c3cde",
+    "vlabench-openpi-ref.tar.gz": "a5a339d2496c9a5f0637b67529e6465daf8c81aa3608d4c953d2a632cf259746"
+  },
+  "simulator_env_source_sha256": "fbe7dcc30a0b8334d386a066477bcf8f8e3d1a142e4c76f6f529cda573c308fc",
+  "downloads_during_followup": false,
+  "controller_changed": false
+}

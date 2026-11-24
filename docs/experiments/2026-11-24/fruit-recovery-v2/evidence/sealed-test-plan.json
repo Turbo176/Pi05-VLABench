@@ -1,0 +1,13 @@
+{
+  "registered_at": "2026-11-24T03:31:23.126709+00:00",
+  "reason": "Overlap already-frozen reference/SFT evaluation with PPO training; keep test outcomes sealed until the PPO checkpoint is frozen.",
+  "sft_run": "runs/fruit-recovery-20261124/sft-continuation-360/checkpoint-0180",
+  "sft_sha256": "695378ced44c199107772e69df7b9904f6c1636b0bb4cc273afb2b1e0bb625e7",
+  "manifest_sha256": "5156c7f5bdd32e3405f7a7747969b0f2faa813c30e3f498ea0f70ffead21f36d",
+  "protocol_sha256": "2d167f81ba644b35a87069c168f94c4abfaef32a44f7cef715e1aa90362028ad",
+  "excluded_recent_initializations": 28,
+  "overlap": 0,
+  "ppo_checkpoint_selection": "Only sixteen-scene development outcomes; do not open sealed test results or logs before final-selection.json is written.",
+  "sft_replacement_after_launch": false,
+  "policy_test_calls_before_launch": 0
+}

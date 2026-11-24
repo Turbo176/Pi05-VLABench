@@ -31,5 +31,6 @@ __pycache__/
 !/media/policy/fruit-completion-v1-base-1501.mp4
 !/media/policy/fruit-completion-v1-sft-1501.mp4
 !/media/policy/fruit-completion-v1-ppo-1501.mp4
+!/media/policy/fruit-recovery-v2-*-6005.mp4
 *.safetensors
 *.pt

@@ -1,0 +1,58 @@
+{
+  "format": "LeRobot v2.1",
+  "fps": 10,
+  "splits": {
+    "train": {
+      "episodes": 4,
+      "frames": 603,
+      "all_frames_verified": true,
+      "action_chunks": {
+        "horizon": 10,
+        "positions_verified": 12
+      },
+      "episodes_detail": [
+        {
+          "source": "runs/fruit-recovery-20261124/expert-orange-expansion/replays/train-select_fruit-2084.h5",
+          "split": "train",
+          "task": "select_fruit",
+          "seed": 2084,
+          "instruction": "Put the orange into the plate_seen",
+          "frames": 162,
+          "initial_state_sha256": "5446cc2a96fbe112007db93aeda4a715239faa07ef7f4f11918a12d5d6df70d7",
+          "render_samples": 0
+        },
+        {
+          "source": "runs/fruit-recovery-20261124/expert-orange-expansion/replays/train-select_fruit-2090.h5",
+          "split": "train",
+          "task": "select_fruit",
+          "seed": 2090,
+          "instruction": "Put the orange into the plate_seen",
+          "frames": 143,
+          "initial_state_sha256": "895749f60dc05890e4ee1a43615645ed104d338cf325a00c61752b9827ac56b8",
+          "render_samples": 0
+        },
+        {
+          "source": "runs/fruit-recovery-20261124/expert-banana-expansion/replays/train-select_fruit-2085.h5",
+          "split": "train",
+          "task": "select_fruit",
+          "seed": 2085,
+          "instruction": "Put the banana into the plate_seen",
+          "frames": 141,
+          "initial_state_sha256": "ae6471038293b547743720fdd49bb1566a15aed4c9985232a595e588bce59b0e",
+          "render_samples": 0
+        },
+        {
+          "source": "runs/fruit-recovery-20261124/expert-banana-expansion/replays/train-select_fruit-2086.h5",
+          "split": "train",
+          "task": "select_fruit",
+          "seed": 2086,
+          "instruction": "Put the banana into the plate_seen",
+          "frames": 157,
+          "initial_state_sha256": "b4041fef499d69b828bc451bb34cc730cd52608e8d3539eccf96b481c34c14e9",
+          "render_samples": 0
+        }
+      ]
+    }
+  },
+  "profile": "vlabench_reference_pose"
+}

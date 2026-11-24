@@ -1,0 +1,23 @@
+{
+  "registered_at": "2026-11-24T02:48:46.341219+00:00",
+  "kind": "balanced_PPO_training_starts_selected_by_reset_only",
+  "seeds": [
+    1303,
+    1304,
+    1305,
+    1306,
+    1307,
+    1308,
+    1312,
+    1314
+  ],
+  "target_counts": {
+    "orange": 2,
+    "pear": 2,
+    "apple": 2,
+    "banana": 2
+  },
+  "controls": 0,
+  "policy_calls": 0,
+  "manifest_sha256": "9c66f95c3fedee1049843cdf76ac69b07c7c093131a30e34f94eb2da97701a15"
+}

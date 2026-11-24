@@ -1,0 +1,37 @@
+{
+  "sft_sha256": "695378ced44c199107772e69df7b9904f6c1636b0bb4cc273afb2b1e0bb625e7",
+  "ppo_sha256": "68205a76ba537a804270942500e18364a1127329735a11c2eaf3b61b973f2a78",
+  "audit_source_sha256": "2213fab6bd2e9ee3a610c55741dd7cb0061c566a9e1f78854416dfa2948e405b",
+  "actor_parameter_changes": {
+    "action_expert_lora": {
+      "tensors": 216,
+      "changed_tensors": 216,
+      "changed_elements": 6930324,
+      "max_abs_delta": 4.155062742938753e-05,
+      "delta_l2": 0.027282698966111196
+    },
+    "action_heads": {
+      "tensors": 8,
+      "changed_tensors": 8,
+      "changed_elements": 2140009,
+      "max_abs_delta": 4.12454828619957e-05,
+      "delta_l2": 0.016384962292599333
+    }
+  },
+  "optimizer_steps": {
+    "actor": {
+      "parameters": 224,
+      "step_min": 24,
+      "step_max": 24
+    },
+    "critic": {
+      "parameters": 8,
+      "step_min": 122,
+      "step_max": 122
+    }
+  },
+  "max_recorded_actor_gradient": 87.70543670654297,
+  "optimizer_iteration": 1,
+  "total_controls": 6897,
+  "matches_training_report": true
+}

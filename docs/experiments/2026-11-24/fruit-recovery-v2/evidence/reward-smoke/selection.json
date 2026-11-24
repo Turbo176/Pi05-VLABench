@@ -1,0 +1,18 @@
+{
+  "selected_at": "2026-11-24T03:25:06.331232+00:00",
+  "results": [
+    {
+      "reward": "discounted-terminal-potential-v2",
+      "successes": 5,
+      "controls": 7341
+    },
+    {
+      "reward": "legacy-distance-v1",
+      "successes": 10,
+      "controls": 5257
+    }
+  ],
+  "selected_reward": "legacy-distance-v1",
+  "selection": "Higher sixteen-scene official successes, then fewer controls; ties prefer corrected reward.",
+  "test_outcomes_consulted": false
+}

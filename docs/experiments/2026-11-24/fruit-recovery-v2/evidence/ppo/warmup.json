@@ -1,0 +1,21 @@
+{
+  "before": {
+    "mc_value_mse": 0.09615589675161415,
+    "mc_explained_variance": 0.006615459860722428,
+    "mean_value": -0.08297336611055559,
+    "mean_mc_return": 0.03744575210113091
+  },
+  "after": {
+    "mc_value_mse": 0.046593941429130134,
+    "mc_explained_variance": 0.5076026258363397,
+    "mean_value": 0.11567241544606194,
+    "mean_mc_return": 0.03744575210113091
+  },
+  "actor_unchanged": true,
+  "actor_max_abs_delta": 0.0,
+  "critic_max_abs_delta": 0.006013382226228714,
+  "optimizer_steps": 98,
+  "total_controls": 3868,
+  "preupdate_logprob_abs_error": 7.62939453125e-06,
+  "target": "discounted Monte Carlo return; no random-critic bootstrapping"
+}

@@ -25,8 +25,11 @@ def main():
     parser.add_argument('--output', type=Path, required=True)
     args = parser.parse_args()
     if (len(set(args.tasks)) != len(args.tasks) or len(set(args.seeds)) != len(args.seeds)
-            or args.max_admitted_per_task < 1 or any(not 0 <= seed < 1000 for seed in args.seeds)):
-        parser.error('Use distinct tasks and training seeds below 1000, with a positive admission cap')
+            or args.max_admitted_per_task < 1):
+        parser.error('Use distinct tasks/seeds and a positive admission cap')
+    fruit_only = set(args.tasks) == {'select_fruit'}
+    if any(not (0 <= seed < 1000 or fruit_only and 2050 <= seed < 2120) for seed in args.seeds):
+        parser.error('Use training seeds below 1000, or fruit-only expansion seeds 2050-2119')
     args.output.mkdir(parents=True, exist_ok=False)
     source, replays = args.output / 'source', args.output / 'replays'
     replays.mkdir()
@@ -75,6 +78,7 @@ def main():
                    attempts=dict(counts), admitted=dict(admitted), render_samples=args.render_samples,
                    max_controls_per_attempt=600, wall_seconds=time.monotonic() - started)
     summary.update(instruction_filter=args.instruction_contains, stop_at_cap=args.stop_at_cap)
+    summary['training_seed_scope'] = 'below 1000; fruit-only expansion also permits 2050-2119'
     (args.output / 'summary.json').write_text(json.dumps(summary, indent=2) + '\n', encoding='utf-8')
     print(json.dumps(summary), flush=True)
 

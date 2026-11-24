@@ -1,0 +1,94 @@
+{
+  "reserved_at": "2026-11-24T02:43:41.440903+00:00",
+  "kind": "balanced_fruit_resets_before_policy_evaluation",
+  "policy_calls": 0,
+  "environment_controls": 0,
+  "counts": {
+    "banana": 10,
+    "apple": 10,
+    "orange": 10,
+    "pear": 10
+  },
+  "excluded_initialization_hashes": 117,
+  "exclusion_sources": [
+    {
+      "path": ".local/reference-aligned/lerobot-banana-expansion/verification.json",
+      "sha256": "6ba2b4a1c2517ec697f1711e33b51a979d2b3b61623e8fb8499c041047c9fe54"
+    },
+    {
+      "path": ".local/reference-aligned/lerobot-corrections-only/verification.json",
+      "sha256": "0b37dcdb5264929def709b8f194d5c78b8af24d4e063058d2ec4f1b83aa0ae13"
+    },
+    {
+      "path": ".local/reference-aligned/lerobot-full/verification.json",
+      "sha256": "6eb42aedcd819934473998a9bcfb56301e60d5f3e4704cee59e858eca296128b"
+    },
+    {
+      "path": ".local/reference-aligned/lerobot-msaa0-flower-105-134/verification.json",
+      "sha256": "83fd93e294ca98402ab6b387c1137704b30679d03fb6e553d21b1f843c28175e"
+    },
+    {
+      "path": ".local/reference-aligned/lerobot-msaa0-flower-tulip-181-205/verification.json",
+      "sha256": "95c6899e65301bf0ca771b38f6ebb1b20b2eff3399f8821a8d96e01e61e2ee87"
+    },
+    {
+      "path": ".local/reference-aligned/lerobot-msaa0-fridge-105-134/verification.json",
+      "sha256": "395d81828e171eb51c70e50dda8c401dda471e63a727b120b71a7d3328feedcf"
+    },
+    {
+      "path": ".local/reference-aligned/lerobot-msaa0-small-extras/verification.json",
+      "sha256": "f9ef36fe5aeb57fbbcac4b0d3afe0071ba61092ec62087f731a789f3fb10948c"
+    },
+    {
+      "path": ".local/reference-aligned/lerobot-recovery-fixture/verification.json",
+      "sha256": "147749877171769119d5315315b51421940fa035a8daa9de3b41561ba3385087"
+    },
+    {
+      "path": ".local/reference-aligned/lerobot-smoke/verification.json",
+      "sha256": "10c64e455ba8a7c084bd5d43d0ae6db7c8c70e34aebab82634d3c0b86682cf40"
+    },
+    {
+      "path": ".local/reference-aligned/lerobot-tritask-expanded/verification.json",
+      "sha256": "59a4ccd6ba3a8d901255750a61554ac2263571cc6bc130f4109caa34496b80d6"
+    },
+    {
+      "path": ".local/reference-aligned/lerobot-tritask-msaa0-v2/verification.json",
+      "sha256": "912661fbd8af7f4f55479b902dcce8e92c28abe5c924dab399bc789e993c11e4"
+    },
+    {
+      "path": ".local/reference-aligned/lerobot-tritask-smoke/verification.json",
+      "sha256": "d85cc12984bdababcb0c85c86d72b5f41e9683237f1022f6ba5645d3057d13e2"
+    },
+    {
+      "path": ".local/reference-aligned/msaa0-development-cases/insert_flower.jsonl",
+      "sha256": "d2e8846f4abddb03117dddffc72df7bf49a9cfbf24db105fb9ebfed326d13596"
+    },
+    {
+      "path": ".local/reference-aligned/msaa0-development-cases/select_fruit.jsonl",
+      "sha256": "07e0af636d9631500a7b6a493e61ce8d0ec7a95aedef7739bf2b761228312855"
+    },
+    {
+      "path": ".local/reference-aligned/msaa0-development-cases/take_out_cool_drink.jsonl",
+      "sha256": "88478040bde75d7f8ee9d001c06bba435057451128e7b869a6a6982459a4df6f"
+    },
+    {
+      "path": "runs/pose-robustness-v2/fruit-completion-v1/cases/select_fruit-alternate_target.jsonl",
+      "sha256": "af2d48455edb78de5f63ae154727d597dd09ea01bed3c4073069cb669c748032"
+    },
+    {
+      "path": "runs/pose-robustness-v2/fruit-completion-v1/cases/select_fruit-language-official.jsonl",
+      "sha256": "f03c90bcb54a1d2cacc66745bd82aefd23b1e21e4450766a4745a6caf95787e2"
+    },
+    {
+      "path": "runs/pose-robustness-v2/fruit-completion-v1/cases/select_fruit-official.jsonl",
+      "sha256": "11b38689e9ec88a7f328a92f3da8ca83f7fa7d2d102bda30fa2cf028fe1626c5"
+    },
+    {
+      "path": "runs/pose-robustness-v2/fruit-completion-v1/cases/select_fruit-paraphrase.jsonl",
+      "sha256": "d638ba9d1edd9940739b25441bed81149caed1ffd7c1012cb6bd6ecf4e93578c"
+    }
+  ],
+  "manifest_sha256": "5156c7f5bdd32e3405f7a7747969b0f2faa813c30e3f498ea0f70ffead21f36d",
+  "script_sha256": "ce6af77092e7bc3735bc2f3900605948b88824be444584959663f3f151e05a20",
+  "rule": "First ten valid isolated natural resets per declared target in increasing seed order."
+}

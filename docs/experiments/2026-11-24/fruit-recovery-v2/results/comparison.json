@@ -1,0 +1,249 @@
+{
+  "cases_sha256": "5156c7f5bdd32e3405f7a7747969b0f2faa813c30e3f498ea0f70ffead21f36d",
+  "episodes_sha256": {
+    "base": "d3bd5da81352ed07527c8a30fa0ddaa4436d8821dce78a209524c8c61c67951a",
+    "sft": "3757b865ca4c419e533172d8b3787a1da72c5aa070a11ded36513fa9f1095899",
+    "ppo": "8e15fa088a0f7f3f31b29f3ee29800b779afaf669176a4e9747c1d04bb4873ee"
+  },
+  "stages": {
+    "base": {
+      "successes": 20,
+      "trials": 40,
+      "success_rate": 0.5,
+      "wilson_95": [
+        0.35199526933465386,
+        0.6480047306653461
+      ],
+      "total_controls": 15195,
+      "ik_nonconverged_controls": 4147,
+      "failure_types": {
+        "target_moved_goal_unsatisfied": 20
+      }
+    },
+    "sft": {
+      "successes": 17,
+      "trials": 40,
+      "success_rate": 0.425,
+      "wilson_95": [
+        0.28509392559950375,
+        0.5780493145800892
+      ],
+      "total_controls": 16661,
+      "ik_nonconverged_controls": 4686,
+      "failure_types": {
+        "target_moved_goal_unsatisfied": 20,
+        "simulator_instability": 2,
+        "target_displacement_under_3cm": 1
+      }
+    },
+    "ppo": {
+      "successes": 16,
+      "trials": 40,
+      "success_rate": 0.4,
+      "wilson_95": [
+        0.2634832568429192,
+        0.5540410633965381
+      ],
+      "total_controls": 16829,
+      "ik_nonconverged_controls": 5012,
+      "failure_types": {
+        "target_moved_goal_unsatisfied": 24
+      }
+    }
+  },
+  "by_target": {
+    "apple": {
+      "base": {
+        "successes": 5,
+        "trials": 10,
+        "success_rate": 0.5,
+        "wilson_95": [
+          0.236593090512564,
+          0.7634069094874361
+        ],
+        "total_controls": 3650,
+        "ik_nonconverged_controls": 1052,
+        "failure_types": {
+          "target_moved_goal_unsatisfied": 5
+        }
+      },
+      "sft": {
+        "successes": 3,
+        "trials": 10,
+        "success_rate": 0.3,
+        "wilson_95": [
+          0.10779126740630099,
+          0.6032218525388546
+        ],
+        "total_controls": 4647,
+        "ik_nonconverged_controls": 1559,
+        "failure_types": {
+          "target_moved_goal_unsatisfied": 6,
+          "target_displacement_under_3cm": 1
+        }
+      },
+      "ppo": {
+        "successes": 4,
+        "trials": 10,
+        "success_rate": 0.4,
+        "wilson_95": [
+          0.16818032970623614,
+          0.6873262302663417
+        ],
+        "total_controls": 4202,
+        "ik_nonconverged_controls": 1686,
+        "failure_types": {
+          "target_moved_goal_unsatisfied": 6
+        }
+      }
+    },
+    "banana": {
+      "base": {
+        "successes": 5,
+        "trials": 10,
+        "success_rate": 0.5,
+        "wilson_95": [
+          0.236593090512564,
+          0.7634069094874361
+        ],
+        "total_controls": 4010,
+        "ik_nonconverged_controls": 900,
+        "failure_types": {
+          "target_moved_goal_unsatisfied": 5
+        }
+      },
+      "sft": {
+        "successes": 8,
+        "trials": 10,
+        "success_rate": 0.8,
+        "wilson_95": [
+          0.49016247153664183,
+          0.9433178485456247
+        ],
+        "total_controls": 2996,
+        "ik_nonconverged_controls": 266,
+        "failure_types": {
+          "simulator_instability": 1,
+          "target_moved_goal_unsatisfied": 1
+        }
+      },
+      "ppo": {
+        "successes": 4,
+        "trials": 10,
+        "success_rate": 0.4,
+        "wilson_95": [
+          0.16818032970623614,
+          0.6873262302663417
+        ],
+        "total_controls": 4249,
+        "ik_nonconverged_controls": 1187,
+        "failure_types": {
+          "target_moved_goal_unsatisfied": 6
+        }
+      }
+    },
+    "orange": {
+      "base": {
+        "successes": 4,
+        "trials": 10,
+        "success_rate": 0.4,
+        "wilson_95": [
+          0.16818032970623614,
+          0.6873262302663417
+        ],
+        "total_controls": 4229,
+        "ik_nonconverged_controls": 1154,
+        "failure_types": {
+          "target_moved_goal_unsatisfied": 6
+        }
+      },
+      "sft": {
+        "successes": 1,
+        "trials": 10,
+        "success_rate": 0.1,
+        "wilson_95": [
+          0.017876213095072896,
+          0.4041500267952385
+        ],
+        "total_controls": 5297,
+        "ik_nonconverged_controls": 1725,
+        "failure_types": {
+          "target_moved_goal_unsatisfied": 8,
+          "simulator_instability": 1
+        }
+      },
+      "ppo": {
+        "successes": 4,
+        "trials": 10,
+        "success_rate": 0.4,
+        "wilson_95": [
+          0.16818032970623614,
+          0.6873262302663417
+        ],
+        "total_controls": 4168,
+        "ik_nonconverged_controls": 1094,
+        "failure_types": {
+          "target_moved_goal_unsatisfied": 6
+        }
+      }
+    },
+    "pear": {
+      "base": {
+        "successes": 6,
+        "trials": 10,
+        "success_rate": 0.6,
+        "wilson_95": [
+          0.31267376973365824,
+          0.8318196702937638
+        ],
+        "total_controls": 3306,
+        "ik_nonconverged_controls": 1041,
+        "failure_types": {
+          "target_moved_goal_unsatisfied": 4
+        }
+      },
+      "sft": {
+        "successes": 5,
+        "trials": 10,
+        "success_rate": 0.5,
+        "wilson_95": [
+          0.236593090512564,
+          0.7634069094874361
+        ],
+        "total_controls": 3721,
+        "ik_nonconverged_controls": 1136,
+        "failure_types": {
+          "target_moved_goal_unsatisfied": 5
+        }
+      },
+      "ppo": {
+        "successes": 4,
+        "trials": 10,
+        "success_rate": 0.4,
+        "wilson_95": [
+          0.16818032970623614,
+          0.6873262302663417
+        ],
+        "total_controls": 4210,
+        "ik_nonconverged_controls": 1045,
+        "failure_types": {
+          "target_moved_goal_unsatisfied": 6
+        }
+      }
+    }
+  },
+  "sft_vs_reference": {
+    "gained_scenes": 6,
+    "lost_scenes": 9,
+    "unchanged_scenes": 25,
+    "success_rate_difference": -0.075,
+    "exact_mcnemar_two_sided_p": 0.60723876953125
+  },
+  "ppo_vs_sft": {
+    "gained_scenes": 5,
+    "lost_scenes": 6,
+    "unchanged_scenes": 29,
+    "success_rate_difference": -0.025,
+    "exact_mcnemar_two_sided_p": 1.0
+  }
+}

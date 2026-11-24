@@ -1,0 +1,9 @@
+{
+  "seed": 6005,
+  "recorded_at": "2026-11-24T04:34:02.345734+00:00",
+  "reason": "Selected an already-completed scene where reference fails and both SFT/PPO succeed, after checkpoint selection was frozen. This is a success illustration; all forty outcomes remain in the aggregate report.",
+  "selection_frozen_at": "2026-11-24T04:20:34.541086+00:00",
+  "all_40_scenes_reported": true,
+  "display_image_size": 512,
+  "supplemental_ppo_recovery_seed": 6002
+}

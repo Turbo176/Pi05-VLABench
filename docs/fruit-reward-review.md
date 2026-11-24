@@ -1,6 +1,6 @@
 # 🍐 Fruit PPO reward review
 
-Reviewed on November 23, 2026. This note explains the completed experiment's reward and a possible next experiment. It does not change the frozen PPO checkpoint, registered configuration, or existing scores. No new PPO run has been started for this proposal.
+Updated on November 24, 2026. This note explains the original experiment's reward and a separate follow-up. Both reward variants completed a full-model GPU smoke run, including critic warmup, actor updates, checkpoint saving and paired development evaluation. The legacy reward scored 10/16 and the corrected potential reward 5/16, against their SFT90 parent at 8/16. These are development results used for selection. The separate SFT180-to-PPO expansion completed a forty-scene test: reference 20/40, SFT180 17/40 and PPO1 16/40. It did not improve overall success. The frozen November 22 checkpoint, configuration and scores remain the historical baseline. [Follow-up results and costs](experiments/2026-11-24/fruit-recovery-v2/README.md)
 
 ## 🔎 What actually ran
 
@@ -12,6 +12,8 @@ reward = official_success + 0.5 * (Phi_after_chunk - Phi_before_chunk)
 ```
 
 Rewards are measured after each executed action chunk, normally five controls at 10 Hz. Official success ends the rollout, so its +1 is awarded once. The `0.5` is a coefficient on distance progress in meters; it is not a separate +0.5 lifting reward or a +0.5 placement reward. Simulator geometry is used only to calculate rewards and diagnostics, never as policy input.
+
+The official `select_fruit` configuration uses `ContainCondition`; `FlatContainer.contain` checks the fruit origin against the plate region and a height threshold. It does not require opening the gripper or a settling period. A scored success can therefore end while the fruit is still held above the plate. All reported comparisons preserve that predicate; they are not measurements of released, stable placement. The pinned implementation is listed in [the upstream record](upstream.md).
 
 The [actual two training rollouts](experiments/2026-11-22/fruit-completion-v1/ppo/rollouts.jsonl) were:
 
@@ -38,7 +40,33 @@ There is also a discount-consistency limitation: advantage calculation uses `gam
 
 These sources support clear progress signals and careful reward semantics. None establishes that a 0.5/0.5 or 0.2/0.8 split is optimal for this model and task.
 
-## 🧪 Proposed next experiment, not yet implemented
+## 🔧 Implemented preparation
+
+[`train_fruit_ppo.py`](../scripts/train_fruit_ppo.py) is the next-run entry point. The two registered November 22 PPO scripts remain unchanged so their source hashes and historical results can still be verified.
+
+| Item | Implemented behavior |
+| --- | --- |
+| `legacy-distance-v1` | Preserve `success + weight * (Phi_next - Phi_now)`, including the measured terminal potential |
+| `discounted-terminal-potential-v2` | Use `success + weight * (gamma * Phi_next - Phi_now)`; the effective next potential is zero at success, environment termination or the finite task-budget endpoint |
+| Critic warmup | Fit the value head to complete-episode discounted Monte Carlo returns; freeze actor parameters, check exact actor equality, and verify critic changes |
+| PPO after warmup | Collect fresh on-policy episodes with the warmed critic before calculating GAE; warmup interactions count toward the budget |
+| Replay checks | Compare all sampled/replayed likelihood coordinates before each update, including partially executed final chunks; reject nonfinite values |
+| Update records | Actor loss, value MSE, sampled prefix likelihood-ratio diagnostics, clip fraction, gradients, actual actor changes and interaction counts |
+| Scope | The current SFT90 parent has frozen vision/language features. The new entry rejects VLM LoRA, which needs a separately checked critic-gradient path |
+
+The `approx_kl` field is a sampled likelihood-ratio statistic for the selected flow transition's executed action prefix. A success-shortened prefix depends on the sampled outcome. This statistic is a practical update guard, not an analytic full-chain KL or a KL between decoded robot-action distributions. Logs include executed-length counts. RLinf's `flow_sde` entropy placeholder is not plotted as measured policy entropy.
+
+Seventeen CPU tests in [`test_fruit_ppo.py`](../tests/test_fruit_ppo.py) cover reward accounting, 100 randomized terminal-return identities, chunk discounting, clipping, warmup isolation, effective actor updates, post-update rollback, zero-reward actor skips, nonfinite ratios and partial replay coordinates. Replay failures are logged before raising, including coordinate errors that cancel in the aggregate. A post-step replay exception restores parameters and existing AdamW state before propagating the error. These are numerical and optimizer tests with small fixtures; they do not establish full-model training stability or a success-rate improvement. See the [follow-up commands](single-gpu.md#fruit-reward-follow-up).
+
+The new optimizer checks the prefix-score diagnostic both before and after a minibatch step. An excessive post-step change restores actor/critic parameters and AdamW state. The full rollout batch is checked again before saving a checkpoint. An all-zero-reward batch can fit the critic but cannot produce a claimed actor update.
+
+## 🖥️ Full-model GPU smoke validation
+
+Both variants restarted from SFT90 with training starts 1301 and 1302 and the same sampler seed, learning rates, critic warmup and interaction limit. Each used 1,032 controls: 731 for critic warmup and 301 for a fresh on-policy collection. Both applied eight actor optimizer steps and saved a PPO checkpoint. All 216 action-expert LoRA tensors and eight action-head tensors changed in the corrected-reward run. The final sampled prefix-score diagnostic was 0.00360 for the corrected reward and 0.00488 for the legacy reward, below the configured 0.02 guard.
+
+For the corrected reward, the critic's MSE on its warmup data decreased from 0.59479 to 0.03539, while the actor stayed exactly unchanged during warmup. This measures fitting of the sampled training returns, not generalization of the critic. The two successful fresh training rollouts were collected before the actor update; they are not evidence of a PPO success-rate improvement. Saved-policy development evaluation and the larger follow-up are separate steps.
+
+## 🧪 Separate milestone proposal, not yet implemented
 
 The suggested split of +0.5 for lifting and +0.5 for placement is a reasonable candidate to compare. A more completion-focused starting candidate is:
 
